@@ -1,0 +1,70 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/model_view/cos_table_model.cpp
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\model_view\cos_table_model.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\model_view\cos_table_model.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "cos_model.h"
+        -:    2:
+function _ZNK8CosModel8rowCountERK11QModelIndex called 0 returned 0% blocks executed 0%
+    #####:    3:int CosModel::rowCount(const QModelIndex&) const {
+    #####:    4:    return service.getAllCos().size();
+    %%%%%:    4-block  0
+call    0 never executed
+call    1 never executed
+        -:    5:}
+        -:    6:
+function _ZNK8CosModel4dataERK11QModelIndexi called 0 returned 0% blocks executed 0%
+    #####:    7:QVariant CosModel::data(const QModelIndex &index, int role) const {
+    #####:    8:    if (role == Qt::DisplayRole) {
+    %%%%%:    8-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:    9:        const auto& carte = service.getAllCos().at(index.row());
+    %%%%%:    9-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   10:        return QString::fromStdString(carte.getTitlu() + " - " + carte.getAutor());
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   10-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   10-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   10-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   10-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   10-block  4
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+    $$$$$:   10-block  5
+call   19 never executed
+    $$$$$:   10-block  6
+call   20 never executed
+    $$$$$:   10-block  7
+    $$$$$:   10-block  8
+        -:   11:    }
+    #####:   12:    return QVariant();
+    %%%%%:   12-block  0
+call    0 never executed
+        -:   13:}
+        -:   14:
+function _ZN8CosModel6updateEv called 0 returned 0% blocks executed 0%
+    #####:   15:void CosModel::update() {
+    #####:   16:    beginResetModel();
+    %%%%%:   16-block  0
+call    0 never executed
+    #####:   17:    endResetModel();
+call    0 never executed
+    #####:   18:}

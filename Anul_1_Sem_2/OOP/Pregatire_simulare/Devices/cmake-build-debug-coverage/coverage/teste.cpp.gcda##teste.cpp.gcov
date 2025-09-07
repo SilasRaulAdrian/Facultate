@@ -1,0 +1,434 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Devices/teste/teste.cpp
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\teste\teste.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\teste\teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <cassert>
+        -:    2:#include <iostream>
+        -:    3:#include <fstream>
+        -:    4:#include <vector>
+        -:    5:#include "../domain/device.h"
+        -:    6:#include "../repository/device_repo.h"
+        -:    7:#include "../service/device_service.h"
+        -:    8:
+function _Z10testDomainv called 1 returned 100% blocks executed 55%
+        1:    9:void testDomain() {
+        1:   10:    Device d("telefon", "iPhone 14", 2023, "rosu", 5500.0);
+        1:   10-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   10-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   10-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   10-block  3
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+    $$$$$:   10-block  4
+    $$$$$:   10-block  5
+call   13 never executed
+    $$$$$:   10-block  6
+    $$$$$:   10-block  7
+call   14 never executed
+    $$$$$:   10-block  8
+       1*:   11:    assert(d.getTip() == "telefon");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   11-block  1
+call    6 never executed
+        1:   11-block  2
+        1:   11-block  3
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   11-block  4
+call    9 returned 1
+    $$$$$:   11-block  5
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   11-block  6
+call   12 never executed
+    $$$$$:   11-block  7
+    $$$$$:   11-block  8
+       1*:   12:    assert(d.getModel() == "iPhone 14");
+        1:   12-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   12-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   12-block  2
+call    6 never executed
+        1:   12-block  3
+        1:   12-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   12-block  5
+call    9 returned 1
+    $$$$$:   12-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   12-block  7
+call   12 never executed
+    $$$$$:   12-block  8
+    $$$$$:   12-block  9
+       1*:   13:    assert(d.getAn() == 2023);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   13-block  2
+call    5 never executed
+        1:   13-block  3
+       1*:   14:    assert(d.getCuloare() == "rosu");
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   14-block  2
+call    6 never executed
+        1:   14-block  3
+        1:   14-block  4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0
+        1:   14-block  5
+call    9 returned 1
+    $$$$$:   14-block  6
+branch 10 never executed (fallthrough)
+branch 11 never executed
+    $$$$$:   14-block  7
+call   12 never executed
+    $$$$$:   14-block  8
+    $$$$$:   14-block  9
+       1*:   15:    assert(d.getPret() == 5500.0);
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   15-block  2
+call    5 never executed
+        1:   15-block  3
+        -:   16:
+        1:   17:    std::cout << "testDomain a trecut cu succes!\n";
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18:}
+        1:   18-block  0
+call    0 returned 1
+    $$$$$:   18-block  1
+call    1 never executed
+        -:   19:
+function _Z8testRepov called 1 returned 100% blocks executed 63%
+        1:   20:void testRepo() {
+        -:   21:    // Pregătim fișier test
+        1:   22:    std::ofstream out("test_devices.txt");
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23:    out << "telefon,Samsung Galaxy,2022,albastru,3700\n";
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24:    out << "laptop,Dell XPS,2021,negru,6000\n";
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25:    out.close();
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   26:
+        1:   27:    DeviceRepo repo("test_devices.txt");
+        1:   27-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   27-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   27-block  2
+call    6 returned 1
+    $$$$$:   27-block  3
+call    7 never executed
+    $$$$$:   27-block  4
+        1:   28:    auto all = repo.getAll();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+       1*:   29:    assert(all.size() == 2);
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   29-block  1
+call    3 never executed
+        1:   29-block  2
+       1*:   30:    assert(all[0].getModel() == "Samsung Galaxy");
+        1:   30-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   30-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   30-block  2
+call    7 never executed
+        1:   30-block  3
+        1:   30-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+        1:   30-block  5
+call   10 returned 1
+    $$$$$:   30-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   30-block  7
+call   13 never executed
+    $$$$$:   30-block  8
+    $$$$$:   30-block  9
+       1*:   31:    assert(all[1].getPret() == 6000);
+        1:   31-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   31-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   31-block  2
+call    6 never executed
+        1:   31-block  3
+        -:   32:
+        1:   33:    std::cout << "testRepo a trecut cu succes!\n";
+        1:   33-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34:}
+        1:   34-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   34-block  1
+call    3 never executed
+    $$$$$:   34-block  2
+call    4 never executed
+    $$$$$:   34-block  3
+call    5 never executed
+        -:   35:
+function _Z11testServicev called 1 returned 100% blocks executed 62%
+        1:   36:void testService() {
+        1:   37:    std::ofstream out("test_devices.txt");
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38:    out << "telefon,Samsung Galaxy,2022,rosu,3700\n";
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39:    out << "laptop,Dell XPS,2021,negru,6000\n";
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40:    out << "tableta,iPad,2023,galben,5000\n";
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41:    out.close();
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   42:
+        1:   43:    DeviceRepo repo("test_devices.txt");
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   43-block  2
+call    6 returned 1
+    $$$$$:   43-block  3
+call    7 never executed
+    $$$$$:   43-block  4
+        1:   44:    DeviceService service(repo);
+call    0 returned 1
+        -:   45:
+        1:   46:    auto all = service.getAll();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   47:    assert(all.size() == 3);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   47-block  1
+call    3 never executed
+        1:   47-block  2
+        -:   48:
+        1:   49:    auto sortedByModel = service.sortByModel();
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   50:    assert(sortedByModel[0].getModel() == "Dell XPS");
+        1:   50-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   50-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   50-block  2
+call    7 never executed
+        1:   50-block  3
+        1:   50-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+        1:   50-block  5
+call   10 returned 1
+    $$$$$:   50-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   50-block  7
+call   13 never executed
+    $$$$$:   50-block  8
+    $$$$$:   50-block  9
+       1*:   51:    assert(sortedByModel[1].getModel() == "iPad");
+        1:   51-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   51-block  1
+call    4 returned 1
+branch  5 taken 0 (fallthrough)
+branch  6 taken 1
+    %%%%%:   51-block  2
+call    7 never executed
+        1:   51-block  3
+        1:   51-block  4
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0
+        1:   51-block  5
+call   10 returned 1
+    $$$$$:   51-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   51-block  7
+call   13 never executed
+    $$$$$:   51-block  8
+    $$$$$:   51-block  9
+        -:   52:
+        1:   53:    auto sortedByPrice = service.sortByPret();
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   54:    assert(sortedByPrice[0].getPret() == 3700);
+        1:   54-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   54-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   54-block  2
+call    6 never executed
+        1:   54-block  3
+       1*:   55:    assert(sortedByPrice[2].getPret() == 6000);
+        1:   55-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   55-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   55-block  2
+call    6 never executed
+        1:   55-block  3
+        -:   56:
+        1:   57:    std::cout << "testService a trecut cu succes!\n";
+        1:   57-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   58:}
+        1:   58-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:   58-block  1
+call    5 never executed
+    $$$$$:   58-block  2
+call    6 never executed
+    $$$$$:   58-block  3
+call    7 never executed
+    $$$$$:   58-block  4
+call    8 never executed
+    $$$$$:   58-block  5
+call    9 never executed
+        -:   59:
+function _Z7testAllv called 1 returned 100% blocks executed 100%
+        1:   60:void testAll() {
+        1:   61:    std::cout << "Ruleaza testele...\n";
+        1:   61-block  0
+call    0 returned 1
+        1:   62:    testDomain();
+call    0 returned 1
+        1:   63:    testRepo();
+call    0 returned 1
+        1:   64:    testService();
+call    0 returned 1
+        1:   65:    std::cout << "Toate testele au trecut cu succes!\n";
+call    0 returned 1
+        1:   66:}

@@ -1,0 +1,17 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 2-4/Pb 8/main.c
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 2-4/Pb 8/cmake-build-debug-coverage/CMakeFiles/Pb_8.dir/main.c.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 2-4/Pb 8/cmake-build-debug-coverage/CMakeFiles/Pb_8.dir/main.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "ui.h"
+        -:    2:#include "test.h"
+        -:    3:
+function main called 1 returned 100% blocks executed 100%
+        1:    4:int main() {
+        1:    5:    testAll();
+        1:    5-block  0
+call    0 returned 1
+        1:    6:    gestionareProduse();
+call    0 returned 1
+        -:    7:
+        1:    8:    return 0;
+        -:    9:}

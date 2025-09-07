@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Melodii_1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Melodii_1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Melodii_1-Debug-23ce1d0af7cfaa0531f7.json",
+					"name" : "Melodii_1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Melodii_1_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Melodii_1_autogen-Debug-0f54e8429f89b747051f.json",
+					"name" : "Melodii_1_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Melodii_1_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Melodii_1_autogen_timestamp_deps-Debug-82b117764edefd95a501.json",
+					"name" : "Melodii_1_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Melodii_1/cmake-build-debug",
+		"source" : "D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Melodii_1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

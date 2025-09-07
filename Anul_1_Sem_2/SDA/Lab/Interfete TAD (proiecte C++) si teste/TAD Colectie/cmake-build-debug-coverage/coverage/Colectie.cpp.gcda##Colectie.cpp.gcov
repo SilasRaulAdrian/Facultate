@@ -1,0 +1,317 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Colectie/Proiect_C++/Colectie/Colectie.cpp
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Colectie/cmake-build-debug-coverage/CMakeFiles/TAD_Colectie.dir/Proiect_C++/Colectie/Colectie.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Colectie/cmake-build-debug-coverage/CMakeFiles/TAD_Colectie.dir/Proiect_C++/Colectie/Colectie.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "Colectie.h"
+        -:    2:#include "IteratorColectie.h"
+        -:    3:#include <iostream>
+        -:    4:
+        -:    5:using namespace std;
+        -:    6:
+function _Z3relii called 171931520 returned 100% blocks executed 100%
+171931520:    7:bool rel(TElem e1, TElem e2) {
+171931520:    8:    return e1 <= e2;
+171931520:    8-block  0
+        -:    9:}
+        -:   10:
+function _ZN8ColectieC2Ev called 11 returned 100% blocks executed 80%
+       11:   11:Colectie::Colectie() {
+       11:   12:    capacitate = 10;
+       11:   13:    dimensiune = 0;
+      11*:   14:    elemente = new Pereche[capacitate];
+       11:   14-block  0
+branch  0 taken 11 (fallthrough)
+branch  1 taken 0
+       11:   14-block  1
+    %%%%%:   14-block  2
+call    2 never executed
+       11:   14-block  3
+call    3 returned 11
+       11:   15:    relatie = rel;
+       11:   16:}
+        -:   17:
+        -:   18:/*
+        -:   19: * Complexitati:
+        -:   20: * Best case (Teta(1)): Daca elementul este deja in colectie si se afla la inceput, doar ii creste frecventa,
+        -:   21: *                      ceea ce dureaza constant.
+        -:   22: * Worst case (O(n)): Daca trebuie sa insereze un nou element si colectia este plina, se realoca un vector
+        -:   23: *                    de dimensiune dubla si se muta toate elementele, ceea ce este O(n).
+        -:   24: * Average case (0(n)): Deoarece in medie se poate parcurge jumatate din colectie pentru a gasi pozitia
+        -:   25: *                      corecta, complexitatea medie este O(n).
+        -:   26: */
+function _ZN8Colectie6adaugaEi called 64343 returned 100% blocks executed 97%
+    64343:   27:void Colectie::adauga(TElem e) {
+    64343:   28:    int poz = 0;
+        -:   29:
+171933548:   30:    while (poz < dimensiune && relatie(elemente[poz].elem, e)) {
+    64343:   30-block  0
+171933548:   30-block  1
+branch  0 taken 171929872 (fallthrough)
+branch  1 taken 3676
+171929872:   30-block  2
+call    2 returned 171929872
+branch  3 taken 171925041 (fallthrough)
+branch  4 taken 4831
+171925041:   30-block  3
+     8507:   30-block  4
+171933548:   30-block  5
+branch  5 taken 171925041
+branch  6 taken 8507 (fallthrough)
+171925041:   31:        if (elemente[poz].elem == e) {
+171925041:   31-block  0
+branch  0 taken 55836 (fallthrough)
+branch  1 taken 171869205
+    55836:   32:            elemente[poz].frecventa++;
+    55836:   33:            return;
+    55836:   33-block  0
+        -:   34:        }
+171869205:   35:        poz++;
+171869205:   35-block  0
+        -:   36:    }
+        -:   37:
+     8507:   38:    if (dimensiune == capacitate) {
+     8507:   38-block  0
+branch  0 taken 35 (fallthrough)
+branch  1 taken 8472
+       35:   39:        capacitate *= 2;
+      35*:   40:        Pereche* elementeNou = new Pereche[capacitate];
+       35:   40-block  0
+branch  0 taken 35 (fallthrough)
+branch  1 taken 0
+       35:   40-block  1
+    %%%%%:   40-block  2
+call    2 never executed
+       35:   40-block  3
+call    3 returned 35
+    14385:   41:        for (int i = 0; i < dimensiune; i++) {
+    14385:   41-block  0
+branch  0 taken 14350
+branch  1 taken 35 (fallthrough)
+    14350:   42:            elementeNou[i] = elemente[i];
+    14350:   42-block  0
+        -:   43:        }
+       35:   44:        elementeNou[poz].elem = e;
+       35:   45:        elementeNou[poz].frecventa = 1;
+    12021:   46:        for (int i = poz; i < dimensiune; i++) {
+       35:   46-block  0
+    12021:   46-block  1
+branch  0 taken 11986
+branch  1 taken 35 (fallthrough)
+    11986:   47:            elementeNou[i + 1] = elemente[i];
+    11986:   47-block  0
+        -:   48:        }
+       35:   49:        delete[] elemente;
+       35:   49-block  0
+branch  0 taken 35 (fallthrough)
+branch  1 taken 0
+       35:   49-block  1
+call    2 returned 35
+       35:   50:        elemente = elementeNou;
+       35:   50-block  0
+        -:   51:    }
+        -:   52:    else {
+  9684577:   53:        for (int i = dimensiune; i > poz; i--) {
+     8472:   53-block  0
+  9684577:   53-block  1
+branch  0 taken 9676105
+branch  1 taken 8472 (fallthrough)
+  9676105:   54:            elemente[i] = elemente[i - 1];
+  9676105:   54-block  0
+        -:   55:        }
+     8472:   56:        elemente[poz].elem = e;
+     8472:   57:        elemente[poz].frecventa = 1;
+     8472:   57-block  0
+        -:   58:    }
+     8507:   59:    dimensiune++;
+     8507:   59-block  0
+        -:   60:}
+        -:   61:
+        -:   62:/*
+        -:   63: * Complexitati:
+        -:   64: * Best case (Teta(1)): Daca elementul este la inceputul colectiei
+        -:   65: *                      si are frecventa mai mare decat 1, doar i se scade frecventa.
+        -:   66: * Worst case (O(n)): Daca elementul este ultimul sau nu exista, trebuie parcurs intregul vector.
+        -:   67: * Average case (O(n)): Deoarece in medie se poate parcurge jumatate din colectie, este O(n).
+        -:   68: */
+function _ZN8Colectie6stergeEi called 31541 returned 100% blocks executed 100%
+    31541:   69:bool Colectie::sterge(TElem e) {
+ 63269708:   70:    for (int i = 0; i < dimensiune; i++) {
+    31541:   70-block  0
+ 63238167:   70-block  1
+ 63269708:   70-block  2
+branch  0 taken 63246840
+branch  1 taken 22868 (fallthrough)
+ 63246840:   71:        if (elemente[i].elem == e) {
+ 63246840:   71-block  0
+branch  0 taken 8673 (fallthrough)
+branch  1 taken 63238167
+     8673:   72:            elemente[i].frecventa--;
+     8673:   73:            if (elemente[i].frecventa == 0) {
+     8673:   73-block  0
+branch  0 taken 500 (fallthrough)
+branch  1 taken 8173
+   160500:   74:                for (int j = i; j < dimensiune - 1; j++) {
+      500:   74-block  0
+   160500:   74-block  1
+branch  0 taken 160000
+branch  1 taken 500 (fallthrough)
+   160000:   75:                    elemente[j] = elemente[j + 1];
+   160000:   75-block  0
+        -:   76:                }
+      500:   77:                dimensiune--;
+      500:   77-block  0
+        -:   78:            }
+     8673:   79:            return true;
+     8673:   79-block  0
+        -:   80:        }
+        -:   81:    }
+    22868:   82:    return false;
+    22868:   82-block  0
+        -:   83:}
+        -:   84:
+        -:   85:/*
+        -:   86: * Complexitati:
+        -:   87: * Best case (Teta(1)): Daca elementul se afla la inceputul colectiei.
+        -:   88: * Worst case (O(n)): Daca elementul nu exista sau este ultimul, se parcurge toata colectia.
+        -:   89: * Average case (O(n)): Se parcurge in medie jumatate din colectie.
+        -:   90: */
+function _ZNK8Colectie5cautaEi called 4937 returned 100% blocks executed 100%
+     4937:   91:bool Colectie::cauta(TElem elem) const {
+  1092566:   92:    for (int i = 0; i < dimensiune; i++) {
+     4937:   92-block  0
+  1087629:   92-block  1
+  1092566:   92-block  2
+branch  0 taken 1091627
+branch  1 taken 939 (fallthrough)
+  1091627:   93:        if (elemente[i].elem == elem) {
+  1091627:   93-block  0
+branch  0 taken 3998 (fallthrough)
+branch  1 taken 1087629
+     3998:   94:            return true;
+     3998:   94-block  0
+        -:   95:        }
+        -:   96:    }
+      939:   97:    return false;
+      939:   97-block  0
+        -:   98:}
+        -:   99:
+        -:  100:/*
+        -:  101: * Complexitati:
+        -:  102: * Best case (Teta(1)): Daca elementul se afla la inceputul colectiei.
+        -:  103: * Worst case (O(n)): Daca elementul nu exista sau este ultimul, se parcurge toata colectia.
+        -:  104: * Average case (O(n)): Se parcurge in medie jumatate din colectie.
+        -:  105: */
+function _ZNK8Colectie10nrAparitiiEi called 4950 returned 100% blocks executed 100%
+     4950:  106:int Colectie::nrAparitii(TElem elem) const {
+  1092809:  107:    for (int i = 0; i < dimensiune; i++) {
+     4950:  107-block  0
+  1087859:  107-block  1
+  1092809:  107-block  2
+branch  0 taken 1091870
+branch  1 taken 939 (fallthrough)
+  1091870:  108:        if (elemente[i].elem == elem) {
+  1091870:  108-block  0
+branch  0 taken 4011 (fallthrough)
+branch  1 taken 1087859
+     4011:  109:            return elemente[i].frecventa;
+     4011:  109-block  0
+        -:  110:        }
+        -:  111:    }
+      939:  112:    return 0;
+      939:  112-block  0
+        -:  113:}
+        -:  114:
+        -:  115:/*
+        -:  116: * Complexitati:
+        -:  117: * Best case (Teta(n)): Trebuie sa adune frecventele tuturor elementelor, deci minim O(n).
+        -:  118: * Worst case (O(n)): Tot O(n), deoarece mereu se parcurge intreaga colectie.
+        -:  119: * Average case (O(n)): Indiferent de caz, trebuie sa viziteze fiecare element.
+        -:  120: */
+function _ZNK8Colectie3dimEv called 10015 returned 100% blocks executed 100%
+    10015:  121:int Colectie::dim() const {
+    10015:  122:    int total = 0;
+ 60023432:  123:    for (int i = 0; i < dimensiune; i++) {
+    10015:  123-block  0
+ 60023432:  123-block  1
+branch  0 taken 60013417
+branch  1 taken 10015 (fallthrough)
+ 60013417:  124:        total += elemente[i].frecventa;
+ 60013417:  124-block  0
+        -:  125:    }
+    10015:  126:    return total;
+    10015:  126-block  0
+        -:  127:}
+        -:  128:
+        -:  129:/*
+        -:  130: * Complexitati:
+        -:  131: * Best case (Teta(1)): Compara dimensiunea cu 0, operatie constanta.
+        -:  132: * Worst case (O(1)): Tot O(1), deoarece verifica doar dimensiunea.
+        -:  133: * Average case (O(1)): O operatie constanta.
+        -:  134: */
+function _ZNK8Colectie4vidaEv called 4 returned 100% blocks executed 100%
+        4:  135:bool Colectie::vida() const {
+        4:  136:    return dimensiune == 0;
+        4:  136-block  0
+        -:  137:}
+        -:  138:
+        -:  139:/*
+        -:  140: * Complexitati:
+        -:  141: * Best case (Teta(n)): Daca b contine elemente deja existente in this, doar se mareste frecventa acestora.
+        -:  142: * Worst case (O(n^2)): Daca toate elementele trebuie inserate individual, fiecare apel adauga()
+        -:  143: *                      poate costa O(n), iar daca sunt n elemente, avem O(n^2).
+        -:  144: * Average case (O(n^2)): In cazul general, se fac n apeluri la adauga(), care in medie sunt O(n).
+        -:  145: */
+function _ZN8Colectie19adaugaToateElementeERKS_ called 2 returned 100% blocks executed 100%
+        2:  146:void Colectie::adaugaToateElemente(const Colectie &b) {
+       13:  147:    for (int i = 0; i < b.dimensiune; i++) {
+        2:  147-block  0
+       11:  147-block  1
+       13:  147-block  2
+branch  0 taken 11
+branch  1 taken 2 (fallthrough)
+       25:  148:        for (int j = 0; j < b.elemente[i].frecventa; j++) {
+       11:  148-block  0
+       25:  148-block  1
+branch  0 taken 14
+branch  1 taken 11 (fallthrough)
+       14:  149:            adauga(b.elemente[i].elem);
+       14:  149-block  0
+call    0 returned 14
+        -:  150:        }
+        -:  151:    }
+        -:  152:
+        2:  153:}
+        -:  154:
+        -:  155:/*
+        -:  156: * Complexitati:
+        -:  157: * Best case (Teta(1)): Constructorul iteratorului doar seteaza niste valori.
+        -:  158: * Worst case (O(1)): La fel, aloca un obiect si seteaza pozitia initiala.
+        -:  159: * Average case (O(1)): O operatie constanta.
+        -:  160: */
+function _ZNK8Colectie8iteratorEv called 6 returned 100% blocks executed 100%
+        6:  161:IteratorColectie Colectie::iterator() const {
+        6:  162:    return IteratorColectie(*this);
+        6:  162-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:  162-block  1
+        6:  162-block  2
+        6:  162-block  3
+        -:  163:}
+        -:  164:
+        -:  165:/*
+        -:  166: * Complexitati:
+        -:  167: * Best case (Teta(1)): Dezalocarea unui vector este O(1).
+        -:  168: * Worst case (O(1)): La fel, doar se elibereaza memoria.
+        -:  169: * Average case (O(1)): O operatie constanta.
+        -:  170: */
+function _ZN8ColectieD2Ev called 11 returned 100% blocks executed 100%
+       11:  171:Colectie::~Colectie() {
+       11:  172:    delete[] elemente;
+       11:  172-block  0
+branch  0 taken 11 (fallthrough)
+branch  1 taken 0
+       11:  172-block  1
+call    2 returned 11
+       11:  173:}

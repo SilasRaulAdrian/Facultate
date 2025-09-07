@@ -1,0 +1,10 @@
+Telefon,Samsung Galaxy,2022,rosu,3700
+Laptop,HP Spectre,2021,negru,5800
+Telefon,iPhone 14,2023,galben,6200
+Tableta,Lenovo Tab,2020,albastru,2100
+Laptop,Dell XPS,2022,rosu,5500
+Telefon,Xiaomi Mi,2021,albastru,2500
+Laptop,Asus ZenBook,2022,negru,5300
+Tableta,Surface Pro,2023,galben,6400
+Telefon,OnePlus 11,2023,rosu,4300
+Tableta,iPad Air,2022,albastru,4600

@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "CMakeFiles\\Lab_6_7.dir\\tests\\tests.cpp.obj",
+            "outputs": [
+                "D:\\Facultate\\Anul 1 Sem 2\\OOP\\Lab\\Lab_10-11\\out\\build\\x64-Debug\\vc140.pdb",
+                "CMakeFiles\\Lab_6_7.dir\\tests\\tests.cpp.obj.ddi"
+            ],
+            "requires": []
+        }
+    ]
+}

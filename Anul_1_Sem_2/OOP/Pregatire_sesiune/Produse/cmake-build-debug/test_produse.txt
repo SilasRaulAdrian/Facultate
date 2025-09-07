@@ -1,0 +1,3 @@
+1,Lapte,aliment,5.5
+2,Pix,papetarie,2.2
+3,Apa,bautura,3

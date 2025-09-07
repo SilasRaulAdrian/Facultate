@@ -1,0 +1,10 @@
+55,Bulevardul Unirii,85000
+70,Strada Lalelelor,92000
+48,Strada Primăverii,78000
+60,Calea Moșilor,105000
+90,Bulevardul Tineretului,135000
+50,Strada Magnoliei,87000
+76,Strada Salcâmilor,110000
+62,Strada Libertății,99000
+80,Strada Teilor,120000
+45,Strada Zorilor,75000

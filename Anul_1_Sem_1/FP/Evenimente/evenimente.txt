@@ -1,0 +1,7 @@
+20.02.2021,08:00,Exam FP
+15.03.2022,14:30,Meeting with team
+01.01.2023,00:00,New Year Celebration
+28.01.2025,12:00,Eating
+28.01.2025,09:00,Wake up
+28.01.2025,15:00,Learning
+20.02.2021,06:00,Wake up

@@ -1,0 +1,29 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Devices/service/device_service.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\main.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Raul on 16.05.2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef DEVICES_DEVICE_SERVICE_H
+        -:    6:#define DEVICES_DEVICE_SERVICE_H
+        -:    7:
+        -:    8:#include "../domain/device.h"
+        -:    9:#include "../repository/device_repo.h"
+        -:   10:#include <vector>
+        -:   11:
+        -:   12:class DeviceService {
+        -:   13:private:
+        -:   14:    DeviceRepo &repo;
+        -:   15:
+        -:   16:public:
+function _ZN13DeviceServiceC1ER10DeviceRepo called 2 returned 100% blocks executed 100%
+        2:   17:    DeviceService(DeviceRepo &repo) : repo(repo) {}
+        -:   18:
+        -:   19:    std::vector<Device> getAll() const;
+        -:   20:    std::vector<Device> sortByModel() const;
+        -:   21:    std::vector<Device> sortByPret() const;
+        -:   22:};
+        -:   23:
+        -:   24:#endif //DEVICES_DEVICE_SERVICE_H

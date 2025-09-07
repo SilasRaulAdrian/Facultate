@@ -1,0 +1,10 @@
+The Beatles,06/12,100
+Pink Floyd,07/15,80
+Metallica,08/20,120
+Queen,09/05,90
+Iron Maiden,10/10,110
+AC/DC,11/25,70
+Guns N' Roses,12/05,85
+Nirvana,01/15,95
+Red Hot Chili Peppers,02/20,75
+Black Sabbath,03/10,65

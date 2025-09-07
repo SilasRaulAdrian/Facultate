@@ -1,0 +1,382 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/lab2-4/service/service.c
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/lab2-4/cmake-build-debug-coverage/CMakeFiles/lab2_4.dir/service/service.c.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/lab2-4/cmake-build-debug-coverage/CMakeFiles/lab2_4.dir/service/service.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "service.h"
+        -:    2:
+        -:    3:#include <stdlib.h>
+        -:    4:#include <string.h>
+        -:    5:#include <stdio.h>
+        -:    6:
+function creeazaService called 3 returned 100% blocks executed 100%
+        3:    7:Service* creeazaService() {
+        3:    8:    Service *service = (Service*)malloc(sizeof(Service));
+        3:    9:    service->oferte = creeazaRepo();
+        3:    9-block  0
+call    0 returned 3
+        3:   10:    service->undo_capacity = 10;
+        3:   11:    service->undo_count = 0;
+        3:   12:    service->undo_stack = (Repo**)malloc(service->undo_capacity * sizeof(Repo*));
+        3:   13:    return service;
+        -:   14:}
+        -:   15:
+function distrugeService called 3 returned 100% blocks executed 89%
+        3:   16:void distrugeService(Service *service) {
+       3*:   17:    if (service == NULL) return;
+        3:   17-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 3
+    %%%%%:   17-block  1
+        -:   18:
+       17:   19:    for (int i = 0; i < service->undo_count; i++) {
+        3:   19-block  0
+       17:   19-block  1
+branch  0 taken 14
+branch  1 taken 3 (fallthrough)
+       14:   20:        distruge_repo(service->undo_stack[i]);
+       14:   20-block  0
+call    0 returned 14
+        -:   21:    }
+        3:   22:    free(service->undo_stack);
+        3:   23:    distruge_repo(service->oferte);
+        3:   23-block  0
+call    0 returned 3
+        3:   24:    free(service);
+        -:   25:}
+        -:   26:
+function salveaza_stare called 16 returned 100% blocks executed 83%
+       16:   27:void salveaza_stare(Service *service) {
+       16:   28:    if (service->undo_count == service->undo_capacity) {
+       16:   28-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 15
+        1:   29:        service->undo_capacity *= 2;
+        1:   30:        service->undo_stack = (Repo**)realloc(service->undo_stack, service->undo_capacity * sizeof(Repo*));
+       1*:   31:        if (service->undo_stack == NULL) return;
+        1:   31-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   31-block  1
+        -:   32:    }
+        -:   33:
+       16:   34:    Repo *copie = copie_repo(service->oferte);
+       16:   34-block  0
+call    0 returned 16
+       16:   35:    service->undo_stack[service->undo_count++] = copie;
+        -:   36:}
+        -:   37:
+function adauga_oferta_service called 7 returned 100% blocks executed 100%
+        7:   38:int adauga_oferta_service(Service *service, Oferta *oferta) {
+        7:   39:    if (validare_oferta(oferta) == 0)
+        7:   39-block  0
+call    0 returned 7
+branch  1 taken 1 (fallthrough)
+branch  2 taken 6
+        1:   40:        return 0;
+        1:   40-block  0
+        -:   41:
+        6:   42:    salveaza_stare(service);
+        6:   42-block  0
+call    0 returned 6
+        -:   43:
+        6:   44:    if (adauga_oferta(service->oferte, oferta) == 0)
+call    0 returned 6
+branch  1 taken 1 (fallthrough)
+branch  2 taken 5
+        1:   45:        return 0;
+        1:   45-block  0
+        -:   46:
+        5:   47:    return 1;
+        5:   47-block  0
+        -:   48:}
+        -:   49:
+function modifica_tip_service called 5 returned 100% blocks executed 100%
+        5:   50:int modifica_tip_service(Service *service, int id, char *tip) {
+        5:   51:    if (validare_id(id) == 0 || validare_tip(tip) == 0)
+        5:   51-block  0
+call    0 returned 5
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:   51-block  1
+call    3 returned 4
+branch  4 taken 2 (fallthrough)
+branch  5 taken 2
+        3:   52:        return 0;
+        3:   52-block  0
+        -:   53:
+        2:   54:    salveaza_stare(service);
+        2:   54-block  0
+call    0 returned 2
+        -:   55:
+        2:   56:    if (modifica_tip(service->oferte, tip, id) == 0)
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   57:        return 0;
+        1:   57-block  0
+        -:   58:
+        1:   59:    return 1;
+        1:   59-block  0
+        -:   60:}
+        -:   61:
+function modifica_adresa_service called 4 returned 100% blocks executed 100%
+        4:   62:int modifica_adresa_service(Service *service, int id, char *adresa) {
+        4:   63:    if (validare_id(id) == 0 || validare_adresa(adresa) == 0)
+        4:   63-block  0
+call    0 returned 4
+branch  1 taken 3 (fallthrough)
+branch  2 taken 1
+        3:   63-block  1
+call    3 returned 3
+branch  4 taken 1 (fallthrough)
+branch  5 taken 2
+        2:   64:        return 0;
+        2:   64-block  0
+        -:   65:
+        2:   66:    salveaza_stare(service);
+        2:   66-block  0
+call    0 returned 2
+        -:   67:
+        2:   68:    if (modifica_adresa(service->oferte, adresa, id) == 0)
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   69:        return 0;
+        1:   69-block  0
+        -:   70:
+        1:   71:    return 1;
+        1:   71-block  0
+        -:   72:}
+        -:   73:
+function modifica_pret_service called 3 returned 100% blocks executed 100%
+        3:   74:int modifica_pret_service(Service *service, int id, int pret) {
+        3:   75:    if (validare_id(id) == 0 || validare_pret(pret) == 0)
+        3:   75-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0
+        3:   75-block  1
+call    3 returned 3
+branch  4 taken 1 (fallthrough)
+branch  5 taken 2
+        1:   76:        return 0;
+        1:   76-block  0
+        -:   77:
+        2:   78:    salveaza_stare(service);
+        2:   78-block  0
+call    0 returned 2
+        -:   79:
+        2:   80:    if (modifica_pret(service->oferte, pret, id) == 0)
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   81:        return 0;
+        1:   81-block  0
+        -:   82:
+        1:   83:    return 1;
+        1:   83-block  0
+        -:   84:}
+        -:   85:
+function modifica_suprafata_service called 3 returned 100% blocks executed 100%
+        3:   86:int modifica_suprafata_service(Service *service, int id, int suprafata) {
+        3:   87:    if (validare_id(id) == 0 || validare_suprafata(suprafata) == 0)
+        3:   87-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0
+        3:   87-block  1
+call    3 returned 3
+branch  4 taken 1 (fallthrough)
+branch  5 taken 2
+        1:   88:        return 0;
+        1:   88-block  0
+        -:   89:
+        2:   90:    salveaza_stare(service);
+        2:   90-block  0
+call    0 returned 2
+        -:   91:
+        2:   92:    if (modifica_suprafata(service->oferte, suprafata, id) == 0)
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:   93:        return 0;
+        1:   93-block  0
+        -:   94:
+        1:   95:    return 1;
+        1:   95-block  0
+        -:   96:}
+        -:   97:
+function sterge_oferta_service called 3 returned 100% blocks executed 100%
+        3:   98:int sterge_oferta_service(Service *service, int id) {
+        3:   99:    if (validare_id(id) == 0)
+        3:   99-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:  100:        return 0;
+        1:  100-block  0
+        -:  101:
+        2:  102:    salveaza_stare(service);
+        2:  102-block  0
+call    0 returned 2
+        -:  103:
+        2:  104:    if (sterge_oferta(service->oferte,id) == 0)
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:  105:        return 0;
+        1:  105-block  0
+        -:  106:
+        1:  107:    return 1;
+        1:  107-block  0
+        -:  108:}
+        -:  109:
+function oferte_ordonate_pret called 2 returned 100% blocks executed 100%
+        2:  110:Repo* oferte_ordonate_pret(Service *service, int mod) {
+        2:  111:    Repo *repo_nou = copie_repo(service->oferte);
+        2:  111-block  0
+call    0 returned 2
+        -:  112:
+        4:  113:    for (int i = 0; i < repo_nou->lungime - 1; i++) {
+        2:  113-block  0
+        4:  113-block  1
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        4:  114:        for (int j = i + 1; j < repo_nou->lungime; j++) {
+        2:  114-block  0
+        2:  114-block  1
+        4:  114-block  2
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        2:  115:            if ((mod == 0 && repo_nou->oferte[i]->pret > repo_nou->oferte[j]->pret) ||
+        2:  115-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  115-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        2:  115-block  2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 1
+        1:  116:                (mod == 1 && repo_nou->oferte[i]->pret < repo_nou->oferte[j]->pret)) {
+        1:  116-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  117:                Oferta *oferta = repo_nou->oferte[i];
+        1:  118:                repo_nou->oferte[i] = repo_nou->oferte[j];
+        1:  119:                repo_nou->oferte[j] = oferta;
+        1:  119-block  0
+        -:  120:                }
+        -:  121:        }
+        -:  122:    }
+        -:  123:
+        2:  124:    return repo_nou;
+        2:  124-block  0
+        -:  125:}
+        -:  126:
+function oferte_ordonate_tip called 2 returned 100% blocks executed 100%
+        2:  127:Repo* oferte_ordonate_tip(Service *service, int mod) {
+        2:  128:    Repo *repo_nou = copie_repo(service->oferte);
+        2:  128-block  0
+call    0 returned 2
+        -:  129:
+        4:  130:    for (int i = 0; i < repo_nou->lungime - 1; i++) {
+        2:  130-block  0
+        4:  130-block  1
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        4:  131:        for (int j = i + 1; j < repo_nou->lungime; j++) {
+        2:  131-block  0
+        2:  131-block  1
+        4:  131-block  2
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        2:  132:            if ((mod == 0 && strcmp(repo_nou->oferte[i]->tip, repo_nou->oferte[j]->tip) > 0) ||
+        2:  132-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  132-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        2:  132-block  2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 1
+        1:  133:                (mod == 1 && strcmp(repo_nou->oferte[i]->tip, repo_nou->oferte[j]->tip) < 0)) {
+        1:  133-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:  134:                Oferta *oferta = repo_nou->oferte[i];
+        1:  135:                repo_nou->oferte[i] = repo_nou->oferte[j];
+        1:  136:                repo_nou->oferte[j] = oferta;
+        1:  136-block  0
+        -:  137:                }
+        -:  138:        }
+        -:  139:    }
+        -:  140:
+        2:  141:    return repo_nou;
+        2:  141-block  0
+        -:  142:}
+        -:  143:
+function oferte_filtrate_tip called 3 returned 100% blocks executed 100%
+        3:  144:Repo* oferte_filtrate_tip(Service *service, char *tip) {
+        3:  145:    if (validare_tip(tip) == 0)
+        3:  145-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:  146:        return NULL;
+        1:  146-block  0
+        -:  147:
+        2:  148:    Repo *repo_nou = creeazaRepo();
+        2:  148-block  0
+call    0 returned 2
+        -:  149:
+        6:  150:    for (int i = 0; i < service->oferte->lungime; i++) {
+        4:  150-block  0
+        6:  150-block  1
+branch  0 taken 4
+branch  1 taken 2 (fallthrough)
+        4:  151:        if (strcmp(service->oferte->oferte[i]->tip, tip) == 0) {
+        4:  151-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        -:  152:            // 🔥 Create a new copy of the oferta object instead of copying the pointer
+        1:  153:            Oferta *copie = creeaza_oferta(
+        1:  154:                service->oferte->oferte[i]->id,
+        1:  155:                service->oferte->oferte[i]->tip,
+        1:  156:                service->oferte->oferte[i]->suprafata,
+        1:  157:                service->oferte->oferte[i]->adresa,
+        1:  158:                service->oferte->oferte[i]->pret
+        1:  158-block  0
+call    0 returned 1
+        -:  159:            );
+        1:  160:            repo_nou->oferte[repo_nou->lungime] = copie;
+        1:  161:            repo_nou->lungime++;
+        -:  162:        }
+        -:  163:    }
+        -:  164:
+        2:  165:    return repo_nou;
+        2:  165-block  0
+        -:  166:}
+        -:  167:
+function undo_service called 3 returned 100% blocks executed 100%
+        3:  168:void undo_service(Service *service) {
+        3:  169:    if (service->undo_count == 0 || service == NULL)
+        3:  169-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:  169-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 2
+        1:  170:        return;
+        1:  170-block  0
+        -:  171:
+        2:  172:    distruge_repo(service->oferte);
+        2:  172-block  0
+call    0 returned 2
+        -:  173:
+        2:  174:    service->undo_count--;
+        2:  175:    service->oferte = service->undo_stack[service->undo_count];
+        -:  176:
+        2:  177:    service->undo_stack[service->undo_count] = NULL;
+        -:  178:}

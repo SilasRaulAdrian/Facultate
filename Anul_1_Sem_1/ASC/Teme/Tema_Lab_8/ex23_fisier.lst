@@ -1,0 +1,70 @@
+     1                                  bits 32
+     2                                  
+     3                                  global start        
+     4                                  
+     5                                  ; Declarații de funcții externe necesare pentru program
+     6                                  extern exit, fopen, fprintf, fclose
+     7                                  import exit msvcrt.dll  
+     8                                  import fopen msvcrt.dll  
+     9                                  import fprintf msvcrt.dll
+    10                                  import fclose msvcrt.dll
+    11                                  
+    12                                  ; Secțiunea de date: variabile necesare programului
+    13                                  segment data use32 class=data
+    14 00000000 6E756D61725F686578-         nume_fisier db "numar_hex.txt", 0 ; Numele fișierului care va fi creat
+    14 00000009 2E74787400         
+    15 0000000E 7700                        mod_acces db "w", 0               ; Modul de deschidere a fișierului (w - scriere)
+    16 00000010 256300                      text_format db "%c", 0          ; Formatul pentru fprintf: un caracter urmat de newline
+    17 00000013 303132333435363738-         hex_digits db "0123456789ABCDEF"  ; Cifrele hexazecimale
+    17 0000001C 39414243444546     
+    18 00000023 CDAB3412                    numar dd 0x1234ABCD               ; Numărul pe 32 de biți ce va fi scris în fișier
+    19 00000027 FFFFFFFF                    descriptor_fis dd -1              ; Descriptorul fișierului
+    20                                  
+    21                                  ; Codul programului începe aici
+    22                                  segment code use32 class=code
+    23                                      start:
+    24                                          ; Apelăm fopen pentru a crea/deschide fișierul
+    25                                          ; eax = fopen(nume_fisier, mod_acces)
+    26 00000000 68[0E000000]                    push dword mod_acces     
+    27 00000005 68[00000000]                    push dword nume_fisier
+    28 0000000A FF15[00000000]                  call [fopen]
+    29 00000010 83C408                          add esp, 4*2                ; Eliberăm parametrii de pe stivă
+    30                                  
+    31 00000013 A3[27000000]                    mov [descriptor_fis], eax   ; Salvăm descriptorul fișierului în variabila descriptor_fis
+    32                                          
+    33                                          ; Verificăm dacă fopen a creat cu succes fișierul (dacă EAX != 0)
+    34 00000018 83F800                          cmp eax, 0
+    35 0000001B 7441                            je final
+    36                                          
+    37                                          ; Lucrăm cu numărul și scriem fiecare cifră hexazecimală în fișier
+    38 0000001D A1[23000000]                    mov eax, [numar]            ; Încărcăm numărul în EAX
+    39 00000022 B908000000                      mov ecx, 8                  ; 8 cifre hexazecimale (32 biți = 8 cifre)
+    40                                  
+    41                                      hex_loop:
+    42 00000027 89C2                            mov edx, eax                ; Copiem numărul în EDX
+    43 00000029 C1EA1C                          shr edx, 28                 ; Mutăm cei mai semnificativi 4 biți la dreapta
+    44 0000002C 83E20F                          and edx, 0xF                ; Masca pentru a obține doar 4 biți (o cifră hexazecimală)
+    45                                          
+    46                                          ; Obținem cifra ca ASCII din hex_digits
+    47 0000002F 8A92[13000000]                  mov dl, [hex_digits + edx]  ; DL = caracterul corespunzător cifrei hexazecimale
+    48                                          
+    49                                          ; Scriem cifra în fișier folosind fprintf
+    50 00000035 52                              push edx                    ; Parametrul: caracterul (DL)
+    51 00000036 68[10000000]                    push dword text_format      ; Parametrul: formatul (%c\n)
+    52 0000003B FF35[27000000]                  push dword [descriptor_fis] ; Parametrul: descriptorul fișierului
+    53 00000041 FF15[00000000]                  call [fprintf]              ; Apelăm fprintf
+    54 00000047 83C40C                          add esp, 4*3                ; Eliberăm parametrii de pe stivă
+    55                                          
+    56                                          ; Pregătim pentru următoarea cifră
+    57 0000004A C1E004                          shl eax, 4                  ; Eliminăm cei mai semnificativi 4 biți
+    58 0000004D E2D8                            loop hex_loop               ; Repetăm pentru toate cele 8 cifre
+    59                                  
+    60                                          ; Apelăm fclose pentru a închide fișierul
+    61 0000004F FF35[27000000]                  push dword [descriptor_fis] ; Parametrul: descriptorul fișierului
+    62 00000055 FF15[00000000]                  call [fclose]
+    63 0000005B 83C404                          add esp, 4
+    64                                  
+    65                                      final:
+    66                                          ; Ieșim din program
+    67 0000005E 6A00                            push    dword 0             ; Codul de ieșire: 0
+    68 00000060 FF15[00000000]                  call    [exit]

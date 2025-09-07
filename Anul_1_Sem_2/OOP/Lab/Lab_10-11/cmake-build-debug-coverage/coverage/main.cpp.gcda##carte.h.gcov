@@ -1,0 +1,213 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/domain/carte.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\main.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_CARTE_H
+        -:    2:#define LAB_6_7_CARTE_H
+        -:    3:
+        -:    4:#include <string>
+        -:    5:#include <iostream>
+        -:    6:
+        -:    7:class Carte {
+        -:    8:private:
+        -:    9:    mutable std::string titlu;
+        -:   10:    mutable std::string autor;
+        -:   11:    mutable std::string gen;
+        -:   12:    mutable int an_aparitie;
+        -:   13:    int id;
+        -:   14:
+        -:   15:public:
+        -:   16:    /**
+        -:   17:     * Constructorul clasei Carte
+        -:   18:     * @param id Id-ul cartii
+        -:   19:     * @param titlu Titlul cartii
+        -:   20:     * @param autor Autorul cartii
+        -:   21:     * @param gen Genul cartii
+        -:   22:     * @param an_aparitie Anul aparitiei cartii
+        -:   23:     */
+function _ZN5CarteC1EiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_i called 194 returned 100% blocks executed 62%
+      194:   24:    Carte(int id, const std::string &titlu, const std::string &autor, const std::string &gen, int an_aparitie) :
+      194:   25:        id(id), titlu(titlu), autor(autor), gen(gen), an_aparitie(an_aparitie) {}
+      194:   25-block  0
+call    0 returned 194
+call    1 returned 194
+branch  2 taken 194 (fallthrough)
+branch  3 taken 0 (throw)
+      194:   25-block  1
+call    4 returned 194
+branch  5 taken 194 (fallthrough)
+branch  6 taken 0 (throw)
+      194:   25-block  2
+    $$$$$:   25-block  3
+call    7 never executed
+    $$$$$:   25-block  4
+call    8 never executed
+        -:   26:
+        -:   27:    /**
+        -:   28:     * Constructorul de copiere al clasei Carte
+        -:   29:     * @param other Obiectul Carte de copiat
+        -:   30:     */
+function _ZN5CarteC1ERKS_ called 185 returned 100% blocks executed 55%
+      185:   31:    Carte(const Carte &other) :
+      185:   32:        id(other.id), titlu(other.titlu), autor(other.autor), gen(other.gen), an_aparitie(other.an_aparitie) {
+      185:   32-block  0
+call    0 returned 185
+call    1 returned 185
+branch  2 taken 185 (fallthrough)
+branch  3 taken 0 (throw)
+      185:   32-block  1
+call    4 returned 185
+branch  5 taken 185 (fallthrough)
+branch  6 taken 0 (throw)
+      185:   33:        std::cout << "Constructor de copiere apelat\n";
+      185:   33-block  0
+call    0 returned 185
+branch  1 taken 185 (fallthrough)
+branch  2 taken 0 (throw)
+      185:   34:    }
+      185:   34-block  0
+    $$$$$:   34-block  1
+call    0 never executed
+    $$$$$:   34-block  2
+call    1 never executed
+    $$$$$:   34-block  3
+call    2 never executed
+        -:   35:
+        -:   36:    /**
+        -:   37:     * Suprascrierea operatorului de atribuire
+        -:   38:     * @param other Obiectul Carte de copiat
+        -:   39:     * @return Obiectul curent
+        -:   40:     */
+function _ZN5CarteaSERKS_ called 911 returned 100% blocks executed 100%
+      911:   41:    Carte &operator=(const Carte &other) {
+      911:   42:        if (this != &other) {
+      911:   42-block  0
+branch  0 taken 910 (fallthrough)
+branch  1 taken 1
+      910:   43:            id = other.id;
+      910:   44:            titlu = other.titlu;
+      910:   44-block  0
+call    0 returned 910
+      910:   45:            autor = other.autor;
+call    0 returned 910
+      910:   46:            gen = other.gen;
+call    0 returned 910
+      910:   47:            an_aparitie = other.an_aparitie;
+        -:   48:        }
+      911:   49:        std::cout << "Operator de atribuire apelat\n";
+      911:   49-block  0
+call    0 returned 911
+      911:   50:        return *this;
+        -:   51:    }
+        -:   52:
+        -:   53:    /**
+        -:   54:     * Suprascrierea operatorului de comparare
+        -:   55:     * @param other Obiectul Carte cu care se compara
+        -:   56:     * @return True daca cartile sunt egale, false altfel
+        -:   57:     */
+function _ZNK5CarteeqERKS_ called 6435 returned 100% blocks executed 100%
+     6435:   58:    bool operator==(const Carte &other) const {
+       22:   59:        return this->id == other.id &&
+branch  0 taken 21 (fallthrough)
+branch  1 taken 1
+       43:   60:               this->titlu == other.titlu &&
+       22:   60-block  0
+call    0 returned 22
+branch  1 taken 21 (fallthrough)
+branch  2 taken 0
+       42:   61:               this->autor == other.autor &&
+       21:   61-block  0
+call    0 returned 21
+branch  1 taken 21 (fallthrough)
+branch  2 taken 0
+     6478:   62:               this->gen == other.gen &&
+     6435:   62-block  0
+branch  0 taken 22 (fallthrough)
+branch  1 taken 6413
+       21:   62-block  1
+call    2 returned 21
+       21:   62-block  2
+     6414:   62-block  3
+     6456:   63:               this->an_aparitie == other.an_aparitie;
+       21:   63-block  0
+branch  0 taken 21 (fallthrough)
+branch  1 taken 0
+     6435:   63-block  1
+        -:   64:    }
+        -:   65:
+        -:   66:    /**
+        -:   67:     * Constructorul default al clasei Carte
+        -:   68:     */
+function _ZN5CarteC1Ev called 1491 returned 100% blocks executed 100%
+     1491:   69:    Carte() = default;
+     1491:   69-block  0
+call    0 returned 1491
+call    1 returned 1491
+call    2 returned 1491
+        -:   70:
+        -:   71:    /**
+        -:   72:     * Destructorul clasei Carte
+        -:   73:     */
+function _ZN5CarteD1Ev called 1870 returned 100% blocks executed 100%
+     1870:   74:    ~Carte()  = default;
+     1870:   74-block  0
+call    0 returned 1870
+call    1 returned 1870
+call    2 returned 1870
+        -:   75:
+        -:   76:    /**
+        -:   77:     * Getter pentru id
+        -:   78:     * @return Id-ul cartii
+        -:   79:     */
+        -:   80:    const int getId() const;
+        -:   81:
+        -:   82:    /**
+        -:   83:     * Getter pentru titlu
+        -:   84:     * @return Titlul cartii
+        -:   85:     */
+        -:   86:    const std::string &getTitlu() const;
+        -:   87:
+        -:   88:    /**
+        -:   89:     * Getter pentru autor
+        -:   90:     * @return Autorul cartii
+        -:   91:     */
+        -:   92:    const std::string &getAutor() const;
+        -:   93:
+        -:   94:    /**
+        -:   95:     * Getter pentru gen
+        -:   96:     * @return Genul cartii
+        -:   97:     */
+        -:   98:    const std::string &getGen() const;
+        -:   99:
+        -:  100:    /**
+        -:  101:     * Getter pentru an_aparitie
+        -:  102:     * @return Anul aparitiei cartii
+        -:  103:     */
+        -:  104:    const int getAnAparitie() const;
+        -:  105:
+        -:  106:    /**
+        -:  107:     * Setter pentru titlu
+        -:  108:     * @param newTitlu Noul titlu al cartii
+        -:  109:     */
+        -:  110:    void setTitlu(const std::string &newTitlu) const;
+        -:  111:
+        -:  112:    /**
+        -:  113:     * Setter pentru autor
+        -:  114:     * @param newAutor Noul autor al cartii
+        -:  115:     */
+        -:  116:    void setAutor(const std::string &newAutor) const;
+        -:  117:
+        -:  118:    /**
+        -:  119:     * Setter pentru gen
+        -:  120:     * @param newGen Noul gen al cartii
+        -:  121:     */
+        -:  122:    void setGen(const std::string &newGen) const;
+        -:  123:
+        -:  124:    /**
+        -:  125:     * Setter pentru an_aparitie
+        -:  126:     * @param newAnAparitie Noul an de aparitie al cartii
+        -:  127:     */
+        -:  128:    void setAnAparitie(int newAnAparitie) const;
+        -:  129:};
+        -:  130:
+        -:  131:#endif //LAB_6_7_CARTE_H

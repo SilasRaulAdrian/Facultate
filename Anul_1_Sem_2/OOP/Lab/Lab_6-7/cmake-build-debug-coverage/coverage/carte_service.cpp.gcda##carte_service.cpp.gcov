@@ -1,0 +1,856 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/service/carte_service.cpp
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/service/carte_service.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/service/carte_service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "carte_service.h"
+        -:    2:#include "../exceptions/exceptii.h"
+        -:    3:#include <algorithm>
+        -:    4:
+function _ZN12CarteService11adaugaCarteEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_S7_i called 17 returned 94% blocks executed 64%
+       17:    5:void CarteService::adaugaCarte(int id, const std::string &titlu, const std::string &autor, const std::string &gen, int an_aparitie) {
+       17:    6:    if (id <= 0 || titlu.empty() || autor.empty() || gen.empty() || an_aparitie <= 0) {
+       17:    6-block  0
+branch  0 taken 16 (fallthrough)
+branch  1 taken 1
+       16:    6-block  1
+call    2 returned 16
+branch  3 taken 16 (fallthrough)
+branch  4 taken 0
+       16:    6-block  2
+call    5 returned 16
+branch  6 taken 16 (fallthrough)
+branch  7 taken 0
+       16:    6-block  3
+call    8 returned 16
+branch  9 taken 16 (fallthrough)
+branch 10 taken 0
+       16:    6-block  4
+branch 11 taken 0 (fallthrough)
+branch 12 taken 16
+        1:    6-block  5
+       16:    6-block  6
+       17:    6-block  7
+branch 13 taken 1 (fallthrough)
+branch 14 taken 16
+        3:    7:        throw ValidationException("Datele introduse sunt invalide.");
+        1:    7-block  0
+call    0 returned 1
+        1:    7-block  1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:    7-block  2
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:    7-block  3
+call    7 returned 1
+        1:    7-block  4
+call    8 returned 1
+    $$$$$:    7-block  5
+call    9 never executed
+    $$$$$:    7-block  6
+    $$$$$:    7-block  7
+    $$$$$:    7-block  8
+call   10 never executed
+        -:    8:    }
+       16:    9:    Carte carte(id, titlu, autor, gen, an_aparitie);
+       16:    9-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:   10:    repo.adaugaCarte(carte);
+       16:   10-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:   11:    undoActions.push_back(std::make_unique<UndoAdaugaCarte>(repo, carte));
+       16:   11-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:   11-block  1
+call    3 returned 16
+call    4 returned 16
+branch  5 taken 16 (fallthrough)
+branch  6 taken 0 (throw)
+       16:   11-block  2
+call    7 returned 16
+call    8 returned 16
+    $$$$$:   11-block  3
+call    9 never executed
+    $$$$$:   11-block  4
+call   10 never executed
+    $$$$$:   11-block  5
+    $$$$$:   11-block  6
+       16:   12:}
+call    0 returned 16
+    $$$$$:   12-block  0
+call    1 never executed
+        -:   13:
+function _ZN12CarteService11stergeCarteEi called 1 returned 100% blocks executed 59%
+        1:   14:bool CarteService::stergeCarte(int id) {
+        1:   15:    Carte c = repo.cautaCarte(getTitluById(id));
+        1:   15-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   15-block  2
+call    6 returned 1
+    $$$$$:   15-block  3
+call    7 never executed
+    $$$$$:   15-block  4
+        1:   16:    bool rezultat = repo.stergeCarte(c.getId());
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   17:    if (rezultat)
+        1:   17-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   18:        undoActions.push_back(std::make_unique<UndoStergeCarte>(repo, c));
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   18-block  2
+call    7 returned 1
+call    8 returned 1
+    $$$$$:   18-block  3
+call    9 never executed
+    $$$$$:   18-block  4
+call   10 never executed
+    $$$$$:   18-block  5
+    $$$$$:   18-block  6
+        1:   19:    return rezultat;
+        1:   19-block  0
+        1:   20:}
+        1:   20-block  0
+call    0 returned 1
+    $$$$$:   20-block  1
+call    1 never executed
+        -:   21:
+function _ZN12CarteService13modificaTitluEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 59%
+        1:   22:bool CarteService::modificaTitlu(int id, const std::string &newTitlu) {
+        1:   23:    Carte carteVeche = repo.cautaCarte(getTitluById(id));
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  2
+call    6 returned 1
+    $$$$$:   23-block  3
+call    7 never executed
+    $$$$$:   23-block  4
+        1:   24:    bool rezultat = repo.modificaTitlu(id, newTitlu);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25:    if (rezultat) {
+        1:   25-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   26:        undoActions.push_back(std::make_unique<UndoModificaCarte>(repo, carteVeche, Carte(id, newTitlu, carteVeche.getAutor(), carteVeche.getGen(), carteVeche.getAnAparitie())));
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   26-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   26-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   26-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   26-block  5
+call   15 returned 1
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   26-block  6
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+    $$$$$:   26-block  7
+call   22 never executed
+    $$$$$:   26-block  8
+call   23 never executed
+    $$$$$:   26-block  9
+call   24 never executed
+    $$$$$:   26-block 10
+    $$$$$:   26-block 11
+    $$$$$:   26-block 12
+        -:   27:    }
+        1:   28:    return rezultat;
+        1:   28-block  0
+        1:   29:}
+        1:   29-block  0
+call    0 returned 1
+    $$$$$:   29-block  1
+call    1 never executed
+        -:   30:
+function _ZN12CarteService13modificaAutorEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 59%
+        1:   31:bool CarteService::modificaAutor(int id, const std::string &newAutor) {
+        1:   32:    Carte carteVeche = repo.cautaCarte(getTitluById(id));
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   32-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   32-block  2
+call    6 returned 1
+    $$$$$:   32-block  3
+call    7 never executed
+    $$$$$:   32-block  4
+        1:   33:    bool rezultat = repo.modificaAutor(id, newAutor);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34:    if (rezultat) {
+        1:   34-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   35:        undoActions.push_back(std::make_unique<UndoModificaCarte>(repo, carteVeche, Carte(id, carteVeche.getTitlu(), newAutor, carteVeche.getGen(), carteVeche.getAnAparitie())));
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   35-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   35-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   35-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   35-block  5
+call   15 returned 1
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   35-block  6
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+    $$$$$:   35-block  7
+call   22 never executed
+    $$$$$:   35-block  8
+call   23 never executed
+    $$$$$:   35-block  9
+call   24 never executed
+    $$$$$:   35-block 10
+    $$$$$:   35-block 11
+    $$$$$:   35-block 12
+        -:   36:    }
+        1:   37:    return rezultat;
+        1:   37-block  0
+        1:   38:}
+        1:   38-block  0
+call    0 returned 1
+    $$$$$:   38-block  1
+call    1 never executed
+        -:   39:
+function _ZN12CarteService11modificaGenEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 59%
+        1:   40:bool CarteService::modificaGen(int id, const std::string &newGen) {
+        1:   41:    Carte carteVeche = repo.cautaCarte(getTitluById(id));
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   41-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   41-block  2
+call    6 returned 1
+    $$$$$:   41-block  3
+call    7 never executed
+    $$$$$:   41-block  4
+        1:   42:    bool rezultat = repo.modificaGen(id, newGen);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   43:    if (rezultat) {
+        1:   43-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   44:        undoActions.push_back(std::make_unique<UndoModificaCarte>(repo, carteVeche, Carte(id, carteVeche.getTitlu(), carteVeche.getAutor(), newGen, carteVeche.getAnAparitie())));
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   44-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   44-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   44-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   44-block  5
+call   15 returned 1
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   44-block  6
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+    $$$$$:   44-block  7
+call   22 never executed
+    $$$$$:   44-block  8
+call   23 never executed
+    $$$$$:   44-block  9
+call   24 never executed
+    $$$$$:   44-block 10
+    $$$$$:   44-block 11
+    $$$$$:   44-block 12
+        -:   45:    }
+        1:   46:    return rezultat;
+        1:   46-block  0
+        1:   47:}
+        1:   47-block  0
+call    0 returned 1
+    $$$$$:   47-block  1
+call    1 never executed
+        -:   48:
+function _ZN12CarteService18modificaAnAparitieEii called 1 returned 100% blocks executed 59%
+        1:   49:bool CarteService::modificaAnAparitie(int id, int newAnAparitie) {
+        1:   50:    Carte carteVeche = repo.cautaCarte(getTitluById(id));
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   50-block  2
+call    6 returned 1
+    $$$$$:   50-block  3
+call    7 never executed
+    $$$$$:   50-block  4
+        1:   51:    bool rezultat = repo.modificaAnAparitie(id, newAnAparitie);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52:    if (rezultat) {
+        1:   52-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   53:        undoActions.push_back(std::make_unique<UndoModificaCarte>(repo, carteVeche, Carte(id, carteVeche.getTitlu(), carteVeche.getAutor(), carteVeche.getGen(), newAnAparitie)));
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   53-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   53-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   53-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   53-block  4
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   53-block  5
+call   15 returned 1
+call   16 returned 1
+branch 17 taken 1 (fallthrough)
+branch 18 taken 0 (throw)
+        1:   53-block  6
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+    $$$$$:   53-block  7
+call   22 never executed
+    $$$$$:   53-block  8
+call   23 never executed
+    $$$$$:   53-block  9
+call   24 never executed
+    $$$$$:   53-block 10
+    $$$$$:   53-block 11
+    $$$$$:   53-block 12
+        -:   54:    }
+        1:   55:    return rezultat;
+        1:   55-block  0
+        1:   56:}
+        1:   56-block  0
+call    0 returned 1
+    $$$$$:   56-block  1
+call    1 never executed
+        -:   57:
+function _ZN12CarteService8getCartiEv called 10 returned 100% blocks executed 100%
+       10:   58:Lista<Carte> &CarteService::getCarti() {
+       10:   59:    return repo.getCarti();
+       10:   59-block  0
+call    0 returned 10
+        -:   60:}
+        -:   61:
+function _ZNK12CarteService10cautaCarteERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 9 returned 78% blocks executed 100%
+        9:   62:Carte CarteService::cautaCarte(const std::string &titlu) const {
+        9:   63:    return repo.cautaCarte(titlu);
+        9:   63-block  0
+call    0 returned 7
+        -:   64:}
+        -:   65:
+function _ZNK12CarteService18filtreazaDupaTitluERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 90%
+        2:   66:Lista<Carte> CarteService::filtreazaDupaTitlu(const std::string &titlu) const {
+        2:   67:    Lista<Carte> rezultat;
+        2:   67-block  0
+call    0 returned 2
+        2:   68:    auto &carti = repo.getCarti();
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   69:
+function _ZZNK12CarteService18filtreazaDupaTitluERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK5CarteE_clESA_ called 6 returned 100% blocks executed 100%
+        2:   70:    std::copy_if(carti.begin(), carti.end(), std::back_inserter(rezultat), [&titlu](const Carte &carte) {
+        2:   70-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   70-block  1
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        6:   71:        return carte.getTitlu() == titlu;
+        6:   71-block  0
+call    0 returned 6
+call    1 returned 6
+        -:   72:    });
+        -:   73:
+        2:   74:    return rezultat;
+        2:   74-block  0
+        2:   74-block  1
+    =====:   75:}
+    $$$$$:   75-block  0
+call    0 never executed
+        -:   76:
+function _ZNK12CarteService15filtreazaDupaAnEi called 2 returned 100% blocks executed 90%
+        2:   77:Lista<Carte> CarteService::filtreazaDupaAn(int an) const{
+        2:   78:    Lista<Carte> rezultat;
+        2:   78-block  0
+call    0 returned 2
+        2:   79:    auto &carti = repo.getCarti();
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   80:
+function _ZZNK12CarteService15filtreazaDupaAnEiENKUlRK5CarteE_clES2_ called 6 returned 100% blocks executed 100%
+        2:   81:    std::copy_if(carti.begin(), carti.end(), std::back_inserter(rezultat), [an](const Carte &carte) {
+        2:   81-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   81-block  1
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+        6:   82:        return carte.getAnAparitie() == an;
+        6:   82-block  0
+call    0 returned 6
+        -:   83:    });
+        -:   84:
+        2:   85:    return rezultat;
+        2:   85-block  0
+        2:   85-block  1
+    =====:   86:}
+    $$$$$:   86-block  0
+call    0 never executed
+        -:   87:
+function _ZN12CarteService17sorteazaDupaTitluEi called 2 returned 100% blocks executed 89%
+        2:   88:Lista<Carte> CarteService::sorteazaDupaTitlu(int mod) {
+        2:   89:    Lista<Carte> listaSortata = repo.getCarti();
+        2:   89-block  0
+call    0 returned 2
+call    1 returned 2
+        2:   90:    auto* v = listaSortata.getVector();
+call    0 returned 2
+        -:   91:
+function _ZZN12CarteService17sorteazaDupaTitluEiENKUlRK5CarteS2_E_clES2_S2_ called 6 returned 100% blocks executed 100%
+        2:   92:    std::sort(v, v + listaSortata.getSize(), [mod](const Carte &a, const Carte &b) {
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   93:        if (mod == 1) {
+        6:   93-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 3
+        3:   94:            return a.getTitlu() > b.getTitlu();
+        3:   94-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+        -:   95:        } else {
+        3:   96:            return a.getTitlu() < b.getTitlu();
+        3:   96-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+call    3 returned 3
+        -:   97:        }
+        -:   98:    });
+        -:   99:
+        2:  100:    return listaSortata;
+        2:  100-block  0
+        2:  100-block  1
+    =====:  101:}
+    $$$$$:  101-block  0
+call    0 never executed
+        -:  102:
+function _ZN12CarteService17sorteazaDupaAutorEi called 2 returned 100% blocks executed 89%
+        2:  103:Lista<Carte> CarteService::sorteazaDupaAutor(int mod) {
+        2:  104:    Lista<Carte> listaSortata = repo.getCarti();
+        2:  104-block  0
+call    0 returned 2
+call    1 returned 2
+        2:  105:    auto* v = listaSortata.getVector();
+call    0 returned 2
+        -:  106:
+function _ZZN12CarteService17sorteazaDupaAutorEiENKUlRK5CarteS2_E_clES2_S2_ called 6 returned 100% blocks executed 100%
+        2:  107:    std::sort(v, v + listaSortata.getSize(), [mod](const Carte &a, const Carte &b) {
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        6:  108:        if (mod == 1) {
+        6:  108-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 4
+        2:  109:            return a.getAutor() > b.getAutor();
+        2:  109-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+call    3 returned 2
+        -:  110:        } else {
+        4:  111:            return a.getAutor() < b.getAutor();
+        4:  111-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+call    3 returned 4
+        -:  112:        }
+        -:  113:    });
+        -:  114:
+        2:  115:    return listaSortata;
+        2:  115-block  0
+        2:  115-block  1
+    =====:  116:}
+    $$$$$:  116-block  0
+call    0 never executed
+        -:  117:
+function _ZN12CarteService25sorteazaDupaAnulAparitieiEi called 2 returned 100% blocks executed 89%
+        2:  118:Lista<Carte> CarteService::sorteazaDupaAnulAparitiei(int mod) {
+        2:  119:    Lista<Carte> listaSortata = repo.getCarti();
+        2:  119-block  0
+call    0 returned 2
+call    1 returned 2
+        2:  120:    auto* v = listaSortata.getVector();
+call    0 returned 2
+        -:  121:
+function _ZZN12CarteService25sorteazaDupaAnulAparitieiEiENKUlRK5CarteS2_E_clES2_S2_ called 9 returned 100% blocks executed 100%
+        2:  122:    std::sort(v, v + listaSortata.getSize(), [mod](const Carte &a, const Carte &b) {
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        9:  123:        if (mod == 1) {
+        9:  123-block  0
+branch  0 taken 4 (fallthrough)
+branch  1 taken 5
+        4:  124:            return a.getAnAparitie() > b.getAnAparitie();
+        4:  124-block  0
+call    0 returned 4
+call    1 returned 4
+        -:  125:        } else {
+        5:  126:            return a.getAnAparitie() < b.getAnAparitie();
+        5:  126-block  0
+call    0 returned 5
+call    1 returned 5
+        -:  127:        }
+        -:  128:    });
+        -:  129:
+        2:  130:    return listaSortata;
+        2:  130-block  0
+        2:  130-block  1
+    =====:  131:}
+    $$$$$:  131-block  0
+call    0 never executed
+        -:  132:
+function _ZN12CarteService15sorteazaDupaGenEi called 2 returned 100% blocks executed 89%
+        2:  133:Lista<Carte> CarteService::sorteazaDupaGen(int mod) {
+        2:  134:    Lista<Carte> listaSortata = repo.getCarti();
+        2:  134-block  0
+call    0 returned 2
+call    1 returned 2
+        2:  135:    auto* v = listaSortata.getVector();
+call    0 returned 2
+        -:  136:
+function _ZZN12CarteService15sorteazaDupaGenEiENKUlRK5CarteS2_E_clES2_S2_ called 9 returned 100% blocks executed 100%
+        2:  137:    std::sort(v, v + listaSortata.getSize(), [mod](const Carte &a, const Carte &b) {
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        9:  138:        if (mod == 1) {
+        9:  138-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 4
+        5:  139:            return a.getGen() > b.getGen();
+        5:  139-block  0
+call    0 returned 5
+call    1 returned 5
+call    2 returned 5
+call    3 returned 5
+        -:  140:        } else {
+        4:  141:            return a.getGen() < b.getGen();
+        4:  141-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+call    3 returned 4
+        -:  142:        }
+        -:  143:    });
+        -:  144:
+        2:  145:    return listaSortata;
+        2:  145-block  0
+        2:  145-block  1
+    =====:  146:}
+    $$$$$:  146-block  0
+call    0 never executed
+        -:  147:
+function _ZN12CarteService10golesteCosEv called 1 returned 100% blocks executed 100%
+        1:  148:void CarteService::golesteCos() {
+        1:  149:    cos.golesteCos();
+        1:  149-block  0
+call    0 returned 1
+        1:  150:}
+        -:  151:
+function _ZN12CarteService20adaugaCarteDupaTitluERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 6 returned 83% blocks executed 71%
+        6:  152:void CarteService::adaugaCarteDupaTitlu(const std::string &titlu) {
+        6:  153:    const auto& carte = cautaCarte(titlu);
+        6:  153-block  0
+call    0 returned 6
+branch  1 taken 5 (fallthrough)
+branch  2 taken 1 (throw)
+        5:  154:    cos.adaugaCarte(carte);
+        5:  154-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:  155:}
+        5:  155-block  0
+call    0 returned 5
+    $$$$$:  155-block  1
+call    1 never executed
+        -:  156:
+function _ZN12CarteService12genereazaCosEiR5ListaI5CarteE called 1 returned 100% blocks executed 100%
+        1:  157:void CarteService::genereazaCos(int numarCarti, Lista<Carte> &carti) {
+        1:  158:    cos.genereazaCos(numarCarti, carti);
+        1:  158-block  0
+call    0 returned 1
+        1:  159:}
+        -:  160:
+function _ZNK12CarteService9exportCsvERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 100%
+        1:  161:void CarteService::exportCsv(const std::string &numeFisier) const {
+        1:  162:    cos.exportCsv(numeFisier);
+        1:  162-block  0
+call    0 returned 1
+        1:  163:}
+        -:  164:
+function _ZNK12CarteService10getSizeCosEv called 6 returned 100% blocks executed 100%
+        6:  165:int CarteService::getSizeCos() const {
+        6:  166:    return cos.getSizeCos();
+        6:  166-block  0
+call    0 returned 6
+        -:  167:}
+        -:  168:
+function _ZNK12CarteService9getAllCosEv called 1 returned 100% blocks executed 100%
+        1:  169:const std::vector<Carte>& CarteService::getAllCos() const {
+        1:  170:    return cos.getAllCos();
+        1:  170-block  0
+call    0 returned 1
+        -:  171:}
+        -:  172:
+function _ZNK12CarteService13getCartiPeGenB5cxx11Ev called 1 returned 100% blocks executed 92%
+        1:  173:std::map<std::string, std::vector<Carte>> CarteService::getCartiPeGen() const {
+        1:  174:    std::map<std::string, std::vector<Carte>> cartiPeGen;
+        1:  174-block  0
+call    0 returned 1
+        1:  175:    const auto &carti = repo.getCarti();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  176:
+        5:  177:    for (const auto &carte : carti) {
+        1:  177-block  0
+call    0 returned 1
+call    1 returned 1
+        4:  177-block  1
+        5:  177-block  2
+branch  2 taken 4
+branch  3 taken 1 (fallthrough)
+        4:  178:        cartiPeGen[carte.getGen()].push_back(carte);
+        4:  178-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  178-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:  178-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        -:  179:    }
+        -:  180:
+        1:  181:    return cartiPeGen;
+        1:  181-block  0
+        1:  181-block  1
+    =====:  182:}
+    $$$$$:  182-block  0
+call    0 never executed
+        -:  183:
+function _ZN12CarteService4undoEv called 10 returned 90% blocks executed 92%
+       10:  184:void CarteService::undo() {
+       10:  185:    if (undoActions.empty()) {
+       10:  185-block  0
+call    0 returned 10
+branch  1 taken 1 (fallthrough)
+branch  2 taken 9
+        1:  186:        throw std::runtime_error("Nu exista actiuni de undo disponibile.");
+        1:  186-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  186-block  1
+call    4 returned 0
+    $$$$$:  186-block  2
+call    5 never executed
+        -:  187:    }
+        -:  188:
+        9:  189:    undoActions.back()->doUndo();
+        9:  189-block  0
+call    0 returned 9
+call    1 returned 9
+call    2 returned 9
+        9:  190:    undoActions.pop_back();
+call    0 returned 9
+        9:  191:}
+        -:  192:
+function _ZNK12CarteService12getTitluByIdB5cxx11Ei called 6 returned 83% blocks executed 67%
+        6:  193:std::string CarteService::getTitluById(int id) const {
+        9:  194:    for (const auto &carte : repo.getCarti()) {
+        6:  194-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+        3:  194-block  1
+        9:  194-block  2
+branch  3 taken 8
+branch  4 taken 1 (fallthrough)
+        8:  195:        if (carte.getId() == id) {
+        8:  195-block  0
+call    0 returned 8
+branch  1 taken 5 (fallthrough)
+branch  2 taken 3
+        5:  196:            return carte.getTitlu();
+        5:  196-block  0
+call    0 returned 5
+call    1 returned 5
+        -:  197:        }
+        -:  198:    }
+        -:  199:
+        1:  200:    throw std::runtime_error("Cartea cu id-ul " + std::to_string(id) + " nu a fost gasita.");
+        1:  200-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  200-block  1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  200-block  2
+call    8 returned 1
+branch  9 taken 1 (fallthrough)
+branch 10 taken 0 (throw)
+        1:  200-block  3
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+call   14 returned 0
+    $$$$$:  200-block  4
+call   15 never executed
+    $$$$$:  200-block  5
+call   16 never executed
+    $$$$$:  200-block  6
+call   17 never executed
+    $$$$$:  200-block  7
+    $$$$$:  200-block  8
+    $$$$$:  200-block  9
+    $$$$$:  200-block 10
+call   18 never executed
+        -:  201:}

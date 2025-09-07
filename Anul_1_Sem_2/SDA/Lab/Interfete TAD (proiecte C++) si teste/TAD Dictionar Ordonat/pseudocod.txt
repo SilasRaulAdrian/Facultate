@@ -1,0 +1,42 @@
+subalgoritm diferentaValoareMaxMin()
+    Daca vid() atunci
+        returneaza -1
+    SfDaca
+
+    nod <- radacina
+    minVal <- elemente[nod].second
+    maxVal <- elemente[nod].second
+
+    aloca stack[dimensiune]
+    top <- -1
+    top <- top + 1
+    stack[top] <- radacina
+
+    cat timp top != -1 executa
+        current <- stack[top]
+        top <- top - 1
+
+        val <- elemente[current].second
+
+        daca val < minVal atunci
+            minVal <- val
+        SfDaca
+
+        daca val > maxVal atunci
+            maxVal <- val
+        SfDaca
+
+        daca stanga[current] != -1 atunci
+            top <- top + 1
+            stack[top] <- stanga[current]
+        SfDaca
+
+        daca dreapta[current] != -1 atunci
+            top <- top + 1
+            stack[top] <- dreapta[current]
+        SfDaca
+    SfCatTimp
+
+    distruge stack
+    returneaza maxVal - minVal
+SfSubalgoritm

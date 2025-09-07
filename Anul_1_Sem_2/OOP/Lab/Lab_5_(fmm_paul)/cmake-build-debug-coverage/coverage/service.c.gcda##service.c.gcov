@@ -1,0 +1,449 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/service.c
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage/CMakeFiles/Lab_5__fmm_paul_.dir/service.c.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage/CMakeFiles/Lab_5__fmm_paul_.dir/service.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdlib.h>
+        -:    2:#include <string.h>
+        -:    3:#include "list.h"
+        -:    4:#include "oferte.h"
+        -:    5:#include "service.h"
+        -:    6:#include "validare.h"
+        -:    7:
+function creeazaService called 3 returned 100% blocks executed 100%
+        3:    8:Service *creeazaService() {
+        3:    9:    Service *service = (Service *)malloc(sizeof(Service));
+        3:   10:    service->oferte = creeazaLista((Distruge) distrugeOferta, (Copiaza) copiazaOferta);
+        3:   10-block  0
+call    0 returned 3
+        3:   11:    service->undoList = creeazaLista((Distruge) distrugeLista, (Copiaza) copiazaLista);
+call    0 returned 3
+        3:   12:    return service;
+        -:   13:}
+        -:   14:
+function distrugeService called 3 returned 100% blocks executed 100%
+        3:   15:void distrugeService(Service *service) {
+        3:   16:    distrugeLista(service->oferte);
+        3:   16-block  0
+call    0 returned 3
+        3:   17:    distrugeLista(service->undoList);
+call    0 returned 3
+        3:   18:    free(service);
+        3:   19:}
+        -:   20:
+function idExists called 6 returned 100% blocks executed 100%
+        6:   21:int idExists(Service *service, int id) {
+       10:   22:    for (int i = 0; i < service->oferte->lg; i++) {
+        6:   22-block  0
+        4:   22-block  1
+       10:   22-block  2
+branch  0 taken 5
+branch  1 taken 5 (fallthrough)
+        5:   23:        Oferta *oferta = (Oferta *)service->oferte->elems[i];
+        5:   24:        if (oferta->id == id) {
+        5:   24-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 4
+        1:   25:            return 1;
+        1:   25-block  0
+        -:   26:        }
+        -:   27:    }
+        -:   28:
+        5:   29:    return 0;
+        5:   29-block  0
+        -:   30:}
+        -:   31:
+function adaugaOferta called 5 returned 100% blocks executed 100%
+        5:   32:int adaugaOferta(Service *service, Oferta *oferta) {
+        5:   33:    if (validare_oferta(oferta) == 0 || idExists(service, oferta->id) == 1)
+        5:   33-block  0
+call    0 returned 5
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:   33-block  1
+call    3 returned 4
+branch  4 taken 0 (fallthrough)
+branch  5 taken 4
+        1:   34:        return 0;
+        1:   34-block  0
+        -:   35:
+        4:   36:    List *copy = copiazaLista(service->oferte);
+        4:   36-block  0
+call    0 returned 4
+        4:   37:    add(service->undoList, copy);
+call    0 returned 4
+        -:   38:
+        4:   39:    add(service->oferte, oferta);
+call    0 returned 4
+        4:   40:    return 1;
+        -:   41:}
+        -:   42:
+function modificaTip called 5 returned 100% blocks executed 100%
+        5:   43:int modificaTip(Service *service, int id, char *tip) {
+        5:   44:    if (validare_id(id) == 0 || validare_tip(tip) == 0)
+        5:   44-block  0
+call    0 returned 5
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:   44-block  1
+call    3 returned 4
+branch  4 taken 1 (fallthrough)
+branch  5 taken 3
+        2:   45:        return 0;
+        2:   45-block  0
+        -:   46:
+        3:   47:    List *copy = copiazaLista(service->oferte);
+        3:   47-block  0
+call    0 returned 3
+        3:   48:    add(service->undoList, copy);
+call    0 returned 3
+        -:   49:
+        5:   50:    for (int i = 0; i < service->oferte->lg; i++) {
+        2:   50-block  0
+        5:   50-block  1
+branch  0 taken 3
+branch  1 taken 2 (fallthrough)
+        3:   51:        Oferta *oferta = (Oferta *)service->oferte->elems[i];
+        3:   52:        if (oferta->id == id) {
+        3:   52-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   53:            free(oferta->tip);
+        1:   54:            oferta->tip = (char *)malloc(sizeof(char) * strlen(tip) + 1);
+        1:   55:            strcpy(oferta->tip, tip);
+        1:   56:            return 1;
+        1:   56-block  0
+        -:   57:        }
+        -:   58:    }
+        -:   59:
+        2:   60:    return 0;
+        2:   60-block  0
+        -:   61:}
+        -:   62:
+function modificaAdresa called 5 returned 100% blocks executed 100%
+        5:   63:int modificaAdresa(Service *service, int id, char *adresa) {
+        5:   64:    if (validare_id(id) == 0 || validare_adresa(adresa) == 0)
+        5:   64-block  0
+call    0 returned 5
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:   64-block  1
+call    3 returned 4
+branch  4 taken 1 (fallthrough)
+branch  5 taken 3
+        2:   65:        return 0;
+        2:   65-block  0
+        -:   66:
+        3:   67:    List *copy = copiazaLista(service->oferte);
+        3:   67-block  0
+call    0 returned 3
+        3:   68:    add(service->undoList, copy);
+call    0 returned 3
+        -:   69:
+        5:   70:    for (int i = 0; i < service->oferte->lg; i++) {
+        2:   70-block  0
+        5:   70-block  1
+branch  0 taken 3
+branch  1 taken 2 (fallthrough)
+        3:   71:        Oferta *oferta = (Oferta *)service->oferte->elems[i];
+        3:   72:        if (oferta->id == id) {
+        3:   72-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   73:            free(oferta->adresa);
+        1:   74:            oferta->adresa = (char *)malloc(sizeof(char) * strlen(adresa) + 1);
+        1:   75:            strcpy(oferta->adresa, adresa);
+        1:   76:            return 1;
+        1:   76-block  0
+        -:   77:        }
+        -:   78:    }
+        -:   79:
+        2:   80:    return 0;
+        2:   80-block  0
+        -:   81:}
+        -:   82:
+function modificaSuprafata called 5 returned 100% blocks executed 100%
+        5:   83:int modificaSuprafata(Service *service, int id, int suprafata) {
+        5:   84:    if (validare_id(id) == 0 || validare_suprafata(suprafata) == 0)
+        5:   84-block  0
+call    0 returned 5
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:   84-block  1
+call    3 returned 4
+branch  4 taken 1 (fallthrough)
+branch  5 taken 3
+        2:   85:        return 0;
+        2:   85-block  0
+        -:   86:
+        3:   87:    List *copy = copiazaLista(service->oferte);
+        3:   87-block  0
+call    0 returned 3
+        3:   88:    add(service->undoList, copy);
+call    0 returned 3
+        -:   89:
+        5:   90:    for (int i = 0; i < service->oferte->lg; i++) {
+        2:   90-block  0
+        5:   90-block  1
+branch  0 taken 3
+branch  1 taken 2 (fallthrough)
+        3:   91:        Oferta *oferta = (Oferta *)service->oferte->elems[i];
+        3:   92:        if (oferta->id == id) {
+        3:   92-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   93:            oferta->suprafata = suprafata;
+        1:   94:            return 1;
+        1:   94-block  0
+        -:   95:        }
+        -:   96:    }
+        -:   97:
+        2:   98:    return 0;
+        2:   98-block  0
+        -:   99:}
+        -:  100:
+function modificaPret called 5 returned 100% blocks executed 100%
+        5:  101:int modificaPret(Service *service, int id, int pret) {
+        5:  102:    if (validare_id(id) == 0 || validare_pret(pret) == 0)
+        5:  102-block  0
+call    0 returned 5
+branch  1 taken 4 (fallthrough)
+branch  2 taken 1
+        4:  102-block  1
+call    3 returned 4
+branch  4 taken 1 (fallthrough)
+branch  5 taken 3
+        2:  103:        return 0;
+        2:  103-block  0
+        -:  104:
+        3:  105:    List *copy = copiazaLista(service->oferte);
+        3:  105-block  0
+call    0 returned 3
+        3:  106:    add(service->undoList, copy);
+call    0 returned 3
+        -:  107:
+        5:  108:    for (int i = 0; i < service->oferte->lg; i++) {
+        2:  108-block  0
+        5:  108-block  1
+branch  0 taken 3
+branch  1 taken 2 (fallthrough)
+        3:  109:        Oferta *oferta = (Oferta *)service->oferte->elems[i];
+        3:  110:        if (oferta->id == id) {
+        3:  110-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:  111:            oferta->pret = pret;
+        1:  112:            return 1;
+        1:  112-block  0
+        -:  113:        }
+        -:  114:    }
+        -:  115:
+        2:  116:    return 0;
+        2:  116-block  0
+        -:  117:}
+        -:  118:
+function stergeOferta called 3 returned 100% blocks executed 100%
+        3:  119:int stergeOferta(Service *service, int id) {
+        3:  120:    if (validare_id(id) == 0)
+        3:  120-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:  121:        return 0;
+        1:  121-block  0
+        -:  122:
+        2:  123:    List *copy = copiazaLista(service->oferte);
+        2:  123-block  0
+call    0 returned 2
+        2:  124:    add(service->undoList, copy);
+call    0 returned 2
+        -:  125:
+        3:  126:    for (int i = 0; i < service->oferte->lg; i++) {
+        1:  126-block  0
+        3:  126-block  1
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        2:  127:        Oferta *oferta = (Oferta *)service->oferte->elems[i];
+        2:  128:        if (oferta->id == id) {
+        2:  128-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  129:            service->oferte->distruge(service->oferte->elems[i]);
+        1:  129-block  0
+call    0 returned 1
+        2:  130:            for (int j = i; j < service->oferte->lg - 1; j++) {
+        2:  130-block  0
+branch  0 taken 1
+branch  1 taken 1 (fallthrough)
+        1:  131:                service->oferte->elems[j] = service->oferte->elems[j + 1];
+        1:  131-block  0
+        -:  132:            }
+        1:  133:            service->oferte->lg--;
+        1:  134:            return 1;
+        1:  134-block  0
+        -:  135:        }
+        -:  136:    }
+        -:  137:
+        1:  138:    return 0;
+        1:  138-block  0
+        -:  139:}
+        -:  140:
+function oferteOrdonateDupaPret called 2 returned 100% blocks executed 100%
+        2:  141:List *oferteOrdonateDupaPret(Service *service, int mod) {
+        2:  142:    List *listaNoua = copiazaLista(service->oferte);
+        2:  142-block  0
+call    0 returned 2
+        -:  143:
+        4:  144:    for (int i = 0; i < listaNoua->lg - 1; i++) {
+        2:  144-block  0
+        4:  144-block  1
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        4:  145:        for (int j = i + 1; j < listaNoua->lg; j++) {
+        2:  145-block  0
+        2:  145-block  1
+        4:  145-block  2
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        2:  146:            Oferta *oferta1 = (Oferta *)listaNoua->elems[i];
+        2:  147:            Oferta *oferta2 = (Oferta *)listaNoua->elems[j];
+        2:  148:            if ((mod == 0 && oferta1->pret > oferta2->pret) ||
+        2:  148-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  148-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+        1:  148-block  2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:  149:                (mod == 1 && oferta1->pret < oferta2->pret)) {
+        1:  149-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  150:                listaNoua->elems[i] = oferta2;
+        1:  151:                listaNoua->elems[j] = oferta1;
+        1:  151-block  0
+        -:  152:            }
+        -:  153:        }
+        -:  154:    }
+        -:  155:
+        2:  156:    return listaNoua;
+        2:  156-block  0
+        -:  157:}
+        -:  158:
+function oferteOrdonateDupaTip called 2 returned 100% blocks executed 100%
+        2:  159:List *oferteOrdonateDupaTip(Service *service, int mod) {
+        2:  160:    List *listaNoua = copiazaLista(service->oferte);
+        2:  160-block  0
+call    0 returned 2
+        -:  161:
+        4:  162:    for (int i = 0; i < listaNoua->lg - 1; i++) {
+        2:  162-block  0
+        4:  162-block  1
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        4:  163:        for (int j = i + 1; j < listaNoua->lg; j++) {
+        2:  163-block  0
+        2:  163-block  1
+        4:  163-block  2
+branch  0 taken 2
+branch  1 taken 2 (fallthrough)
+        2:  164:            Oferta *oferta1 = (Oferta *)listaNoua->elems[i];
+        2:  165:            Oferta *oferta2 = (Oferta *)listaNoua->elems[j];
+        2:  166:            if ((mod == 0 && strcmp(oferta1->tip, oferta2->tip) > 0) ||
+        2:  166-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  166-block  1
+branch  2 taken 0 (fallthrough)
+branch  3 taken 1
+        1:  166-block  2
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0
+        1:  167:                (mod == 1 && strcmp(oferta1->tip, oferta2->tip) < 0)) {
+        1:  167-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  168:                listaNoua->elems[i] = oferta2;
+        1:  169:                listaNoua->elems[j] = oferta1;
+        1:  169-block  0
+        -:  170:            }
+        -:  171:        }
+        -:  172:    }
+        -:  173:
+        2:  174:    return listaNoua;
+        2:  174-block  0
+        -:  175:}
+        -:  176:
+function oferteFiltrateDupaTip called 2 returned 100% blocks executed 100%
+        2:  177:List *oferteFiltrateDupaTip(Service *service, char *tip) {
+        2:  178:    List *listaNoua = creeazaLista((Distruge) distrugeOferta, (Copiaza) copiazaOferta);
+        2:  178-block  0
+call    0 returned 2
+        -:  179:
+        6:  180:    for (int i = 0; i < service->oferte->lg; i++) {
+        4:  180-block  0
+        6:  180-block  1
+branch  0 taken 4
+branch  1 taken 2 (fallthrough)
+        4:  181:        Oferta *oferta = (Oferta *)service->oferte->elems[i];
+        4:  182:        if (strcmp(oferta->tip, tip) == 0) {
+        4:  182-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:  183:            add(listaNoua, copiazaOferta(oferta));
+        1:  183-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  184:        }
+        -:  185:    }
+        -:  186:
+        2:  187:    return listaNoua;
+        2:  187-block  0
+        -:  188:}
+        -:  189:
+function oferteFiltrateDupaSuprafata called 2 returned 100% blocks executed 100%
+        2:  190:List *oferteFiltrateDupaSuprafata(Service *service, int suprafata) {
+        2:  191:    List *listaNoua = creeazaLista((Distruge) distrugeOferta, (Copiaza) copiazaOferta);
+        2:  191-block  0
+call    0 returned 2
+        -:  192:
+        6:  193:    for (int i = 0; i < service->oferte->lg; i++) {
+        4:  193-block  0
+        6:  193-block  1
+branch  0 taken 4
+branch  1 taken 2 (fallthrough)
+        4:  194:        Oferta *oferta = (Oferta *)service->oferte->elems[i];
+        4:  195:        if (oferta->suprafata == suprafata) {
+        4:  195-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 3
+        1:  196:            add(listaNoua, copiazaOferta(oferta));
+        1:  196-block  0
+call    0 returned 1
+call    1 returned 1
+        -:  197:        }
+        -:  198:    }
+        -:  199:
+        2:  200:    return listaNoua;
+        2:  200-block  0
+        -:  201:}
+        -:  202:
+function undo called 3 returned 100% blocks executed 100%
+        3:  203:int undo(Service *service) {
+        3:  204:    if (lungime(service->undoList) == 0)
+        3:  204-block  0
+call    0 returned 3
+branch  1 taken 1 (fallthrough)
+branch  2 taken 2
+        1:  205:        return 0;
+        1:  205-block  0
+        -:  206:
+        2:  207:    List *lista = pop(service->undoList);
+        2:  207-block  0
+call    0 returned 2
+        2:  208:    distrugeLista(service->oferte);
+call    0 returned 2
+        2:  209:    service->oferte = lista;
+        2:  210:    return 1;
+        -:  211:}

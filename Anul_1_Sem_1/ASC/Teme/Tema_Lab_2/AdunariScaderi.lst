@@ -1,0 +1,205 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14                                      ; a resb 1
+    15                                      ; b resb 1
+    16                                      ; c resb 1
+    17                                      ; d resb 1
+    18                                      
+    19 00000000 <res 00000002>              a resw 1
+    20 00000002 <res 00000002>              b resw 1
+    21 00000004 <res 00000002>              c resw 1
+    22 00000006 <res 00000002>              d resw 1
+    23                                  
+    24                                  ; our code starts here
+    25                                  segment code use32 class=code
+    26                                      start:
+    27                                          ; a, b, c, d - byte
+    28                                          
+    29                                          ; ex 21
+    30                                          ; mov al, [a]
+    31                                          ; mov bl, [b]
+    32                                          ; mov cl, [c]
+    33                                          ; mov dl, [d]
+    34                                          
+    35                                          ; mov al, 3
+    36                                          ; mov bl, 2
+    37                                          ; mov cl, 5
+    38                                          ; mov dl, 4
+    39                                          
+    40                                          ; sub al, bl
+    41                                          ; sub cl, dl
+    42                                          
+    43                                          ; add al, cl
+    44                                          
+    45                                          ; ex 22
+    46                                          ; mov al, [a]
+    47                                          ; mov bl, [b]
+    48                                          ; mov cl, [c]
+    49                                          ; mov dl, [d]
+    50                                          
+    51                                          ; mov al, 3
+    52                                          ; mov bl, 2
+    53                                          ; mov cl, 1
+    54                                          ; mov dl, 2
+    55                                          
+    56                                          ; add al, bl
+    57                                          ; add al, bl
+    58                                          ; add cl, dl
+    59                                          
+    60                                          ; sub al, cl
+    61                                          
+    62                                          ; ex 23
+    63                                          ; mov al, [a]
+    64                                          ; mov bl, [b]
+    65                                          ; mov cl, [c]
+    66                                          ; mov dl, [d]
+    67                                          
+    68                                          ; mov al, 5
+    69                                          ; mov bl, 1
+    70                                          ; mov cl, 3
+    71                                          ; mov dl, 2
+    72                                          
+    73                                          ; sub al, cl
+    74                                          ; add bl, bl
+    75                                          ; add bl, dl
+    76                                          
+    77                                          ; add al, bl
+    78                                          
+    79                                          ; ex 24
+    80                                          ; mov al, [a]
+    81                                          ; mov bl, [b]
+    82                                          ; mov cl, [c]
+    83                                          ; mov dl, [d]
+    84                                          
+    85                                          ; mov al, 7
+    86                                          ; mov bl, 1
+    87                                          ; mov cl, 2
+    88                                          ; mov dl, 1
+    89                                          
+    90                                          ; mov ah, al
+    91                                          ; sub ah, bl
+    92                                          ; sub ah, bl
+    93                                          ; sub ah, cl
+    94                                          
+    95                                          ; mov al, al
+    96                                          ; sub al, cl
+    97                                          ; sub al, cl
+    98                                          ; sub al, dl
+    99                                          
+   100                                          ; add al, ah
+   101                                          
+   102                                          ; ex 25
+   103                                          ; mov al, [a]
+   104                                          ; mov bl, [b]
+   105                                          ; mov cl, [c]
+   106                                          ; mov dl, [d]
+   107                                          
+   108                                          ; mov al, 1
+   109                                          ; mov bl, 2
+   110                                          ; mov cl, 3
+   111                                          ; mov dl, 2
+   112                                          
+   113                                          ; add cl, dl
+   114                                          ; add cl, dl
+   115                                          ; add al, al
+   116                                          ; add al, bl
+   117                                          
+   118                                          ; sub cl, al
+   119                                          
+   120                                          
+   121                                          ; a, b, c, d - word
+   122                                          
+   123                                          ; ex 26
+   124                                          ; mov ax, [a]
+   125                                          ; mov bx, [b]
+   126                                          ; mov cx, [c]
+   127                                          ; mov dx, [d]
+   128                                          
+   129                                          ; mov ax, 5
+   130                                          ; mov bx, 2
+   131                                          ; mov cx, 4
+   132                                          ; mov dx, 3
+   133                                          
+   134                                          ; add ax, cx
+   135                                          ; add bx, bx
+   136                                          ; add bx, dx
+   137                                          
+   138                                          ; sub ax, bx
+   139                                          
+   140                                          ; ex 27
+   141                                          ; mov ax, [a]
+   142                                          ; mov bx, [b]
+   143                                          ; mov cx, [c]
+   144                                          ; mov dx, [d]
+   145                                          
+   146                                          ; add ax, bx
+   147                                          ; add cx, dx
+   148                                          ; sub ax, cx
+   149                                          ; add ax, 100h
+   150                                          
+   151                                          ; ex 28
+   152                                          ; mov ax, [a]
+   153                                          ; mov bx, [b]
+   154                                          ; mov cx, [c]
+   155                                          ; mov dx, [d]
+   156                                          
+   157                                          ; mov ax, 1
+   158                                          ; mov bx, 3
+   159                                          ; mov cx, 2
+   160                                          ; mov dx, 4
+   161                                          
+   162                                          ; mov ax, dx
+   163                                          ; sub ax, cx
+   164                                          ; add bx, bx
+   165                                          ; sub bx, cx
+   166                                          ; sub bx, ax
+   167                                          ; add ax, bx
+   168                                          ; add ax, dx
+   169                                          
+   170                                          ; ex 29
+   171                                          ; mov ax, [a]
+   172                                          ; mov bx, [b]
+   173                                          ; mov cx, [c]
+   174                                          ; mov dx, [d]
+   175                                          
+   176                                          ; mov ax, 2
+   177                                          ; mov bx, 1
+   178                                          ; mov cx, 2
+   179                                          ; mov dx, 4
+   180                                          
+   181                                          ; sub dx, ax
+   182                                          ; add bx, bx
+   183                                          ; add bx, cx
+   184                                          ; add dx, bx
+   185                                          
+   186                                          ; ex 30
+   187 00000000 66A1[00000000]                  mov ax, [a]
+   188 00000006 668B1D[02000000]                mov bx, [b]
+   189 0000000D 668B0D[04000000]                mov cx, [c]
+   190 00000014 668B15[06000000]                mov dx, [d]
+   191                                          
+   192 0000001B 66B80500                        mov ax, 5
+   193 0000001F 66BB0400                        mov bx, 4
+   194 00000023 66B90300                        mov cx, 3
+   195 00000027 66BA0200                        mov dx, 2
+   196                                          
+   197 0000002B 6689C6                          mov si, ax
+   198 0000002E 6629DE                          sub si, bx
+   199 00000031 6629D1                          sub cx, dx
+   200 00000034 6601C1                          add cx, ax
+   201 00000037 6601CE                          add si, cx
+   202                                      
+   203                                          ; exit(0)
+   204 0000003A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   205 0000003C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

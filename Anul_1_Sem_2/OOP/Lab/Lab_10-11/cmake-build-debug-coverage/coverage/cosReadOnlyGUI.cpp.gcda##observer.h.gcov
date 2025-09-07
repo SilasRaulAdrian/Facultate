@@ -1,0 +1,22 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/observer/observer.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cosReadOnlyGUI.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cosReadOnlyGUI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_OBSERVER_H
+        -:    2:#define LAB_6_7_OBSERVER_H
+        -:    3:
+        -:    4:class Observer {
+        -:    5:public:
+        -:    6:    /**
+        -:    7:     * Functie virtuala pura care va fi implementata de clasele derivate
+        -:    8:     */
+        -:    9:    virtual void update() = 0;
+        -:   10:
+        -:   11:    /**
+        -:   12:     * Destructor virtual pentru a permite distrugerea corecta a obiectelor derivate
+        -:   13:     */
+function _ZN8ObserverD2Ev called 0 returned 0% blocks executed 0%
+    #####:   14:    virtual ~Observer() = default;
+        -:   15:};
+        -:   16:
+        -:   17:#endif //LAB_6_7_OBSERVER_H

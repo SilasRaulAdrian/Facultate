@@ -1,0 +1,58 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/oferte.c
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage/CMakeFiles/Lab_5__fmm_paul_.dir/oferte.c.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage/CMakeFiles/Lab_5__fmm_paul_.dir/oferte.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdlib.h>
+        -:    2:#include <string.h>
+        -:    3:#include "oferte.h"
+        -:    4:
+function creeazaOferta called 24 returned 100% blocks executed 100%
+       24:    5:Oferta *creeazaOferta(int id, char *tip, int suprafata, char *adresa, int pret) {
+       24:    6:    Oferta *oferta = (Oferta *)malloc(sizeof(Oferta));
+        -:    7:
+       24:    8:    oferta->id = id;
+       24:    9:    oferta->tip = (char*)malloc(sizeof(char) * strlen(tip) + 1);
+       24:   10:    strcpy(oferta->tip, tip);
+        -:   11:
+       24:   12:    oferta->suprafata = suprafata;
+       24:   13:    oferta->adresa = (char*)malloc(sizeof(char) * strlen(adresa) + 1);
+       24:   14:    strcpy(oferta->adresa, adresa);
+        -:   15:
+       24:   16:    oferta->pret = pret;
+        -:   17:
+       24:   18:    return oferta;
+       24:   18-block  0
+        -:   19:}
+        -:   20:
+function distrugeOferta called 56 returned 100% blocks executed 75%
+       56:   21:void distrugeOferta(Oferta *oferta) {
+      56*:   22:    if (oferta == NULL) return;
+       56:   22-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 56
+    %%%%%:   22-block  1
+        -:   23:
+       56:   24:    free(oferta->tip);
+       56:   25:    free(oferta->adresa);
+       56:   26:    free(oferta);
+       56:   26-block  0
+        -:   27:}
+        -:   28:
+function copiazaOferta called 32 returned 100% blocks executed 100%
+       32:   29:Oferta *copiazaOferta(Oferta *oferta) {
+       32:   30:    Oferta *new_oferta = (Oferta *)malloc(sizeof(Oferta));
+        -:   31:
+       32:   32:    new_oferta->id = oferta->id;
+        -:   33:
+       32:   34:    new_oferta->tip = (char *)malloc(sizeof(char) * strlen(oferta->tip) + 1);
+       32:   35:    strcpy(new_oferta->tip, oferta->tip);
+        -:   36:
+       32:   37:    new_oferta->suprafata = oferta->suprafata;
+       32:   38:    new_oferta->pret = oferta->pret;
+        -:   39:
+       32:   40:    new_oferta->adresa = (char *)malloc(sizeof(char) * strlen(oferta->adresa) + 1);
+       32:   41:    strcpy(new_oferta->adresa, oferta->adresa);
+        -:   42:
+       32:   43:    return new_oferta;
+       32:   43-block  0
+        -:   44:}

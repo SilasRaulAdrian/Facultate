@@ -1,0 +1,2 @@
+1,Ana,Timisoara
+2,Mihai,Oradea

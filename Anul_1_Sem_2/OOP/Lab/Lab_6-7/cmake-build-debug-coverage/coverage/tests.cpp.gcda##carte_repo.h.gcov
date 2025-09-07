@@ -1,0 +1,92 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/repository/carte_repo.h
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/tests/tests.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/tests/tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_CARTE_REPO_H
+        -:    2:#define LAB_6_7_CARTE_REPO_H
+        -:    3:
+        -:    4:#include "../domain/carte.h"
+        -:    5:#include "../vector_dinamic/lista.h"
+        -:    6:
+        -:    7:
+        -:    8:class CarteRepo {
+        -:    9:private:
+        -:   10:    Lista<Carte> carti;
+        -:   11:
+        -:   12:public:
+        -:   13:    /**
+        -:   14:     * Constructorul clasei CarteRepo
+        -:   15:     */
+function _ZN9CarteRepoC2Ev called 0 returned 0% blocks executed 0%
+    #####:   16:    CarteRepo() = default;
+    %%%%%:   16-block  0
+call    0 never executed
+        -:   17:
+        -:   18:    /**
+        -:   19:     * Destructorul clasei CarteRepo
+        -:   20:     */
+function _ZN9CarteRepoD2Ev called 0 returned 0% blocks executed 0%
+    #####:   21:    ~CarteRepo() = default;
+    %%%%%:   21-block  0
+call    0 never executed
+        -:   22:
+        -:   23:    /**
+        -:   24:     * Adauga o carte in lista de carti
+        -:   25:     * @param carte Cartea de adaugat
+        -:   26:     */
+        -:   27:    void adaugaCarte(const Carte &carte);
+        -:   28:
+        -:   29:    /**
+        -:   30:     * Sterge o carte din lista de carti
+        -:   31:     * @param id Id-ul cartii de sters
+        -:   32:     * @return True daca s-a sters cu succes, false altfel
+        -:   33:     */
+        -:   34:    bool stergeCarte(int id);
+        -:   35:
+        -:   36:    /**
+        -:   37:     * Modifica titlul unei carti
+        -:   38:     * @param id Id-ul cartii de modificat
+        -:   39:     * @param newTitlu Noul titlu
+        -:   40:     * @return True daca s-a modificat cu succes, false altfel
+        -:   41:     */
+        -:   42:    bool modificaTitlu(int id, const std::string &newTitlu);
+        -:   43:
+        -:   44:    /**
+        -:   45:     * Modifica autorul unei carti
+        -:   46:     * @param id Id-ul cartii de modificat
+        -:   47:     * @param newAutor Noul autor
+        -:   48:     * @return True daca s-a modificat cu succes, false altfel
+        -:   49:     */
+        -:   50:    bool modificaAutor(int id, const std::string &newAutor);
+        -:   51:
+        -:   52:    /**
+        -:   53:     * Modifica genul unei carti
+        -:   54:     * @param id Id-ul cartii de modificat
+        -:   55:     * @param newGen Noul gen
+        -:   56:     * @return True daca s-a modificat cu succes, false altfel
+        -:   57:     */
+        -:   58:    bool modificaGen(int id, const std::string &newGen);
+        -:   59:
+        -:   60:    /**
+        -:   61:     * Modifica anul de aparitie al unei carti
+        -:   62:     * @param id Id-ul cartii de modificat
+        -:   63:     * @param newAnAparitie Noul an de aparitie
+        -:   64:     * @return True daca s-a modificat cu succes, false altfel
+        -:   65:     */
+        -:   66:    bool modificaAnAparitie(int id, int newAnAparitie);
+        -:   67:
+        -:   68:    /**
+        -:   69:     * Getter pentru lista de carti
+        -:   70:     * @return Lista de carti
+        -:   71:     */
+        -:   72:    Lista<Carte> &getCarti();
+        -:   73:
+        -:   74:    /**
+        -:   75:     * Cauta o carte dupa titlu
+        -:   76:     * @param titlu Titlul cartii de cautat
+        -:   77:     * @return Cartea gasita
+        -:   78:     */
+        -:   79:    Carte cautaCarte(const std::string &titlu) const;
+        -:   80:};
+        -:   81:
+        -:   82:#endif //LAB_6_7_CARTE_REPO_H

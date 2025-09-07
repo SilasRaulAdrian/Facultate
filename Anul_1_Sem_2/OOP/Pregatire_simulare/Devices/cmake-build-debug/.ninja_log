@@ -1,0 +1,14 @@
+# ninja log v6
+16	163	7694452092995455	Devices_autogen/timestamp	556a5516a7dfe178
+16	163	7694452092995455	Devices_autogen/mocs_compilation.cpp	556a5516a7dfe178
+8	703	7694452237900380	build.ninja	120c87f32b0fd96f
+210	4257	7694449876392734	CMakeFiles/Devices.dir/main.cpp.obj	47dbf65ceb91355a
+1855	2329	7694452111386055	Devices.exe	ddce6c85efd09965
+16	163	7694452092995455	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Devices/cmake-build-debug/Devices_autogen/timestamp	556a5516a7dfe178
+16	163	7694452092995455	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Devices/cmake-build-debug/Devices_autogen/mocs_compilation.cpp	556a5516a7dfe178
+1886	6047	7690980680560700	CMakeFiles/Devices.dir/Devices_autogen/mocs_compilation.cpp.obj	e71ddec0debc7665
+1894	3930	7690980680642194	CMakeFiles/Devices.dir/domain/device.cpp.obj	a6ed6dc1f3fe40c6
+1901	4162	7690980680722198	CMakeFiles/Devices.dir/service/device_service.cpp.obj	c536b7c8ed0e50f0
+207	4413	7690982438799209	CMakeFiles/Devices.dir/repository/device_repo.cpp.obj	5e41094476e9b232
+1905	6201	7690980680762203	CMakeFiles/Devices.dir/ui/main_window.cpp.obj	1e922ca2421abcfc
+167	1855	7694452094498144	CMakeFiles/Devices.dir/teste/teste.cpp.obj	ace4632334e2544b

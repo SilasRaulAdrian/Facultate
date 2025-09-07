@@ -1,0 +1,5 @@
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Apartamente/cmake-build-debug/CMakeFiles/Apartamente.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Apartamente/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Apartamente/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Apartamente/cmake-build-debug/CMakeFiles/Apartamente_autogen_timestamp_deps.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Apartamente/cmake-build-debug/CMakeFiles/Apartamente_autogen.dir

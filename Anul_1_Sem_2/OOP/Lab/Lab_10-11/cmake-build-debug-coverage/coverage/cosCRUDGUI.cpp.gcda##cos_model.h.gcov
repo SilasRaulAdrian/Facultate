@@ -1,0 +1,47 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/model_view/cos_model.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cosCRUDGUI.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cosCRUDGUI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_COS_MODEL_H
+        -:    2:#define LAB_6_7_COS_MODEL_H
+        -:    3:
+        -:    4:#include <QAbstractListModel>
+        -:    5:#include "../service/carte_service.h"
+        -:    6:
+        -:    7:class CosModel : public QAbstractListModel {
+        -:    8:    Q_OBJECT
+        -:    9:private:
+        -:   10:    CarteService &service;
+        -:   11:
+        -:   12:public:
+        -:   13:    /**
+        -:   14:     * Constructorul clasei CosTableModel
+        -:   15:     * @param service Referinta la serviciul de carti
+        -:   16:     */
+function _ZN8CosModelC1ER12CarteService called 0 returned 0% blocks executed 0%
+    #####:   17:    CosModel(CarteService &service) : service(service) {}
+    %%%%%:   17-block  0
+call    0 never executed
+        -:   18:
+        -:   19:    /**
+        -:   20:     * Functie care returneaza numarul de randuri
+        -:   21:     * @param parent Indexul parintei (neutilizat)
+        -:   22:     * @return Numarul de randuri
+        -:   23:     */
+        -:   24:    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+        -:   25:
+        -:   26:    /**
+        -:   27:     * Functie care returneaza datele pentru un index specificat
+        -:   28:     * @param index Indexul pentru care se cer datele
+        -:   29:     * @param role Rolul pentru care se cer datele
+        -:   30:     * @return Datele pentru indexul specificat si rolul dat
+        -:   31:     */
+        -:   32:    QVariant data(const QModelIndex &index, int role) const override;
+        -:   33:
+        -:   34:    /**
+        -:   35:     * Functie care actualizeaza modelul
+        -:   36:     */
+        -:   37:    void update();
+        -:   38:};
+        -:   39:
+        -:   40:#endif //LAB_6_7_COS_MODEL_H

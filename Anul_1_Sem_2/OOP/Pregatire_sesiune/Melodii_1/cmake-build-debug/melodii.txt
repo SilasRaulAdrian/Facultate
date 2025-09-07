@@ -1,0 +1,9 @@
+1,Yesterday,The Beatles,10
+2,Hello,Adele,8
+3,Bad Romance,Lady Gaga,7
+4,Numb,Linkin Park,5
+5,Thriller,Michael Jackson,10
+6,Perfect,Ed Sheeran,8
+7,Rolling in the Deep,Adele,8
+8,Smells Like Teen Spirit,Nirvana,9
+9,Imagine,John Lennon,10

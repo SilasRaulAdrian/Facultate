@@ -1,0 +1,225 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/service/carte_service.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\tests\tests.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\tests\tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_CARTE_SERVICE_H
+        -:    2:#define LAB_6_7_CARTE_SERVICE_H
+        -:    3:
+        -:    4:#include "../repository/carte_repo.h"
+        -:    5:#include "../cos_inchirieri/cos_inchirieri.h"
+        -:    6:#include "../undo/undo.h"
+        -:    7:#include <map>
+        -:    8:#include <memory>
+        -:    9:#include <stack>
+        -:   10:#include "../observer/observer.h"
+        -:   11:#include  <vector>
+        -:   12:
+        -:   13:class CarteService {
+        -:   14:private:
+        -:   15:    CarteRepo &repo;
+        -:   16:    CosInchirieri cos;
+        -:   17:    std::vector<std::unique_ptr<ActiuneUndo>> undoActions;
+        -:   18:    std::vector<Observer*> observers;
+        -:   19:
+        -:   20:    void notify();
+        -:   21:
+        -:   22:public:
+        -:   23:    /**
+        -:   24:     * Constructorul clasei CarteService
+        -:   25:     * @param repo Repository-ul de carti
+        -:   26:     */
+function _ZN12CarteServiceC1ER9CarteRepo called 0 returned 0% blocks executed 0%
+    #####:   27:    CarteService(CarteRepo &repo) : repo(repo) {}
+    %%%%%:   27-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   28:
+        -:   29:    /**
+        -:   30:     * Destructorul clasei CarteService
+        -:   31:     */
+function _ZN12CarteServiceD1Ev called 0 returned 0% blocks executed 0%
+    #####:   32:    ~CarteService() = default;
+    %%%%%:   32-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   33:
+        -:   34:    /**
+        -:   35:     * Adauga o carte in lista de carti
+        -:   36:     * @param id Id-ul cartii
+        -:   37:     * @param titlu Titlul cartii
+        -:   38:     * @param autor Autorul cartii
+        -:   39:     * @param gen Genul cartii
+        -:   40:     * @param an_aparitie Anul aparitiei cartii
+        -:   41:     */
+        -:   42:    void adaugaCarte(int id, const std::string &titlu, const std::string &autor, const std::string &gen, int an_aparitie);
+        -:   43:
+        -:   44:    /**
+        -:   45:     * Sterge o carte din lista de carti
+        -:   46:     * @param id Id-ul cartii de sters
+        -:   47:     * @return True daca s-a sters cu succes, false altfel
+        -:   48:     */
+        -:   49:    bool stergeCarte(int id);
+        -:   50:
+        -:   51:    /**
+        -:   52:     * Modifica titlul unei carti
+        -:   53:     * @param id Id-ul cartii de modificat
+        -:   54:     * @param newTitlu Noul titlu
+        -:   55:     * @return True daca s-a modificat cu succes, false altfel
+        -:   56:     */
+        -:   57:    bool modificaTitlu(int id, const std::string &newTitlu);
+        -:   58:
+        -:   59:    /**
+        -:   60:     * Modifica autorul unei carti
+        -:   61:     * @param id Id-ul cartii de modificat
+        -:   62:     * @param newAutor Noul autor
+        -:   63:     * @return True daca s-a modificat cu succes, false altfel
+        -:   64:     */
+        -:   65:    bool modificaAutor(int id, const std::string &newAutor);
+        -:   66:
+        -:   67:    /**
+        -:   68:     * Modifica genul unei carti
+        -:   69:     * @param id Id-ul cartii de modificat
+        -:   70:     * @param newGen Noul gen
+        -:   71:     * @return True daca s-a modificat cu succes, false altfel
+        -:   72:     */
+        -:   73:    bool modificaGen(int id, const std::string &newGen);
+        -:   74:
+        -:   75:    /**
+        -:   76:     * Modifica anul de aparitie al unei carti
+        -:   77:     * @param id Id-ul cartii de modificat
+        -:   78:     * @param newAnAparitie Noul an de aparitie
+        -:   79:     * @return True daca s-a modificat cu succes, false altfel
+        -:   80:     */
+        -:   81:    bool modificaAnAparitie(int id, int newAnAparitie);
+        -:   82:
+        -:   83:    /**
+        -:   84:     * Getter pentru lista de carti
+        -:   85:     * @return Lista de carti
+        -:   86:     */
+        -:   87:    Lista<Carte> &getCarti();
+        -:   88:
+        -:   89:    /**
+        -:   90:     * Cauta o carte dupa titlu
+        -:   91:     * @param titlu Titlul cartii
+        -:   92:     * @return Cartea gasita sau nullptr daca nu exista
+        -:   93:     */
+        -:   94:    Carte cautaCarte(const std::string &titlu) const;
+        -:   95:
+        -:   96:    /**
+        -:   97:     * Filtreaza cartile dupa titlu
+        -:   98:     * @param titlu Titlul dupa care se filtreaza
+        -:   99:     * @return Lista de carti filtrate
+        -:  100:     */
+        -:  101:    Lista<Carte> filtreazaDupaTitlu(const std::string &titlu) const;
+        -:  102:
+        -:  103:    /**
+        -:  104:     * Filtreaza cartile dupa anul aparitiei
+        -:  105:     * @param an Anul dupa care se filtreaza
+        -:  106:     * @return Lista de carti filtrate
+        -:  107:     */
+        -:  108:    Lista<Carte> filtreazaDupaAn(int an) const;
+        -:  109:
+        -:  110:    /**
+        -:  111:     * Sorteaza cartile dupa titlu
+        -:  112:     * @param mod 0 - crescator, 1 - descrescator
+        -:  113:     * @return Lista de carti sortate
+        -:  114:     */
+        -:  115:    Lista<Carte> sorteazaDupaTitlu(int mod);
+        -:  116:
+        -:  117:    /**
+        -:  118:     * Sorteaza cartile dupa autor
+        -:  119:     * @param mod 0 - crescator, 1 - descrescator
+        -:  120:     * @return Lista de carti sortate
+        -:  121:     */
+        -:  122:    Lista<Carte> sorteazaDupaAutor(int mod);
+        -:  123:
+        -:  124:    /**
+        -:  125:     * Sorteaza cartile dupa anul aparitiei
+        -:  126:     * @param mod 0 - crescator, 1 - descrescator
+        -:  127:     * @return Lista de carti sortate
+        -:  128:     */
+        -:  129:    Lista<Carte> sorteazaDupaAnulAparitiei(int mod);
+        -:  130:
+        -:  131:    /**
+        -:  132:     * Sorteaza cartile dupa gen
+        -:  133:     * @param mod 0 - crescator, 1 - descrescator
+        -:  134:     * @return Lista de carti sortate
+        -:  135:     */
+        -:  136:    Lista<Carte> sorteazaDupaGen(int mod);
+        -:  137:
+        -:  138:    /**
+        -:  139:     * Goleste cosul de carti
+        -:  140:     */
+        -:  141:    void golesteCos();
+        -:  142:
+        -:  143:    /**
+        -:  144:     * Adauga o carte in cos dupa titlu
+        -:  145:     * @param titlu Titlul cartii de adaugat
+        -:  146:     */
+        -:  147:    void adaugaCarteDupaTitlu(const std::string &titlu);
+        -:  148:
+        -:  149:    /**
+        -:  150:     * Genereaza un cos de carti aleator
+        -:  151:     * @param numarCarti Numarul de carti dorit
+        -:  152:     * @param carti Lista de carti disponibile
+        -:  153:     */
+        -:  154:    void genereazaCos(int numarCarti, Lista<Carte> &carti);
+        -:  155:
+        -:  156:    /**
+        -:  157:     * Exporta cosul de carti in fisier CSV
+        -:  158:     * @param numeFisier Numele fisierului CSV
+        -:  159:     */
+        -:  160:    void exportCsv(const std::string &numeFisier) const;
+        -:  161:
+        -:  162:    /**
+        -:  163:     * Exporta cosul de carti in fisier HTML
+        -:  164:     * @param numeFisier Numele fisierului HTML
+        -:  165:     */
+        -:  166:    void exportHtml(const std::string &numeFisier) const;
+        -:  167:
+        -:  168:    /**
+        -:  169:     * Functie care returneaza toate cartile din cos
+        -:  170:     * @return Cosul de carti
+        -:  171:     */
+        -:  172:    const std::vector<Carte> &getAllCos() const;
+        -:  173:
+        -:  174:    /**
+        -:  175:     * Functie care returneaza numarul de carti din cos
+        -:  176:     * @return Numarul de carti din cos
+        -:  177:     */
+        -:  178:    int getSizeCos() const;
+        -:  179:
+        -:  180:    /**
+        -:  181:     * Functie care returneaza un map cu numarul de carti pe gen
+        -:  182:     * @return Map cu numarul de carti pe gen
+        -:  183:     */
+        -:  184:    std::map<std::string, std::vector<Carte>> getCartiPeGen() const;
+        -:  185:
+        -:  186:    /**
+        -:  187:     * Functie care adauga o actiune undo
+        -:  188:     */
+        -:  189:    void undo();
+        -:  190:
+        -:  191:    /**
+        -:  192:     * Functie care afla titlul unei carti dupa id
+        -:  193:     * @param id Id-ul cartii
+        -:  194:     * @return Titlul cartii
+        -:  195:     */
+        -:  196:    std::string getTitluById(int id) const;
+        -:  197:
+        -:  198:    /**
+        -:  199:     * Functie care adauga un observer
+        -:  200:     * @param observer Observerul de adaugat
+        -:  201:     */
+        -:  202:    void addObserver(Observer *observer);
+        -:  203:
+        -:  204:    /**
+        -:  205:     * Functie care elimina un observer
+        -:  206:     * @param observer Observerul de eliminat
+        -:  207:     */
+        -:  208:    void removeObserver(Observer *observer);
+        -:  209:};
+        -:  210:
+        -:  211:#endif //LAB_6_7_CARTE_SERVICE_H

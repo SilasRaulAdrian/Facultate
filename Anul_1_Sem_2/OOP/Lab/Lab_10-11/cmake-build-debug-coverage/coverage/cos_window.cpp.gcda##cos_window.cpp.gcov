@@ -1,0 +1,1429 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/windows/cos_window.cpp
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cos_window.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cos_window.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "cos_window.h"
+        -:    2:#include <QPushButton>
+        -:    3:#include <QCloseEvent>
+        -:    4:#include <QMessageBox>
+        -:    5:#include <QBoxLayout>
+        -:    6:
+function _ZN9CosWindowC2ER12CarteServiceP11QMainWindow called 0 returned 0% blocks executed 0%
+    #####:    7:CosWindow::CosWindow(CarteService& srv, QMainWindow *parent) : QMainWindow(parent), mainWindow(parent), service(srv) {
+    %%%%%:    7-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:    7-block  1
+call    4 never executed
+    #####:    8:    setupUI();
+    %%%%%:    8-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:    9:}
+    %%%%%:    9-block  0
+    $$$$$:    9-block  1
+call    0 never executed
+        -:   10:
+function _ZN9CosWindow7setupUIEv called 0 returned 0% blocks executed 0%
+    #####:   11:void CosWindow::setupUI() {
+    #####:   12:    setWindowTitle("Cos");
+    %%%%%:   12-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   12-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   12-block  2
+call    6 never executed
+    $$$$$:   12-block  3
+call    7 never executed
+    $$$$$:   12-block  4
+    #####:   13:    resize(1000, 600);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   14:
+    #####:   15:    central = new QWidget(this);
+    %%%%%:   15-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   15-block  1
+call    3 never executed
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    $$$$$:   15-block  2
+    $$$$$:   15-block  3
+branch  7 never executed (fallthrough)
+branch  8 never executed
+    $$$$$:   15-block  4
+call    9 never executed
+    #####:   16:    this->setCentralWidget(central);
+    %%%%%:   16-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   17:
+    #####:   18:    QHBoxLayout *layout = new QHBoxLayout(central);
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   18-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   18-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   18-block  3
+call    8 never executed
+    #####:   19:    stangaLayout = new QVBoxLayout;
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   19-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   19-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   19-block  3
+call    8 never executed
+    #####:   20:    dreaptaLayout = new QVBoxLayout;
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   20-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   20-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   20-block  3
+call    8 never executed
+        -:   21:
+    #####:   22:    backButton = new QPushButton("Inapoi la Biblioteca");
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   22-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   22-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   22-block  3
+call    9 never executed
+    $$$$$:   22-block  4
+call   10 never executed
+    $$$$$:   22-block  5
+    $$$$$:   22-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   22-block  7
+call   13 never executed
+    #####:   23:    stangaLayout->addWidget(backButton);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   23-block  0
+        -:   24:
+        -:   25:    // Adaugare carte in cos
+    #####:   26:    titluEdit = new QLineEdit;
+    %%%%%:   26-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   26-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   26-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   26-block  3
+call    8 never executed
+    #####:   27:    adaugaCarteButton = new QPushButton("Adauga carte in cos");
+    %%%%%:   27-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   27-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   27-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   27-block  3
+call    9 never executed
+    $$$$$:   27-block  4
+call   10 never executed
+    $$$$$:   27-block  5
+    $$$$$:   27-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   27-block  7
+call   13 never executed
+    #####:   28:    stangaLayout->addWidget(new QLabel("Titlu:"));
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   28-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   28-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   28-block  2
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   28-block  3
+call   14 never executed
+    $$$$$:   28-block  4
+call   15 never executed
+    $$$$$:   28-block  5
+    $$$$$:   28-block  6
+    $$$$$:   28-block  7
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    $$$$$:   28-block  8
+call   18 never executed
+    $$$$$:   28-block  9
+    #####:   29:    stangaLayout->addWidget(titluEdit);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   29-block  0
+    #####:   30:    stangaLayout->addWidget(adaugaCarteButton);
+    %%%%%:   30-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   30-block  1
+        -:   31:
+        -:   32:    // Golire cos
+    #####:   33:    golesteCosButton = new QPushButton("Goleste cos");
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   33-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   33-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   33-block  3
+call    9 never executed
+    $$$$$:   33-block  4
+call   10 never executed
+    $$$$$:   33-block  5
+    $$$$$:   33-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   33-block  7
+call   13 never executed
+    #####:   34:    stangaLayout->addWidget(golesteCosButton);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   34-block  0
+        -:   35:
+        -:   36:    // Generare cos
+    #####:   37:    numarCartiEdit = new QLineEdit;
+    %%%%%:   37-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   37-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   37-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   37-block  3
+call    8 never executed
+    #####:   38:    genereazaCosButton = new QPushButton("Genereaza cos");
+    %%%%%:   38-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   38-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   38-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   38-block  3
+call    9 never executed
+    $$$$$:   38-block  4
+call   10 never executed
+    $$$$$:   38-block  5
+    $$$$$:   38-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   38-block  7
+call   13 never executed
+    #####:   39:    stangaLayout->addWidget(new QLabel("Numar carti pentru generare:"));
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   39-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   39-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   39-block  2
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   39-block  3
+call   14 never executed
+    $$$$$:   39-block  4
+call   15 never executed
+    $$$$$:   39-block  5
+    $$$$$:   39-block  6
+    $$$$$:   39-block  7
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    $$$$$:   39-block  8
+call   18 never executed
+    $$$$$:   39-block  9
+    #####:   40:    stangaLayout->addWidget(numarCartiEdit);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   40-block  0
+    #####:   41:    stangaLayout->addWidget(genereazaCosButton);
+    %%%%%:   41-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   41-block  1
+        -:   42:
+        -:   43:    // Export CSV
+    #####:   44:    numeFisierEdit = new QLineEdit;
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   44-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   44-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   44-block  3
+call    8 never executed
+    #####:   45:    exportCsvButton = new QPushButton("Export CSV");
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   45-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   45-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   45-block  3
+call    9 never executed
+    $$$$$:   45-block  4
+call   10 never executed
+    $$$$$:   45-block  5
+    $$$$$:   45-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   45-block  7
+call   13 never executed
+    #####:   46:    stangaLayout->addWidget(new QLabel("Nume fisier CSV:"));
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   46-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   46-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   46-block  2
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   46-block  3
+call   14 never executed
+    $$$$$:   46-block  4
+call   15 never executed
+    $$$$$:   46-block  5
+    $$$$$:   46-block  6
+    $$$$$:   46-block  7
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    $$$$$:   46-block  8
+call   18 never executed
+    $$$$$:   46-block  9
+    #####:   47:    stangaLayout->addWidget(numeFisierEdit);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   47-block  0
+    #####:   48:    stangaLayout->addWidget(exportCsvButton);
+    %%%%%:   48-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   48-block  1
+        -:   49:
+        -:   50:    // Export HTML
+    #####:   51:    numeFisierHtmlEdit = new QLineEdit;
+    %%%%%:   51-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   51-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   51-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   51-block  3
+call    8 never executed
+    #####:   52:    exportHtmlButton = new QPushButton("Export HTML");
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   52-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   52-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   52-block  3
+call    9 never executed
+    $$$$$:   52-block  4
+call   10 never executed
+    $$$$$:   52-block  5
+    $$$$$:   52-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   52-block  7
+call   13 never executed
+    #####:   53:    stangaLayout->addWidget(new QLabel("Nume fisier HTML:"));
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   53-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:   53-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:   53-block  2
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:   53-block  3
+call   14 never executed
+    $$$$$:   53-block  4
+call   15 never executed
+    $$$$$:   53-block  5
+    $$$$$:   53-block  6
+    $$$$$:   53-block  7
+branch 16 never executed (fallthrough)
+branch 17 never executed
+    $$$$$:   53-block  8
+call   18 never executed
+    $$$$$:   53-block  9
+    #####:   54:    stangaLayout->addWidget(numeFisierHtmlEdit);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   54-block  0
+    #####:   55:    stangaLayout->addWidget(exportHtmlButton);
+    %%%%%:   55-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   55-block  1
+        -:   56:
+        -:   57:    // Afisare numar carti
+    #####:   58:    afiseazaNumarCartiButton = new QPushButton("Afiseaza numar carti din cos");
+    %%%%%:   58-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   58-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   58-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   58-block  3
+call    9 never executed
+    $$$$$:   58-block  4
+call   10 never executed
+    $$$$$:   58-block  5
+    $$$$$:   58-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   58-block  7
+call   13 never executed
+    #####:   59:    stangaLayout->addWidget(afiseazaNumarCartiButton);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   59-block  0
+        -:   60:
+    #####:   61:    layout->addLayout(stangaLayout, 2);
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   62:
+    #####:   63:    tabelaCartiCos = new QTableWidget;
+    %%%%%:   63-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   63-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:   63-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:   63-block  3
+call    8 never executed
+    #####:   64:    tabelaCartiCos->setColumnCount(5);
+    %%%%%:   64-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   65:    tabelaCartiCos->setHorizontalHeaderLabels({"ID", "Titlu", "Autor", "Gen", "Anul aparitiei"});
+    %%%%%:   65-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   65-block  1
+call    3 never executed
+    %%%%%:   65-block  2
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    %%%%%:   65-block  3
+call    6 never executed
+    $$$$$:   65-block  4
+call    7 never executed
+    $$$$$:   65-block  5
+    $$$$$:   65-block  6
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    $$$$$:   65-block  7
+call   10 never executed
+    $$$$$:   65-block  8
+    $$$$$:   65-block  9
+    #####:   66:    dreaptaLayout->addWidget(tabelaCartiCos);
+    %%%%%:   66-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   66-block  1
+    #####:   67:    QFont font;
+    %%%%%:   67-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   68:    font.setPointSizeF(12);
+    %%%%%:   68-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   69:    tabelaCartiCos->setFont(font);
+    %%%%%:   69-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   70:    layout->addLayout(dreaptaLayout, 6);
+    %%%%%:   70-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   71:
+    #####:   72:    central->setLayout(layout);
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   73:
+    #####:   74:    connect(backButton, &QPushButton::clicked, this, &CosWindow::onBackButtonClicked);
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   74-block  1
+call    3 never executed
+    $$$$$:   74-block  2
+    $$$$$:   74-block  3
+    #####:   75:    connect(adaugaCarteButton, &QPushButton::clicked, this, &CosWindow::adaugaCarteInCos);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   75-block  0
+call    3 never executed
+    $$$$$:   75-block  1
+    $$$$$:   75-block  2
+    #####:   76:    connect(golesteCosButton, &QPushButton::clicked, this, &CosWindow::golesteCos);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   76-block  0
+call    3 never executed
+    $$$$$:   76-block  1
+    $$$$$:   76-block  2
+    #####:   77:    connect(genereazaCosButton, &QPushButton::clicked, this, &CosWindow::genereazaCos);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   77-block  0
+call    3 never executed
+    $$$$$:   77-block  1
+    $$$$$:   77-block  2
+    #####:   78:    connect(exportCsvButton, &QPushButton::clicked, this, &CosWindow::exportCsv);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   78-block  0
+call    3 never executed
+    $$$$$:   78-block  1
+    $$$$$:   78-block  2
+    #####:   79:    connect(exportHtmlButton, &QPushButton::clicked, this, &CosWindow::exportHtml);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   79-block  0
+call    3 never executed
+    $$$$$:   79-block  1
+    $$$$$:   79-block  2
+    #####:   80:    connect(afiseazaNumarCartiButton, &QPushButton::clicked, this, &CosWindow::afiseazaNumarCarti);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   80-block  0
+call    3 never executed
+    $$$$$:   80-block  1
+    $$$$$:   80-block  2
+    #####:   81:}
+    %%%%%:   81-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   81-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   81-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   81-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:   81-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:   81-block  5
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+call   18 never executed
+    $$$$$:   81-block  6
+branch 19 never executed (fallthrough)
+branch 20 never executed
+    $$$$$:   81-block  7
+    $$$$$:   81-block  8
+branch 21 never executed (fallthrough)
+branch 22 never executed
+    $$$$$:   81-block  9
+call   23 never executed
+    $$$$$:   81-block 10
+call   24 never executed
+        -:   82:
+function _ZN9CosWindow16adaugaCarteInCosEv called 0 returned 0% blocks executed 0%
+    #####:   83:void CosWindow::adaugaCarteInCos() {
+    #####:   84:    std::string titlu = titluEdit->text().toStdString();
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   84-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   84-block  2
+call    6 never executed
+    $$$$$:   84-block  3
+call    7 never executed
+    $$$$$:   84-block  4
+        -:   85:    try {
+    #####:   86:        service.adaugaCarteDupaTitlu(titlu);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   87:        QMessageBox::information(this, "Succes", "Carte adaugata in cos!");
+    %%%%%:   87-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   87-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:   87-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   87-block  3
+call   10 never executed
+call   11 never executed
+    $$$$$:   87-block  4
+call   12 never executed
+    $$$$$:   87-block  5
+    $$$$$:   87-block  6
+call   13 never executed
+    $$$$$:   87-block  7
+    $$$$$:   87-block  8
+    #####:   88:        emit cosModificat();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   89:        loadCos();
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:   90:    } catch (const std::exception &e) {
+    $$$$$:   90-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:   90-block  1
+call    2 never executed
+    =====:   91:        QMessageBox::warning(this, "Eroare", e.what());
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed (fallthrough)
+branch  4 never executed (throw)
+    $$$$$:   91-block  0
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    $$$$$:   91-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    $$$$$:   91-block  2
+call   11 never executed
+call   12 never executed
+    $$$$$:   91-block  3
+call   13 never executed
+    $$$$$:   91-block  4
+    $$$$$:   91-block  5
+call   14 never executed
+    $$$$$:   91-block  6
+    $$$$$:   91-block  7
+    =====:   92:    }
+call    0 never executed
+    $$$$$:   92-block  0
+call    1 never executed
+    #####:   93:    titluEdit->clear();
+    %%%%%:   93-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   94:}
+    %%%%%:   94-block  0
+call    0 never executed
+    $$$$$:   94-block  1
+call    1 never executed
+        -:   95:
+function _ZN9CosWindow7loadCosEv called 0 returned 0% blocks executed 0%
+    #####:   96:void CosWindow::loadCos() {
+    #####:   97:    tabelaCartiCos->clear();
+    %%%%%:   97-block  0
+call    0 never executed
+    #####:   98:    tabelaCartiCos->setRowCount(0);
+call    0 never executed
+    #####:   99:    for (const auto& c : service.getAllCos()) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   99-block  0
+call    3 never executed
+call    4 never executed
+    %%%%%:   99-block  1
+call    5 never executed
+    %%%%%:   99-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed (fallthrough)
+    #####:  100:        tabelaCartiCos->setHorizontalHeaderLabels({"ID", "Titlu", "Autor", "Gen", "Anul aparitiei"});
+    %%%%%:  100-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  100-block  1
+call    3 never executed
+    %%%%%:  100-block  2
+branch  4 never executed (fallthrough)
+branch  5 never executed
+    %%%%%:  100-block  3
+call    6 never executed
+    $$$$$:  100-block  4
+call    7 never executed
+    $$$$$:  100-block  5
+    $$$$$:  100-block  6
+branch  8 never executed (fallthrough)
+branch  9 never executed
+    $$$$$:  100-block  7
+call   10 never executed
+    $$$$$:  100-block  8
+    $$$$$:  100-block  9
+    #####:  101:        int row = tabelaCartiCos->rowCount();
+    %%%%%:  101-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  102:        tabelaCartiCos->insertRow(row);
+    %%%%%:  102-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  103:        tabelaCartiCos->setItem(row, 0, new QTableWidgetItem(QString::number(c.getId())));
+    %%%%%:  103-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  103-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  103-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  103-block  3
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  103-block  4
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  103-block  5
+call   15 never executed
+    $$$$$:  103-block  6
+call   16 never executed
+    $$$$$:  103-block  7
+    $$$$$:  103-block  8
+branch 17 never executed (fallthrough)
+branch 18 never executed
+    $$$$$:  103-block  9
+call   19 never executed
+    #####:  104:        tabelaCartiCos->setItem(row, 1, new QTableWidgetItem(QString::fromStdString(c.getTitlu())));
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  104-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  104-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  104-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  104-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  104-block  4
+call   15 never executed
+    $$$$$:  104-block  5
+call   16 never executed
+    $$$$$:  104-block  6
+    $$$$$:  104-block  7
+branch 17 never executed (fallthrough)
+branch 18 never executed
+    $$$$$:  104-block  8
+call   19 never executed
+    #####:  105:        tabelaCartiCos->setItem(row, 2, new QTableWidgetItem(QString::fromStdString(c.getAutor())));
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  105-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  105-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  105-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  105-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  105-block  4
+call   15 never executed
+    $$$$$:  105-block  5
+call   16 never executed
+    $$$$$:  105-block  6
+    $$$$$:  105-block  7
+branch 17 never executed (fallthrough)
+branch 18 never executed
+    $$$$$:  105-block  8
+call   19 never executed
+    #####:  106:        tabelaCartiCos->setItem(row, 3, new QTableWidgetItem(QString::fromStdString(c.getGen())));
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  106-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  106-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  106-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  106-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  106-block  4
+call   15 never executed
+    $$$$$:  106-block  5
+call   16 never executed
+    $$$$$:  106-block  6
+    $$$$$:  106-block  7
+branch 17 never executed (fallthrough)
+branch 18 never executed
+    $$$$$:  106-block  8
+call   19 never executed
+    #####:  107:        tabelaCartiCos->setItem(row, 4, new QTableWidgetItem(QString::number(c.getAnAparitie())));
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  107-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  107-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  107-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  107-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  107-block  4
+call   15 never executed
+call   16 never executed
+    $$$$$:  107-block  5
+call   17 never executed
+    $$$$$:  107-block  6
+    $$$$$:  107-block  7
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    $$$$$:  107-block  8
+call   20 never executed
+        -:  108:    }
+    #####:  109:}
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  109-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  109-block  1
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:  109-block  2
+call    9 never executed
+branch 10 never executed (fallthrough)
+branch 11 never executed (throw)
+    %%%%%:  109-block  3
+call   12 never executed
+branch 13 never executed (fallthrough)
+branch 14 never executed (throw)
+    %%%%%:  109-block  4
+call   15 never executed
+branch 16 never executed (fallthrough)
+branch 17 never executed (throw)
+    %%%%%:  109-block  5
+    $$$$$:  109-block  6
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    $$$$$:  109-block  7
+    $$$$$:  109-block  8
+branch 20 never executed (fallthrough)
+branch 21 never executed
+    $$$$$:  109-block  9
+call   22 never executed
+        -:  110:
+function _ZN9CosWindow10golesteCosEv called 0 returned 0% blocks executed 0%
+    #####:  111:void CosWindow::golesteCos() {
+    #####:  112:    service.golesteCos();
+    %%%%%:  112-block  0
+call    0 never executed
+    #####:  113:    emit cosModificat();
+call    0 never executed
+    #####:  114:    loadCos();
+call    0 never executed
+    #####:  115:    QMessageBox::information(this, "Succes", "Cos golit!");
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  115-block  0
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  115-block  1
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  115-block  2
+call   10 never executed
+call   11 never executed
+    $$$$$:  115-block  3
+call   12 never executed
+    $$$$$:  115-block  4
+    $$$$$:  115-block  5
+call   13 never executed
+    $$$$$:  115-block  6
+    #####:  116:}
+        -:  117:
+function _ZN9CosWindow12genereazaCosEv called 0 returned 0% blocks executed 0%
+    #####:  118:void CosWindow::genereazaCos() {
+        -:  119:    try {
+    #####:  120:        int numarCarti = numarCartiEdit->text().toInt();
+    %%%%%:  120-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  120-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  120-block  2
+call    6 never executed
+    $$$$$:  120-block  3
+call    7 never executed
+    $$$$$:  120-block  4
+    #####:  121:        Lista<Carte> &carti = service.getCarti();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  122:        service.genereazaCos(numarCarti, carti);
+    %%%%%:  122-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  123:        emit cosModificat();
+    %%%%%:  123-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  124:        QMessageBox::information(this, "Succes", "Cos generat!");
+    %%%%%:  124-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  124-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  124-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  124-block  3
+call   10 never executed
+call   11 never executed
+    $$$$$:  124-block  4
+call   12 never executed
+    $$$$$:  124-block  5
+    $$$$$:  124-block  6
+call   13 never executed
+    $$$$$:  124-block  7
+    $$$$$:  124-block  8
+    #####:  125:        loadCos();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    =====:  126:    } catch (const std::exception &e) {
+    $$$$$:  126-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  126-block  1
+call    2 never executed
+    =====:  127:        QMessageBox::warning(this, "Eroare", e.what());
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed (fallthrough)
+branch  4 never executed (throw)
+    $$$$$:  127-block  0
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    $$$$$:  127-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    $$$$$:  127-block  2
+call   11 never executed
+call   12 never executed
+    $$$$$:  127-block  3
+call   13 never executed
+    $$$$$:  127-block  4
+    $$$$$:  127-block  5
+call   14 never executed
+    $$$$$:  127-block  6
+    $$$$$:  127-block  7
+    =====:  128:    }
+call    0 never executed
+    $$$$$:  128-block  0
+call    1 never executed
+    #####:  129:    numarCartiEdit->clear();
+    %%%%%:  129-block  0
+call    0 never executed
+    #####:  130:}
+        -:  131:
+function _ZN9CosWindow9exportCsvEv called 0 returned 0% blocks executed 0%
+    #####:  132:void CosWindow::exportCsv() {
+    #####:  133:    std::string numeFisier = numeFisierEdit->text().toStdString();
+    %%%%%:  133-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  133-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  133-block  2
+call    6 never executed
+    $$$$$:  133-block  3
+call    7 never executed
+    $$$$$:  133-block  4
+        -:  134:    try {
+    #####:  135:        service.exportCsv(numeFisier);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  136:        QMessageBox::information(this, "Succes", "Cos exportat in CSV!");
+    %%%%%:  136-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  136-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  136-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  136-block  3
+call   10 never executed
+call   11 never executed
+    $$$$$:  136-block  4
+call   12 never executed
+    $$$$$:  136-block  5
+    $$$$$:  136-block  6
+call   13 never executed
+    $$$$$:  136-block  7
+    $$$$$:  136-block  8
+    =====:  137:    } catch (const std::exception &e) {
+    $$$$$:  137-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  137-block  1
+call    2 never executed
+    =====:  138:        QMessageBox::warning(this, "Eroare", e.what());
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed (fallthrough)
+branch  4 never executed (throw)
+    $$$$$:  138-block  0
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    $$$$$:  138-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    $$$$$:  138-block  2
+call   11 never executed
+call   12 never executed
+    $$$$$:  138-block  3
+call   13 never executed
+    $$$$$:  138-block  4
+    $$$$$:  138-block  5
+call   14 never executed
+    $$$$$:  138-block  6
+    $$$$$:  138-block  7
+    =====:  139:    }
+call    0 never executed
+    $$$$$:  139-block  0
+call    1 never executed
+    #####:  140:    numarCartiEdit->clear();
+    %%%%%:  140-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  141:}
+    %%%%%:  141-block  0
+call    0 never executed
+    $$$$$:  141-block  1
+call    1 never executed
+        -:  142:
+function _ZN9CosWindow10exportHtmlEv called 0 returned 0% blocks executed 0%
+    #####:  143:void CosWindow::exportHtml() {
+    #####:  144:    std::string numeFisier = numeFisierHtmlEdit->text().toStdString();
+    %%%%%:  144-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:  144-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:  144-block  2
+call    6 never executed
+    $$$$$:  144-block  3
+call    7 never executed
+    $$$$$:  144-block  4
+        -:  145:    try {
+    #####:  146:        service.exportHtml(numeFisier);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  147:        QMessageBox::information(this, "Succes", "Cos exportat in HTML!");
+    %%%%%:  147-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  147-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:  147-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:  147-block  3
+call   10 never executed
+call   11 never executed
+    $$$$$:  147-block  4
+call   12 never executed
+    $$$$$:  147-block  5
+    $$$$$:  147-block  6
+call   13 never executed
+    $$$$$:  147-block  7
+    $$$$$:  147-block  8
+    =====:  148:    } catch (const std::exception &e) {
+    $$$$$:  148-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    $$$$$:  148-block  1
+call    2 never executed
+    =====:  149:        QMessageBox::warning(this, "Eroare", e.what());
+call    0 never executed
+call    1 never executed
+call    2 never executed
+branch  3 never executed (fallthrough)
+branch  4 never executed (throw)
+    $$$$$:  149-block  0
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    $$$$$:  149-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    $$$$$:  149-block  2
+call   11 never executed
+call   12 never executed
+    $$$$$:  149-block  3
+call   13 never executed
+    $$$$$:  149-block  4
+    $$$$$:  149-block  5
+call   14 never executed
+    $$$$$:  149-block  6
+    $$$$$:  149-block  7
+    =====:  150:    }
+call    0 never executed
+    $$$$$:  150-block  0
+call    1 never executed
+    #####:  151:    numeFisierHtmlEdit->clear();
+    %%%%%:  151-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:  152:}
+    %%%%%:  152-block  0
+call    0 never executed
+    $$$$$:  152-block  1
+call    1 never executed
+        -:  153:
+function _ZN9CosWindow18afiseazaNumarCartiEv called 0 returned 0% blocks executed 0%
+    #####:  154:void CosWindow::afiseazaNumarCarti() {
+    #####:  155:    int numarCarti = service.getSizeCos();
+    %%%%%:  155-block  0
+call    0 never executed
+    #####:  156:    QMessageBox::information(this, "Numar carti", QString("Numarul de carti din cos este: %1").arg(numarCarti));
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:  156-block  0
+call    4 never executed
+call    5 never executed
+branch  6 never executed (fallthrough)
+branch  7 never executed (throw)
+    %%%%%:  156-block  1
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    %%%%%:  156-block  2
+call   11 never executed
+branch 12 never executed (fallthrough)
+branch 13 never executed (throw)
+    %%%%%:  156-block  3
+call   14 never executed
+call   15 never executed
+call   16 never executed
+    $$$$$:  156-block  4
+call   17 never executed
+    $$$$$:  156-block  5
+    $$$$$:  156-block  6
+call   18 never executed
+    $$$$$:  156-block  7
+    $$$$$:  156-block  8
+call   19 never executed
+    $$$$$:  156-block  9
+    $$$$$:  156-block 10
+    #####:  157:}
+        -:  158:
+function _ZN9CosWindow19onBackButtonClickedEv called 0 returned 0% blocks executed 0%
+    #####:  159:void CosWindow::onBackButtonClicked() {
+    #####:  160:    if (mainWindow) {
+    %%%%%:  160-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  161:        mainWindow->show();
+    %%%%%:  161-block  0
+call    0 never executed
+        -:  162:    }
+    #####:  163:    this->close();
+    %%%%%:  163-block  0
+call    0 never executed
+    #####:  164:}
+        -:  165:
+function _ZN9CosWindow10closeEventEP11QCloseEvent called 0 returned 0% blocks executed 0%
+    #####:  166:void CosWindow::closeEvent(QCloseEvent *event) {
+    #####:  167:    if (mainWindow) {
+    %%%%%:  167-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  168:        mainWindow->show();
+    %%%%%:  168-block  0
+call    0 never executed
+        -:  169:    }
+    #####:  170:    event->accept();
+    %%%%%:  170-block  0
+call    0 never executed
+    #####:  171:}

@@ -1,0 +1,10 @@
+1,TractorA,TIP1,4
+2,TractorB,TIP2,6
+3,TractorC,TIP1,4
+4,TractorD,TIP3,10
+5,TractorE,TIP2,10
+6,TractorF,TIP4,12
+7,TractorG,TIP1,4
+8,TractorH,TIP3,2
+9,TractorI,TIP2,4
+10,TractorJ,TIP4,14

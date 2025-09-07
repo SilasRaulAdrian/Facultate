@@ -1,0 +1,301 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/lab2-4/repo/repo_oferte.c
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/lab2-4/cmake-build-debug-coverage/CMakeFiles/lab2_4.dir/repo/repo_oferte.c.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/lab2-4/cmake-build-debug-coverage/CMakeFiles/lab2_4.dir/repo/repo_oferte.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "repo_oferte.h"
+        -:    2:
+        -:    3:#include <stdlib.h>
+        -:    4:#include <string.h>
+        -:    5:
+        -:    6:#define INIT_CAPACITY 10
+        -:    7:
+function creeazaRepo called 26 returned 100% blocks executed 100%
+       26:    8:Repo* creeazaRepo() {
+       26:    9:    Repo* repo = (Repo*)malloc(sizeof(Repo));
+       26:   10:    repo->lungime = 0;
+       26:   11:    repo->dimensiune = INIT_CAPACITY;
+       26:   12:    repo->oferte = (Oferta**)malloc(sizeof(Oferta*) * INIT_CAPACITY);
+       26:   13:    return repo;
+       26:   13-block  0
+        -:   14:}
+        -:   15:
+function distruge_repo called 26 returned 100% blocks executed 92%
+       26:   16:void distruge_repo(Repo *repo) {
+      26*:   17:    if (repo == NULL) return;
+       26:   17-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 26
+    %%%%%:   17-block  1
+        -:   18:
+       26:   19:    if (repo->oferte != NULL) {
+       26:   19-block  0
+branch  0 taken 26 (fallthrough)
+branch  1 taken 0
+       62:   20:        for (int i = 0; i < repo->lungime; i++) {
+       26:   20-block  0
+       36:   20-block  1
+       62:   20-block  2
+branch  0 taken 36
+branch  1 taken 26 (fallthrough)
+       36:   21:            if (repo->oferte[i] != NULL) {
+       36:   21-block  0
+branch  0 taken 36 (fallthrough)
+branch  1 taken 0
+       36:   22:                distruge_oferta(repo->oferte[i]);
+       36:   22-block  0
+call    0 returned 36
+       36:   23:                repo->oferte[i] = NULL;
+        -:   24:            }
+        -:   25:        }
+       26:   26:        free(repo->oferte);
+       26:   27:        repo->oferte = NULL;
+       26:   27-block  0
+        -:   28:    }
+        -:   29:
+       26:   30:    free(repo);
+       26:   30-block  0
+        -:   31:}
+        -:   32:
+function copie_repo called 20 returned 100% blocks executed 100%
+       20:   33:Repo* copie_repo(Repo* repo) {
+       20:   34:    Repo* nou = creeazaRepo();
+       20:   34-block  0
+call    0 returned 20
+        -:   35:
+       41:   36:    for (int i = 0; i < repo->lungime; i++) {
+       41:   36-block  0
+branch  0 taken 21
+branch  1 taken 20 (fallthrough)
+       21:   37:        Oferta* oferta_noua = creeaza_oferta(
+       21:   38:            repo->oferte[i]->id,
+       21:   39:            repo->oferte[i]->tip,
+       21:   40:            repo->oferte[i]->suprafata,
+       21:   41:            repo->oferte[i]->adresa,
+       21:   42:            repo->oferte[i]->pret
+       21:   42-block  0
+call    0 returned 21
+        -:   43:        );
+       21:   44:        adauga_oferta(nou, oferta_noua);
+call    0 returned 21
+        -:   45:    }
+        -:   46:
+       20:   47:    return nou;
+       20:   47-block  0
+        -:   48:}
+        -:   49:
+function id_exists called 54 returned 100% blocks executed 100%
+       54:   50:int id_exists(Repo *repo, int id) {
+      130:   51:    for (int i = 0; i < repo->lungime; i++) {
+       54:   51-block  0
+       76:   51-block  1
+      130:   51-block  2
+branch  0 taken 87
+branch  1 taken 43 (fallthrough)
+       87:   52:        if (repo->oferte[i]->id == id) {
+       87:   52-block  0
+branch  0 taken 11 (fallthrough)
+branch  1 taken 76
+       11:   53:            return 1;
+       11:   53-block  0
+        -:   54:        }
+        -:   55:    }
+        -:   56:
+       43:   57:    return 0;
+       43:   57-block  0
+        -:   58:}
+        -:   59:
+function adauga_oferta called 38 returned 100% blocks executed 100%
+       38:   60:int adauga_oferta(Repo *repo, Oferta *oferta) {
+       38:   61:    if (id_exists(repo, oferta->id) == 0) {
+       38:   61-block  0
+call    0 returned 38
+branch  1 taken 37 (fallthrough)
+branch  2 taken 1
+       37:   62:        if (repo->lungime == repo->dimensiune) {
+       37:   62-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 36
+        1:   63:            int dimensiune_noua = repo->dimensiune * 2;
+        1:   64:            Oferta** oferte_noi = (Oferta**)malloc(sizeof(Oferta*) * dimensiune_noua);
+       11:   65:            for (int i = 0; i < repo->lungime; i++) {
+        1:   65-block  0
+       11:   65-block  1
+branch  0 taken 10
+branch  1 taken 1 (fallthrough)
+       10:   66:                oferte_noi[i] = repo->oferte[i];
+       10:   66-block  0
+        -:   67:            }
+        1:   68:            free(repo->oferte);
+        1:   69:            repo->oferte = oferte_noi;
+        1:   70:            repo->dimensiune = dimensiune_noua;
+        1:   70-block  0
+        -:   71:        }
+       37:   72:        repo->oferte[repo->lungime] = oferta;
+       37:   73:        repo->lungime = repo->lungime + 1;
+       37:   74:        return 1;
+       37:   74-block  0
+        -:   75:    }
+        -:   76:
+        1:   77:    return 0;
+        1:   77-block  0
+        -:   78:}
+        -:   79:
+function modifica_tip called 3 returned 100% blocks executed 89%
+        3:   80:int modifica_tip(Repo *repo, char *tip, int id) {
+        3:   81:    if (id_exists(repo, id) == 1) {
+        3:   81-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+       2*:   82:        for (int i = 0; i < repo->lungime; i++) {
+        2:   82-block  0
+    %%%%%:   82-block  1
+        2:   82-block  2
+branch  0 taken 2
+branch  1 taken 0 (fallthrough)
+        2:   83:            if (repo->oferte[i]->id == id) {
+        2:   83-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   84:                free(repo->oferte[i]->tip);
+        2:   85:                repo->oferte[i]->tip = (char*)malloc(sizeof(char) * strlen(tip) + 1);
+        2:   86:                strcpy(repo->oferte[i]->tip, tip);
+        2:   87:                return 1;
+        2:   87-block  0
+        -:   88:            }
+        -:   89:        }
+        -:   90:    }
+        -:   91:
+        1:   92:    return 0;
+        1:   92-block  0
+        -:   93:}
+        -:   94:
+function modifica_adresa called 3 returned 100% blocks executed 89%
+        3:   95:int modifica_adresa(Repo *repo, char *adresa, int id) {
+        3:   96:    if (id_exists(repo, id) == 1) {
+        3:   96-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+       2*:   97:        for (int i = 0; i < repo->lungime; i++) {
+        2:   97-block  0
+    %%%%%:   97-block  1
+        2:   97-block  2
+branch  0 taken 2
+branch  1 taken 0 (fallthrough)
+        2:   98:            if (repo->oferte[i]->id == id) {
+        2:   98-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:   99:                free(repo->oferte[i]->adresa);
+        2:  100:                repo->oferte[i]->adresa = (char*)malloc(sizeof(char) * strlen(adresa) + 1);
+        2:  101:                strcpy(repo->oferte[i]->adresa, adresa);
+        2:  102:                return 1;
+        2:  102-block  0
+        -:  103:            }
+        -:  104:        }
+        -:  105:    }
+        -:  106:
+        1:  107:    return 0;
+        1:  107-block  0
+        -:  108:}
+        -:  109:
+function modifica_pret called 3 returned 100% blocks executed 89%
+        3:  110:int modifica_pret(Repo *repo, int pret, int id) {
+        3:  111:    if (id_exists(repo, id) == 1) {
+        3:  111-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+       2*:  112:        for (int i = 0; i < repo->lungime; i++) {
+        2:  112-block  0
+    %%%%%:  112-block  1
+        2:  112-block  2
+branch  0 taken 2
+branch  1 taken 0 (fallthrough)
+        2:  113:            if (repo->oferte[i]->id == id) {
+        2:  113-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  114:                repo->oferte[i]->pret = pret;
+        2:  115:                return 1;
+        2:  115-block  0
+        -:  116:            }
+        -:  117:        }
+        -:  118:    }
+        -:  119:
+        1:  120:    return 0;
+        1:  120-block  0
+        -:  121:}
+        -:  122:
+function modifica_suprafata called 3 returned 100% blocks executed 89%
+        3:  123:int modifica_suprafata(Repo *repo, int suprafata, int id) {
+        3:  124:    if (id_exists(repo, id) == 1) {
+        3:  124-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1
+       2*:  125:        for (int i = 0; i < repo->lungime; i++) {
+        2:  125-block  0
+    %%%%%:  125-block  1
+        2:  125-block  2
+branch  0 taken 2
+branch  1 taken 0 (fallthrough)
+        2:  126:            if (repo->oferte[i]->id == id) {
+        2:  126-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  127:                repo->oferte[i]->suprafata = suprafata;
+        2:  128:                return 1;
+        2:  128-block  0
+        -:  129:            }
+        -:  130:        }
+        -:  131:    }
+        -:  132:
+        1:  133:    return 0;
+        1:  133-block  0
+        -:  134:}
+        -:  135:
+function sterge_oferta called 4 returned 100% blocks executed 93%
+        4:  136:int sterge_oferta(Repo *repo, int id) {
+        4:  137:    int poz = -1;
+        4:  138:    if (id_exists(repo, id) == 0 || repo->lungime <= 0)
+        4:  138-block  0
+call    0 returned 4
+branch  1 taken 2 (fallthrough)
+branch  2 taken 2
+        2:  138-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 2
+        2:  139:        return 0;
+        2:  139-block  0
+        -:  140:
+       2*:  141:    for (int i = 0; i < repo->lungime; i++) {
+        2:  141-block  0
+    %%%%%:  141-block  1
+        2:  141-block  2
+branch  0 taken 2
+branch  1 taken 0 (fallthrough)
+        2:  142:        if (repo->oferte[i]->id == id) {
+        2:  142-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 0
+        2:  143:            poz = i;
+        2:  144:            break;
+        2:  144-block  0
+        -:  145:        }
+        -:  146:    }
+        -:  147:
+       12:  148:    for (int i = poz; i < repo->lungime - 1; i++) {
+        2:  148-block  0
+       12:  148-block  1
+branch  0 taken 10
+branch  1 taken 2 (fallthrough)
+       10:  149:        repo->oferte[i] = repo->oferte[i + 1];
+       10:  149-block  0
+        -:  150:    }
+        2:  151:    repo->lungime--;
+        -:  152:
+        2:  153:    return 1;
+        2:  153-block  0
+        -:  154:}

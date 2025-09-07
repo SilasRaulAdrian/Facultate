@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage -G "Unix Makefiles" -S "/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)" -B "/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage"
+-- Configuring done (0.0s)
+-- Generating done (0.2s)
+-- Build files have been written to: /mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage

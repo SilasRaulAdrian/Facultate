@@ -1,0 +1,29 @@
+subalgoritm previous
+    daca nu e valid atunci
+        arunca exceptie
+    sf_daca
+
+    head <- md.tabel[indexCurent]
+    daca nodCurent = head atunci
+        i <- indexCurent - 1
+        cattimp i >= 0 si md.tabel[i] = NIL executa
+            i <- i - 1
+        sf_cattimp
+        daca i < 0 atunci
+            nodCurent <- NIL
+            indexCurent <- -1
+            return
+        sf_daca
+        indexCurent <- i
+        nodCurent <- md.tabel[i]
+        cattimp nodCurent.urm != NIL
+            nodCurent <- nodCurent.urm
+        sf_cattimp
+    altfel
+        p <- md.tabel[indexCurent]
+        cattimp p != NIL si p.urm != nodCurent executa
+            p <- p.urm
+        sf_cattimp
+        nodCurent <- p
+    sf_daca
+sf_subalgoritm

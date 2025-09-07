@@ -1,0 +1,714 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/ui.c
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage/CMakeFiles/Lab_5__fmm_paul_.dir/ui.c.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage/CMakeFiles/Lab_5__fmm_paul_.dir/ui.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include <stdlib.h>
+        -:    3:#include "ui.h"
+        -:    4:#include "service.h"
+        -:    5:#include "oferte.h"
+        -:    6:#include "list.h"
+        -:    7:
+function meniu called 1 returned 100% blocks executed 100%
+        1:    8:void meniu() {
+        1:    9:    printf("-----------------------------------------------------------\n");
+        1:    9-block  0
+call    0 returned 1
+        1:   10:    printf("1. Adauga oferta\n");
+call    0 returned 1
+        1:   11:    printf("2. Sterge oferta\n");
+call    0 returned 1
+        1:   12:    printf("3. Modifica tip oferta\n");
+call    0 returned 1
+        1:   13:    printf("4. Modifica adresa oferta\n");
+call    0 returned 1
+        1:   14:    printf("5. Modifica pret oferta\n");
+call    0 returned 1
+        1:   15:    printf("6. Modifica suprafata oferta\n");
+call    0 returned 1
+        1:   16:    printf("7. Afiseaza oferte\n");
+call    0 returned 1
+        1:   17:    printf("8. Oferte ordonate dupa pret\n");
+call    0 returned 1
+        1:   18:    printf("9. Oferte ordonate dupa tip\n");
+call    0 returned 1
+        1:   19:    printf("10. Oferte filtrate dupa tip\n");
+call    0 returned 1
+        1:   20:    printf("11. Oferte filtrate dupa suprafata\n");
+call    0 returned 1
+        1:   21:    printf("12. Undo\n");
+call    0 returned 1
+        1:   22:    printf("0. Iesi din aplicatie\n\n");
+call    0 returned 1
+        1:   23:}
+        -:   24:
+function run called 1 returned 100% blocks executed 4%
+        1:   25:void run() {
+        1:   26:    Service *service = creeazaService();
+        1:   26-block  0
+call    0 returned 1
+        -:   27:    int optiune;
+        -:   28:    do {
+        1:   29:        meniu();
+        1:   29-block  0
+call    0 returned 1
+        1:   30:        printf("Introduceti optiunea: ");
+call    0 returned 1
+       1*:   31:        if (scanf("%d", &optiune) == 0) {
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    #####:   32:            printf("Optiune invalida.\n");
+    %%%%%:   32-block  0
+call    0 never executed
+    #####:   33:            while (getchar() != '\n') {}
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   34:            continue;
+    %%%%%:   34-block  0
+        -:   35:        }
+        1:   36:        switch (optiune) {
+        1:   36-block  0
+branch  0 taken 0
+branch  1 taken 0
+branch  2 taken 0
+branch  3 taken 0
+branch  4 taken 0
+branch  5 taken 0
+branch  6 taken 0
+branch  7 taken 0
+branch  8 taken 0
+branch  9 taken 0
+branch 10 taken 0
+branch 11 taken 0
+branch 12 taken 1
+branch 13 taken 0
+    #####:   37:            case 1: {
+        -:   38:                int id, suprafata, pret;
+    #####:   39:                char *tip = (char *) malloc(sizeof(char) * 100);
+    #####:   40:                char *adresa = (char *) malloc(sizeof(char) * 100);
+    #####:   41:                printf("Introduceti id-ul ofertei: ");
+    %%%%%:   41-block  0
+call    0 never executed
+    #####:   42:                if (scanf("%d", &id) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   43:                    printf("Id invalid.\n");
+    %%%%%:   43-block  0
+call    0 never executed
+    #####:   44:                    while (getchar() != '\n') {}
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   45:                    continue;
+    %%%%%:   45-block  0
+    %%%%%:   45-block  1
+        -:   46:                }
+    #####:   47:                printf("Introduceti tipul ofertei: ");
+    %%%%%:   47-block  0
+call    0 never executed
+    #####:   48:                if (scanf("%s", tip) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   49:                    printf("Tip invalid.\n");
+    %%%%%:   49-block  0
+call    0 never executed
+    #####:   50:                    while (getchar() != '\n') {}
+    %%%%%:   50-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   51:                    continue;
+    %%%%%:   51-block  0
+        -:   52:                }
+    #####:   53:                printf("Introduceti suprafata ofertei: ");
+    %%%%%:   53-block  0
+call    0 never executed
+    #####:   54:                if (scanf("%d", &suprafata) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   55:                    printf("Suprafata invalida.\n");
+    %%%%%:   55-block  0
+call    0 never executed
+    #####:   56:                    while (getchar() != '\n') {}
+    %%%%%:   56-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   57:                    continue;
+    %%%%%:   57-block  0
+        -:   58:                }
+    #####:   59:                printf("Introduceti adresa ofertei: ");
+    %%%%%:   59-block  0
+call    0 never executed
+    #####:   60:                if (scanf("%s", adresa) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   61:                    printf("Adresa invalida.\n");
+    %%%%%:   61-block  0
+call    0 never executed
+    #####:   62:                    while (getchar() != '\n') {}
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   63:                    continue;
+    %%%%%:   63-block  0
+        -:   64:                }
+    #####:   65:                printf("Introduceti pretul ofertei: ");
+    %%%%%:   65-block  0
+call    0 never executed
+    #####:   66:                if (scanf("%d", &pret) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   67:                    printf("Pret invalid.\n");
+    %%%%%:   67-block  0
+call    0 never executed
+    #####:   68:                    while (getchar() != '\n') {}
+    %%%%%:   68-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   69:                    continue;
+    %%%%%:   69-block  0
+        -:   70:                }
+    #####:   71:                Oferta *oferta = creeazaOferta(id, tip, suprafata, adresa, pret);
+    %%%%%:   71-block  0
+call    0 never executed
+    #####:   72:                if (adaugaOferta(service, oferta) == 1) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   73:                    printf("Oferta adaugata cu succes!\n");
+    %%%%%:   73-block  0
+call    0 never executed
+    #####:   74:                    free(tip);
+    #####:   75:                    free(adresa);
+        -:   76:                } else {
+    #####:   77:                    distrugeOferta(oferta);
+    %%%%%:   77-block  0
+call    0 never executed
+    #####:   78:                    free(tip);
+    #####:   79:                    free(adresa);
+    #####:   80:                    printf("Oferta nu a putut fi adaugata.\n");
+call    0 never executed
+        -:   81:                }
+    #####:   82:                break;
+    %%%%%:   82-block  0
+        -:   83:            }
+    #####:   84:            case 2: {
+        -:   85:                int id;
+    #####:   86:                printf("Introduceti id-ul ofertei: ");
+    %%%%%:   86-block  0
+call    0 never executed
+    #####:   87:                if (scanf("%d", &id) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   88:                    printf("Id invalid.\n");
+    %%%%%:   88-block  0
+call    0 never executed
+    #####:   89:                    while (getchar() != '\n') {}
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   90:                    continue;
+    %%%%%:   90-block  0
+        -:   91:                }
+    #####:   92:                if (stergeOferta(service, id) == 1) {
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   93:                    printf("Oferta stearsa cu succes!\n");
+    %%%%%:   93-block  0
+call    0 never executed
+        -:   94:                } else {
+    #####:   95:                    printf("Oferta nu a putut fi stearsa.\n");
+    %%%%%:   95-block  0
+call    0 never executed
+        -:   96:                }
+    #####:   97:                break;
+    %%%%%:   97-block  0
+        -:   98:            }
+    #####:   99:            case 3: {
+        -:  100:                int id;
+    #####:  101:                char *tip = (char *) malloc(sizeof(char) * 100);
+    #####:  102:                printf("Introduceti id-ul ofertei: ");
+    %%%%%:  102-block  0
+call    0 never executed
+    #####:  103:                if (scanf("%d", &id) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  104:                    printf("Id invalid.\n");
+    %%%%%:  104-block  0
+call    0 never executed
+    #####:  105:                    while (getchar() != '\n') {}
+    %%%%%:  105-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  106:                    continue;
+    %%%%%:  106-block  0
+    %%%%%:  106-block  1
+        -:  107:                }
+    #####:  108:                printf("Introduceti noul tip: ");
+    %%%%%:  108-block  0
+call    0 never executed
+    #####:  109:                if (scanf("%s", tip) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  110:                    printf("Tip invalid.\n");
+    %%%%%:  110-block  0
+call    0 never executed
+    #####:  111:                    while (getchar() != '\n') {}
+    %%%%%:  111-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  112:                    continue;
+    %%%%%:  112-block  0
+        -:  113:                }
+    #####:  114:                if (modificaTip(service, id, tip) == 1) {
+    %%%%%:  114-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  115:                    printf("Tip modificat cu succes!\n");
+    %%%%%:  115-block  0
+call    0 never executed
+    #####:  116:                    free(tip);
+        -:  117:                } else {
+    #####:  118:                    printf("Tipul nu a putut fi modificat.\n");
+    %%%%%:  118-block  0
+call    0 never executed
+    #####:  119:                    free(tip);
+        -:  120:                }
+    #####:  121:                break;
+    %%%%%:  121-block  0
+        -:  122:            }
+    #####:  123:            case 4: {
+        -:  124:                int id;
+    #####:  125:                char *adresa = (char *) malloc(sizeof(char) * 100);
+    #####:  126:                printf("Introduceti id-ul ofertei: ");
+    %%%%%:  126-block  0
+call    0 never executed
+    #####:  127:                if (scanf("%d", &id) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  128:                    printf("Id invalid.\n");
+    %%%%%:  128-block  0
+call    0 never executed
+    #####:  129:                    while (getchar() != '\n') {}
+    %%%%%:  129-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  130:                    continue;
+    %%%%%:  130-block  0
+    %%%%%:  130-block  1
+        -:  131:                }
+    #####:  132:                printf("Introduceti noua adresa: ");
+    %%%%%:  132-block  0
+call    0 never executed
+    #####:  133:                if (scanf("%s", adresa) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  134:                    printf("Adresa invalida.\n");
+    %%%%%:  134-block  0
+call    0 never executed
+    #####:  135:                    while (getchar() != '\n') {}
+    %%%%%:  135-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  136:                    continue;
+    %%%%%:  136-block  0
+        -:  137:                }
+    #####:  138:                if (modificaAdresa(service, id, adresa) == 1) {
+    %%%%%:  138-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  139:                    printf("Adresa modificata cu succes!\n");
+    %%%%%:  139-block  0
+call    0 never executed
+    #####:  140:                    free(adresa);
+        -:  141:                } else {
+    #####:  142:                    printf("Adresa nu a putut fi modificata.\n");
+    %%%%%:  142-block  0
+call    0 never executed
+    #####:  143:                    free(adresa);
+        -:  144:                }
+    #####:  145:                break;
+    %%%%%:  145-block  0
+        -:  146:            }
+    #####:  147:            case 5: {
+        -:  148:                int id, pret;
+    #####:  149:                printf("Introduceti id-ul ofertei: ");
+    %%%%%:  149-block  0
+call    0 never executed
+    #####:  150:                if (scanf("%d", &id) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  151:                    printf("Id invalid.\n");
+    %%%%%:  151-block  0
+call    0 never executed
+    #####:  152:                    while (getchar() != '\n') {}
+    %%%%%:  152-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  153:                    continue;
+    %%%%%:  153-block  0
+    %%%%%:  153-block  1
+        -:  154:                }
+    #####:  155:                printf("Introduceti noul pret: ");
+    %%%%%:  155-block  0
+call    0 never executed
+    #####:  156:                if (scanf("%d", &pret) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  157:                    printf("Pret invalid.\n");
+    %%%%%:  157-block  0
+call    0 never executed
+    #####:  158:                    while (getchar() != '\n') {}
+    %%%%%:  158-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  159:                    continue;
+    %%%%%:  159-block  0
+        -:  160:                }
+    #####:  161:                if (modificaPret(service, id, pret) == 1) {
+    %%%%%:  161-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  162:                    printf("Pret modificat cu succes!\n");
+    %%%%%:  162-block  0
+call    0 never executed
+        -:  163:                } else {
+    #####:  164:                    printf("Pretul nu a putut fi modificat.\n");
+    %%%%%:  164-block  0
+call    0 never executed
+        -:  165:                }
+    #####:  166:                break;
+    %%%%%:  166-block  0
+        -:  167:            }
+    #####:  168:            case 6: {
+        -:  169:                int id, suprafata;
+    #####:  170:                printf("Introduceti id-ul ofertei: ");
+    %%%%%:  170-block  0
+call    0 never executed
+    #####:  171:                if (scanf("%d", &id) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  172:                    printf("Id invalid.\n");
+    %%%%%:  172-block  0
+call    0 never executed
+    #####:  173:                    while (getchar() != '\n') {}
+    %%%%%:  173-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  174:                    continue;
+    %%%%%:  174-block  0
+    %%%%%:  174-block  1
+        -:  175:                }
+    #####:  176:                printf("Introduceti noua suprafata: ");
+    %%%%%:  176-block  0
+call    0 never executed
+    #####:  177:                if (scanf("%d", &suprafata) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  178:                    printf("Suprafata invalida.\n");
+    %%%%%:  178-block  0
+call    0 never executed
+    #####:  179:                    while (getchar() != '\n') {}
+    %%%%%:  179-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  180:                    continue;
+    %%%%%:  180-block  0
+        -:  181:                }
+    #####:  182:                if (modificaSuprafata(service, id, suprafata) == 1) {
+    %%%%%:  182-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  183:                    printf("Suprafata modificata cu succes!\n");
+    %%%%%:  183-block  0
+call    0 never executed
+        -:  184:                } else {
+    #####:  185:                    printf("Suprafata nu a putut fi modificata.\n");
+    %%%%%:  185-block  0
+call    0 never executed
+        -:  186:                }
+    #####:  187:                break;
+    %%%%%:  187-block  0
+        -:  188:            }
+    #####:  189:            case 7: {
+    #####:  190:                if (service->oferte->lg == 0) {
+    %%%%%:  190-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  191:                    printf("Nu exista oferte.\n");
+    %%%%%:  191-block  0
+call    0 never executed
+        -:  192:                } else {
+    #####:  193:                    for (int i = 0; i < service->oferte->lg; i++) {
+    %%%%%:  193-block  0
+    %%%%%:  193-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  194:                        Oferta *oferta = (Oferta *) service->oferte->elems[i];
+    #####:  195:                        printf("Id: %d, Tip: %s, Suprafata: %d, Adresa: %s, Pret: %d\n",
+    %%%%%:  195-block  0
+call    0 never executed
+        -:  196:                               oferta->id, oferta->tip, oferta->suprafata, oferta->adresa, oferta->pret);
+        -:  197:                    }
+        -:  198:                }
+    #####:  199:                break;
+    %%%%%:  199-block  0
+        -:  200:            }
+    #####:  201:            case 8: {
+        -:  202:                int mod;
+    #####:  203:                printf("Introduceti modul de ordonare (0 - crescator, 1 - descrescator): ");
+    %%%%%:  203-block  0
+call    0 never executed
+    #####:  204:                if (scanf("%d", &mod) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  205:                    printf("Mod invalid.\n");
+    %%%%%:  205-block  0
+call    0 never executed
+    #####:  206:                    while (getchar() != '\n') {}
+    %%%%%:  206-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  207:                    continue;
+    %%%%%:  207-block  0
+        -:  208:                }
+    #####:  209:                List *listaNoua = oferteOrdonateDupaPret(service, mod);
+    %%%%%:  209-block  0
+call    0 never executed
+    #####:  210:                if (listaNoua->lg == 0) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  211:                    printf("Nu exista oferte.\n");
+    %%%%%:  211-block  0
+call    0 never executed
+        -:  212:                } else {
+    #####:  213:                    for (int i = 0; i < listaNoua->lg; i++) {
+    %%%%%:  213-block  0
+    %%%%%:  213-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  214:                        Oferta *oferta = (Oferta *) listaNoua->elems[i];
+    #####:  215:                        printf("Id: %d, Tip: %s, Suprafata: %d, Adresa: %s, Pret: %d\n",
+    %%%%%:  215-block  0
+call    0 never executed
+        -:  216:                               oferta->id, oferta->tip, oferta->suprafata, oferta->adresa, oferta->pret);
+        -:  217:                    }
+        -:  218:                }
+    #####:  219:                break;
+    %%%%%:  219-block  0
+        -:  220:            }
+    #####:  221:            case 9: {
+        -:  222:                int mod;
+    #####:  223:                printf("Introduceti modul de ordonare (0 - crescator, 1 - descrescator): ");
+    %%%%%:  223-block  0
+call    0 never executed
+    #####:  224:                if (scanf("%d", &mod) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  225:                    printf("Mod invalid.\n");
+    %%%%%:  225-block  0
+call    0 never executed
+    #####:  226:                    while (getchar() != '\n') {}
+    %%%%%:  226-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  227:                    continue;
+    %%%%%:  227-block  0
+        -:  228:                }
+    #####:  229:                List *listaNoua = oferteOrdonateDupaTip(service, mod);
+    %%%%%:  229-block  0
+call    0 never executed
+    #####:  230:                if (listaNoua->lg == 0) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  231:                    printf("Nu exista oferte.\n");
+    %%%%%:  231-block  0
+call    0 never executed
+        -:  232:                } else {
+    #####:  233:                    for (int i = 0; i < listaNoua->lg; i++) {
+    %%%%%:  233-block  0
+    %%%%%:  233-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  234:                        Oferta *oferta = (Oferta *) listaNoua->elems[i];
+    #####:  235:                        printf("Id: %d, Tip: %s, Suprafata: %d, Adresa: %s, Pret: %d\n",
+    %%%%%:  235-block  0
+call    0 never executed
+        -:  236:                               oferta->id, oferta->tip, oferta->suprafata, oferta->adresa, oferta->pret);
+        -:  237:                    }
+        -:  238:                }
+    #####:  239:                break;
+    %%%%%:  239-block  0
+        -:  240:            }
+    #####:  241:            case 10: {
+    #####:  242:                char *tip = (char *) malloc(sizeof(char) * 100);
+    #####:  243:                printf("Introduceti tipul ofertei: ");
+    %%%%%:  243-block  0
+call    0 never executed
+    #####:  244:                if (scanf("%s", tip) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  245:                    printf("Tip invalid.\n");
+    %%%%%:  245-block  0
+call    0 never executed
+    #####:  246:                    while (getchar() != '\n') {}
+    %%%%%:  246-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  247:                    continue;
+    %%%%%:  247-block  0
+        -:  248:                }
+    #####:  249:                List *listaNoua = oferteFiltrateDupaTip(service, tip);
+    %%%%%:  249-block  0
+call    0 never executed
+    #####:  250:                if (listaNoua->lg == 0) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  251:                    printf("Nu exista oferte.\n");
+    %%%%%:  251-block  0
+call    0 never executed
+        -:  252:                } else {
+    #####:  253:                    for (int i = 0; i < listaNoua->lg; i++) {
+    %%%%%:  253-block  0
+    %%%%%:  253-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  254:                        Oferta *oferta = (Oferta *) listaNoua->elems[i];
+    #####:  255:                        printf("Id: %d, Tip: %s, Suprafata: %d, Adresa: %s, Pret: %d\n",
+    %%%%%:  255-block  0
+call    0 never executed
+        -:  256:                               oferta->id, oferta->tip, oferta->suprafata, oferta->adresa, oferta->pret);
+        -:  257:                    }
+        -:  258:                }
+    #####:  259:                distrugeLista(listaNoua);
+    %%%%%:  259-block  0
+call    0 never executed
+    #####:  260:                break;
+        -:  261:            }
+    #####:  262:            case 11: {
+        -:  263:                int suprafata;
+    #####:  264:                printf("Introduceti suprafata ofertei: ");
+    %%%%%:  264-block  0
+call    0 never executed
+    #####:  265:                if (scanf("%d", &suprafata) == 0) {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  266:                    printf("Suprafata invalida.\n");
+    %%%%%:  266-block  0
+call    0 never executed
+    #####:  267:                    while (getchar() != '\n') {}
+    %%%%%:  267-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  268:                    continue;
+    %%%%%:  268-block  0
+        -:  269:                }
+    #####:  270:                List *listaNoua = oferteFiltrateDupaSuprafata(service, suprafata);
+    %%%%%:  270-block  0
+call    0 never executed
+    #####:  271:                if (listaNoua->lg == 0) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:  272:                    printf("Nu exista oferte.\n");
+    %%%%%:  272-block  0
+call    0 never executed
+        -:  273:                } else {
+    #####:  274:                    for (int i = 0; i < listaNoua->lg; i++) {
+    %%%%%:  274-block  0
+    %%%%%:  274-block  1
+branch  0 never executed
+branch  1 never executed (fallthrough)
+    #####:  275:                        Oferta *oferta = (Oferta *) listaNoua->elems[i];
+    #####:  276:                        printf("Id: %d, Tip: %s, Suprafata: %d, Adresa: %s, Pret: %d\n",
+    %%%%%:  276-block  0
+call    0 never executed
+        -:  277:                               oferta->id, oferta->tip, oferta->suprafata, oferta->adresa, oferta->pret);
+        -:  278:                    }
+        -:  279:                }
+    #####:  280:                distrugeLista(listaNoua);
+    %%%%%:  280-block  0
+call    0 never executed
+    #####:  281:                break;
+        -:  282:            }
+    #####:  283:            case 12: {
+    #####:  284:                if (undo(service) == 1) {
+    %%%%%:  284-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:  285:                    printf("Operatie de undo efectuata cu succes!\n");
+    %%%%%:  285-block  0
+call    0 never executed
+        -:  286:                } else {
+    #####:  287:                    printf("Nu se poate efectua operatia de undo.\n");
+    %%%%%:  287-block  0
+call    0 never executed
+        -:  288:                }
+    #####:  289:                break;
+    %%%%%:  289-block  0
+        -:  290:            }
+        1:  291:            case 0: {
+        1:  292:                printf("Aplicatia s-a inchis.\n");
+        1:  292-block  0
+call    0 returned 1
+        1:  293:                distrugeService(service);
+call    0 returned 1
+        1:  294:                break;
+        -:  295:            }
+    #####:  296:            default: {
+    #####:  297:                printf("Optiune invalida.\n");
+    %%%%%:  297-block  0
+call    0 never executed
+    #####:  298:                break;
+        -:  299:            }
+        -:  300:        }
+        1:  301:    } while (optiune != 0);
+        1:  301-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  302:}
+        -:  303:

@@ -1,0 +1,198 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/domain/carte.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\repository\carte_repo.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\repository\carte_repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_CARTE_H
+        -:    2:#define LAB_6_7_CARTE_H
+        -:    3:
+        -:    4:#include <string>
+        -:    5:#include <iostream>
+        -:    6:
+        -:    7:class Carte {
+        -:    8:private:
+        -:    9:    mutable std::string titlu;
+        -:   10:    mutable std::string autor;
+        -:   11:    mutable std::string gen;
+        -:   12:    mutable int an_aparitie;
+        -:   13:    int id;
+        -:   14:
+        -:   15:public:
+        -:   16:    /**
+        -:   17:     * Constructorul clasei Carte
+        -:   18:     * @param id Id-ul cartii
+        -:   19:     * @param titlu Titlul cartii
+        -:   20:     * @param autor Autorul cartii
+        -:   21:     * @param gen Genul cartii
+        -:   22:     * @param an_aparitie Anul aparitiei cartii
+        -:   23:     */
+        -:   24:    Carte(int id, const std::string &titlu, const std::string &autor, const std::string &gen, int an_aparitie) :
+        -:   25:        id(id), titlu(titlu), autor(autor), gen(gen), an_aparitie(an_aparitie) {}
+        -:   26:
+        -:   27:    /**
+        -:   28:     * Constructorul de copiere al clasei Carte
+        -:   29:     * @param other Obiectul Carte de copiat
+        -:   30:     */
+function _ZN5CarteC1ERKS_ called 0 returned 0% blocks executed 0%
+    #####:   31:    Carte(const Carte &other) :
+    #####:   32:        id(other.id), titlu(other.titlu), autor(other.autor), gen(other.gen), an_aparitie(other.an_aparitie) {
+    %%%%%:   32-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   32-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    #####:   33:        std::cout << "Constructor de copiere apelat\n";
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:   34:    }
+    %%%%%:   34-block  0
+    $$$$$:   34-block  1
+call    0 never executed
+    $$$$$:   34-block  2
+call    1 never executed
+    $$$$$:   34-block  3
+call    2 never executed
+        -:   35:
+        -:   36:    /**
+        -:   37:     * Suprascrierea operatorului de atribuire
+        -:   38:     * @param other Obiectul Carte de copiat
+        -:   39:     * @return Obiectul curent
+        -:   40:     */
+function _ZN5CarteaSERKS_ called 0 returned 0% blocks executed 0%
+    #####:   41:    Carte &operator=(const Carte &other) {
+    #####:   42:        if (this != &other) {
+    %%%%%:   42-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   43:            id = other.id;
+    #####:   44:            titlu = other.titlu;
+    %%%%%:   44-block  0
+call    0 never executed
+    #####:   45:            autor = other.autor;
+call    0 never executed
+    #####:   46:            gen = other.gen;
+call    0 never executed
+    #####:   47:            an_aparitie = other.an_aparitie;
+        -:   48:        }
+    #####:   49:        std::cout << "Operator de atribuire apelat\n";
+    %%%%%:   49-block  0
+call    0 never executed
+    #####:   50:        return *this;
+        -:   51:    }
+        -:   52:
+        -:   53:    /**
+        -:   54:     * Suprascrierea operatorului de comparare
+        -:   55:     * @param other Obiectul Carte cu care se compara
+        -:   56:     * @return True daca cartile sunt egale, false altfel
+        -:   57:     */
+function _ZNK5CarteeqERKS_ called 0 returned 0% blocks executed 0%
+    #####:   58:    bool operator==(const Carte &other) const {
+    #####:   59:        return this->id == other.id &&
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   60:               this->titlu == other.titlu &&
+    %%%%%:   60-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   61:               this->autor == other.autor &&
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed
+    #####:   62:               this->gen == other.gen &&
+    %%%%%:   62-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   62-block  1
+call    2 never executed
+    %%%%%:   62-block  2
+    %%%%%:   62-block  3
+    #####:   63:               this->an_aparitie == other.an_aparitie;
+    %%%%%:   63-block  0
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    %%%%%:   63-block  1
+        -:   64:    }
+        -:   65:
+        -:   66:    /**
+        -:   67:     * Constructorul default al clasei Carte
+        -:   68:     */
+function _ZN5CarteC1Ev called 0 returned 0% blocks executed 0%
+    #####:   69:    Carte() = default;
+    %%%%%:   69-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   70:
+        -:   71:    /**
+        -:   72:     * Destructorul clasei Carte
+        -:   73:     */
+function _ZN5CarteD1Ev called 0 returned 0% blocks executed 0%
+    #####:   74:    ~Carte()  = default;
+    %%%%%:   74-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   75:
+        -:   76:    /**
+        -:   77:     * Getter pentru id
+        -:   78:     * @return Id-ul cartii
+        -:   79:     */
+        -:   80:    const int getId() const;
+        -:   81:
+        -:   82:    /**
+        -:   83:     * Getter pentru titlu
+        -:   84:     * @return Titlul cartii
+        -:   85:     */
+        -:   86:    const std::string &getTitlu() const;
+        -:   87:
+        -:   88:    /**
+        -:   89:     * Getter pentru autor
+        -:   90:     * @return Autorul cartii
+        -:   91:     */
+        -:   92:    const std::string &getAutor() const;
+        -:   93:
+        -:   94:    /**
+        -:   95:     * Getter pentru gen
+        -:   96:     * @return Genul cartii
+        -:   97:     */
+        -:   98:    const std::string &getGen() const;
+        -:   99:
+        -:  100:    /**
+        -:  101:     * Getter pentru an_aparitie
+        -:  102:     * @return Anul aparitiei cartii
+        -:  103:     */
+        -:  104:    const int getAnAparitie() const;
+        -:  105:
+        -:  106:    /**
+        -:  107:     * Setter pentru titlu
+        -:  108:     * @param newTitlu Noul titlu al cartii
+        -:  109:     */
+        -:  110:    void setTitlu(const std::string &newTitlu) const;
+        -:  111:
+        -:  112:    /**
+        -:  113:     * Setter pentru autor
+        -:  114:     * @param newAutor Noul autor al cartii
+        -:  115:     */
+        -:  116:    void setAutor(const std::string &newAutor) const;
+        -:  117:
+        -:  118:    /**
+        -:  119:     * Setter pentru gen
+        -:  120:     * @param newGen Noul gen al cartii
+        -:  121:     */
+        -:  122:    void setGen(const std::string &newGen) const;
+        -:  123:
+        -:  124:    /**
+        -:  125:     * Setter pentru an_aparitie
+        -:  126:     * @param newAnAparitie Noul an de aparitie al cartii
+        -:  127:     */
+        -:  128:    void setAnAparitie(int newAnAparitie) const;
+        -:  129:};
+        -:  130:
+        -:  131:#endif //LAB_6_7_CARTE_H

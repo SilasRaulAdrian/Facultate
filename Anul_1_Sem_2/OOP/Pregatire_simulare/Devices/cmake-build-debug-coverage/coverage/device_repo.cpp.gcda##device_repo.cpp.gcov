@@ -1,0 +1,174 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Devices/repository/device_repo.cpp
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\repository\device_repo.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\repository\device_repo.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "device_repo.h"
+        -:    2:#include <QFile>
+        -:    3:#include <QTextStream>
+        -:    4:
+function _ZN10DeviceRepoC2ERK7QString called 3 returned 100% blocks executed 62%
+        3:    5:DeviceRepo::DeviceRepo(const QString &filename) : filename(filename) {
+        3:    5-block  0
+call    0 returned 3
+call    1 returned 3
+        3:    6:    loadFromFile();
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:    7:}
+        3:    7-block  0
+    $$$$$:    7-block  1
+call    0 never executed
+    $$$$$:    7-block  2
+call    1 never executed
+        -:    8:
+function _ZN10DeviceRepo12loadFromFileEv called 3 returned 100% blocks executed 62%
+        3:    9:void DeviceRepo::loadFromFile() {
+        3:   10:    QFile file(filename);
+        3:   10-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   11:    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        3:   11-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:   11-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 3
+    #####:   12:        throw std::runtime_error("Nu s-a putut deschide fisierul.\n");
+    %%%%%:   12-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   12-block  1
+call    4 never executed
+    $$$$$:   12-block  2
+call    5 never executed
+        -:   13:    }
+        3:   14:    QTextStream in(&file);
+        3:   14-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   15:
+       18:   16:    while(!in.atEnd()) {
+        3:   16-block  0
+       18:   16-block  1
+call    0 returned 18
+branch  1 taken 18 (fallthrough)
+branch  2 taken 0 (throw)
+       18:   16-block  2
+branch  3 taken 15
+branch  4 taken 3 (fallthrough)
+       15:   17:        QString line = in.readLine();
+       15:   17-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   18:        QStringList tokens = line.split(',');
+       15:   18-block  0
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+branch  3 taken 15 (fallthrough)
+branch  4 taken 0 (throw)
+    $$$$$:   18-block  1
+    $$$$$:   18-block  2
+        -:   19:
+      15*:   20:        if (tokens.size() != 5) continue;
+       15:   20-block  0
+call    0 returned 15
+branch  1 taken 0 (fallthrough)
+branch  2 taken 15
+    %%%%%:   20-block  1
+        -:   21:
+       15:   22:        QString tip = tokens[0];
+       15:   22-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   22-block  1
+call    3 returned 15
+       15:   23:        QString model = tokens[1];
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   23-block  0
+call    3 returned 15
+       15:   24:        int an = tokens[2].toInt();
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   24-block  0
+call    3 returned 15
+branch  4 taken 15 (fallthrough)
+branch  5 taken 0 (throw)
+       15:   25:        QString culoare = tokens[3];
+       15:   25-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   25-block  1
+call    3 returned 15
+       15:   26:        double pret = tokens[4].toDouble();
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   26-block  0
+call    3 returned 15
+branch  4 taken 15 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   27:
+       15:   28:        devices.emplace_back(tip, model, an, culoare, pret);
+       15:   28-block  0
+call    0 returned 15
+branch  1 taken 15 (fallthrough)
+branch  2 taken 0 (throw)
+       15:   29:    }
+       15:   29-block  0
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+       15:   29-block  1
+call    3 returned 15
+branch  4 taken 15 (fallthrough)
+branch  5 taken 0
+       15:   29-block  2
+       15:   29-block  3
+call    6 returned 15
+branch  7 taken 15 (fallthrough)
+branch  8 taken 0
+    $$$$$:   29-block  4
+call    9 never executed
+    $$$$$:   29-block  5
+call   10 never executed
+    $$$$$:   29-block  6
+call   11 never executed
+    $$$$$:   29-block  7
+call   12 never executed
+    $$$$$:   29-block  8
+call   13 never executed
+        -:   30:
+        3:   31:    file.close();
+        3:   31-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:   32:}
+        3:   32-block  0
+call    0 returned 3
+call    1 returned 3
+    $$$$$:   32-block  1
+call    2 never executed
+    $$$$$:   32-block  2
+call    3 never executed
+        -:   33:
+function _ZNK10DeviceRepo6getAllEv called 5 returned 100% blocks executed 100%
+        5:   34:const std::vector<Device> &DeviceRepo::getAll() const {
+        5:   35:    return devices;
+        5:   35-block  0
+        -:   36:}

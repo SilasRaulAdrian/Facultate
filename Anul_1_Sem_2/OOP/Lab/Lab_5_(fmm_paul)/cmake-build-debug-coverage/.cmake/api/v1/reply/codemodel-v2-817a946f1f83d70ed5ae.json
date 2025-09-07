@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Lab_5__fmm_paul_",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Lab_5__fmm_paul_::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lab_5__fmm_paul_-Debug-d4948be77fe7187b65c1.json",
+					"name" : "Lab_5__fmm_paul_",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage",
+		"source" : "/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

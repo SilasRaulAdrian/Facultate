@@ -1,0 +1,351 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/vector_dinamic/lista.h
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_LISTA_H
+        -:    2:#define LAB_6_7_LISTA_H
+        -:    3:
+        -:    4:#include <stdexcept>
+        -:    5:
+        -:    6:template <typename T>
+        -:    7:class Lista {
+        -:    8:private:
+        -:    9:    T *elemente;
+        -:   10:    int lungime;
+        -:   11:    int capacitate;
+        -:   12:
+        -:   13:public:
+        -:   14:    using value_type = T;
+        -:   15:
+        -:   16:    /**
+        -:   17:     * Constructorul clasei Lista
+        -:   18:     * @param cap Capacitatea initiala a listei
+        -:   19:     */
+function _ZN5ListaI5CarteEC2Ei called 23 returned 100% blocks executed 89%
+       23:   20:    Lista(int cap = 10) : lungime(0), capacitate(cap) {
+     253*:   21:        elemente = new T[capacitate];
+       23:   21-block  0
+branch  0 taken 23 (fallthrough)
+branch  1 taken 0
+       23:   21-block  1
+    %%%%%:   21-block  2
+       23:   21-block  3
+call    2 returned 23
+      230:   21-block  4
+call    3 returned 230
+      253:   21-block  5
+branch  4 taken 230
+branch  5 taken 23 (fallthrough)
+       23:   22:    }
+        -:   23:
+        -:   24:    /**
+        -:   25:     * Destructorul clasei Lista
+        -:   26:     */
+function _ZN5ListaI5CarteED2Ev called 39 returned 100% blocks executed 100%
+       39:   27:    ~Lista() {
+     1189:   28:        delete[] elemente;
+       39:   28-block  0
+branch  0 taken 39 (fallthrough)
+branch  1 taken 0
+       39:   28-block  1
+     1189:   28-block  2
+branch  2 taken 1150 (fallthrough)
+branch  3 taken 39
+     1150:   28-block  3
+call    4 returned 1150
+       39:   28-block  4
+call    5 returned 39
+       39:   29:    }
+        -:   30:
+        -:   31:    /**
+        -:   32:     * Constructor de copiere
+        -:   33:     * @param other Lista de copiat
+        -:   34:     */
+function _ZN5ListaI5CarteEC2ERKS1_ called 16 returned 100% blocks executed 92%
+       16:   35:    Lista(const Lista &other) : lungime(other.lungime), capacitate(other.capacitate) {
+     626*:   36:        elemente = new T[capacitate];
+       16:   36-block  0
+branch  0 taken 16 (fallthrough)
+branch  1 taken 0
+       16:   36-block  1
+    %%%%%:   36-block  2
+       16:   36-block  3
+call    2 returned 16
+      610:   36-block  4
+call    3 returned 610
+      626:   36-block  5
+branch  4 taken 610
+branch  5 taken 16 (fallthrough)
+      345:   37:        for (int i = 0; i < lungime; ++i) {
+       16:   37-block  0
+      345:   37-block  1
+branch  0 taken 329
+branch  1 taken 16 (fallthrough)
+      329:   38:            elemente[i] = other.elemente[i];
+      329:   38-block  0
+call    0 returned 329
+        -:   39:        }
+       16:   40:    }
+        -:   41:
+        -:   42:    /**
+        -:   43:     * Operator de atribuire
+        -:   44:     * @param other Lista de copiat
+        -:   45:     * @return Lista curenta
+        -:   46:     */
+function _ZN5ListaI5CarteEaSERKS1_ called 4 returned 100% blocks executed 95%
+        4:   47:    Lista& operator=(const Lista &other) {
+        4:   48:        if (this != &other) {
+        4:   48-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 1
+      103:   49:            delete[] elemente;
+        3:   49-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   49-block  1
+      103:   49-block  2
+branch  2 taken 100 (fallthrough)
+branch  3 taken 3
+      100:   49-block  3
+call    4 returned 100
+        3:   49-block  4
+call    5 returned 3
+        3:   50:            lungime = other.lungime;
+        3:   51:            capacitate = other.capacitate;
+     183*:   52:            elemente = new T[capacitate];
+        3:   52-block  0
+branch  0 taken 3 (fallthrough)
+branch  1 taken 0
+        3:   52-block  1
+    %%%%%:   52-block  2
+        3:   52-block  3
+call    2 returned 3
+      180:   52-block  4
+call    3 returned 180
+      183:   52-block  5
+branch  4 taken 180
+branch  5 taken 3 (fallthrough)
+      107:   53:            for (int i = 0; i < lungime; ++i) {
+        3:   53-block  0
+      107:   53-block  1
+branch  0 taken 104
+branch  1 taken 3 (fallthrough)
+      104:   54:                elemente[i] = other.elemente[i];
+      104:   54-block  0
+call    0 returned 104
+        -:   55:            }
+        -:   56:        }
+        4:   57:        return *this;
+        4:   57-block  0
+        -:   58:    }
+        -:   59:
+        -:   60:    /**
+        -:   61:     * Redimensioneaza lista pentru a avea o capacitate mai mare
+        -:   62:     */
+function _ZN5ListaI5CarteE15redimensioneazaEv called 8 returned 100% blocks executed 94%
+        8:   63:    void redimensioneaza() {
+        8:   64:        capacitate *= 2;
+     468*:   65:        T *nou = new T[capacitate];
+        8:   65-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+        8:   65-block  1
+    %%%%%:   65-block  2
+        8:   65-block  3
+call    2 returned 8
+      460:   65-block  4
+call    3 returned 460
+      468:   65-block  5
+branch  4 taken 460
+branch  5 taken 8 (fallthrough)
+      238:   66:        for (int i = 0; i < lungime; ++i) {
+        8:   66-block  0
+      238:   66-block  1
+branch  0 taken 230
+branch  1 taken 8 (fallthrough)
+      230:   67:            nou[i] = elemente[i];
+      230:   67-block  0
+call    0 returned 230
+        -:   68:        }
+      238:   69:        delete[] elemente;
+        8:   69-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 0
+        8:   69-block  1
+      238:   69-block  2
+branch  2 taken 230 (fallthrough)
+branch  3 taken 8
+      230:   69-block  3
+call    4 returned 230
+        8:   69-block  4
+call    5 returned 8
+        8:   70:        elemente = nou;
+        8:   71:    }
+        -:   72:
+        -:   73:    /**
+        -:   74:     * Adauga un element in lista
+        -:   75:     * @param element Elementul de adaugat
+        -:   76:     */
+function _ZN5ListaI5CarteE9push_backERKS0_ called 191 returned 99% blocks executed 91%
+      191:   77:    void push_back(const T &element) {
+      191:   78:        if (exista(element)) {
+      191:   78-block  0
+call    0 returned 191
+branch  1 taken 1 (fallthrough)
+branch  2 taken 190
+        1:   79:            throw std::runtime_error("Elementul exista deja in lista.");
+        1:   79-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   79-block  1
+call    4 returned 0
+    $$$$$:   79-block  2
+call    5 never executed
+        -:   80:        }
+        -:   81:
+      190:   82:        if (lungime == capacitate) {
+      190:   82-block  0
+branch  0 taken 8 (fallthrough)
+branch  1 taken 182
+        8:   83:            redimensioneaza();
+        8:   83-block  0
+call    0 returned 8
+        -:   84:        }
+        -:   85:
+      190:   86:        elemente[lungime++] = element;
+      190:   86-block  0
+call    0 returned 190
+      190:   87:    }
+        -:   88:
+        -:   89:    /**
+        -:   90:     * Verifica daca un element exista in lista
+        -:   91:     * @param element Elementul de cautat
+        -:   92:     * @return True daca elementul exista, false altfel
+        -:   93:     */
+function _ZNK5ListaI5CarteE6existaERKS0_ called 196 returned 100% blocks executed 100%
+      196:   94:    bool exista(const T &element) const {
+     6592:   95:        for (int i = 0; i < lungime; ++i) {
+      196:   95-block  0
+     6396:   95-block  1
+     6592:   95-block  2
+branch  0 taken 6401
+branch  1 taken 191 (fallthrough)
+     6401:   96:            if (elemente[i] == element) {
+     6401:   96-block  0
+call    0 returned 6401
+branch  1 taken 5 (fallthrough)
+branch  2 taken 6396
+        5:   97:                return true;
+        5:   97-block  0
+        -:   98:            }
+        -:   99:        }
+      191:  100:        return false;
+      191:  100-block  0
+        -:  101:    }
+        -:  102:
+        -:  103:    /**
+        -:  104:     * Sterge un element din lista
+        -:  105:     * @param element Elementul de sters
+        -:  106:     * @return True daca elementul a fost sters, false altfel
+        -:  107:     */
+        -:  108:    bool sterge(const T &element) {
+        -:  109:        for (int i = 0; i < lungime; ++i) {
+        -:  110:            if (elemente[i] == element) {
+        -:  111:                for (int j = i; j < lungime - 1; ++j) {
+        -:  112:                    elemente[j] = elemente[j + 1];
+        -:  113:                }
+        -:  114:                --lungime;
+        -:  115:                return true;
+        -:  116:            }
+        -:  117:        }
+        -:  118:        throw std::runtime_error("Elementul nu a fost gasit in lista.");
+        -:  119:    }
+        -:  120:
+        -:  121:    /**
+        -:  122:     * Returneaza dimensiunea listei
+        -:  123:     * @return Dimensiunea listei
+        -:  124:     */
+function _ZNK5ListaI5CarteE7getSizeEv called 38 returned 100% blocks executed 100%
+       38:  125:    int getSize() const {
+       38:  126:        return lungime;
+       38:  126-block  0
+        -:  127:    }
+        -:  128:
+        -:  129:    /**
+        -:  130:     * Suprascrierea operatorului de indexare
+        -:  131:     * @param index Indexul elementului
+        -:  132:     * @return Elementul de la indexul dat
+        -:  133:     */
+function _ZNK5ListaI5CarteEixEi called 39 returned 97% blocks executed 89%
+       39:  134:    const T& operator[](int index) const {
+       39:  135:        if (index < 0 || index >= lungime) {
+       39:  135-block  0
+branch  0 taken 39 (fallthrough)
+branch  1 taken 0
+       39:  135-block  1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 38
+        1:  136:            throw std::out_of_range("Index invalid.");
+        1:  136-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  136-block  1
+call    4 returned 0
+    $$$$$:  136-block  2
+call    5 never executed
+        -:  137:        }
+       38:  138:        return elemente[index];
+       38:  138-block  0
+       38:  138-block  1
+        -:  139:    }
+        -:  140:
+        -:  141:    /**
+        -:  142:     * Inceputul listei
+        -:  143:     * @return Pointer la inceputul listei
+        -:  144:     */
+        -:  145:    const T* begin() const {
+        -:  146:        return elemente;
+        -:  147:    }
+        -:  148:
+        -:  149:    /**
+        -:  150:     * Sfarsitul listei
+        -:  151:     * @return Pointer la sfarsitul listei
+        -:  152:     */
+        -:  153:    const value_type* end() const {
+        -:  154:        return elemente + lungime;
+        -:  155:    }
+        -:  156:
+        -:  157:    /**
+        -:  158:     * Inceputul listei
+        -:  159:     * @return Pointer la inceputul listei
+        -:  160:     */
+function _ZN5ListaI5CarteE5beginEv called 68 returned 100% blocks executed 100%
+       68:  161:    T* begin() {
+       68:  162:        return elemente;
+       68:  162-block  0
+        -:  163:    }
+        -:  164:
+        -:  165:    /**
+        -:  166:     * Sfarsitul listei
+        -:  167:     * @return Pointer la sfarsitul listei
+        -:  168:     */
+function _ZN5ListaI5CarteE3endEv called 95 returned 100% blocks executed 100%
+       95:  169:    T* end() {
+       95:  170:        return elemente + lungime;
+       95:  170-block  0
+        -:  171:    }
+        -:  172:
+        -:  173:    /**
+        -:  174:     * Getter pentru vectorul de elemente
+        -:  175:     * @return Vectorul de elemente
+        -:  176:     */
+        -:  177:    T* getVector() {
+        -:  178:        return elemente;
+        -:  179:    }
+        -:  180:};
+        -:  181:
+        -:  182:#endif //LAB_6_7_LISTA_H

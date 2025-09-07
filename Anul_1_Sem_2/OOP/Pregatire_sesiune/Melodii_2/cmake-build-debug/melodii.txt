@@ -1,0 +1,8 @@
+1,Shape of You,Ed Sheeran,pop
+2,Bohemian Rhapsody,Queen,rock
+3,Hotel California,Eagles,rock
+4,Perfect,Ed Sheeran,pop
+5,Despacito,Luis Fonsi,disco
+8,Dancing Queen,ABBA,disco
+9,Castle on the Hill,Ed Sheeran,pop
+10,Ciuleandra,Romanița,folk

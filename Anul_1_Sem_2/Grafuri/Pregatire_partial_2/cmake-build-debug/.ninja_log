@@ -1,0 +1,8 @@
+# ninja log v6
+4	679	7700402873195186	CMakeFiles/Pregatire_partial_2.dir/main.cpp.obj	b668d205a149f5dd
+712	805	7700407628532013	Pregatire_partial_2.exe	6f6bf2b8b81fece0
+6	712	7700407621469386	CMakeFiles/Pregatire_partial_2.dir/s2.cpp.obj	c63a8551e7f5fd51
+2	280	7700412623397269	build.ninja	d4bba5cf1976fa02
+2	273	7700412623397269	build.ninja	d4bba5cf1976fa02
+26	644	7700412624453599	CMakeFiles/Pregatire_partial_2.dir/s3.cpp.obj	e82be30974d557a2
+645	737	7700412630662180	Pregatire_partial_2.exe	43335df599658747

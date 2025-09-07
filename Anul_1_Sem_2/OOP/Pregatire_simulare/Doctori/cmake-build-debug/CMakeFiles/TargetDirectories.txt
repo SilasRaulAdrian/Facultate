@@ -1,0 +1,5 @@
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Doctori/cmake-build-debug/CMakeFiles/Doctori.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Doctori/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Doctori/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Doctori/cmake-build-debug/CMakeFiles/Doctori_autogen_timestamp_deps.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Doctori/cmake-build-debug/CMakeFiles/Doctori_autogen.dir

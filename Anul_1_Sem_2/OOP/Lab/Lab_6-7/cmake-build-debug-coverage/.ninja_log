@@ -1,0 +1,9 @@
+# ninja log v6
+54	905	7684016056640495	CMakeFiles/Lab_6_7.dir/domain/carte.cpp.obj	9c3b58aadd1f903b
+34	1246	7684016056442266	CMakeFiles/Lab_6_7.dir/repository/carte_repo.cpp.obj	111b803a261e1166
+44	1455	7684016056533366	CMakeFiles/Lab_6_7.dir/ui/console.cpp.obj	ddd345f259b93b66
+30	1543	7684016056391545	CMakeFiles/Lab_6_7.dir/main.cpp.obj	16d61d12f031ebc6
+60	1913	7684016056691673	CMakeFiles/Lab_6_7.dir/cos_inchirieri/cos_inchirieri.cpp.obj	d60f1208e4fd65a9
+39	2264	7684016056483480	CMakeFiles/Lab_6_7.dir/service/carte_service.cpp.obj	1f68267c0c94f283
+49	2405	7684016056594562	CMakeFiles/Lab_6_7.dir/tests/tests.cpp.obj	fb4b23517d2b9766
+2405	2993	7684016080142465	Lab_6_7.exe	fb89f685cca62a8

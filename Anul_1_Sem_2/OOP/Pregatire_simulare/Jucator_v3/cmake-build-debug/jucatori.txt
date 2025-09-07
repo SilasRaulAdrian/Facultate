@@ -1,0 +1,11 @@
+Nadal,Spania,2000,1
+Djokovic,Serbia,1800,2
+Federer,Elvetia,1600,3
+Murray,Marea Britanie,1500,4
+Thiem,Austria,1400,5
+Zverev,Germania,1300,6
+Tsitsipas,Grecia,1200,7
+Medvedev,Rusia,1100,8
+Alcaraz,Spania,1000,9
+Rune,Danemarca,900,10
+raul,romania,39,11

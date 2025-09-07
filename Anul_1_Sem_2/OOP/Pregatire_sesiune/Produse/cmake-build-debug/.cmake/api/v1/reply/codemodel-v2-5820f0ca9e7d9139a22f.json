@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Produse",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Produse::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Produse-Debug-a4a5cc7552a2022517f3.json",
+					"name" : "Produse",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Produse_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Produse_autogen-Debug-1077b451453b2ddd69cf.json",
+					"name" : "Produse_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Produse_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Produse_autogen_timestamp_deps-Debug-86879d217695c7e4835f.json",
+					"name" : "Produse_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Produse/cmake-build-debug",
+		"source" : "D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Produse"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

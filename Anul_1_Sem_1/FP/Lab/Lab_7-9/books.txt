@@ -1,0 +1,6 @@
+1,Ion,Liviu Rebreanu roman clasic,Liviu Rebreanu
+2,Dracula,Un roman horror de Bram Stoker,Bram Stoker
+3,Mizerabilii,Romanul despre lupta pentru dreptate a lui Jean Valjean,Victor Hugo
+4,morometii,bac,marin preda
+5,moara cu noroc,bac,ioan slavici
+6,mitul carsimei,dezvoltare personala,olivia fox cabane

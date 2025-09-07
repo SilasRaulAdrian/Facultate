@@ -1,0 +1,15 @@
+Popescu,Andrei,198,Pivot
+Ionescu,Mihai,185,Fundas
+Dumitrescu,Radu,192,Extrema
+Stanescu,Alexandru,200,Pivot
+Georgescu,Cristian,188,Fundas
+Marinescu,Stefan,195,Extrema
+Vasilescu,Daniel,182,Fundas
+Enescu,Gabriel,190,Extrema
+Radulescu,Victor,197,Pivot
+Serbanescu,Florin,186,Fundas
+Moldovan,Vlad,182,Fundas
+Dragusin,Constantin,216,Extrema
+Graham,Paul,211,Extrema
+Nikolic,Niksa,204,Pivot
+Navickas,Gediminas,189,Pivot

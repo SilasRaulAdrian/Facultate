@@ -1,0 +1,98 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/cos_inchirieri/cos_inchirieri.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\tests\tests.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\tests\tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_COS_INCHIRIERI_H
+        -:    2:#define LAB_6_7_COS_INCHIRIERI_H
+        -:    3:
+        -:    4:#include <vector>
+        -:    5:#include <string>
+        -:    6:#include "../domain/carte.h"
+        -:    7:#include "../vector_dinamic/lista.h"
+        -:    8:#include "../observer/observer.h"
+        -:    9:
+        -:   10:class CosInchirieri {
+        -:   11:public:
+        -:   12:    /**
+        -:   13:     * Constructorul clasei CosInchirieri
+        -:   14:     */
+function _ZN13CosInchirieriC1Ev called 0 returned 0% blocks executed 0%
+    #####:   15:    CosInchirieri() = default;
+    %%%%%:   15-block  0
+call    0 never executed
+call    1 never executed
+        -:   16:
+        -:   17:    /**
+        -:   18:     * Destructorul clasei CosInchirieri
+        -:   19:     */
+function _ZN13CosInchirieriD1Ev called 0 returned 0% blocks executed 0%
+    #####:   20:    ~CosInchirieri() = default;
+    %%%%%:   20-block  0
+call    0 never executed
+call    1 never executed
+        -:   21:
+        -:   22:    /**
+        -:   23:     * Goleste cosul de carti
+        -:   24:     */
+        -:   25:    void golesteCos();
+        -:   26:
+        -:   27:    /**
+        -:   28:     * Adauga o carte in cos dupa titlu
+        -:   29:     * @param carte Cartea de adaugat
+        -:   30:     */
+        -:   31:    void adaugaCarte(const Carte &carte);
+        -:   32:
+        -:   33:    /**
+        -:   34:     * Genereaza un cos de carti aleator
+        -:   35:     * @param numarCarti Numarul de carti dorit
+        -:   36:     * @param carti Lista de carti disponibile
+        -:   37:     */
+        -:   38:    void genereazaCos(int numarCarti, Lista<Carte> &carti);
+        -:   39:
+        -:   40:    /**
+        -:   41:     * Exporta cosul de carti in fisier CSV
+        -:   42:     * @param numeFisier Numele fisierului CSV
+        -:   43:     */
+        -:   44:    void exportCsv(const std::string &numeFisier) const;
+        -:   45:
+        -:   46:    /**
+        -:   47:     * Exporta cosul de carti in fisier HTML
+        -:   48:     * @param numeFisier Numele fisierului HTML
+        -:   49:     */
+        -:   50:    void exportHtml(const std::string &numeFisier) const;
+        -:   51:
+        -:   52:    /**
+        -:   53:     * Functie care returneaza toate cartile din cos
+        -:   54:     * @return Lista de carti din cos
+        -:   55:     */
+        -:   56:    const std::vector<Carte> &getAllCos() const;
+        -:   57:
+        -:   58:    /**
+        -:   59:     * Functie care returneaza numarul de carti din cos
+        -:   60:     * @return Numarul de carti din cos
+        -:   61:     */
+        -:   62:    int getSizeCos() const;
+        -:   63:
+        -:   64:    /**
+        -:   65:     * Functie care adauga un observer la cos
+        -:   66:     * @param observer Observerul de adaugat
+        -:   67:     */
+        -:   68:    void addObserver(Observer* observer);
+        -:   69:
+        -:   70:    /**
+        -:   71:     * Functie care elimina un observer din cos
+        -:   72:     * @param observer Observerul de eliminat
+        -:   73:     */
+        -:   74:    void removeObserver(Observer* observer);
+        -:   75:
+        -:   76:    /**
+        -:   77:     * Functie care notifica toti observerii despre o modificare in cos
+        -:   78:     */
+        -:   79:    void notify();
+        -:   80:
+        -:   81:private:
+        -:   82:    std::vector<Carte> cos;
+        -:   83:    std::vector<Observer*> observers;
+        -:   84:};
+        -:   85:
+        -:   86:#endif //LAB_6_7_COS_INCHIRIERI_H

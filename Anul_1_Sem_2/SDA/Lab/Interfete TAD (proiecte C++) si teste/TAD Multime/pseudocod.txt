@@ -1,0 +1,26 @@
+subalgoritm filtreaza
+    curent <- prim
+    precedent <- -1
+
+    cat timp curent != -1 executa:
+        daca conditie(elemente[curent].informatie) = FALSE atunci
+            daca precedent = -1 atunci
+                prim <- elemente[curent].urmator
+            altfel:
+                elemente[precedent].urmator <- elemente[curent].urmator
+            sf_daca
+
+            deSters <- curent
+            curent <- elemente[curent].urmator
+
+            elemente[deSters].urmator <- primLiber
+            primLiber <- deSters
+
+            dimensiune <- dimensiune - 1
+
+        altfel:
+            precedent <- curent
+            curent <- elemente[curent].urmator
+        sf_daca
+    sf_cattimp
+sf_subalgoritm

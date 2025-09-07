@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Lab_6_7",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Lab_6_7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lab_6_7-Debug-9cde5dd585bb5f56b2f5.json",
+					"name" : "Lab_6_7",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lab_6_7_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lab_6_7_autogen-Debug-eda9b0bcfdc6d9d7e161.json",
+					"name" : "Lab_6_7_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Lab_6_7_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Lab_6_7_autogen_timestamp_deps-Debug-d64ae8da7f7971ca57dc.json",
+					"name" : "Lab_6_7_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/cmake-build-debug-coverage",
+		"source" : "D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

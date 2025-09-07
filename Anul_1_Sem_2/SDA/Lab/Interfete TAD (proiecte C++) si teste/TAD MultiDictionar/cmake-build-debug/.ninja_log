@@ -1,0 +1,27 @@
+# ninja log v6
+9	401	7688301167838368	CMakeFiles/TAD_MultiDictionar.dir/Proiect_C++/IteratorMD.cpp.obj	ca14d49032769792
+4	452	7688301167787168	CMakeFiles/TAD_MultiDictionar.dir/Proiect_C++/App.cpp.obj	24f17c6f0d80ae4f
+23	608	7688301167981391	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestScurt.cpp.obj	93cd61993955b0a
+13	648	7688301167879498	CMakeFiles/TAD_MultiDictionar.dir/Proiect_C++/MD.cpp.obj	a629166a6f86f722
+18	716	7688301167930404	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestExtins.cpp.obj	31d02ff11e112347
+716	886	7688301174908334	TAD_MultiDictionar.exe	24434a915085ea3e
+76	574	7696169124735650	CMakeFiles/TAD_MultiDictionar.dir/Proiect_C++/IteratorMD.cpp.obj	ca14d49032769792
+90	756	7696169124879020	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestScurt.cpp.obj	93cd61993955b0a
+83	817	7696169124807986	CMakeFiles/TAD_MultiDictionar.dir/Proiect_C++/MD.cpp.obj	a629166a6f86f722
+86	868	7696169124848987	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestExtins.cpp.obj	31d02ff11e112347
+868	1014	7696169132667973	TAD_MultiDictionar.exe	24434a915085ea3e
+25	345	7696173564105059	CMakeFiles/TAD_MultiDictionar.dir/Proiect_C++/IteratorMD.cpp.obj	ca14d49032769792
+30	612	7696173564105059	CMakeFiles/TAD_MultiDictionar.dir/Proiect_C++/MD.cpp.obj	a629166a6f86f722
+38	634	7696173564228327	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestScurt.cpp.obj	93cd61993955b0a
+34	674	7696173564105059	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestExtins.cpp.obj	31d02ff11e112347
+674	786	7696173570611592	TAD_MultiDictionar.exe	24434a915085ea3e
+24	559	7696174289248630	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestScurt.cpp.obj	93cd61993955b0a
+560	694	7696174294609719	TAD_MultiDictionar.exe	24434a915085ea3e
+9	542	7696175471182893	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestScurt.cpp.obj	93cd61993955b0a
+542	650	7696175476510579	TAD_MultiDictionar.exe	24434a915085ea3e
+41	630	7696175589133879	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestScurt.cpp.obj	93cd61993955b0a
+630	748	7696175595027035	TAD_MultiDictionar.exe	24434a915085ea3e
+26	559	7696175744329754	CMakeFiles/TAD_MultiDictionar.dir/Teste/TestScurt.cpp.obj	93cd61993955b0a
+559	667	7696175749664679	TAD_MultiDictionar.exe	24434a915085ea3e
+32	383	7696188683738286	CMakeFiles/TAD_MultiDictionar.dir/Proiect_C++/IteratorMD.cpp.obj	ca14d49032769792
+384	545	7696188687262274	TAD_MultiDictionar.exe	24434a915085ea3e

@@ -1,0 +1,454 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 2-4/Pb 8/test.c
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 2-4/Pb 8/cmake-build-debug-coverage/CMakeFiles/Pb_8.dir/test.c.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 2-4/Pb 8/cmake-build-debug-coverage/CMakeFiles/Pb_8.dir/test.c.gcda
+        -:    0:Runs:1
+        -:    1:#include "service.h"
+        -:    2:#include "test.h"
+        -:    3:#include "list.h"
+        -:    4:#include "validare.h"
+        -:    5:#include <assert.h>
+        -:    6:#include <stdio.h>
+        -:    7:
+        -:    8:#define INIT_CAP 10
+        -:    9:
+function testList called 1 returned 100% blocks executed 87%
+        1:   10:void testList() {
+        1:   11:    List *list = creeazaLista((Distruge) distrugeProdus, (Copiaza) copieProdus);
+        1:   11-block  0
+call    0 returned 1
+       1*:   12:    assert(list->lg == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   12-block  0
+call    2 never executed
+       1*:   13:    assert(list->cap == INIT_CAP);
+        1:   13-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   13-block  1
+call    2 never executed
+        1:   14:    Produs *produs = creeazaProdus(1, "Laptop", "Asus", "Zenbook", 5000, 10);
+        1:   14-block  0
+call    0 returned 1
+        1:   15:    add(list, produs);
+call    0 returned 1
+        1:   16:    List *copie = copiazaLista(list);
+call    0 returned 1
+       1*:   17:    assert(copie->lg == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   17-block  0
+call    2 never executed
+       1*:   18:    assert(lungime(copie) == 1);
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   18-block  1
+call    3 never executed
+        1:   19:    List *altaLista = creeazaLista((Distruge) distrugeProdus, (Copiaza) copieProdus);
+        1:   19-block  0
+call    0 returned 1
+        1:   20:    Produs *produs1 = creeazaProdus(2, "Telefon", "Samsung", "Galaxy S20", 3000, 5);
+call    0 returned 1
+        1:   21:    Produs *produs2 = creeazaProdus(3, "Tableta", "Apple", "iPad", 4000, 3);
+call    0 returned 1
+        1:   22:    Produs *produs3 = creeazaProdus(4, "Laptop", "Dell", "Inspiron", 4500, 7);
+call    0 returned 1
+        1:   23:    Produs *produs4 = creeazaProdus(5, "Telefon", "Apple", "iPhone 11", 3500, 8);
+call    0 returned 1
+        1:   24:    Produs *produs5 = creeazaProdus(6, "Tableta", "Samsung", "Galaxy Tab", 2500, 6);
+call    0 returned 1
+        1:   25:    Produs *produs6 = creeazaProdus(7, "Laptop", "Lenovo", "IdeaPad", 4200, 4);
+call    0 returned 1
+        1:   26:    Produs *produs7 = creeazaProdus(8, "Telefon", "Huawei", "P40", 3200, 9);
+call    0 returned 1
+        1:   27:    Produs *produs8 = creeazaProdus(9, "Tableta", "Huawei", "MediaPad", 2300, 2);
+call    0 returned 1
+        1:   28:    Produs *produs9 = creeazaProdus(10, "Laptop", "HP", "Pavilion", 4100, 1);
+call    0 returned 1
+        1:   29:    Produs *produs10 = creeazaProdus(11, "Telefon", "Xiaomi", "Mi 10", 3300, 0);
+call    0 returned 1
+        1:   30:    Produs *produs11 = creeazaProdus(12, "Tableta", "Lenovo", "Tab", 2400, 0);
+call    0 returned 1
+        1:   31:    add(altaLista, produs1);
+call    0 returned 1
+        1:   32:    add(altaLista, produs2);
+call    0 returned 1
+        1:   33:    add(altaLista, produs3);
+call    0 returned 1
+        1:   34:    add(altaLista, produs4);
+call    0 returned 1
+        1:   35:    add(altaLista, produs5);
+call    0 returned 1
+        1:   36:    add(altaLista, produs6);
+call    0 returned 1
+        1:   37:    add(altaLista, produs7);
+call    0 returned 1
+        1:   38:    add(altaLista, produs8);
+call    0 returned 1
+        1:   39:    add(altaLista, produs9);
+call    0 returned 1
+        1:   40:    add(altaLista, produs10);
+call    0 returned 1
+        1:   41:    add(altaLista, produs11);
+call    0 returned 1
+       1*:   42:    assert(altaLista->lg == 11);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   42-block  0
+call    2 never executed
+       1*:   43:    assert(altaLista->cap == 20);
+        1:   43-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   43-block  1
+call    2 never executed
+        1:   44:    distrugeLista(list);
+        1:   44-block  0
+call    0 returned 1
+        1:   45:    distrugeLista(copie);
+call    0 returned 1
+        1:   46:    distrugeLista(altaLista);
+call    0 returned 1
+        1:   47:    printf("Testele pentru lista au trecut cu succes!\n");
+call    0 returned 1
+        1:   48:}
+        -:   49:
+function testService called 1 returned 100% blocks executed 70%
+        1:   50:void testService() {
+        1:   51:    Service *service = creeazaService();
+        1:   51-block  0
+call    0 returned 1
+       1*:   52:    assert(modificaPret(service, 1, 5000) == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   52-block  0
+call    3 never executed
+       1*:   53:    assert(modificaCantitate(service, 1, 10) == 0);
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   53-block  1
+call    3 never executed
+        -:   54:
+        1:   55:    Produs *produs1 = creeazaProdus(1, "Laptop", "Asus", "Vivobook", 4000, 10);
+        1:   55-block  0
+call    0 returned 1
+        1:   56:    Produs *produs2 = creeazaProdus(2, "Telefon", "Samsung", "Galaxy S20", 3000, 5);
+call    0 returned 1
+        1:   57:    Produs *produs_invalid = creeazaProdus(-1, "Laptop", "Asus", "Vivobook", 2000, 10);
+call    0 returned 1
+        -:   58:
+       1*:   59:    assert(adaugaProdus(service, produs1) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   59-block  0
+call    3 never executed
+       1*:   60:    assert(adaugaProdus(service, produs2) == 1);
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   60-block  1
+call    3 never executed
+       1*:   61:    assert(adaugaProdus(service, produs1) == 0);
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   61-block  1
+call    3 never executed
+       1*:   62:    assert(adaugaProdus(service, produs_invalid) == 0);
+        1:   62-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   62-block  1
+call    3 never executed
+       1*:   63:    assert(service->produse->lg == 2);
+        1:   63-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   63-block  1
+call    2 never executed
+        -:   64:
+        1:   65:    List *lista1 = ordoneazaProduseDupaPret(service, 0);
+        1:   65-block  0
+call    0 returned 1
+       1*:   66:    assert(((Produs *)lista1->elems[0])->pret == 3000);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   66-block  0
+call    2 never executed
+       1*:   67:    assert(((Produs *)lista1->elems[1])->pret == 4000);
+        1:   67-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   67-block  1
+call    2 never executed
+        1:   68:    distrugeLista(lista1);
+        1:   68-block  0
+call    0 returned 1
+        -:   69:
+        1:   70:    List *lista2 = ordoneazaProduseDupaPret(service, 1);
+call    0 returned 1
+       1*:   71:    assert(((Produs *)lista2->elems[0])->pret == 4000);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   71-block  0
+call    2 never executed
+       1*:   72:    assert(((Produs *)lista2->elems[1])->pret == 3000);
+        1:   72-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   72-block  1
+call    2 never executed
+        1:   73:    distrugeLista(lista2);
+        1:   73-block  0
+call    0 returned 1
+        -:   74:
+        1:   75:    List *lista3 = ordoneazaProduseDupaCantitate(service, 0);
+call    0 returned 1
+       1*:   76:    assert(((Produs *)lista3->elems[0])->cantitate == 5);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   76-block  0
+call    2 never executed
+       1*:   77:    assert(((Produs *)lista3->elems[1])->cantitate == 20);
+        1:   77-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   77-block  1
+call    2 never executed
+        1:   78:    distrugeLista(lista3);
+        1:   78-block  0
+call    0 returned 1
+        -:   79:
+        1:   80:    List *lista4 = ordoneazaProduseDupaCantitate(service, 1);
+call    0 returned 1
+       1*:   81:    assert(((Produs *)lista4->elems[0])->cantitate == 20);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   81-block  0
+call    2 never executed
+       1*:   82:    assert(((Produs *)lista4->elems[1])->cantitate == 5);
+        1:   82-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   82-block  1
+call    2 never executed
+        1:   83:    distrugeLista(lista4);
+        1:   83-block  0
+call    0 returned 1
+        -:   84:
+        1:   85:    List *lista5 = filtreazaProduseDupaCantitate(service, 5);
+call    0 returned 1
+       1*:   86:    assert(lista5->lg == 1);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   86-block  0
+call    2 never executed
+        1:   87:    distrugeLista(lista5);
+        1:   87-block  0
+call    0 returned 1
+        -:   88:
+        1:   89:    List *lista6 = filtreazaProduseDupaCantitate(service, 30);
+call    0 returned 1
+       1*:   90:    assert(lista6->lg == 0);
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:   90-block  0
+call    2 never executed
+        1:   91:    distrugeLista(lista6);
+        1:   91-block  0
+call    0 returned 1
+        -:   92:
+       1*:   93:    assert(modificaPret(service, 1, 5000) == 1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   93-block  0
+call    3 never executed
+       1*:   94:    assert(modificaPret(service, 3, 5000) == 0);
+        1:   94-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   94-block  1
+call    3 never executed
+       1*:   95:    assert(modificaPret(service, 1, -1) == 0);
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   95-block  1
+call    3 never executed
+        -:   96:
+       1*:   97:    assert(modificaCantitate(service, 1, 5) == 1);
+        1:   97-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   97-block  1
+call    3 never executed
+       1*:   98:    assert(modificaCantitate(service, 3, 5) == 0);
+        1:   98-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   98-block  1
+call    3 never executed
+       1*:   99:    assert(modificaCantitate(service, 1, -1) == 0);
+        1:   99-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   99-block  1
+call    3 never executed
+        -:  100:
+       1*:  101:    assert(stergeProdus(service, 1) == 1);
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  101-block  1
+call    3 never executed
+       1*:  102:    assert(stergeProdus(service, 1) == 0);
+        1:  102-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  102-block  1
+call    3 never executed
+       1*:  103:    assert(stergeProdus(service, -1) == 0);
+        1:  103-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  103-block  1
+call    3 never executed
+       1*:  104:    assert(service->produse->lg == 1);
+        1:  104-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  104-block  1
+call    2 never executed
+        -:  105:
+        1:  106:    distrugeService(service);
+        1:  106-block  0
+call    0 returned 1
+        1:  107:    distrugeProdus(produs_invalid);
+call    0 returned 1
+        1:  108:    printf("Testele pentru service au trecut cu succes!\n");
+call    0 returned 1
+        1:  109:}
+        -:  110:
+function testValidare called 1 returned 100% blocks executed 81%
+        1:  111:void testValidare() {
+        1:  112:    Produs *produs = creeazaProdus(1, "Laptop", "Asus", "Vivobook", 2000, 10);
+        1:  112-block  0
+call    0 returned 1
+       1*:  113:    assert(validareProdus(produs));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  113-block  0
+call    3 never executed
+        1:  114:    distrugeProdus(produs);
+        1:  114-block  0
+call    0 returned 1
+        -:  115:
+        1:  116:    produs = creeazaProdus(-1, "Laptop", "Asus", "Vivobook", 2000, 10);
+call    0 returned 1
+       1*:  117:    assert(!validareProdus(produs));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  117-block  0
+call    3 never executed
+        1:  118:    distrugeProdus(produs);
+        1:  118-block  0
+call    0 returned 1
+        -:  119:
+        1:  120:    produs = creeazaProdus(1, "", "Asus", "Vivobook", 2000, 10);
+call    0 returned 1
+       1*:  121:    assert(!validareProdus(produs));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  121-block  0
+call    3 never executed
+        1:  122:    distrugeProdus(produs);
+        1:  122-block  0
+call    0 returned 1
+        -:  123:
+        1:  124:    produs = creeazaProdus(1, "Laptop", "", "Vivobook", 2000, 10);
+call    0 returned 1
+       1*:  125:    assert(!validareProdus(produs));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  125-block  0
+call    3 never executed
+        1:  126:    distrugeProdus(produs);
+        1:  126-block  0
+call    0 returned 1
+        -:  127:
+        1:  128:    produs = creeazaProdus(1, "Laptop", "Asus", "", 2000, 10);
+call    0 returned 1
+       1*:  129:    assert(!validareProdus(produs));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  129-block  0
+call    3 never executed
+        1:  130:    distrugeProdus(produs);
+        1:  130-block  0
+call    0 returned 1
+        -:  131:
+        1:  132:    produs = creeazaProdus(1, "Laptop", "Asus", "Vivobook", -2000, 10);
+call    0 returned 1
+       1*:  133:    assert(!validareProdus(produs));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  133-block  0
+call    3 never executed
+        1:  134:    distrugeProdus(produs);
+        1:  134-block  0
+call    0 returned 1
+        -:  135:
+        1:  136:    produs = creeazaProdus(1, "Laptop", "Asus", "Vivobook", 2000, -10);
+call    0 returned 1
+       1*:  137:    assert(!validareProdus(produs));
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  137-block  0
+call    3 never executed
+        1:  138:    distrugeProdus(produs);
+        1:  138-block  0
+call    0 returned 1
+        -:  139:
+        1:  140:    printf("Testele pentru validare au trecut cu succes!\n");
+call    0 returned 1
+        1:  141:}
+        -:  142:
+function testAll called 1 returned 100% blocks executed 100%
+        1:  143:void testAll() {
+        1:  144:    printf("Ruleaza testele...\n");
+        1:  144-block  0
+call    0 returned 1
+        1:  145:    testList();
+call    0 returned 1
+        1:  146:    testService();
+call    0 returned 1
+        1:  147:    testValidare();
+call    0 returned 1
+        1:  148:    printf("Toate testele au trecut cu succes!\n");
+call    0 returned 1
+        1:  149:}

@@ -1,0 +1,440 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/cos_inchirieri/cos_inchirieri.cpp
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\cos_inchirieri\cos_inchirieri.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\cos_inchirieri\cos_inchirieri.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "cos_inchirieri.h"
+        -:    2:#include <fstream>
+        -:    3:#include <algorithm>
+        -:    4:#include <random>
+        -:    5:
+function _ZN13CosInchirieri10golesteCosEv called 6 returned 100% blocks executed 100%
+        6:    6:void CosInchirieri::golesteCos() {
+        6:    7:    cos.clear();
+        6:    7-block  0
+call    0 returned 6
+        6:    8:    notify();
+call    0 returned 6
+        6:    9:}
+        -:   10:
+function _ZN13CosInchirieri11adaugaCarteERK5Carte called 9 returned 100% blocks executed 100%
+        9:   11:void CosInchirieri::adaugaCarte(const Carte& carte) {
+        9:   12:    cos.push_back(carte);
+        9:   12-block  0
+call    0 returned 9
+        9:   13:    notify();
+call    0 returned 9
+        9:   14:}
+        -:   15:
+function _ZN13CosInchirieri12genereazaCosEiR5ListaI5CarteE called 4 returned 50% blocks executed 73%
+        4:   16:void CosInchirieri::genereazaCos(int numarCarti, Lista<Carte> &carti) {
+        4:   17:    golesteCos();
+        4:   17-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   18:
+        4:   19:    if (numarCarti > carti.getSize()) {
+        4:   19-block  0
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        1:   20:        throw std::runtime_error("Numarul de carti dorit este mai mare decat numarul de carti disponibile.");
+        1:   20-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   20-block  1
+call    4 returned 1
+    $$$$$:   20-block  2
+call    5 never executed
+        -:   21:    }
+        3:   22:    if (numarCarti <= 0) {
+        3:   22-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 2
+        1:   23:        throw std::runtime_error("Numarul de carti dorit trebuie sa fie mai mare decat 0.");
+        1:   23-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   23-block  1
+call    4 returned 1
+    $$$$$:   23-block  2
+call    5 never executed
+        -:   24:    }
+        -:   25:
+        2:   26:    Lista<Carte> copieCarti = carti;
+        2:   26-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   27:    std::shuffle(copieCarti.begin(), copieCarti.end(), std::default_random_engine(std::random_device{}()));
+        2:   27-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   27-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   27-block  2
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:   27-block  3
+call    9 returned 2
+call   10 returned 2
+call   11 returned 2
+branch 12 taken 2 (fallthrough)
+branch 13 taken 0 (throw)
+        2:   27-block  4
+call   14 returned 2
+    $$$$$:   27-block  5
+call   15 never executed
+    $$$$$:   27-block  6
+    $$$$$:   27-block  7
+        -:   28:
+        6:   29:    for (int i = 0; i < numarCarti; ++i) {
+        4:   29-block  0
+        6:   29-block  1
+branch  0 taken 4
+branch  1 taken 2 (fallthrough)
+        4:   30:        cos.push_back(copieCarti[i]);
+        4:   30-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   30-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        -:   31:    }
+        -:   32:
+        2:   33:    notify();
+        2:   33-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   34:}
+        2:   34-block  0
+call    0 returned 2
+    $$$$$:   34-block  1
+call    1 never executed
+        -:   35:
+function _ZNK13CosInchirieri9exportCsvERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 90%
+        2:   36:void CosInchirieri::exportCsv(const std::string &numeFisier) const {
+        2:   37:    std::ofstream fisier(numeFisier);
+        2:   37-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   38:
+        6:   39:    for (const auto &carte : this->getAllCos()) {
+        2:   39-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+        4:   39-block  1
+call    3 returned 4
+        4:   39-block  2
+call    4 returned 4
+        6:   39-block  3
+call    5 returned 6
+branch  6 taken 4
+branch  7 taken 2 (fallthrough)
+        4:   40:        fisier << carte.getId() << "," << carte.getTitlu() << "," << carte.getAutor() << "," << carte.getGen() << "," << carte.getAnAparitie() << "\n";
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   40-block  0
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   40-block  1
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   40-block  2
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   40-block  3
+call   12 returned 4
+branch 13 taken 4 (fallthrough)
+branch 14 taken 0 (throw)
+        4:   40-block  4
+call   15 returned 4
+branch 16 taken 4 (fallthrough)
+branch 17 taken 0 (throw)
+        4:   40-block  5
+call   18 returned 4
+branch 19 taken 4 (fallthrough)
+branch 20 taken 0 (throw)
+        4:   40-block  6
+call   21 returned 4
+branch 22 taken 4 (fallthrough)
+branch 23 taken 0 (throw)
+        4:   40-block  7
+call   24 returned 4
+branch 25 taken 4 (fallthrough)
+branch 26 taken 0 (throw)
+        4:   40-block  8
+call   27 returned 4
+branch 28 taken 4 (fallthrough)
+branch 29 taken 0 (throw)
+        4:   40-block  9
+call   30 returned 4
+branch 31 taken 4 (fallthrough)
+branch 32 taken 0 (throw)
+        4:   40-block 10
+call   33 returned 4
+branch 34 taken 4 (fallthrough)
+branch 35 taken 0 (throw)
+        4:   40-block 11
+call   36 returned 4
+branch 37 taken 4 (fallthrough)
+branch 38 taken 0 (throw)
+        4:   40-block 12
+call   39 returned 4
+branch 40 taken 4 (fallthrough)
+branch 41 taken 0 (throw)
+        4:   40-block 13
+call   42 returned 4
+branch 43 taken 4 (fallthrough)
+branch 44 taken 0 (throw)
+        -:   41:    }
+        -:   42:
+        2:   43:    fisier.close();
+        2:   43-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   44:}
+        2:   44-block  0
+call    0 returned 2
+    $$$$$:   44-block  1
+call    1 never executed
+        -:   45:
+function _ZNK13CosInchirieri10exportHtmlERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 93%
+        2:   46:void CosInchirieri::exportHtml(const std::string &numeFisier) const {
+        2:   47:    std::ofstream fisier(numeFisier);
+        2:   47-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   48:
+        2:   49:    fisier << "<!DOCTYPE html>\n<html>\n<head>\n<title>Cos Inchirieri</title>\n";
+        2:   49-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   50:    fisier << "<style>table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }</style>\n";
+        2:   50-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   51:    fisier << "</head>\n<body>\n";
+        2:   51-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   52:    fisier << "<h2>Lista carti in cos</h2>\n";
+        2:   52-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   53:    fisier << "<table>\n<tr><th>ID</th><th>Titlu</th><th>Autor</th><th>Gen</th><th>An Aparitie</th></tr>\n";
+        2:   53-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   54:
+        6:   55:    for (const auto &carte: cos) {
+        2:   55-block  0
+call    0 returned 2
+call    1 returned 2
+        4:   55-block  1
+call    2 returned 4
+        4:   55-block  2
+call    3 returned 4
+        6:   55-block  3
+call    4 returned 6
+branch  5 taken 4
+branch  6 taken 2 (fallthrough)
+        4:   56:        fisier << "<tr>";
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   57:        fisier << "<td>" << carte.getId() << "</td>";
+        4:   57-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   57-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   57-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   57-block  3
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   58:        fisier << "<td>" << carte.getTitlu() << "</td>";
+        4:   58-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   58-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   58-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   58-block  3
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   59:        fisier << "<td>" << carte.getAutor() << "</td>";
+        4:   59-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   59-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   59-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   59-block  3
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   60:        fisier << "<td>" << carte.getGen() << "</td>";
+        4:   60-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   60-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   60-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   60-block  3
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   61:        fisier << "<td>" << carte.getAnAparitie() << "</td>";
+        4:   61-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   61-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   61-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   61-block  3
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+        4:   62:        fisier << "</tr>\n";
+        4:   62-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   63:    }
+        -:   64:
+        2:   65:    fisier << "</table>\n</body>\n</html>";
+        2:   65-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   66:    fisier.close();
+        2:   66-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   67:}
+        2:   67-block  0
+call    0 returned 2
+    $$$$$:   67-block  1
+call    1 never executed
+        -:   68:
+function _ZNK13CosInchirieri9getAllCosEv called 7 returned 100% blocks executed 100%
+        7:   69:const std::vector<Carte> &CosInchirieri::getAllCos() const {
+        7:   70:    return cos;
+        7:   70-block  0
+        -:   71:}
+        -:   72:
+function _ZNK13CosInchirieri10getSizeCosEv called 11 returned 100% blocks executed 100%
+       11:   73:int CosInchirieri::getSizeCos() const {
+       11:   74:    return cos.size();
+       11:   74-block  0
+call    0 returned 11
+        -:   75:}
+        -:   76:
+function _ZN13CosInchirieri11addObserverEP8Observer called 0 returned 0% blocks executed 0%
+    #####:   77:void CosInchirieri::addObserver(Observer* observer) {
+    #####:   78:    observers.push_back(observer);
+    %%%%%:   78-block  0
+call    0 never executed
+    #####:   79:}
+        -:   80:
+function _ZN13CosInchirieri14removeObserverEP8Observer called 0 returned 0% blocks executed 0%
+    #####:   81:void CosInchirieri::removeObserver(Observer* observer) {
+    #####:   82:    observers.erase(std::remove(observers.begin(), observers.end(), observer), observers.end());
+    %%%%%:   82-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:   82-block  1
+call    7 never executed
+call    8 never executed
+branch  9 never executed (fallthrough)
+branch 10 never executed (throw)
+    $$$$$:   82-block  2
+    $$$$$:   82-block  3
+    $$$$$:   82-block  4
+    #####:   83:}
+    %%%%%:   83-block  0
+        -:   84:
+function _ZN13CosInchirieri6notifyEv called 26 returned 100% blocks executed 67%
+       26:   85:void CosInchirieri::notify() {
+      26*:   86:    for (Observer* observer : observers) {
+       26:   86-block  0
+call    0 returned 26
+call    1 returned 26
+    %%%%%:   86-block  1
+call    2 never executed
+    %%%%%:   86-block  2
+call    3 never executed
+       26:   86-block  3
+call    4 returned 26
+branch  5 taken 0
+branch  6 taken 26 (fallthrough)
+    #####:   87:        observer->update();
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   88:    }
+       26:   89:}
+       26:   89-block  0

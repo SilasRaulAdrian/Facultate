@@ -1,0 +1,78 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Tractoare",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Tractoare::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Tractoare-Debug-088da835601048a4f5ef.json",
+					"name" : "Tractoare",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Tractoare_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Tractoare_autogen-Debug-18222ccb3974cd840ad1.json",
+					"name" : "Tractoare_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Tractoare_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Tractoare_autogen_timestamp_deps-Debug-4879b9a7395e029653b8.json",
+					"name" : "Tractoare_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Tractoare/cmake-build-debug",
+		"source" : "D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Tractoare"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

@@ -1,0 +1,26 @@
+Cerinte generale
+
+Creati o aplicatie modulara in C.
+Se cere interfata utilizator de tip consola.
+Datele introduse de utilizator trebuie validate.
+Folositi athitectura stratificata.
+Folositi dezvoltare dirijata de teste (Test Driven Development)
+Fiecare metoda din aplicatie trebuie specificat si testat.
+Implementati vector dinamic pentru lucru cu liste:
+    - in prima saptamana puteti folosi reprezentarea cu un struct ( un vector static si lungime in el)
+    - pana in saptamana 2 trebuie folosit alocare dinamica (sa acomodeze oricate elemente)
+Timp de lucru 2 saptamani.
+
+
+
+10. Agentie imobiliara
+
+Creati o aplicatie care permite gestiunea ofertelor de la o agentie imobiliara.
+Fiecare oferta are: tip (teren, casa, apartament), suprafata, adresa, pret
+
+Aplicatia permite:
+ a) Adaugarea de noi oferte.
+ b) Actualizare oferte
+ c) Stergere oferta
+ d) Vizualizare oferete ordonat dupa pret, tip (crescator/descrescator)
+ e) Vizualizare oferta filtrate dupa un criteriu (suprafata, tip, pret)

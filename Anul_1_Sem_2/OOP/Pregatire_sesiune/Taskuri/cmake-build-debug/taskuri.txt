@@ -1,0 +1,11 @@
+1,Implementare login,open,Ana;Ion
+2,Fix bug sesiune,closed,Mihai
+3,Optimizare SQL,inprogress,Ion
+4,Design UI homepage,open,Ana;Elena
+5,Integrare API,inprogress,Mihai;Ion
+6,Testare finala,closed,Elena;Maria
+7,Documentare proiect,open,Maria
+8,Refactorizare modul,inprogress,Ana;Maria
+9,Setare CI/CD,closed,Mihai;Elena
+10,Creare dashboard,open,Ion
+11,Proiect,inprogress,Raul

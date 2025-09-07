@@ -1,0 +1,3 @@
+telefon,Samsung Galaxy,2022,rosu,3700
+laptop,Dell XPS,2021,negru,6000
+tableta,iPad,2023,galben,5000

@@ -1,0 +1,27 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 9001                        a DW 400
+    15 00000002 C400                        b DW 196 
+    16                                  
+    17                                  ; our code starts here
+    18                                  segment code use32 class=code
+    19                                      start:
+    20                                          ; ...
+    21 00000000 B012                            mov al, 12h
+    22 00000002 B32D                            mov bl, 2Dh
+    23 00000004 F6E3                            mul bl
+    24                                      
+    25                                          ; exit(0)
+    26 00000006 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    27 00000008 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

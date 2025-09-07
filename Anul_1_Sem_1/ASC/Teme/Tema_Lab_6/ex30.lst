@@ -1,0 +1,73 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 34127856BC9A10DE            cuvinte dw 1234h, 5678h, 9ABCh, 0DE10h
+    15                                      len_cuvinte equ 4
+    16 00000008 00000000                    s1 db 0, 0, 0, 0
+    17 0000000C 00000000                    s2 db 0, 0, 0, 0
+    18                                  
+    19                                  ; our code starts here
+    20                                  segment code use32 class=code
+    21                                      start:
+    22                                          ; ...
+    23 00000000 31C9                            xor ecx, ecx ; indexul pt cuvinte
+    24                                      parcurge_cuvinte:
+    25 00000002 668B8409[00000000]              mov ax, [cuvinte + ecx * 2] ; incarc cuvantul curent in ax
+    26                                          
+    27 0000000A 8A8409[00000000]                mov al, byte [cuvinte + ecx * 2] ; extrag octetul low in al
+    28 00000011 8AA409[01000000]                mov ah, byte [cuvinte + ecx * 2 + 1] ; extrag octetul high in ah
+    29                                          
+    30 00000018 88C3                            mov bl, al ; salvez octetul low in bl pt numarare
+    31 0000001A 31D2                            xor edx, edx ; nr de biti 1 pt octetul low
+    32                                      numara_biti_low:
+    33 0000001C F6C301                          test bl, 1 ; verific ultimul bit din bl
+    34 0000001F 7401                            jz nu_incrementeaza_low ; daca bitul nu este 1, sar
+    35 00000021 42                              inc edx ; incrementez nr de biti 1
+    36                                      nu_incrementeaza_low:
+    37 00000022 D0EB                            shr bl, 1 ; verific urm bit
+    38 00000024 75F6                            jnz numara_biti_low ; daca mai sunt biti de verificat, continui
+    39                                          
+    40 00000026 88E3                            mov bl, ah ; salvez octetul high in bl pt numarare
+    41 00000028 31C9                            xor ecx, ecx ; nr de biti 1 pt octetul high
+    42                                      numara_biti_high:
+    43 0000002A F6C301                          test bl, 1
+    44 0000002D 7401                            jz nu_incrementeaza_high
+    45 0000002F 41                              inc ecx
+    46                                      nu_incrementeaza_high:
+    47 00000030 D0EB                            shr bl, 1
+    48 00000032 75F6                            jnz numara_biti_high
+    49                                          
+    50                                          ; daca nr de biti 1 din high > low, s1 va contine octetul high si s2 va contine octetul low
+    51 00000034 88A1[08000000]                  mov [s1 + ecx], ah ; stochez octetul high in s1
+    52 0000003A 8881[0C000000]                  mov [s2 + ecx], al ; stochez octetul low in s2
+    53 00000040 EB1B                            jmp continuare
+    54                                          
+    55                                      biti_egali:
+    56                                          ; daca nr de biti 1 din high = low
+    57 00000042 8891[08000000]                  mov [s1 + ecx], dl ; stochez nr de biti 1 in s1
+    58 00000048 C681[0C000000]00                mov byte [s2 + ecx], 0 ; setez s2 la 0
+    59 0000004F EB0C                            jmp continuare
+    60                                          
+    61                                      low_mai_mare:
+    62                                          ; daca nr de biti 1 din high < low
+    63 00000051 8881[08000000]                  mov [s1 + ecx], al
+    64 00000057 88A1[0C000000]                  mov [s2 + ecx], ah
+    65                                          
+    66                                      continuare:
+    67 0000005D 41                              inc ecx ; trec la urm cuvant
+    68 0000005E 83F904                          cmp ecx, len_cuvinte ; verific daca am parcurs toate cuvintele
+    69 00000061 7C9F                            jl parcurge_cuvinte ; daca nu, continui
+    70                                      
+    71                                          ; exit(0)
+    72 00000063 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    73 00000065 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

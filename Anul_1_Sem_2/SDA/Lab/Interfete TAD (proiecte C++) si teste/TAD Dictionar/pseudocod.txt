@@ -1,0 +1,11 @@
+subalgoritm revinoKPasi(k):
+	Daca k <= 0 || valid() = false atunci
+		Arunca exceptie
+	SfDaca
+	Pentru i = 0, i < k && curent != NIL
+		curent = [curent].anterior
+	SfPentru
+	Daca curent = NIL atunci
+		Arunca exceptie
+	SfDaca
+SfSubalgoritm

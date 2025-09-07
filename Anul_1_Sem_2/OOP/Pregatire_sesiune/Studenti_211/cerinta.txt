@@ -1,0 +1,7 @@
+Creati o aplicatie C++ cu interfata grafica utilizator pentru gestiunea de studenti. Un student are: nrmatricol: int (unic), nume: string, varsta:int, facultate(una dintre: "mate", "info", "mate-info", "ai").
+Studentii sunt salvati in fisier si se incarca la pornirea aplicatiei. Creati un fisier txt care contine cel putin 10 studenti.
+Pe fereastra principala:
+1. Folositi QTableView si un model custom pentru a prezenta studentii intr-un tabel sortat dupa varsta. Coloane: nrmatricol, nume, varsta, facultate. Fiecare linie din tabel este colorata in functie de facultatea la care este studentul (alegi tu culorile).
+2. Interfata are 2 butoane: "intinerire" si "imbatranire". Apasand pe aceste butoane se modifica varsta fiecarui student (-1 "intinerire", +1 "imbatranire"). Modificarea se va reflecta atat in fisier cat si in tabel
+3. Studentii se pot sterge selectand in tabel si apasand butonul "sterge". Modificarea se va reflecta atat in fisier cat si in tabel. Se permite selectie multipla caz in care se sterg toti studentii selectati.
+4. Aplicatia permite "undo" si "redo" multiplu. Butonul "undo" reface ultima operatie (intinerire, imbatranire, stergere) efectuata de utilizator. Butonul "redo" reface ultima operatie la care s-a dat "undo". Modificarea se reflecta atat in fisier cat si in tabel.

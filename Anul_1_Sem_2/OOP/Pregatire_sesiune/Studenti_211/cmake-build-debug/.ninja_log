@@ -1,0 +1,20 @@
+# ninja log v6
+29	479	7724903849577958	Studenti_211_autogen/timestamp	7bbe53b6cec23fd6
+29	479	7724903849577958	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Studenti_211/cmake-build-debug/Studenti_211_autogen/mocs_compilation.cpp	7bbe53b6cec23fd6
+29	479	7724903849577958	Studenti_211_autogen/mocs_compilation.cpp	7bbe53b6cec23fd6
+29	479	7724903849577958	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Studenti_211/cmake-build-debug/Studenti_211_autogen/timestamp	7bbe53b6cec23fd6
+484	567	7724903850698659	CMakeFiles/Studenti_211.dir/Studenti_211_autogen/mocs_compilation.cpp.obj	bcbf644e11a2fe22
+489	11164	7724903850758669	CMakeFiles/Studenti_211.dir/main.cpp.obj	515666d2ea4ddf4d
+11168	12593	7724903957544900	Studenti_211.exe	726de85bb9fd2690
+29	2856	7724943329916477	Studenti_211_autogen/timestamp	7bbe53b6cec23fd6
+29	2856	7724943329916477	Studenti_211_autogen/mocs_compilation.cpp	7bbe53b6cec23fd6
+29	2856	7724943329916477	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Studenti_211/cmake-build-debug/Studenti_211_autogen/timestamp	7bbe53b6cec23fd6
+29	2856	7724943329916477	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_sesiune/Studenti_211/cmake-build-debug/Studenti_211_autogen/mocs_compilation.cpp	7bbe53b6cec23fd6
+2864	5262	7724943330795864	CMakeFiles/Studenti_211.dir/domain/student.cpp.obj	7d13c164b39107d0
+2871	5767	7724943330860921	CMakeFiles/Studenti_211.dir/service/student_service.cpp.obj	4629f0c4810f7c79
+2868	6971	7724943330825879	CMakeFiles/Studenti_211.dir/repository/student_repo.cpp.obj	22e897fdd1898dfd
+2875	7509	7724943330901018	CMakeFiles/Studenti_211.dir/gui/student_model.cpp.obj	2075fbd8c52d763a
+2860	7692	7724943330755860	CMakeFiles/Studenti_211.dir/main.cpp.obj	515666d2ea4ddf4d
+2857	7747	7724943330715011	CMakeFiles/Studenti_211.dir/Studenti_211_autogen/mocs_compilation.cpp.obj	bcbf644e11a2fe22
+2880	7797	7724943330951026	CMakeFiles/Studenti_211.dir/gui/main_window.cpp.obj	44087056494108f6
+7797	8393	7724943380121441	Studenti_211.exe	40930c16ffdfa232

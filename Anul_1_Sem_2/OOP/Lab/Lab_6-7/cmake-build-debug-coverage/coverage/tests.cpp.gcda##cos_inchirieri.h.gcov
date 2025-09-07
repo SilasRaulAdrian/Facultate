@@ -1,0 +1,71 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cos_inchirieri/cos_inchirieri.h
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/tests/tests.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/tests/tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_COS_INCHIRIERI_H
+        -:    2:#define LAB_6_7_COS_INCHIRIERI_H
+        -:    3:
+        -:    4:#include <vector>
+        -:    5:#include <string>
+        -:    6:#include "../domain/carte.h"
+        -:    7:#include "../vector_dinamic/lista.h"
+        -:    8:
+        -:    9:class CosInchirieri {
+        -:   10:public:
+        -:   11:    /**
+        -:   12:     * Constructorul clasei CosInchirieri
+        -:   13:     */
+function _ZN13CosInchirieriC2Ev called 0 returned 0% blocks executed 0%
+    #####:   14:    CosInchirieri() = default;
+    %%%%%:   14-block  0
+call    0 never executed
+        -:   15:
+        -:   16:    /**
+        -:   17:     * Destructorul clasei CosInchirieri
+        -:   18:     */
+function _ZN13CosInchirieriD2Ev called 0 returned 0% blocks executed 0%
+    #####:   19:    ~CosInchirieri() = default;
+    %%%%%:   19-block  0
+call    0 never executed
+        -:   20:
+        -:   21:    /**
+        -:   22:     * Goleste cosul de carti
+        -:   23:     */
+        -:   24:    void golesteCos();
+        -:   25:
+        -:   26:    /**
+        -:   27:     * Adauga o carte in cos dupa titlu
+        -:   28:     * @param carte Cartea de adaugat
+        -:   29:     */
+        -:   30:    void adaugaCarte(const Carte &carte);
+        -:   31:
+        -:   32:    /**
+        -:   33:     * Genereaza un cos de carti aleator
+        -:   34:     * @param numarCarti Numarul de carti dorit
+        -:   35:     * @param carti Lista de carti disponibile
+        -:   36:     */
+        -:   37:    void genereazaCos(int numarCarti, Lista<Carte> &carti);
+        -:   38:
+        -:   39:    /**
+        -:   40:     * Exporta cosul de carti in fisier CSV
+        -:   41:     * @param numeFisier Numele fisierului CSV
+        -:   42:     */
+        -:   43:    void exportCsv(const std::string &numeFisier) const;
+        -:   44:
+        -:   45:    /**
+        -:   46:     * Functie care returneaza toate cartile din cos
+        -:   47:     * @return Lista de carti din cos
+        -:   48:     */
+        -:   49:    const std::vector<Carte> &getAllCos() const;
+        -:   50:
+        -:   51:    /**
+        -:   52:     * Functie care returneaza numarul de carti din cos
+        -:   53:     * @return Numarul de carti din cos
+        -:   54:     */
+        -:   55:    int getSizeCos() const;
+        -:   56:
+        -:   57:private:
+        -:   58:    std::vector<Carte> cos;
+        -:   59:};
+        -:   60:
+        -:   61:#endif //LAB_6_7_COS_INCHIRIERI_H

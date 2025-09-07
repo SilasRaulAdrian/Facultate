@@ -1,0 +1,4522 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/tests/tests.cpp
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\tests\tests.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\tests\tests.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "../domain/carte.h"
+        -:    2:#include "../repository/carte_repo.h"
+        -:    3:#include "../service/carte_service.h"
+        -:    4:#include "../exceptions/exceptii.h"
+        -:    5:#include <cassert>
+        -:    6:#include <iostream>
+        -:    7:#include <string>
+        -:    8:#include <random>
+        -:    9:#include <fstream>
+        -:   10:
+function _Z10testDomainv called 1 returned 100% blocks executed 63%
+        1:   11:void testDomain() {
+        1:   11-block  0
+        -:   12:    // Test Constructor
+        5:   13:    Carte carte(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:   13-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   13-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   13-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   13-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   13-block  4
+call   12 returned 1
+        1:   13-block  5
+call   13 returned 1
+        1:   13-block  6
+call   14 returned 1
+    $$$$$:   13-block  7
+call   15 never executed
+    $$$$$:   13-block  8
+    $$$$$:   13-block  9
+    $$$$$:   13-block 10
+call   16 never executed
+    $$$$$:   13-block 11
+    $$$$$:   13-block 12
+    $$$$$:   13-block 13
+call   17 never executed
+    $$$$$:   13-block 14
+    $$$$$:   13-block 15
+        1:   14:    Carte carteDefault;
+        1:   14-block  0
+call    0 returned 1
+       1*:   15:    assert(carte.getId() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   15-block  0
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   15-block  1
+call    5 never executed
+        1:   15-block  2
+       1*:   16:    assert(carte.getTitlu() == "Ion");
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   16-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   16-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   16-block  3
+call    8 never executed
+        1:   16-block  4
+       1*:   17:    assert(carte.getAutor() == "Liviu Rebreanu");
+        1:   17-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   17-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   17-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   17-block  3
+call    8 never executed
+        1:   17-block  4
+       1*:   18:    assert(carte.getGen() == "Roman");
+        1:   18-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   18-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   18-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   18-block  3
+call    8 never executed
+        1:   18-block  4
+       1*:   19:    assert(carte.getAnAparitie() == 1920);
+        1:   19-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   19-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   19-block  2
+call    5 never executed
+        1:   19-block  3
+        -:   20:
+        -:   21:    // Test Getters
+       1*:   22:    assert(carte.getId() == 1);
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   22-block  2
+call    5 never executed
+        1:   22-block  3
+       1*:   23:    assert(carte.getTitlu() == "Ion");
+        1:   23-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   23-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   23-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   23-block  3
+call    8 never executed
+        1:   23-block  4
+       1*:   24:    assert(carte.getAutor() == "Liviu Rebreanu");
+        1:   24-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   24-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   24-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   24-block  3
+call    8 never executed
+        1:   24-block  4
+       1*:   25:    assert(carte.getGen() == "Roman");
+        1:   25-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   25-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   25-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   25-block  3
+call    8 never executed
+        1:   25-block  4
+       1*:   26:    assert(carte.getAnAparitie() == 1920);
+        1:   26-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   26-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   26-block  2
+call    5 never executed
+        1:   26-block  3
+        -:   27:
+        -:   28:    // Test Setters
+        2:   29:    carte.setTitlu("Morometii");
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   29-block  2
+call    6 returned 1
+        1:   29-block  3
+    $$$$$:   29-block  4
+call    7 never executed
+    $$$$$:   29-block  5
+    $$$$$:   29-block  6
+        2:   30:    carte.setAutor("Marin Preda");
+        1:   30-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   30-block  2
+call    6 returned 1
+        1:   30-block  3
+    $$$$$:   30-block  4
+call    7 never executed
+    $$$$$:   30-block  5
+    $$$$$:   30-block  6
+        1:   31:    carte.setGen("Drama");
+        1:   31-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   31-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   31-block  2
+call    6 returned 1
+    $$$$$:   31-block  3
+call    7 never executed
+    $$$$$:   31-block  4
+    $$$$$:   31-block  5
+        1:   32:    carte.setAnAparitie(1955);
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   33:
+       1*:   34:    assert(carte.getTitlu() == "Morometii");
+        1:   34-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   34-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   34-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   34-block  3
+call    8 never executed
+        1:   34-block  4
+       1*:   35:    assert(carte.getAutor() == "Marin Preda");
+        1:   35-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   35-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   35-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   35-block  3
+call    8 never executed
+        1:   35-block  4
+       1*:   36:    assert(carte.getGen() == "Drama");
+        1:   36-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   36-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   36-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:   36-block  3
+call    8 never executed
+        1:   36-block  4
+       1*:   37:    assert(carte.getAnAparitie() == 1955);
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:   37-block  2
+call    5 never executed
+        1:   37-block  3
+        -:   38:
+        1:   39:    std::cout << "Testele pentru domeniu au trecut cu succes!\n";
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40:}
+        1:   40-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   40-block  1
+call    2 never executed
+    $$$$$:   40-block  2
+call    3 never executed
+        -:   41:
+function _Z8testRepov called 1 returned 100% blocks executed 65%
+        1:   42:void testRepo() {
+        1:   43:    CarteRepo repo;
+        1:   43-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   44:    Carte carte(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   44-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   44-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   44-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   44-block  4
+call   12 returned 1
+        1:   44-block  5
+call   13 returned 1
+        1:   44-block  6
+call   14 returned 1
+        1:   44-block  7
+    $$$$$:   44-block  8
+call   15 never executed
+    $$$$$:   44-block  9
+    $$$$$:   44-block 10
+    $$$$$:   44-block 11
+call   16 never executed
+    $$$$$:   44-block 12
+    $$$$$:   44-block 13
+    $$$$$:   44-block 14
+call   17 never executed
+    $$$$$:   44-block 15
+    $$$$$:   44-block 16
+        5:   45:    Carte carte2(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   45-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   45-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   45-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   45-block  4
+call   12 returned 1
+        1:   45-block  5
+call   13 returned 1
+        1:   45-block  6
+call   14 returned 1
+    $$$$$:   45-block  7
+call   15 never executed
+    $$$$$:   45-block  8
+    $$$$$:   45-block  9
+    $$$$$:   45-block 10
+call   16 never executed
+    $$$$$:   45-block 11
+    $$$$$:   45-block 12
+    $$$$$:   45-block 13
+call   17 never executed
+    $$$$$:   45-block 14
+    $$$$$:   45-block 15
+        -:   46:
+        -:   47:    // Test Adauga Carte
+        1:   48:    repo.adaugaCarte(carte);
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49:    repo.adaugaCarte(carte2);
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   50:    assert(repo.getCarti().getSize() == 2);
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   50-block  2
+call    6 never executed
+        1:   50-block  3
+        -:   51:
+        -:   52:    try {
+        1:   53:        repo.adaugaCarte(carte);
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   54:    } catch (const RepoException &e) {
+        1:   54-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   54-block  1
+call    2 returned 1
+        1:   55:        std::cout << "Exceptie prinsa la adaugare duplicat: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   55-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   56:        assert(repo.getCarti().getSize() == 2);
+        1:   56-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   56-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:   56-block  2
+call    6 never executed
+        1:   56-block  3
+        1:   57:    }
+        1:   57-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   57-block  1
+call    3 never executed
+        -:   58:
+        -:   59:    // Test Sterge Carte
+        1:   60:    repo.stergeCarte(1);
+        1:   60-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   61:    assert(repo.getCarti().getSize() == 1);
+        1:   61-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   61-block  2
+call    6 never executed
+        1:   61-block  3
+        -:   62:    try {
+        1:   63:        repo.stergeCarte(10);
+        1:   63-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:   64:    } catch (const RepoException &e) {
+        1:   64-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   64-block  1
+call    2 returned 1
+        1:   65:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   65-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   65-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   66:        assert(repo.getCarti().getSize() == 1);
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:   66-block  2
+call    6 never executed
+        1:   66-block  3
+        1:   67:    }
+        1:   67-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   67-block  1
+call    3 never executed
+        -:   68:
+        -:   69:    // Test Modifica Titlu
+        1:   70:    repo.modificaTitlu(2, "Morometii 2");
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   70-block  2
+call    6 returned 1
+    $$$$$:   70-block  3
+call    7 never executed
+    $$$$$:   70-block  4
+    $$$$$:   70-block  5
+       1*:   71:    assert(repo.getCarti()[0].getTitlu() == "Morometii 2");
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   71-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   71-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   71-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:   71-block  5
+call   14 never executed
+        1:   71-block  6
+        -:   72:    try {
+       2*:   73:        repo.modificaTitlu(10, "Morometii 3");
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   73-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   73-block  2
+call    6 never executed
+    %%%%%:   73-block  3
+        1:   73-block  4
+call    7 returned 1
+        1:   73-block  5
+        1:   73-block  6
+        1:   74:    } catch (const RepoException &e) {
+        1:   74-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   74-block  1
+call    2 returned 1
+        1:   75:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   75-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   75-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   76:        assert(repo.getCarti()[0].getTitlu() == "Morometii 2");
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   76-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   76-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   76-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    $$$$$:   76-block  5
+call   14 never executed
+        1:   76-block  6
+        1:   77:    }
+        1:   77-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   77-block  1
+call    3 never executed
+        -:   78:
+        -:   79:    // Test Modifica Autor
+        1:   80:    repo.modificaAutor(2, "Marin Preda 2");
+        1:   80-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   80-block  2
+call    6 returned 1
+    $$$$$:   80-block  3
+call    7 never executed
+    $$$$$:   80-block  4
+    $$$$$:   80-block  5
+       1*:   81:    assert(repo.getCarti()[0].getAutor() == "Marin Preda 2");
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   81-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   81-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   81-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   81-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:   81-block  5
+call   14 never executed
+        1:   81-block  6
+        -:   82:    try {
+       2*:   83:        repo.modificaAutor(10, "Marin Preda 3");
+        1:   83-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   83-block  2
+call    6 never executed
+    %%%%%:   83-block  3
+        1:   83-block  4
+call    7 returned 1
+        1:   83-block  5
+        1:   83-block  6
+        1:   84:    } catch (const RepoException &e) {
+        1:   84-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   84-block  1
+call    2 returned 1
+        1:   85:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   85-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   85-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   86:        assert(repo.getCarti()[0].getAutor() == "Marin Preda 2");
+        1:   86-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   86-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   86-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   86-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    $$$$$:   86-block  5
+call   14 never executed
+        1:   86-block  6
+        1:   87:    }
+        1:   87-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   87-block  1
+call    3 never executed
+        -:   88:
+        -:   89:    // Test Modifica Gen
+        1:   90:    repo.modificaGen(2, "Drama 2");
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   90-block  2
+call    6 returned 1
+    $$$$$:   90-block  3
+call    7 never executed
+    $$$$$:   90-block  4
+    $$$$$:   90-block  5
+       1*:   91:    assert(repo.getCarti()[0].getGen() == "Drama 2");
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   91-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   91-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   91-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   91-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:   91-block  5
+call   14 never executed
+        1:   91-block  6
+        -:   92:    try {
+       2*:   93:        repo.modificaGen(10, "Drama 3");
+        1:   93-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   93-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:   93-block  2
+call    6 never executed
+    %%%%%:   93-block  3
+        1:   93-block  4
+call    7 returned 1
+        1:   93-block  5
+        1:   93-block  6
+        1:   94:    } catch (const RepoException &e) {
+        1:   94-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   94-block  1
+call    2 returned 1
+        1:   95:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   95-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   95-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:   96:        assert(repo.getCarti()[0].getGen() == "Drama 2");
+        1:   96-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   96-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   96-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   96-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   96-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    $$$$$:   96-block  5
+call   14 never executed
+        1:   96-block  6
+        1:   97:    }
+        1:   97-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:   97-block  1
+call    3 never executed
+        -:   98:
+        -:   99:    // Test Modifica An Aparitie
+        1:  100:    repo.modificaAnAparitie(2, 1956);
+        1:  100-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  101:    assert(repo.getCarti()[0].getAnAparitie() == 1956);
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  101-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  101-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  101-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  101-block  4
+call   11 never executed
+        1:  101-block  5
+        -:  102:    try {
+        1:  103:        repo.modificaAnAparitie(10, 1957);
+        1:  103-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  104:    } catch (const RepoException &e) {
+        1:  104-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  104-block  1
+call    2 returned 1
+        1:  105:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  105-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  105-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  106:        assert(repo.getCarti()[0].getAnAparitie() == 1956);
+        1:  106-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  106-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  106-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  106-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    $$$$$:  106-block  4
+call   11 never executed
+        1:  106-block  5
+        1:  107:    }
+        1:  107-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  107-block  1
+call    3 never executed
+        -:  108:
+        -:  109:    // Test Cauta Carte
+       3*:  110:    assert(repo.cautaCarte("Morometii 2").getTitlu() == "Morometii 2");
+        1:  110-block  0
+        1:  110-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  110-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  110-block  3
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  110-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  110-block  5
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  110-block  6
+call   14 never executed
+        1:  110-block  7
+        1:  110-block  8
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0
+        1:  110-block  9
+call   17 returned 1
+        1:  110-block 10
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0
+        1:  110-block 11
+call   20 returned 1
+        1:  110-block 12
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+        1:  110-block 13
+    $$$$$:  110-block 14
+branch 23 never executed (fallthrough)
+branch 24 never executed
+    $$$$$:  110-block 15
+call   25 never executed
+    $$$$$:  110-block 16
+    $$$$$:  110-block 17
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    $$$$$:  110-block 18
+call   28 never executed
+    $$$$$:  110-block 19
+    $$$$$:  110-block 20
+branch 29 never executed (fallthrough)
+branch 30 never executed
+    $$$$$:  110-block 21
+        -:  111:    try {
+       2*:  112:        repo.cautaCarte("Morometii 3");
+        1:  112-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  112-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  112-block  2
+call    6 never executed
+call    7 never executed
+    %%%%%:  112-block  3
+        1:  112-block  4
+call    8 returned 1
+        1:  112-block  5
+        1:  112-block  6
+        1:  112-block  7
+        1:  113:    } catch (const RepoException &e) {
+        1:  113-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  113-block  1
+call    2 returned 1
+        1:  114:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  114-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  114-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        2:  115:        assert(repo.cautaCarte("Morometii 2").getTitlu() == "Morometii 2");
+        1:  115-block  0
+        1:  115-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  115-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  115-block  3
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  115-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  115-block  5
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    $$$$$:  115-block  6
+call   14 never executed
+        1:  115-block  7
+        1:  115-block  8
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0
+        1:  115-block  9
+call   17 returned 1
+        1:  115-block 10
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0
+        1:  115-block 11
+call   20 returned 1
+        1:  115-block 12
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:  115-block 13
+branch 23 never executed (fallthrough)
+branch 24 never executed
+    $$$$$:  115-block 14
+call   25 never executed
+    $$$$$:  115-block 15
+    $$$$$:  115-block 16
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    $$$$$:  115-block 17
+call   28 never executed
+    $$$$$:  115-block 18
+    $$$$$:  115-block 19
+branch 29 never executed (fallthrough)
+branch 30 never executed
+    $$$$$:  115-block 20
+        1:  116:    }
+        1:  116-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  116-block  1
+call    3 never executed
+        -:  117:
+        1:  118:    std::cout << "Testele pentru repository au trecut cu succes!\n";
+        1:  118-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  119:}
+        1:  119-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  119-block  1
+call    3 never executed
+    $$$$$:  119-block  2
+call    4 never executed
+    $$$$$:  119-block  3
+call    5 never executed
+        -:  120:
+function _Z11testServicev called 1 returned 100% blocks executed 62%
+        1:  121:void testService() {
+        1:  122:    CarteRepo repo;
+        1:  122-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  123:    CarteService service(repo);
+        1:  123-block  0
+call    0 returned 1
+        -:  124:
+        6:  125:    service.adaugaCarte(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  125-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  125-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  125-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  125-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  125-block  4
+call   12 returned 1
+        1:  125-block  5
+call   13 returned 1
+        1:  125-block  6
+call   14 returned 1
+        1:  125-block  7
+    $$$$$:  125-block  8
+call   15 never executed
+    $$$$$:  125-block  9
+    $$$$$:  125-block 10
+    $$$$$:  125-block 11
+call   16 never executed
+    $$$$$:  125-block 12
+    $$$$$:  125-block 13
+    $$$$$:  125-block 14
+call   17 never executed
+    $$$$$:  125-block 15
+    $$$$$:  125-block 16
+        6:  126:    service.adaugaCarte(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:  126-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  126-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  126-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  126-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  126-block  4
+call   12 returned 1
+        1:  126-block  5
+call   13 returned 1
+        1:  126-block  6
+call   14 returned 1
+        1:  126-block  7
+    $$$$$:  126-block  8
+call   15 never executed
+    $$$$$:  126-block  9
+    $$$$$:  126-block 10
+    $$$$$:  126-block 11
+call   16 never executed
+    $$$$$:  126-block 12
+    $$$$$:  126-block 13
+    $$$$$:  126-block 14
+call   17 never executed
+    $$$$$:  126-block 15
+    $$$$$:  126-block 16
+        5:  127:    service.adaugaCarte(3, "Baltagul", "Mihail Sadoveanu", "Mister", 1930);
+        1:  127-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  127-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  127-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  127-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  127-block  4
+call   12 returned 1
+        1:  127-block  5
+call   13 returned 1
+        1:  127-block  6
+call   14 returned 1
+    $$$$$:  127-block  7
+call   15 never executed
+    $$$$$:  127-block  8
+    $$$$$:  127-block  9
+    $$$$$:  127-block 10
+call   16 never executed
+    $$$$$:  127-block 11
+    $$$$$:  127-block 12
+    $$$$$:  127-block 13
+call   17 never executed
+    $$$$$:  127-block 14
+    $$$$$:  127-block 15
+       1*:  128:    assert(service.getCarti().getSize() == 3);
+        1:  128-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  128-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  128-block  2
+call    6 never executed
+        1:  128-block  3
+        -:  129:
+        -:  130:    try {
+       6*:  131:        service.adaugaCarte(-1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  131-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  131-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  131-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  131-block  3
+call    9 returned 1
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1 (throw)
+    %%%%%:  131-block  4
+call   12 never executed
+    %%%%%:  131-block  5
+call   13 never executed
+    %%%%%:  131-block  6
+call   14 never executed
+    %%%%%:  131-block  7
+        1:  131-block  8
+call   15 returned 1
+        1:  131-block  9
+        1:  131-block 10
+        1:  131-block 11
+call   16 returned 1
+        1:  131-block 12
+        1:  131-block 13
+        1:  131-block 14
+call   17 returned 1
+        1:  131-block 15
+        1:  131-block 16
+        1:  132:    } catch (const ValidationException &e) {
+        1:  132-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  132-block  1
+call    2 returned 1
+        1:  133:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  133-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  133-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  134:        assert(service.getCarti().getSize() == 3);
+        1:  134-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  134-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  134-block  2
+call    6 never executed
+        1:  134-block  3
+        1:  135:    }
+        1:  135-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  135-block  1
+call    3 never executed
+        -:  136:
+        -:  137:    try {
+       1*:  138:        service.getTitluById(10);
+        1:  138-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    %%%%%:  138-block  1
+call    3 never executed
+        1:  138-block  2
+        1:  139:    } catch (const std::runtime_error &e) {
+        1:  139-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  139-block  1
+call    2 returned 1
+        1:  140:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  140-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  140-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  141:        assert(service.getCarti().getSize() == 3);
+        1:  141-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  141-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  141-block  2
+call    6 never executed
+        1:  141-block  3
+        1:  142:    }
+        1:  142-block  0
+call    0 returned 1
+    $$$$$:  142-block  1
+call    1 never executed
+        -:  143:
+        1:  144:    Lista<Carte> filtrateTitlu = service.filtreazaDupaTitlu("Baltagul");
+        1:  144-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  144-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  144-block  2
+call    6 returned 1
+    $$$$$:  144-block  3
+call    7 never executed
+    $$$$$:  144-block  4
+    $$$$$:  144-block  5
+       1*:  145:    assert(filtrateTitlu.getSize() == 1);
+        1:  145-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  145-block  1
+call    3 never executed
+        1:  145-block  2
+       1*:  146:    assert(filtrateTitlu[0].getTitlu() == "Baltagul");
+        1:  146-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  146-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  146-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  146-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  146-block  4
+call   11 never executed
+        1:  146-block  5
+        -:  147:
+        1:  148:    Lista<Carte> filtrareFaraRezultat = service.filtreazaDupaTitlu("Carte Necunoscuta");
+        1:  148-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  148-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  148-block  2
+call    6 returned 1
+    $$$$$:  148-block  3
+call    7 never executed
+    $$$$$:  148-block  4
+    $$$$$:  148-block  5
+       1*:  149:    assert(filtrareFaraRezultat.getSize() == 0);
+        1:  149-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  149-block  1
+call    3 never executed
+        1:  149-block  2
+        -:  150:
+        1:  151:    Lista<Carte> filtrateAn = service.filtreazaDupaAn(1930);
+        1:  151-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  152:    assert(filtrateAn.getSize() == 1);
+        1:  152-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  152-block  1
+call    3 never executed
+        1:  152-block  2
+       1*:  153:    assert(filtrateAn[0].getTitlu() == "Baltagul");
+        1:  153-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  153-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  153-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  153-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  153-block  4
+call   11 never executed
+        1:  153-block  5
+        -:  154:
+        1:  155:    Lista<Carte> filtrareAnInexistent = service.filtreazaDupaAn(1800);
+        1:  155-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  156:    assert(filtrareAnInexistent.getSize() == 0);
+        1:  156-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  156-block  1
+call    3 never executed
+        1:  156-block  2
+        -:  157:
+        1:  158:    Lista<Carte> sortateTitluCrescator = service.sorteazaDupaTitlu(0);
+        1:  158-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  159:    assert(sortateTitluCrescator.getSize() == 3);
+        1:  159-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  159-block  1
+call    3 never executed
+        1:  159-block  2
+       1*:  160:    assert(sortateTitluCrescator[0].getTitlu() == "Baltagul");
+        1:  160-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  160-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  160-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  160-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  160-block  4
+call   11 never executed
+        1:  160-block  5
+        -:  161:
+        1:  162:    Lista<Carte> sortateTitluDescrescator = service.sorteazaDupaTitlu(1);
+        1:  162-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  163:    assert(sortateTitluDescrescator.getSize() == 3);
+        1:  163-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  163-block  1
+call    3 never executed
+        1:  163-block  2
+       1*:  164:    assert(sortateTitluDescrescator[0].getTitlu() == "Morometii");
+        1:  164-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  164-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  164-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  164-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  164-block  4
+call   11 never executed
+        1:  164-block  5
+        -:  165:
+        1:  166:    Lista<Carte> sortateAutor = service.sorteazaDupaAutor(0);
+        1:  166-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  167:    assert(sortateAutor[0].getAutor() == "Liviu Rebreanu");
+        1:  167-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  167-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  167-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  167-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  167-block  4
+call   11 never executed
+        1:  167-block  5
+        -:  168:
+        1:  169:    Lista<Carte> sortateAutorDescrescator = service.sorteazaDupaAutor(1);
+        1:  169-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  170:    assert(sortateAutorDescrescator[0].getAutor() == "Mihail Sadoveanu");
+        1:  170-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  170-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  170-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  170-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  170-block  4
+call   11 never executed
+        1:  170-block  5
+        -:  171:
+        1:  172:    Lista<Carte> sortateAn = service.sorteazaDupaAnulAparitiei(0);
+        1:  172-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  173:    assert(sortateAn[0].getAnAparitie() == 1920);
+        1:  173-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  173-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  173-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  173-block  3
+call    8 never executed
+        1:  173-block  4
+        -:  174:
+        1:  175:    Lista<Carte> sortateAnDescrescator = service.sorteazaDupaAnulAparitiei(1);
+        1:  175-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  176:    assert(sortateAnDescrescator[0].getAnAparitie() == 1955);
+        1:  176-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  176-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  176-block  2
+branch  6 taken 0 (fallthrough)
+branch  7 taken 1
+    %%%%%:  176-block  3
+call    8 never executed
+        1:  176-block  4
+        -:  177:
+        1:  178:    Lista<Carte> sortateGen = service.sorteazaDupaGen(0);
+        1:  178-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  179:    assert(sortateGen[0].getGen() == "Drama");
+        1:  179-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  179-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  179-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  179-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  179-block  4
+call   11 never executed
+        1:  179-block  5
+        -:  180:
+        1:  181:    Lista<Carte> sortateGenDescrescator = service.sorteazaDupaGen(1);
+        1:  181-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  182:    assert(sortateGenDescrescator[0].getGen() == "Roman");
+        1:  182-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  182-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  182-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  182-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  182-block  4
+call   11 never executed
+        1:  182-block  5
+        -:  183:
+       3*:  184:    assert(service.cautaCarte("Morometii").getTitlu() == "Morometii");
+        1:  184-block  0
+        1:  184-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  184-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  184-block  3
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  184-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  184-block  5
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  184-block  6
+call   14 never executed
+        1:  184-block  7
+        1:  184-block  8
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0
+        1:  184-block  9
+call   17 returned 1
+        1:  184-block 10
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0
+        1:  184-block 11
+call   20 returned 1
+        1:  184-block 12
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+        1:  184-block 13
+    $$$$$:  184-block 14
+branch 23 never executed (fallthrough)
+branch 24 never executed
+    $$$$$:  184-block 15
+call   25 never executed
+    $$$$$:  184-block 16
+    $$$$$:  184-block 17
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    $$$$$:  184-block 18
+call   28 never executed
+    $$$$$:  184-block 19
+    $$$$$:  184-block 20
+branch 29 never executed (fallthrough)
+branch 30 never executed
+    $$$$$:  184-block 21
+        -:  185:    try {
+       2*:  186:        service.cautaCarte("Carte Inexistenta");
+        1:  186-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  186-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  186-block  2
+call    6 never executed
+call    7 never executed
+    %%%%%:  186-block  3
+        1:  186-block  4
+call    8 returned 1
+        1:  186-block  5
+        1:  186-block  6
+        1:  186-block  7
+        1:  187:    } catch (const RepoException &e) {
+        1:  187-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  187-block  1
+call    2 returned 1
+        1:  188:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  188-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  188-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        2:  189:        assert(service.cautaCarte("Morometii").getTitlu() == "Morometii");
+        1:  189-block  0
+        1:  189-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  189-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  189-block  3
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  189-block  4
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  189-block  5
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    $$$$$:  189-block  6
+call   14 never executed
+        1:  189-block  7
+        1:  189-block  8
+branch 15 taken 1 (fallthrough)
+branch 16 taken 0
+        1:  189-block  9
+call   17 returned 1
+        1:  189-block 10
+branch 18 taken 1 (fallthrough)
+branch 19 taken 0
+        1:  189-block 11
+call   20 returned 1
+        1:  189-block 12
+branch 21 taken 1 (fallthrough)
+branch 22 taken 0
+    $$$$$:  189-block 13
+branch 23 never executed (fallthrough)
+branch 24 never executed
+    $$$$$:  189-block 14
+call   25 never executed
+    $$$$$:  189-block 15
+    $$$$$:  189-block 16
+branch 26 never executed (fallthrough)
+branch 27 never executed
+    $$$$$:  189-block 17
+call   28 never executed
+    $$$$$:  189-block 18
+    $$$$$:  189-block 19
+branch 29 never executed (fallthrough)
+branch 30 never executed
+    $$$$$:  189-block 20
+        1:  190:    }
+        1:  190-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  190-block  1
+call    3 never executed
+        -:  191:
+        1:  192:    service.stergeCarte(1);
+        1:  192-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  193:    assert(service.getCarti().getSize() == 2);
+        1:  193-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  193-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  193-block  2
+call    6 never executed
+        1:  193-block  3
+        -:  194:
+        1:  195:    service.modificaTitlu(2, "Morometii 2");
+        1:  195-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  195-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  195-block  2
+call    6 returned 1
+    $$$$$:  195-block  3
+call    7 never executed
+    $$$$$:  195-block  4
+    $$$$$:  195-block  5
+       1*:  196:    assert(service.getCarti()[0].getTitlu() == "Morometii 2");
+        1:  196-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  196-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  196-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  196-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  196-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  196-block  5
+call   14 never executed
+        1:  196-block  6
+        -:  197:
+        1:  198:    service.modificaAutor(2, "Marin Preda 2");
+        1:  198-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  198-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  198-block  2
+call    6 returned 1
+    $$$$$:  198-block  3
+call    7 never executed
+    $$$$$:  198-block  4
+    $$$$$:  198-block  5
+       1*:  199:    assert(service.getCarti()[0].getAutor() == "Marin Preda 2");
+        1:  199-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  199-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  199-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  199-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  199-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  199-block  5
+call   14 never executed
+        1:  199-block  6
+        -:  200:
+        1:  201:    service.modificaGen(2, "Drama 2");
+        1:  201-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  201-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  201-block  2
+call    6 returned 1
+    $$$$$:  201-block  3
+call    7 never executed
+    $$$$$:  201-block  4
+    $$$$$:  201-block  5
+       1*:  202:    assert(service.getCarti()[0].getGen() == "Drama 2");
+        1:  202-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  202-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  202-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  202-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  202-block  4
+branch 12 taken 0 (fallthrough)
+branch 13 taken 1
+    %%%%%:  202-block  5
+call   14 never executed
+        1:  202-block  6
+        -:  203:
+        1:  204:    service.modificaAnAparitie(2, 1956);
+        1:  204-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  205:    assert(service.getCarti()[0].getAnAparitie() == 1956);
+        1:  205-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  205-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  205-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  205-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  205-block  4
+call   11 never executed
+        1:  205-block  5
+        -:  206:
+        5:  207:    service.adaugaCarte(100, "Test Carte", "Autor Test", "Gen Test", 2020);
+        1:  207-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  207-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  207-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  207-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  207-block  4
+call   12 returned 1
+        1:  207-block  5
+call   13 returned 1
+        1:  207-block  6
+call   14 returned 1
+    $$$$$:  207-block  7
+call   15 never executed
+    $$$$$:  207-block  8
+    $$$$$:  207-block  9
+    $$$$$:  207-block 10
+call   16 never executed
+    $$$$$:  207-block 11
+    $$$$$:  207-block 12
+    $$$$$:  207-block 13
+call   17 never executed
+    $$$$$:  207-block 14
+    $$$$$:  207-block 15
+       1*:  208:    assert(service.getCarti().getSize() == 3);
+        1:  208-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  208-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  208-block  2
+call    6 never executed
+        1:  208-block  3
+        1:  209:    service.undo();
+        1:  209-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  210:    assert(service.getCarti().getSize() == 2);
+        1:  210-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  210-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  210-block  2
+call    6 never executed
+        1:  210-block  3
+        -:  211:
+        1:  212:    int undoCount = 0;
+        1:  212-block  0
+        -:  213:    try {
+        -:  214:        while (true) {
+        9:  215:            service.undo();
+        9:  215-block  0
+call    0 returned 9
+branch  1 taken 8 (fallthrough)
+branch  2 taken 1 (throw)
+        8:  216:            undoCount++;
+        8:  216-block  0
+        -:  217:        }
+        1:  218:    } catch (const std::runtime_error& e) {
+        1:  218-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  218-block  1
+call    2 returned 1
+        1:  219:        std::cout << "S-au efectuat " << undoCount << " undo-uri inainte de exceptie: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  219-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  219-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  219-block  2
+call    9 returned 1
+call   10 returned 1
+branch 11 taken 1 (fallthrough)
+branch 12 taken 0 (throw)
+        1:  219-block  3
+call   13 returned 1
+branch 14 taken 1 (fallthrough)
+branch 15 taken 0 (throw)
+        1:  220:        assert(undoCount > 0);
+        1:  220-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    $$$$$:  220-block  1
+call    2 never executed
+        1:  220-block  2
+        1:  221:    }
+        1:  221-block  0
+call    0 returned 1
+    $$$$$:  221-block  1
+call    1 never executed
+        -:  222:
+        1:  223:    std::cout << "Testele pentru service au trecut cu succes!\n";
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  224:}
+        1:  224-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+call    9 returned 1
+call   10 returned 1
+call   11 returned 1
+call   12 returned 1
+call   13 returned 1
+    $$$$$:  224-block  1
+call   14 never executed
+    $$$$$:  224-block  2
+call   15 never executed
+    $$$$$:  224-block  3
+call   16 never executed
+    $$$$$:  224-block  4
+call   17 never executed
+    $$$$$:  224-block  5
+call   18 never executed
+    $$$$$:  224-block  6
+call   19 never executed
+    $$$$$:  224-block  7
+call   20 never executed
+    $$$$$:  224-block  8
+call   21 never executed
+    $$$$$:  224-block  9
+call   22 never executed
+    $$$$$:  224-block 10
+call   23 never executed
+    $$$$$:  224-block 11
+call   24 never executed
+    $$$$$:  224-block 12
+call   25 never executed
+    $$$$$:  224-block 13
+call   26 never executed
+    $$$$$:  224-block 14
+call   27 never executed
+        -:  225:
+function _Z9testListav called 1 returned 100% blocks executed 60%
+        1:  226:void testLista() {
+        1:  227:    Lista<Carte> listaCarti;
+        1:  227-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  228:
+        6:  229:    Carte carte1(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  229-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  229-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  229-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  229-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  229-block  4
+call   12 returned 1
+        1:  229-block  5
+call   13 returned 1
+        1:  229-block  6
+call   14 returned 1
+        1:  229-block  7
+    $$$$$:  229-block  8
+call   15 never executed
+    $$$$$:  229-block  9
+    $$$$$:  229-block 10
+    $$$$$:  229-block 11
+call   16 never executed
+    $$$$$:  229-block 12
+    $$$$$:  229-block 13
+    $$$$$:  229-block 14
+call   17 never executed
+    $$$$$:  229-block 15
+    $$$$$:  229-block 16
+        6:  230:    Carte carte2(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:  230-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  230-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  230-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  230-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  230-block  4
+call   12 returned 1
+        1:  230-block  5
+call   13 returned 1
+        1:  230-block  6
+call   14 returned 1
+        1:  230-block  7
+    $$$$$:  230-block  8
+call   15 never executed
+    $$$$$:  230-block  9
+    $$$$$:  230-block 10
+    $$$$$:  230-block 11
+call   16 never executed
+    $$$$$:  230-block 12
+    $$$$$:  230-block 13
+    $$$$$:  230-block 14
+call   17 never executed
+    $$$$$:  230-block 15
+    $$$$$:  230-block 16
+        6:  231:    Carte carte3(3, "Enigma Otiliei", "George Calinescu", "Roman", 1938);
+        1:  231-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  231-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  231-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  231-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  231-block  4
+call   12 returned 1
+        1:  231-block  5
+call   13 returned 1
+        1:  231-block  6
+call   14 returned 1
+        1:  231-block  7
+    $$$$$:  231-block  8
+call   15 never executed
+    $$$$$:  231-block  9
+    $$$$$:  231-block 10
+    $$$$$:  231-block 11
+call   16 never executed
+    $$$$$:  231-block 12
+    $$$$$:  231-block 13
+    $$$$$:  231-block 14
+call   17 never executed
+    $$$$$:  231-block 15
+    $$$$$:  231-block 16
+        5:  232:    Carte carte4(4, "Mizerabilii", "Victor Hugo", "Drama", 1862);
+        1:  232-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  232-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  232-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  232-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  232-block  4
+call   12 returned 1
+        1:  232-block  5
+call   13 returned 1
+        1:  232-block  6
+call   14 returned 1
+    $$$$$:  232-block  7
+call   15 never executed
+    $$$$$:  232-block  8
+    $$$$$:  232-block  9
+    $$$$$:  232-block 10
+call   16 never executed
+    $$$$$:  232-block 11
+    $$$$$:  232-block 12
+    $$$$$:  232-block 13
+call   17 never executed
+    $$$$$:  232-block 14
+    $$$$$:  232-block 15
+        -:  233:
+        1:  234:    listaCarti.push_back(carte1);
+        1:  234-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  235:    listaCarti.push_back(carte2);
+        1:  235-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  236:    listaCarti.push_back(carte3);
+        1:  236-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  237:    listaCarti.push_back(carte4);
+        1:  237-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  238:
+        1:  239:    Lista<Carte> listaCarti2;
+        1:  239-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  240:    listaCarti2 = listaCarti;
+        1:  240-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  241:    assert(listaCarti2.getSize() == 4);
+        1:  241-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  241-block  1
+call    3 never executed
+        1:  241-block  2
+       1*:  242:    assert(listaCarti2[0].getTitlu() == "Ion");
+        1:  242-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  242-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  242-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  242-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  242-block  4
+call   11 never executed
+        1:  242-block  5
+       1*:  243:    assert(listaCarti2[1].getTitlu() == "Morometii");
+        1:  243-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  243-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  243-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  243-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  243-block  4
+call   11 never executed
+        1:  243-block  5
+       1*:  244:    assert(listaCarti2[2].getTitlu() == "Enigma Otiliei");
+        1:  244-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  244-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  244-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  244-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  244-block  4
+call   11 never executed
+        1:  244-block  5
+       1*:  245:    assert(listaCarti2[3].getTitlu() == "Mizerabilii");
+        1:  245-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  245-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  245-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  245-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  245-block  4
+call   11 never executed
+        1:  245-block  5
+        -:  246:
+        1:  247:    listaCarti = listaCarti;
+        1:  247-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  248:    assert(listaCarti.getSize() == 4);
+        1:  248-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  248-block  1
+call    3 never executed
+        1:  248-block  2
+        -:  249:
+       1*:  250:    assert(listaCarti[0].getTitlu() == "Ion");
+        1:  250-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  250-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  250-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  250-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  250-block  4
+call   11 never executed
+        1:  250-block  5
+       1*:  251:    assert(listaCarti[1].getTitlu() == "Morometii");
+        1:  251-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  251-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  251-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  251-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  251-block  4
+call   11 never executed
+        1:  251-block  5
+       1*:  252:    assert(listaCarti[2].getTitlu() == "Enigma Otiliei");
+        1:  252-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  252-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  252-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  252-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  252-block  4
+call   11 never executed
+        1:  252-block  5
+       1*:  253:    assert(listaCarti[3].getTitlu() == "Mizerabilii");
+        1:  253-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  253-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  253-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  253-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  253-block  4
+call   11 never executed
+        1:  253-block  5
+        -:  254:
+       1*:  255:    assert(listaCarti.exista(carte1) == true);
+        1:  255-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  255-block  1
+call    3 never executed
+        1:  255-block  2
+       1*:  256:    assert(listaCarti.exista(carte2) == true);
+        1:  256-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  256-block  1
+call    3 never executed
+        1:  256-block  2
+       1*:  257:    assert(listaCarti.exista(carte3) == true);
+        1:  257-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  257-block  1
+call    3 never executed
+        1:  257-block  2
+       1*:  258:    assert(listaCarti.exista(carte4) == true);
+        1:  258-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  258-block  1
+call    3 never executed
+        1:  258-block  2
+       6*:  259:    assert(listaCarti.exista(Carte(5, "Nonexistent", "Autor", "Gen", 2020)) == false);
+        1:  259-block  0
+        1:  259-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  259-block  2
+        1:  259-block  3
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  259-block  4
+        1:  259-block  5
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  259-block  6
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  259-block  7
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1
+    %%%%%:  259-block  8
+call   15 never executed
+        1:  259-block  9
+        1:  259-block 10
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0
+        1:  259-block 11
+call   18 returned 1
+        1:  259-block 12
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0
+        1:  259-block 13
+call   21 returned 1
+        1:  259-block 14
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0
+        1:  259-block 15
+branch 24 taken 1 (fallthrough)
+branch 25 taken 0
+        1:  259-block 16
+call   26 returned 1
+        1:  259-block 17
+branch 27 taken 1 (fallthrough)
+branch 28 taken 0
+        1:  259-block 18
+branch 29 taken 1 (fallthrough)
+branch 30 taken 0
+        1:  259-block 19
+call   31 returned 1
+        1:  259-block 20
+branch 32 taken 1 (fallthrough)
+branch 33 taken 0
+    $$$$$:  259-block 21
+branch 34 never executed (fallthrough)
+branch 35 never executed
+    $$$$$:  259-block 22
+call   36 never executed
+    $$$$$:  259-block 23
+    $$$$$:  259-block 24
+branch 37 never executed (fallthrough)
+branch 38 never executed
+    $$$$$:  259-block 25
+call   39 never executed
+    $$$$$:  259-block 26
+    $$$$$:  259-block 27
+branch 40 never executed (fallthrough)
+branch 41 never executed
+    $$$$$:  259-block 28
+    $$$$$:  259-block 29
+branch 42 never executed (fallthrough)
+branch 43 never executed
+    $$$$$:  259-block 30
+call   44 never executed
+    $$$$$:  259-block 31
+    $$$$$:  259-block 32
+branch 45 never executed (fallthrough)
+branch 46 never executed
+    $$$$$:  259-block 33
+    $$$$$:  259-block 34
+branch 47 never executed (fallthrough)
+branch 48 never executed
+    $$$$$:  259-block 35
+call   49 never executed
+    $$$$$:  259-block 36
+    $$$$$:  259-block 37
+branch 50 never executed (fallthrough)
+branch 51 never executed
+    $$$$$:  259-block 38
+        -:  260:
+       11:  261:    for (int i = 5; i < 15; ++i) {
+        1:  261-block  0
+       11:  261-block  1
+branch  0 taken 10
+branch  1 taken 1 (fallthrough)
+       30:  262:        listaCarti.push_back(Carte(i, "Carte " + std::to_string(i), "Autor " + std::to_string(i), "Gen", 2000 + i));
+       10:  262-block  0
+       10:  262-block  1
+call    0 returned 10
+branch  1 taken 10 (fallthrough)
+branch  2 taken 0 (throw)
+       10:  262-block  2
+call    3 returned 10
+call    4 returned 10
+branch  5 taken 10 (fallthrough)
+branch  6 taken 0 (throw)
+       10:  262-block  3
+call    7 returned 10
+call    8 returned 10
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0 (throw)
+       10:  262-block  4
+call   11 returned 10
+branch 12 taken 10 (fallthrough)
+branch 13 taken 0 (throw)
+       10:  262-block  5
+call   14 returned 10
+branch 15 taken 10 (fallthrough)
+branch 16 taken 0 (throw)
+       10:  262-block  6
+call   17 returned 10
+call   18 returned 10
+call   19 returned 10
+call   20 returned 10
+call   21 returned 10
+call   22 returned 10
+       10:  262-block  7
+    $$$$$:  262-block  8
+call   23 never executed
+    $$$$$:  262-block  9
+call   24 never executed
+    $$$$$:  262-block 10
+call   25 never executed
+    $$$$$:  262-block 11
+    $$$$$:  262-block 12
+    $$$$$:  262-block 13
+call   26 never executed
+    $$$$$:  262-block 14
+call   27 never executed
+    $$$$$:  262-block 15
+    $$$$$:  262-block 16
+    $$$$$:  262-block 17
+call   28 never executed
+    $$$$$:  262-block 18
+    $$$$$:  262-block 19
+    $$$$$:  262-block 20
+        -:  263:    }
+       1*:  264:    assert(listaCarti.getSize() == 14);
+        1:  264-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  264-block  1
+call    3 never executed
+        1:  264-block  2
+        -:  265:
+       1*:  266:    assert(listaCarti.sterge(carte1) == true);
+        1:  266-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  266-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  266-block  2
+call    5 never executed
+        1:  266-block  3
+       1*:  267:    assert(listaCarti.getSize() == 13);
+        1:  267-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  267-block  1
+call    3 never executed
+        1:  267-block  2
+        -:  268:
+        -:  269:    try {
+       7*:  270:        listaCarti.sterge(Carte(100, "Nonexistent", "Autor", "Gen", 2020));
+        1:  270-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  270-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  270-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  270-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  270-block  4
+call   12 returned 1
+branch 13 taken 0 (fallthrough)
+branch 14 taken 1 (throw)
+    %%%%%:  270-block  5
+call   15 never executed
+call   16 never executed
+    %%%%%:  270-block  6
+call   17 never executed
+    %%%%%:  270-block  7
+call   18 never executed
+    %%%%%:  270-block  8
+        1:  270-block  9
+call   19 returned 1
+        1:  270-block 10
+call   20 returned 1
+        1:  270-block 11
+        1:  270-block 12
+        1:  270-block 13
+call   21 returned 1
+        1:  270-block 14
+        1:  270-block 15
+        1:  270-block 16
+call   22 returned 1
+        1:  270-block 17
+        1:  270-block 18
+        1:  270-block 19
+        1:  271:    } catch (const std::runtime_error &e) {
+        1:  271-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  271-block  1
+call    2 returned 1
+        1:  272:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  272-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  272-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  273:    }
+        1:  273-block  0
+call    0 returned 1
+    $$$$$:  273-block  1
+call    1 never executed
+        -:  274:
+        -:  275:    try {
+        1:  276:        listaCarti[14];
+        1:  276-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  277:    } catch (const std::out_of_range &e) {
+        1:  277-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  277-block  1
+call    2 returned 1
+        1:  278:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  278-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  278-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  279:    }
+        1:  279-block  0
+call    0 returned 1
+    $$$$$:  279-block  1
+call    1 never executed
+        -:  280:
+        -:  281:    try {
+        1:  282:        listaCarti.push_back(carte2);
+        1:  282-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  283:    } catch (const std::runtime_error &e) {
+        1:  283-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  283-block  1
+call    2 returned 1
+        1:  284:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  284-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  284-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  285:    }
+        1:  285-block  0
+call    0 returned 1
+    $$$$$:  285-block  1
+call    1 never executed
+        -:  286:
+       1*:  287:    assert(listaCarti.getSize() == 13);
+        1:  287-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  287-block  1
+call    3 never executed
+        1:  287-block  2
+        -:  288:
+        1:  289:    std::cout << "Testele pentru lista de carti au trecut cu succes!\n";
+        1:  289-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  290:}
+        1:  290-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+    $$$$$:  290-block  1
+call    6 never executed
+    $$$$$:  290-block  2
+call    7 never executed
+    $$$$$:  290-block  3
+call    8 never executed
+    $$$$$:  290-block  4
+call    9 never executed
+    $$$$$:  290-block  5
+call   10 never executed
+    $$$$$:  290-block  6
+call   11 never executed
+        -:  291:
+function _Z7testCosv called 1 returned 100% blocks executed 62%
+        1:  292:void testCos() {
+        1:  293:    CosInchirieri cos;
+       1*:  294:    assert(cos.getSizeCos() == 0);
+        1:  294-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  294-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  294-block  2
+call    5 never executed
+        1:  294-block  3
+        -:  295:
+        6:  296:    Carte carte1(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  296-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  296-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  296-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  296-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  296-block  4
+call   12 returned 1
+        1:  296-block  5
+call   13 returned 1
+        1:  296-block  6
+call   14 returned 1
+        1:  296-block  7
+    $$$$$:  296-block  8
+call   15 never executed
+    $$$$$:  296-block  9
+    $$$$$:  296-block 10
+    $$$$$:  296-block 11
+call   16 never executed
+    $$$$$:  296-block 12
+    $$$$$:  296-block 13
+    $$$$$:  296-block 14
+call   17 never executed
+    $$$$$:  296-block 15
+    $$$$$:  296-block 16
+        5:  297:    Carte carte2(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:  297-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  297-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  297-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  297-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  297-block  4
+call   12 returned 1
+        1:  297-block  5
+call   13 returned 1
+        1:  297-block  6
+call   14 returned 1
+    $$$$$:  297-block  7
+call   15 never executed
+    $$$$$:  297-block  8
+    $$$$$:  297-block  9
+    $$$$$:  297-block 10
+call   16 never executed
+    $$$$$:  297-block 11
+    $$$$$:  297-block 12
+    $$$$$:  297-block 13
+call   17 never executed
+    $$$$$:  297-block 14
+    $$$$$:  297-block 15
+        -:  298:
+        1:  299:    cos.adaugaCarte(carte1);
+        1:  299-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  300:    cos.adaugaCarte(carte2);
+        1:  300-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  301:    assert(cos.getSizeCos() == 2);
+        1:  301-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  301-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  301-block  2
+call    5 never executed
+        1:  301-block  3
+       1*:  302:    assert(cos.getAllCos()[0].getTitlu() == "Ion");
+        1:  302-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  302-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  302-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  302-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:  302-block  4
+call   12 never executed
+        1:  302-block  5
+       1*:  303:    assert(cos.getAllCos()[1].getTitlu() == "Morometii");
+        1:  303-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  303-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  303-block  2
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  303-block  3
+branch 10 taken 0 (fallthrough)
+branch 11 taken 1
+    %%%%%:  303-block  4
+call   12 never executed
+        1:  303-block  5
+        -:  304:
+        1:  305:    cos.golesteCos();
+        1:  305-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  306:    assert(cos.getSizeCos() == 0);
+        1:  306-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  306-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  306-block  2
+call    5 never executed
+        1:  306-block  3
+        -:  307:
+        1:  308:    Lista<Carte> carti;
+        1:  308-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  309:    carti.push_back(carte1);
+        1:  309-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  310:    carti.push_back(carte2);
+        1:  310-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  311:
+        1:  312:    cos.genereazaCos(2, carti);
+        1:  312-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  313:    assert(cos.getSizeCos() == 2);
+        1:  313-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  313-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  313-block  2
+call    5 never executed
+        1:  313-block  3
+        -:  314:
+        1:  315:    const std::string numeFisier = "../cos.csv";
+        1:  315-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  315-block  1
+        1:  316:    cos.exportCsv(numeFisier);
+        1:  316-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  317:
+        1:  318:    const std::string numeFisier1 = "../cos.html";
+        1:  318-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  318-block  1
+        1:  319:    cos.exportHtml(numeFisier1);
+        1:  319-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  320:
+        1:  321:    std::ifstream f(numeFisier);
+        1:  321-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  322:    assert(f.is_open());
+        1:  322-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  322-block  1
+call    3 never executed
+        1:  322-block  2
+        -:  323:
+        1:  324:    std::string linie;
+        1:  324-block  0
+call    0 returned 1
+        1:  325:    int nrLinii = 0;
+        3:  326:    while (std::getline(f, linie)) {
+        3:  326-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  326-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:  326-block  2
+branch  6 taken 2
+branch  7 taken 1 (fallthrough)
+        2:  327:        ++nrLinii;
+        2:  327-block  0
+        -:  328:    }
+        1:  329:    f.close();
+        1:  329-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  330:    assert(nrLinii == 2);
+        1:  330-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  330-block  1
+call    2 never executed
+        1:  330-block  2
+        -:  331:
+        1:  332:    std::remove(numeFisier.c_str());
+        1:  332-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        -:  333:
+        1:  334:    bool exceptiePrinsa = false;
+        -:  335:    try {
+        1:  336:        cos.genereazaCos(5, carti);
+        1:  336-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  337:    } catch (const std::runtime_error &e) {
+        1:  337-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  337-block  1
+call    2 returned 1
+        1:  338:        exceptiePrinsa = true;
+        1:  339:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  339-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  339-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  340:    }
+        1:  340-block  0
+call    0 returned 1
+    $$$$$:  340-block  1
+call    1 never executed
+       1*:  341:    assert(exceptiePrinsa == true);
+        1:  341-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  341-block  1
+call    2 never executed
+        1:  341-block  2
+        -:  342:
+        1:  343:    exceptiePrinsa = false;
+        -:  344:    try {
+        1:  345:        cos.genereazaCos(0, carti);
+        1:  345-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  346:    } catch (const std::runtime_error &e) {
+        1:  346-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  346-block  1
+call    2 returned 1
+        1:  347:        exceptiePrinsa = true;
+        1:  348:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  348-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  348-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  349:    }
+        1:  349-block  0
+call    0 returned 1
+    $$$$$:  349-block  1
+call    1 never executed
+       1*:  350:    assert(exceptiePrinsa == true);
+        1:  350-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  350-block  1
+call    2 never executed
+        1:  350-block  2
+        -:  351:
+        1:  352:    std::cout << "Testele pentru cos au trecut cu succes!\n";
+        1:  352-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  353:}
+        1:  353-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+    $$$$$:  353-block  1
+call    8 never executed
+    $$$$$:  353-block  2
+call    9 never executed
+    $$$$$:  353-block  3
+call   10 never executed
+    $$$$$:  353-block  4
+call   11 never executed
+    $$$$$:  353-block  5
+call   12 never executed
+    $$$$$:  353-block  6
+call   13 never executed
+    $$$$$:  353-block  7
+call   14 never executed
+    $$$$$:  353-block  8
+call   15 never executed
+        -:  354:
+function _Z14testGolesteCosv called 1 returned 100% blocks executed 56%
+        1:  355:void testGolesteCos() {
+        1:  356:    CarteRepo repo;
+        1:  356-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  357:    CarteService service(repo);
+        1:  357-block  0
+call    0 returned 1
+        -:  358:
+        6:  359:    service.adaugaCarte(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  359-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  359-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  359-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  359-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  359-block  4
+call   12 returned 1
+        1:  359-block  5
+call   13 returned 1
+        1:  359-block  6
+call   14 returned 1
+        1:  359-block  7
+    $$$$$:  359-block  8
+call   15 never executed
+    $$$$$:  359-block  9
+    $$$$$:  359-block 10
+    $$$$$:  359-block 11
+call   16 never executed
+    $$$$$:  359-block 12
+    $$$$$:  359-block 13
+    $$$$$:  359-block 14
+call   17 never executed
+    $$$$$:  359-block 15
+    $$$$$:  359-block 16
+        6:  360:    service.adaugaCarte(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:  360-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  360-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  360-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  360-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  360-block  4
+call   12 returned 1
+        1:  360-block  5
+call   13 returned 1
+        1:  360-block  6
+call   14 returned 1
+        1:  360-block  7
+    $$$$$:  360-block  8
+call   15 never executed
+    $$$$$:  360-block  9
+    $$$$$:  360-block 10
+    $$$$$:  360-block 11
+call   16 never executed
+    $$$$$:  360-block 12
+    $$$$$:  360-block 13
+    $$$$$:  360-block 14
+call   17 never executed
+    $$$$$:  360-block 15
+    $$$$$:  360-block 16
+        -:  361:
+        2:  362:    service.adaugaCarteDupaTitlu("Ion");
+        1:  362-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  362-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  362-block  2
+call    6 returned 1
+        1:  362-block  3
+    $$$$$:  362-block  4
+call    7 never executed
+    $$$$$:  362-block  5
+    $$$$$:  362-block  6
+        1:  363:    service.adaugaCarteDupaTitlu("Morometii");
+        1:  363-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  363-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  363-block  2
+call    6 returned 1
+    $$$$$:  363-block  3
+call    7 never executed
+    $$$$$:  363-block  4
+    $$$$$:  363-block  5
+        -:  364:
+       1*:  365:    assert(service.getSizeCos() == 2);
+        1:  365-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  365-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  365-block  2
+call    5 never executed
+        1:  365-block  3
+        1:  366:    service.golesteCos();
+        1:  366-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  367:    assert(service.getSizeCos() == 0);
+        1:  367-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  367-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  367-block  2
+call    5 never executed
+        1:  367-block  3
+        -:  368:
+        1:  369:    const auto& cartiRepo = repo.getCarti();
+        1:  369-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  370:    assert(cartiRepo.getSize() == 2);
+        1:  370-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  370-block  1
+call    3 never executed
+        1:  370-block  2
+        -:  371:
+       1*:  372:    assert(cartiRepo[0].getTitlu() == "Ion");
+        1:  372-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  372-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  372-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  372-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  372-block  4
+call   11 never executed
+        1:  372-block  5
+       1*:  373:    assert(cartiRepo[1].getTitlu() == "Morometii");
+        1:  373-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  373-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  373-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  373-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:  373-block  4
+call   11 never executed
+        1:  373-block  5
+        -:  374:
+        1:  375:    std::cout << "Testul pentru golesteCos a trecut cu succes!\n";
+        1:  375-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  376:}
+        1:  376-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  376-block  1
+call    2 never executed
+    $$$$$:  376-block  2
+call    3 never executed
+        -:  377:
+function _Z18testAdaugaCarteCosv called 1 returned 100% blocks executed 55%
+        1:  378:void testAdaugaCarteCos() {
+        1:  379:    CarteRepo repo;
+        1:  379-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  380:    CarteService service(repo);
+        1:  380-block  0
+call    0 returned 1
+        -:  381:
+        6:  382:    service.adaugaCarte(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  382-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  382-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  382-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  382-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  382-block  4
+call   12 returned 1
+        1:  382-block  5
+call   13 returned 1
+        1:  382-block  6
+call   14 returned 1
+        1:  382-block  7
+    $$$$$:  382-block  8
+call   15 never executed
+    $$$$$:  382-block  9
+    $$$$$:  382-block 10
+    $$$$$:  382-block 11
+call   16 never executed
+    $$$$$:  382-block 12
+    $$$$$:  382-block 13
+    $$$$$:  382-block 14
+call   17 never executed
+    $$$$$:  382-block 15
+    $$$$$:  382-block 16
+        6:  383:    service.adaugaCarte(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:  383-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  383-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  383-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  383-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  383-block  4
+call   12 returned 1
+        1:  383-block  5
+call   13 returned 1
+        1:  383-block  6
+call   14 returned 1
+        1:  383-block  7
+    $$$$$:  383-block  8
+call   15 never executed
+    $$$$$:  383-block  9
+    $$$$$:  383-block 10
+    $$$$$:  383-block 11
+call   16 never executed
+    $$$$$:  383-block 12
+    $$$$$:  383-block 13
+    $$$$$:  383-block 14
+call   17 never executed
+    $$$$$:  383-block 15
+    $$$$$:  383-block 16
+        -:  384:
+        1:  385:    service.adaugaCarteDupaTitlu("Ion");
+        1:  385-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  385-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  385-block  2
+call    6 returned 1
+    $$$$$:  385-block  3
+call    7 never executed
+    $$$$$:  385-block  4
+    $$$$$:  385-block  5
+       1*:  386:    assert(service.getSizeCos() == 1);
+        1:  386-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  386-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  386-block  2
+call    5 never executed
+        1:  386-block  3
+        -:  387:
+        -:  388:    try {
+       2*:  389:        service.adaugaCarteDupaTitlu("Carte Inexistenta");
+        1:  389-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  389-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1 (throw)
+    %%%%%:  389-block  2
+call    6 never executed
+    %%%%%:  389-block  3
+        1:  389-block  4
+call    7 returned 1
+        1:  389-block  5
+        1:  389-block  6
+        1:  390:    } catch (const RepoException &e) {
+        1:  390-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  390-block  1
+call    2 returned 1
+        1:  391:        std::cout << "Exceptie prinsa: " << e.what() << std::endl;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  391-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  391-block  1
+call    7 returned 1
+branch  8 taken 1 (fallthrough)
+branch  9 taken 0 (throw)
+        1:  392:    }
+        1:  392-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  392-block  1
+call    3 never executed
+        -:  393:
+        1:  394:    std::cout << "Testul pentru adaugaCarteDupaTitlu a trecut cu succes!\n";
+        1:  394-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  395:}
+        1:  395-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  395-block  1
+call    2 never executed
+    $$$$$:  395-block  2
+call    3 never executed
+        -:  396:
+function _Z24testGenereazaCosSiExportv called 1 returned 100% blocks executed 59%
+        1:  397:void testGenereazaCosSiExport() {
+        1:  398:    CarteRepo repo;
+        1:  398-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  399:    CarteService service(repo);
+        1:  399-block  0
+call    0 returned 1
+        -:  400:
+        6:  401:    service.adaugaCarte(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  401-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  401-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  401-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  401-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  401-block  4
+call   12 returned 1
+        1:  401-block  5
+call   13 returned 1
+        1:  401-block  6
+call   14 returned 1
+        1:  401-block  7
+    $$$$$:  401-block  8
+call   15 never executed
+    $$$$$:  401-block  9
+    $$$$$:  401-block 10
+    $$$$$:  401-block 11
+call   16 never executed
+    $$$$$:  401-block 12
+    $$$$$:  401-block 13
+    $$$$$:  401-block 14
+call   17 never executed
+    $$$$$:  401-block 15
+    $$$$$:  401-block 16
+        5:  402:    service.adaugaCarte(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:  402-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  402-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  402-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  402-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  402-block  4
+call   12 returned 1
+        1:  402-block  5
+call   13 returned 1
+        1:  402-block  6
+call   14 returned 1
+    $$$$$:  402-block  7
+call   15 never executed
+    $$$$$:  402-block  8
+    $$$$$:  402-block  9
+    $$$$$:  402-block 10
+call   16 never executed
+    $$$$$:  402-block 11
+    $$$$$:  402-block 12
+    $$$$$:  402-block 13
+call   17 never executed
+    $$$$$:  402-block 14
+    $$$$$:  402-block 15
+        -:  403:
+        1:  404:    Lista<Carte> carti = repo.getCarti();
+        1:  404-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  404-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  405:    service.genereazaCos(2, carti);
+        1:  405-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  406:    assert(service.getSizeCos() == 2);
+        1:  406-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  406-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  406-block  2
+call    5 never executed
+        1:  406-block  3
+        -:  407:
+        1:  408:    const std::string numeFisier = "../cos.csv";
+        1:  408-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  408-block  1
+        1:  409:    service.exportCsv(numeFisier);
+        1:  409-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  410:    std::ifstream fisier(numeFisier);
+        1:  410-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  411:    assert(fisier.is_open());
+        1:  411-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  411-block  1
+call    3 never executed
+        1:  411-block  2
+        -:  412:
+        1:  413:    std::string linie;
+        1:  413-block  0
+call    0 returned 1
+        1:  414:    int count = 0;
+        3:  415:    while (std::getline(fisier, linie)) {
+        3:  415-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  415-block  1
+call    3 returned 3
+branch  4 taken 3 (fallthrough)
+branch  5 taken 0 (throw)
+        3:  415-block  2
+branch  6 taken 2
+branch  7 taken 1 (fallthrough)
+        2:  416:        count++;
+        2:  416-block  0
+        -:  417:    }
+        1:  418:    std::cout << "Numarul de linii din fisier: " << count << std::endl;
+        1:  418-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  418-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  418-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+       1*:  419:    assert(count == 2);
+        1:  419-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  419-block  1
+call    2 never executed
+        1:  419-block  2
+        1:  420:    fisier.close();
+        1:  420-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  421:
+        1:  422:    const std::string numeFisier1 = "../cos.html";
+        1:  422-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+    $$$$$:  422-block  1
+        1:  423:    service.exportHtml(numeFisier1);
+        1:  423-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  424:    std::ifstream fisier1(numeFisier1);
+        1:  424-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  425:    assert(fisier1.is_open());
+        1:  425-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  425-block  1
+call    3 never executed
+        1:  425-block  2
+        -:  426:
+        1:  427:    std::string linie1;
+        1:  427-block  0
+call    0 returned 1
+        1:  428:    int count1 = 0;
+       16:  429:    while (std::getline(fisier1, linie1)) {
+       16:  429-block  0
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+       16:  429-block  1
+call    3 returned 16
+branch  4 taken 16 (fallthrough)
+branch  5 taken 0 (throw)
+       16:  429-block  2
+branch  6 taken 15
+branch  7 taken 1 (fallthrough)
+       15:  430:        count1++;
+       15:  430-block  0
+        -:  431:    }
+        1:  432:    std::cout << "Numarul de linii din fisier HTML: " << count1 << std::endl;
+        1:  432-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  432-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  432-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+       1*:  433:    assert(count1 == 15);
+        1:  433-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+    %%%%%:  433-block  1
+call    2 never executed
+        1:  433-block  2
+        1:  434:    fisier1.close();
+        1:  434-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  435:
+        1:  436:    std::cout << "Testul pentru genereazaCos si exportCsv a trecut cu succes!\n";
+        1:  436-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  437:}
+        1:  437-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  437-block  1
+call    9 never executed
+    $$$$$:  437-block  2
+call   10 never executed
+    $$$$$:  437-block  3
+call   11 never executed
+    $$$$$:  437-block  4
+call   12 never executed
+    $$$$$:  437-block  5
+call   13 never executed
+    $$$$$:  437-block  6
+call   14 never executed
+    $$$$$:  437-block  7
+call   15 never executed
+    $$$$$:  437-block  8
+call   16 never executed
+    $$$$$:  437-block  9
+call   17 never executed
+        -:  438:
+function _Z14testGetSizeCosv called 1 returned 100% blocks executed 52%
+        1:  439:void testGetSizeCos() {
+        1:  440:    CarteRepo repo;
+        1:  440-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  441:    CarteService service(repo);
+        1:  441-block  0
+call    0 returned 1
+        -:  442:
+        6:  443:    service.adaugaCarte(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  443-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  443-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  443-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  443-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  443-block  4
+call   12 returned 1
+        1:  443-block  5
+call   13 returned 1
+        1:  443-block  6
+call   14 returned 1
+        1:  443-block  7
+    $$$$$:  443-block  8
+call   15 never executed
+    $$$$$:  443-block  9
+    $$$$$:  443-block 10
+    $$$$$:  443-block 11
+call   16 never executed
+    $$$$$:  443-block 12
+    $$$$$:  443-block 13
+    $$$$$:  443-block 14
+call   17 never executed
+    $$$$$:  443-block 15
+    $$$$$:  443-block 16
+        5:  444:    service.adaugaCarte(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:  444-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  444-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  444-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  444-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  444-block  4
+call   12 returned 1
+        1:  444-block  5
+call   13 returned 1
+        1:  444-block  6
+call   14 returned 1
+    $$$$$:  444-block  7
+call   15 never executed
+    $$$$$:  444-block  8
+    $$$$$:  444-block  9
+    $$$$$:  444-block 10
+call   16 never executed
+    $$$$$:  444-block 11
+    $$$$$:  444-block 12
+    $$$$$:  444-block 13
+call   17 never executed
+    $$$$$:  444-block 14
+    $$$$$:  444-block 15
+        -:  445:
+       1*:  446:    assert(service.getSizeCos() == 0);
+        1:  446-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  446-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  446-block  2
+call    5 never executed
+        1:  446-block  3
+        -:  447:
+        1:  448:    service.adaugaCarteDupaTitlu("Ion");
+        1:  448-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  448-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  448-block  2
+call    6 returned 1
+    $$$$$:  448-block  3
+call    7 never executed
+    $$$$$:  448-block  4
+    $$$$$:  448-block  5
+       1*:  449:    assert(service.getSizeCos() == 1);
+        1:  449-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  449-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  449-block  2
+call    5 never executed
+        1:  449-block  3
+        -:  450:
+        1:  451:    service.adaugaCarteDupaTitlu("Morometii");
+        1:  451-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  451-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  451-block  2
+call    6 returned 1
+    $$$$$:  451-block  3
+call    7 never executed
+    $$$$$:  451-block  4
+    $$$$$:  451-block  5
+       1*:  452:    assert(service.getSizeCos() == 2);
+        1:  452-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  452-block  1
+branch  3 taken 0 (fallthrough)
+branch  4 taken 1
+    %%%%%:  452-block  2
+call    5 never executed
+        1:  452-block  3
+        -:  453:
+        1:  454:    std::cout << "Testul pentru getSizeCos a trecut cu succes!\n";
+        1:  454-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  455:}
+        1:  455-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  455-block  1
+call    2 never executed
+    $$$$$:  455-block  2
+call    3 never executed
+        -:  456:
+function _Z13testGetAllCosv called 1 returned 100% blocks executed 51%
+        1:  457:void testGetAllCos() {
+        1:  458:    CarteRepo repo;
+        1:  458-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  459:    CarteService service(repo);
+        1:  459-block  0
+call    0 returned 1
+        -:  460:
+        6:  461:    service.adaugaCarte(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  461-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  461-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  461-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  461-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  461-block  4
+call   12 returned 1
+        1:  461-block  5
+call   13 returned 1
+        1:  461-block  6
+call   14 returned 1
+        1:  461-block  7
+    $$$$$:  461-block  8
+call   15 never executed
+    $$$$$:  461-block  9
+    $$$$$:  461-block 10
+    $$$$$:  461-block 11
+call   16 never executed
+    $$$$$:  461-block 12
+    $$$$$:  461-block 13
+    $$$$$:  461-block 14
+call   17 never executed
+    $$$$$:  461-block 15
+    $$$$$:  461-block 16
+        6:  462:    service.adaugaCarte(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:  462-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  462-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  462-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  462-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  462-block  4
+call   12 returned 1
+        1:  462-block  5
+call   13 returned 1
+        1:  462-block  6
+call   14 returned 1
+        1:  462-block  7
+    $$$$$:  462-block  8
+call   15 never executed
+    $$$$$:  462-block  9
+    $$$$$:  462-block 10
+    $$$$$:  462-block 11
+call   16 never executed
+    $$$$$:  462-block 12
+    $$$$$:  462-block 13
+    $$$$$:  462-block 14
+call   17 never executed
+    $$$$$:  462-block 15
+    $$$$$:  462-block 16
+        -:  463:
+        2:  464:    service.adaugaCarteDupaTitlu("Ion");
+        1:  464-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  464-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  464-block  2
+call    6 returned 1
+        1:  464-block  3
+    $$$$$:  464-block  4
+call    7 never executed
+    $$$$$:  464-block  5
+    $$$$$:  464-block  6
+        1:  465:    service.adaugaCarteDupaTitlu("Morometii");
+        1:  465-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  465-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  465-block  2
+call    6 returned 1
+    $$$$$:  465-block  3
+call    7 never executed
+    $$$$$:  465-block  4
+    $$$$$:  465-block  5
+        -:  466:
+        1:  467:    const auto& cartiCos = service.getAllCos();
+        1:  467-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  468:    assert(cartiCos.size() == 2);
+        1:  468-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:  468-block  1
+call    3 never executed
+        1:  468-block  2
+        -:  469:
+        1:  470:    std::cout << "Testul pentru getAllCos a trecut cu succes!\n";
+        1:  470-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  471:}
+        1:  471-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  471-block  1
+call    2 never executed
+    $$$$$:  471-block  2
+call    3 never executed
+        -:  472:
+function _Z17testGetCartiPeGenv called 1 returned 100% blocks executed 50%
+        1:  473:void testGetCartiPeGen() {
+        1:  474:    CarteRepo repo;
+        1:  474-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  475:    CarteService service(repo);
+        1:  475-block  0
+call    0 returned 1
+        -:  476:
+        6:  477:    service.adaugaCarte(1, "Ion", "Liviu Rebreanu", "Roman", 1920);
+        1:  477-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  477-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  477-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  477-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  477-block  4
+call   12 returned 1
+        1:  477-block  5
+call   13 returned 1
+        1:  477-block  6
+call   14 returned 1
+        1:  477-block  7
+    $$$$$:  477-block  8
+call   15 never executed
+    $$$$$:  477-block  9
+    $$$$$:  477-block 10
+    $$$$$:  477-block 11
+call   16 never executed
+    $$$$$:  477-block 12
+    $$$$$:  477-block 13
+    $$$$$:  477-block 14
+call   17 never executed
+    $$$$$:  477-block 15
+    $$$$$:  477-block 16
+        6:  478:    service.adaugaCarte(2, "Morometii", "Marin Preda", "Drama", 1955);
+        1:  478-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  478-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  478-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  478-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  478-block  4
+call   12 returned 1
+        1:  478-block  5
+call   13 returned 1
+        1:  478-block  6
+call   14 returned 1
+        1:  478-block  7
+    $$$$$:  478-block  8
+call   15 never executed
+    $$$$$:  478-block  9
+    $$$$$:  478-block 10
+    $$$$$:  478-block 11
+call   16 never executed
+    $$$$$:  478-block 12
+    $$$$$:  478-block 13
+    $$$$$:  478-block 14
+call   17 never executed
+    $$$$$:  478-block 15
+    $$$$$:  478-block 16
+        6:  479:    service.adaugaCarte(3, "Enigma Otiliei", "George Calinescu", "Roman", 1938);
+        1:  479-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  479-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  479-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  479-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  479-block  4
+call   12 returned 1
+        1:  479-block  5
+call   13 returned 1
+        1:  479-block  6
+call   14 returned 1
+        1:  479-block  7
+    $$$$$:  479-block  8
+call   15 never executed
+    $$$$$:  479-block  9
+    $$$$$:  479-block 10
+    $$$$$:  479-block 11
+call   16 never executed
+    $$$$$:  479-block 12
+    $$$$$:  479-block 13
+    $$$$$:  479-block 14
+call   17 never executed
+    $$$$$:  479-block 15
+    $$$$$:  479-block 16
+        5:  480:    service.adaugaCarte(4, "Mizerabilii", "Victor Hugo", "Drama", 1862);
+        1:  480-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  480-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  480-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  480-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  480-block  4
+call   12 returned 1
+        1:  480-block  5
+call   13 returned 1
+        1:  480-block  6
+call   14 returned 1
+    $$$$$:  480-block  7
+call   15 never executed
+    $$$$$:  480-block  8
+    $$$$$:  480-block  9
+    $$$$$:  480-block 10
+call   16 never executed
+    $$$$$:  480-block 11
+    $$$$$:  480-block 12
+    $$$$$:  480-block 13
+call   17 never executed
+    $$$$$:  480-block 14
+    $$$$$:  480-block 15
+        -:  481:
+        1:  482:    auto cartiPeGen = service.getCartiPeGen();
+        1:  482-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       2*:  483:    assert(cartiPeGen["Roman"].size() == 2);
+        1:  483-block  0
+        1:  483-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  483-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  483-block  3
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  483-block  4
+call    9 never executed
+        1:  483-block  5
+        1:  483-block  6
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  483-block  7
+call   12 returned 1
+        1:  483-block  8
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:  483-block  9
+branch 15 never executed (fallthrough)
+branch 16 never executed
+    $$$$$:  483-block 10
+call   17 never executed
+    $$$$$:  483-block 11
+    $$$$$:  483-block 12
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    $$$$$:  483-block 13
+       2*:  484:    assert(cartiPeGen["Drama"].size() == 2);
+        1:  484-block  0
+        1:  484-block  1
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  484-block  2
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  484-block  3
+call    6 returned 1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  484-block  4
+call    9 never executed
+        1:  484-block  5
+        1:  484-block  6
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0
+        1:  484-block  7
+call   12 returned 1
+        1:  484-block  8
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0
+    $$$$$:  484-block  9
+branch 15 never executed (fallthrough)
+branch 16 never executed
+    $$$$$:  484-block 10
+call   17 never executed
+    $$$$$:  484-block 11
+    $$$$$:  484-block 12
+branch 18 never executed (fallthrough)
+branch 19 never executed
+    $$$$$:  484-block 13
+        -:  485:
+        1:  486:    std::cout << "Testul pentru getCartiPeGen a trecut cu succes!\n";
+        1:  486-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  487:}
+        1:  487-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  487-block  1
+call    3 never executed
+    $$$$$:  487-block  2
+call    4 never executed
+    $$$$$:  487-block  3
+call    5 never executed
+        -:  488:
+function _Z7testAllv called 1 returned 100% blocks executed 100%
+        1:  489:void testAll() {
+        1:  490:    std::cout << "Se ruleaza testele...\n";
+        1:  490-block  0
+call    0 returned 1
+        1:  491:    testLista();
+call    0 returned 1
+        1:  492:    testDomain();
+call    0 returned 1
+        1:  493:    testRepo();
+call    0 returned 1
+        1:  494:    testService();
+call    0 returned 1
+        1:  495:    testCos();
+call    0 returned 1
+        1:  496:    testGolesteCos();
+call    0 returned 1
+        1:  497:    testAdaugaCarteCos();
+call    0 returned 1
+        1:  498:    testGenereazaCosSiExport();
+call    0 returned 1
+        1:  499:    testGetSizeCos();
+call    0 returned 1
+        1:  500:    testGetAllCos();
+call    0 returned 1
+        1:  501:    testGetCartiPeGen();
+call    0 returned 1
+        1:  502:    std::cout << "Toate testele au trecut cu succes!\n";
+call    0 returned 1
+        1:  503:}

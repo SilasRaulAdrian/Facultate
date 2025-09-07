@@ -1,0 +1,459 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/main.cpp
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <cassert>
+        -:    2:#include "repository/carte_repo.h"
+        -:    3:#include "service/carte_service.h"
+        -:    4:#include "ui/console.h"
+        -:    5:#include "tests/tests.h"
+        -:    6:#include "vector_dinamic/lista.h"
+        -:    7:#include <vector>
+        -:    8:
+        -:    9:/*
+        -:   10:  Functie folosit in teste
+        -:   11:  primeste vector prin valoare -> copy constructor
+        -:   12:  returneaza prin valoare -> copy constructor sau move constructor
+        -:   13:*/
+        -:   14:template <typename MyVector>
+function _Z15testCopyIterateI5ListaI5CarteEET_S3_ called 1 returned 100% blocks executed 57%
+        1:   15:MyVector testCopyIterate(MyVector v) {
+        1:   16:    int an_total = 0;
+      101:   17:    for (auto el : v) {
+        1:   17-block  0
+call    0 returned 1
+call    1 returned 1
+      100:   17-block  1
+call    2 returned 100
+branch  3 taken 100 (fallthrough)
+branch  4 taken 0 (throw)
+      101:   17-block  2
+branch  5 taken 100
+branch  6 taken 1 (fallthrough)
+    $$$$$:   17-block  3
+call    7 never executed
+      100:   18:        an_total += el.getAnAparitie();
+      100:   18-block  0
+call    0 returned 100
+branch  1 taken 100 (fallthrough)
+branch  2 taken 0 (throw)
+      100:   18-block  1
+call    3 returned 100
+        -:   19:    }
+        5:   20:    Carte c { 1,"ion","liviu", "bac", an_total };
+        1:   20-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   20-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   20-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   20-block  3
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   20-block  4
+call   12 returned 1
+        1:   20-block  5
+call   13 returned 1
+        1:   20-block  6
+call   14 returned 1
+    $$$$$:   20-block  7
+call   15 never executed
+    $$$$$:   20-block  8
+    $$$$$:   20-block  9
+    $$$$$:   20-block 10
+call   16 never executed
+    $$$$$:   20-block 11
+    $$$$$:   20-block 12
+    $$$$$:   20-block 13
+call   17 never executed
+    $$$$$:   20-block 14
+    $$$$$:   20-block 15
+        1:   21:    v.push_back(c);
+        1:   21-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   22:    return v;
+        1:   22-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   22-block  1
+        1:   23:}
+        1:   23-block  0
+call    0 returned 1
+    $$$$$:   23-block  1
+call    1 never executed
+        -:   24:
+        -:   25:template <typename MyVector>
+function _Z8addCarteI5ListaI5CarteEEvRT_i called 2 returned 100% blocks executed 50%
+        2:   26:void addCarte(MyVector& v, int cate) {
+      152:   27:    for (int i = 0; i < cate; i++) {
+        2:   27-block  0
+      150:   27-block  1
+call    0 returned 150
+      152:   27-block  2
+branch  1 taken 150
+branch  2 taken 2 (fallthrough)
+    $$$$$:   27-block  3
+call    3 never executed
+      150:   28:        Carte c{ i + 1, std::to_string(i) + "_titlu", std::to_string(i) + "_autor", std::to_string(i) + "_gen",i + 10 };
+      150:   28-block  0
+call    0 returned 150
+call    1 returned 150
+branch  2 taken 150 (fallthrough)
+branch  3 taken 0 (throw)
+      150:   28-block  1
+call    4 returned 150
+call    5 returned 150
+branch  6 taken 150 (fallthrough)
+branch  7 taken 0 (throw)
+      150:   28-block  2
+call    8 returned 150
+call    9 returned 150
+branch 10 taken 150 (fallthrough)
+branch 11 taken 0 (throw)
+      150:   28-block  3
+call   12 returned 150
+branch 13 taken 150 (fallthrough)
+branch 14 taken 0 (throw)
+      150:   28-block  4
+call   15 returned 150
+call   16 returned 150
+call   17 returned 150
+call   18 returned 150
+call   19 returned 150
+call   20 returned 150
+    $$$$$:   28-block  5
+call   21 never executed
+    $$$$$:   28-block  6
+call   22 never executed
+    $$$$$:   28-block  7
+    $$$$$:   28-block  8
+    $$$$$:   28-block  9
+call   23 never executed
+    $$$$$:   28-block 10
+call   24 never executed
+    $$$$$:   28-block 11
+    $$$$$:   28-block 12
+    $$$$$:   28-block 13
+call   25 never executed
+    $$$$$:   28-block 14
+call   26 never executed
+    $$$$$:   28-block 15
+    $$$$$:   28-block 16
+      150:   29:        v.push_back(c);
+call    0 returned 150
+branch  1 taken 150 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   30:    }
+        2:   31:}
+        2:   31-block  0
+        -:   32:
+        -:   33:/*
+        -:   34:Testare constructori / assignment
+        -:   35:E template pentru a refolosi la diferite variante de VectorDinamic din proiect
+        -:   36:*/
+        -:   37:template <typename MyVector>
+function _Z20testCreateCopyAssignI5ListaI5CarteEEvv called 1 returned 100% blocks executed 67%
+        1:   38:void testCreateCopyAssign() {
+        1:   39:    MyVector v;//default constructor
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40:    addCarte(v, 100);
+        1:   40-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   41:    assert(v.getSize() == 100);
+        1:   41-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   41-block  1
+call    3 never executed
+       1*:   42:    assert(v[50].getTitlu() == "50_titlu");
+        1:   42-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   42-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   42-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   42-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   42-block  4
+call   11 never executed
+        -:   43:
+        1:   44:    MyVector v2{ v };//constructor de copiere
+        1:   44-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   45:    assert(v2.getSize() == 100);
+        1:   45-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   45-block  1
+call    3 never executed
+       1*:   46:    assert(v2[50].getTitlu() == "50_titlu");
+        1:   46-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   46-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   46-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   46-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   46-block  4
+call   11 never executed
+        -:   47:
+        1:   48:    MyVector v3;//default constructor
+        1:   48-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49:    v3 = v;//operator=   assignment
+        1:   49-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   50:    assert(v3.getSize() == 100);
+        1:   50-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   50-block  1
+call    3 never executed
+       1*:   51:    assert(v3[50].getTitlu() == "50_titlu");
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   51-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   51-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   51-block  4
+call   11 never executed
+        -:   52:
+        1:   53:    auto v4 = testCopyIterate(v3);
+        1:   53-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   53-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   53-block  2
+call    6 returned 1
+    $$$$$:   53-block  3
+call    7 never executed
+    $$$$$:   53-block  4
+       1*:   54:    assert(v4.getSize() == 101);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   54-block  0
+call    3 never executed
+       1*:   55:    assert(v4[50].getTitlu() == "50_titlu");
+        1:   55-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   55-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   55-block  2
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:   55-block  3
+branch  9 taken 0 (fallthrough)
+branch 10 taken 1
+    %%%%%:   55-block  4
+call   11 never executed
+        1:   56:}
+        1:   56-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   56-block  1
+call    4 never executed
+    $$$$$:   56-block  2
+call    5 never executed
+    $$$$$:   56-block  3
+call    6 never executed
+    $$$$$:   56-block  4
+call    7 never executed
+        -:   57:
+        -:   58:/*
+        -:   59:  Test pentru move constructor si move assgnment
+        -:   60:*/
+        -:   61:template <typename MyVector>
+function _Z23testMoveConstrAssgnmentI5ListaI5CarteEEvv called 1 returned 100% blocks executed 55%
+        1:   62:void testMoveConstrAssgnment() {
+        1:   63:    std::vector<MyVector> v;
+        -:   64:    //adaugam un vector care este o variabila temporara
+        -:   65:    //se v-a apela move constructor
+        1:   66:    v.push_back(MyVector{});
+        1:   66-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   66-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   66-block  2
+call    6 returned 1
+    $$$$$:   66-block  3
+call    7 never executed
+    $$$$$:   66-block  4
+        -:   67:
+        -:   68:    //inseram, la fel se apeleaza move costructor de la vectorul nostru
+        1:   69:    v.insert(v.begin(),MyVector{});
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   69-block  0
+call    3 returned 1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   69-block  1
+call    8 returned 1
+    $$$$$:   69-block  2
+    $$$$$:   69-block  3
+    $$$$$:   69-block  4
+call    9 never executed
+    $$$$$:   69-block  5
+        -:   70:
+       1*:   71:    assert(v.size() == 2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   71-block  0
+call    3 never executed
+        -:   72:
+        1:   73:    MyVector v2;
+        1:   73-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   74:    addCarte(v2, 50);
+        1:   74-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   75:
+        1:   76:    v2 = MyVector{};//move assignment
+        1:   76-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   76-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   76-block  2
+call    6 returned 1
+    $$$$$:   76-block  3
+call    7 never executed
+    $$$$$:   76-block  4
+        -:   77:
+       1*:   78:    assert(v2.getSize() == 0);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1
+    %%%%%:   78-block  0
+call    3 never executed
+        -:   79:
+        1:   80:}
+        1:   80-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   80-block  1
+call    2 never executed
+    $$$$$:   80-block  2
+call    3 never executed
+        -:   81:template <typename MyVector>
+function _Z8testAll1I5ListaI5CarteEEvv called 1 returned 100% blocks executed 100%
+        1:   82:void testAll1() {
+        1:   83:    testCreateCopyAssign<MyVector>();
+        1:   83-block  0
+call    0 returned 1
+        1:   84:    testMoveConstrAssgnment<MyVector>();
+call    0 returned 1
+        1:   85:}
+        -:   86:
+function main called 1 returned 100% blocks executed 73%
+        1:   87:int main() {
+        1:   88:    testAll1<Lista<Carte>>();
+        1:   88-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   89:    testAll();
+        1:   89-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   90:    CarteRepo repo;
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   91:    CarteService service(repo);
+        1:   91-block  0
+call    0 returned 1
+        1:   92:    UI ui(service);
+call    0 returned 1
+        1:   93:    ui.run();
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   94:
+        1:   95:    return 0;
+        1:   96:}
+        1:   96-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   96-block  1
+call    2 never executed
+    $$$$$:   96-block  2
+call    3 never executed

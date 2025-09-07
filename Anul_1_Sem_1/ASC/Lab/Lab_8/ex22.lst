@@ -1,0 +1,68 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, scanf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import printf msvcrt.dll
+    11                                  import scanf msvcrt.dll
+    12                                  
+    13                                  ; our data is declared here (the variables needed by our program)
+    14                                  segment data use32 class=data
+    15                                      ; ...
+    16 00000000 00000000                    a dd 0                 
+    17 00000004 00000000                    b dd 0                  
+    18 00000008 05000000                    k dd 5                  
+    19 0000000C 00000000                    result dd 0             
+    20 00000010 256400                      format_in db '%d', 0    
+    21 00000013 52657A756C74617475-         format_out db 'Rezultatul expresiei este: %d', 10, 0 
+    21 0000001C 6C2065787072657369-
+    21 00000025 656920657374653A20-
+    21 0000002E 25640A00           
+    22 00000032 496E74726F64756365-         prompt_a db 'Introduceti numarul a (baza 10): ', 0
+    22 0000003B 7469206E756D617275-
+    22 00000044 6C2061202862617A61-
+    22 0000004D 203130293A2000     
+    23 00000054 496E74726F64756365-         prompt_b db 'Introduceti numarul b (baza 10): ', 0
+    23 0000005D 7469206E756D617275-
+    23 00000066 6C2062202862617A61-
+    23 0000006F 203130293A2000     
+    24                                  
+    25                                  ; our code starts here
+    26                                  segment code use32 class=code
+    27                                      start:
+    28                                          ; ...
+    29 00000000 68[32000000]                    push dword prompt_a
+    30 00000005 FF15[00000000]                  call [printf]
+    31 0000000B 83C404                          add esp, 4
+    32                                          
+    33 0000000E 68[00000000]                    push dword a
+    34 00000013 68[10000000]                    push dword format_in
+    35 00000018 FF15[00000000]                  call [scanf]
+    36 0000001E 83C408                          add esp, 8
+    37                                          
+    38 00000021 68[54000000]                    push dword prompt_b
+    39 00000026 FF15[00000000]                  call [printf]
+    40 0000002C 83C404                          add esp, 4
+    41                                          
+    42 0000002F 68[04000000]                    push dword b
+    43 00000034 68[10000000]                    push dword format_in
+    44 00000039 FF15[00000000]                  call [scanf]
+    45 0000003F 83C408                          add esp, 8
+    46                                          
+    47 00000042 A1[00000000]                    mov eax, [a]
+    48 00000047 0305[04000000]                  add eax, [b]
+    49 0000004D 0FAF05[08000000]                imul eax, dword [k]
+    50 00000054 A3[0C000000]                    mov [result], eax
+    51                                          
+    52 00000059 FF35[0C000000]                  push dword [result]
+    53 0000005F 68[13000000]                    push dword format_out
+    54 00000064 FF15[00000000]                  call [printf]
+    55 0000006A 83C408                          add esp, 8
+    56                                      
+    57                                          ; exit(0)
+    58 0000006D 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    59 0000006F FF15[00000000]                  call    [exit]       ; call exit to terminate the program

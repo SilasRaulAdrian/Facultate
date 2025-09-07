@@ -1,0 +1,15 @@
+ninja_dyndep_version = 1.0
+build CMakeFiles\Lab_6_7.dir\main.cpp.obj: dyndep
+
+build CMakeFiles\Lab_6_7.dir\repository\carte_repo.cpp.obj: dyndep
+
+build CMakeFiles\Lab_6_7.dir\service\carte_service.cpp.obj: dyndep
+
+build CMakeFiles\Lab_6_7.dir\ui\console.cpp.obj: dyndep
+
+build CMakeFiles\Lab_6_7.dir\tests\tests.cpp.obj: dyndep
+
+build CMakeFiles\Lab_6_7.dir\domain\carte.cpp.obj: dyndep
+
+build CMakeFiles\Lab_6_7.dir\cos_inchirieri\cos_inchirieri.cpp.obj: dyndep
+

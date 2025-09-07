@@ -1,0 +1,38 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Devices/domain/device.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\teste\teste.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\teste\teste.cpp.gcda
+        -:    0:Runs:1
+        -:    1://
+        -:    2:// Created by Raul on 16.05.2025.
+        -:    3://
+        -:    4:
+        -:    5:#ifndef DEVICES_DEVICE_H
+        -:    6:#define DEVICES_DEVICE_H
+        -:    7:
+        -:    8:#include <QString>
+        -:    9:
+        -:   10:class Device {
+        -:   11:private:
+        -:   12:    QString tip;
+        -:   13:    QString model;
+        -:   14:    int an;
+        -:   15:    QString culoare;
+        -:   16:    double pret;
+        -:   17:
+        -:   18:public:
+function _ZN6DeviceC1ERK7QStringS2_iS2_d called 0 returned 0% blocks executed 0%
+    #####:   19:    Device(const QString &tip, const QString &model, int an, const QString &culoare, double pret) :
+    #####:   20:        tip(tip), model(model), an(an), culoare(culoare), pret(pret) {}
+    %%%%%:   20-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   21:
+        -:   22:    QString getTip() const;
+        -:   23:    QString getModel() const;
+        -:   24:    int getAn() const;
+        -:   25:    QString getCuloare() const;
+        -:   26:    double getPret() const;
+        -:   27:};
+        -:   28:
+        -:   29:#endif //DEVICES_DEVICE_H

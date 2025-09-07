@@ -1,0 +1,138 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/ui/console.h
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/main.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 6-7/cmake-build-debug-coverage/CMakeFiles/Lab_6_7.dir/main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_CONSOLE_H
+        -:    2:#define LAB_6_7_CONSOLE_H
+        -:    3:
+        -:    4:#include "../service/carte_service.h"
+        -:    5:
+        -:    6:class UI {
+        -:    7:private:
+        -:    8:    CarteService &service;
+        -:    9:
+        -:   10:    /**
+        -:   11:     * Afiseaza meniul aplicatiei
+        -:   12:     */
+        -:   13:    void afiseazaMeniu() const;
+        -:   14:
+        -:   15:    /**
+        -:   16:     * Adauga o carte in lista de carti
+        -:   17:     */
+        -:   18:    void adaugaCarte();
+        -:   19:
+        -:   20:    /**
+        -:   21:     * Sterge o carte din lista de carti
+        -:   22:     */
+        -:   23:    void stergeCarte();
+        -:   24:
+        -:   25:    /**
+        -:   26:     * Modifica titlul unei carti
+        -:   27:     */
+        -:   28:    void modificaTitlu();
+        -:   29:
+        -:   30:    /**
+        -:   31:     * Modifica autorul unei carti
+        -:   32:     */
+        -:   33:    void modificaAutor();
+        -:   34:
+        -:   35:    /**
+        -:   36:     * Modifica genul unei carti
+        -:   37:     */
+        -:   38:    void modificaGen();
+        -:   39:
+        -:   40:    /**
+        -:   41:     * Modifica anul aparitiei unei carti
+        -:   42:     */
+        -:   43:    void modificaAnAparitie();
+        -:   44:
+        -:   45:    /**
+        -:   46:     * Afiseaza toate cartile
+        -:   47:     */
+        -:   48:    void afiseazaCarti() const;
+        -:   49:
+        -:   50:    /**
+        -:   51:     * Cauta o carte dupa titlu
+        -:   52:     */
+        -:   53:    void cautaCarte() const;
+        -:   54:
+        -:   55:    /**
+        -:   56:     * Filtreaza cartile dupa titlu
+        -:   57:     */
+        -:   58:    void filtreazaDupaTitlu() const;
+        -:   59:
+        -:   60:    /**
+        -:   61:     * Filtreaza cartile dupa anul aparitiei
+        -:   62:     */
+        -:   63:    void filtreazaDupaAnulAparitiei() const;
+        -:   64:
+        -:   65:    /**
+        -:   66:     * Sorteaza cartile dupa titlu
+        -:   67:     */
+        -:   68:    void sorteazaDupaTitlu() const;
+        -:   69:
+        -:   70:    /**
+        -:   71:     * Sorteaza cartile dupa autor
+        -:   72:     */
+        -:   73:    void sorteazaDupaAutor() const;
+        -:   74:
+        -:   75:    /**
+        -:   76:     * Sorteaza cartile dupa anul aparitiei
+        -:   77:     */
+        -:   78:    void sorteazaDupaAnulAparitiei() const;
+        -:   79:
+        -:   80:    /**
+        -:   81:     * Sorteaza cartile dupa gen
+        -:   82:     */
+        -:   83:    void sorteazaDupaGen() const;
+        -:   84:
+        -:   85:    /**
+        -:   86:     * Goleste cosul de carti
+        -:   87:     */
+        -:   88:    void golesteCos() const;
+        -:   89:
+        -:   90:    /**
+        -:   91:     * Adauga o carte in cos dupa titlu
+        -:   92:     */
+        -:   93:    void adaugaCarteInCos() const;
+        -:   94:
+        -:   95:    /**
+        -:   96:     * Genereaza un cos de carti aleator
+        -:   97:     */
+        -:   98:    void genereazaCosAleator() const;
+        -:   99:
+        -:  100:    /**
+        -:  101:     * Exporta cosul de carti in fisier CSV
+        -:  102:     */
+        -:  103:    void exportaCosInCsv() const;
+        -:  104:
+        -:  105:    /**
+        -:  106:     * Afiseaza cartile in functie de gen
+        -:  107:     */
+        -:  108:     void afiseazaCartiDupaGen() const;
+        -:  109:
+        -:  110:    /**
+        -:  111:     * Executa operatiunea de undo
+        -:  112:     */
+        -:  113:    void undo();
+        -:  114:
+        -:  115:public:
+        -:  116:    /**
+        -:  117:     * Constructorul clasei UI
+        -:  118:     * @param service Serviciul de carti
+        -:  119:     */
+function _ZN2UIC2ER12CarteService called 1 returned 100% blocks executed 100%
+        1:  120:    UI(CarteService &service) : service(service) {}
+        -:  121:
+        -:  122:    /**
+        -:  123:     * Destructorul clasei UI
+        -:  124:     */
+        -:  125:    ~UI() = default;
+        -:  126:
+        -:  127:    /**
+        -:  128:     * Ruleaza aplicatia
+        -:  129:     */
+        -:  130:    void run();
+        -:  131:};
+        -:  132:
+        -:  133:#endif //LAB_6_7_CONSOLE_H

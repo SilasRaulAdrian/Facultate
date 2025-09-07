@@ -1,0 +1,10 @@
+RDR2,299,Nintendo,12
+God of War,349,PlayStation,18
+Halo Infinite,259,XBOX,16
+Elden Ring,299,PC,18
+Minecraft,99,PC,7
+Mario Kart,249,Nintendo,3
+FIFA 24,319,PlayStation,3
+Forza Horizon 5,279,XBOX,3
+The Sims 4,149,PC,12
+Call of Duty,349,PlayStation,18

@@ -1,0 +1,1 @@
+/usr/bin/cc --coverage -Wall -Wextra -g CMakeFiles/Pb_8.dir/main.c.o CMakeFiles/Pb_8.dir/validare.c.o CMakeFiles/Pb_8.dir/produs.c.o CMakeFiles/Pb_8.dir/list.c.o CMakeFiles/Pb_8.dir/service.c.o CMakeFiles/Pb_8.dir/ui.c.o CMakeFiles/Pb_8.dir/test.c.o -o Pb_8 

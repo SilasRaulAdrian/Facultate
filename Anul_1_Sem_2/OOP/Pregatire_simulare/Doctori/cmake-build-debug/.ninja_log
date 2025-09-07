@@ -1,0 +1,19 @@
+# ninja log v6
+20	425	7691002974146819	Doctori_autogen/timestamp	683dcb5173ff492a
+20	425	7691002974146819	Doctori_autogen/mocs_compilation.cpp	683dcb5173ff492a
+20	425	7691002974146819	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Doctori/cmake-build-debug/Doctori_autogen/timestamp	683dcb5173ff492a
+20	425	7691002974146819	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Doctori/cmake-build-debug/Doctori_autogen/mocs_compilation.cpp	683dcb5173ff492a
+432	681	7691002975572222	CMakeFiles/Doctori.dir/Doctori_autogen/mocs_compilation.cpp.obj	d703708796f24b7d
+438	4864	7691002975612405	CMakeFiles/Doctori.dir/main.cpp.obj	a23cbbfc68110fb1
+4866	5432	7691003019871075	Doctori.exe	36e1a2cbfff6710e
+38	1943	7691039720509424	Doctori_autogen/timestamp	683dcb5173ff492a
+38	1943	7691039720509424	Doctori_autogen/mocs_compilation.cpp	683dcb5173ff492a
+38	1943	7691039720509424	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Doctori/cmake-build-debug/Doctori_autogen/timestamp	683dcb5173ff492a
+38	1943	7691039720509424	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Doctori/cmake-build-debug/Doctori_autogen/mocs_compilation.cpp	683dcb5173ff492a
+1974	4039	7691039721592567	CMakeFiles/Doctori.dir/domain/doctor.cpp.obj	2a8affd462ba1300
+1983	4155	7691039721673332	CMakeFiles/Doctori.dir/service/doctor_service.cpp.obj	adc496c04badba38
+1979	5372	7691039721632586	CMakeFiles/Doctori.dir/repository/doctor_repo.cpp.obj	d18726e12c503f67
+1967	6153	7691039721512569	CMakeFiles/Doctori.dir/Doctori_autogen/mocs_compilation.cpp.obj	d703708796f24b7d
+1970	6196	7691039721552564	CMakeFiles/Doctori.dir/main.cpp.obj	a23cbbfc68110fb1
+1986	6635	7691039721713992	CMakeFiles/Doctori.dir/ui/main_window.cpp.obj	386466049e17f787
+6636	8145	7691039768203064	Doctori.exe	e6a3b7de59796fe3

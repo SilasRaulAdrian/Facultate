@@ -1,0 +1,70 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, scanf               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import printf msvcrt.dll
+    11                                  import scanf msvcrt.dll
+    12                                  
+    13                                  ; our data is declared here (the variables needed by our program)
+    14                                  segment data use32 class=data
+    15                                      ; ...
+    16 00000000 416365737461206573-         sir db 'Acesta este un exemplu de text.', 0
+    16 00000009 746520756E20657865-
+    16 00000012 6D706C752064652074-
+    16 0000001B 6578742E00         
+    17 00000020 00                          caracter db 0                              
+    18 00000021 00000000                    numar_aparitii dd 0                        
+    19 00000025 256300                      format_in db '%c', 0                       
+    20 00000028 436172616374657275-         format_out db 'Caracterul "%c" apare de %d ori.', 10, 0 
+    20 00000031 6C2022256322206170-
+    20 0000003A 617265206465202564-
+    20 00000043 206F72692E0A00     
+    21 0000004A 496E74726F64756365-         prompt_caracter db 'Introduceti caracterul: ', 0
+    21 00000053 746920636172616374-
+    21 0000005C 6572756C3A2000     
+    22                                  
+    23                                  ; our code starts here
+    24                                  segment code use32 class=code
+    25                                      start:
+    26                                          ; ...
+    27 00000000 68[4A000000]                    push dword prompt_caracter
+    28 00000005 FF15[00000000]                  call [printf]
+    29 0000000B 83C404                          add esp, 4
+    30                                          
+    31 0000000E 68[20000000]                    push dword caracter
+    32 00000013 68[25000000]                    push dword format_in
+    33 00000018 FF15[00000000]                  call [scanf]
+    34 0000001E 83C408                          add esp, 8
+    35                                          
+    36 00000021 31C9                            xor ecx, ecx
+    37 00000023 BE[00000000]                    mov esi, sir
+    38                                          
+    39                                      contor:
+    40 00000028 8A06                            mov al, [esi]
+    41 0000002A 3C00                            cmp al, 0
+    42 0000002C 740C                            je afisare
+    43 0000002E 3A05[20000000]                  cmp al, [caracter]
+    44 00000034 7501                            jne next_char
+    45 00000036 41                              inc ecx
+    46                                          
+    47                                      next_char:
+    48 00000037 46                              inc esi
+    49 00000038 EBEE                            jmp contor
+    50                                          
+    51                                      afisare:
+    52 0000003A 890D[21000000]                  mov [numar_aparitii], ecx
+    53                                          
+    54 00000040 FF35[21000000]                  push dword [numar_aparitii]
+    55 00000046 FF35[20000000]                  push dword [caracter]
+    56 0000004C 68[28000000]                    push dword format_out
+    57 00000051 FF15[00000000]                  call [printf]
+    58 00000057 83C40C                          add esp, 12
+    59                                      
+    60                                          ; exit(0)
+    61 0000005A 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    62 0000005C FF15[00000000]                  call    [exit]       ; call exit to terminate the program

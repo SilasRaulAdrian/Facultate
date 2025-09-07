@@ -1,0 +1,1 @@
+/usr/bin/cc --coverage -g CMakeFiles/Lab_5__fmm_paul_.dir/main.c.o CMakeFiles/Lab_5__fmm_paul_.dir/list.c.o CMakeFiles/Lab_5__fmm_paul_.dir/oferte.c.o CMakeFiles/Lab_5__fmm_paul_.dir/service.c.o CMakeFiles/Lab_5__fmm_paul_.dir/validare.c.o CMakeFiles/Lab_5__fmm_paul_.dir/ui.c.o CMakeFiles/Lab_5__fmm_paul_.dir/teste.c.o -o Lab_5__fmm_paul_ 

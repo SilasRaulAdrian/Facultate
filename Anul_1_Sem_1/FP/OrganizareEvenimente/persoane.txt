@@ -1,0 +1,4 @@
+1,Popescu Ion,Bucuresti
+2,Ionescu Maria,Cluj-Napoca
+3,Marinescu Andrei,Timisoara
+4,Dumitrescu Elena,Constanta

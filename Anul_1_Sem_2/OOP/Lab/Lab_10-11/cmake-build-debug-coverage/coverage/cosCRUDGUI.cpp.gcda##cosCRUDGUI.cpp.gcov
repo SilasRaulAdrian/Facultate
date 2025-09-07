@@ -1,0 +1,246 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/windows/cosCRUDGUI.cpp
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cosCRUDGUI.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cosCRUDGUI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <QInputDialog>
+        -:    2:#include "cosCRUDGUI.h"
+        -:    3:
+function _ZN10CosCRUDGUIC2ER12CarteService called 0 returned 0% blocks executed 0%
+    #####:    4:CosCRUDGUI::CosCRUDGUI(CarteService &service) : service(service) {
+    %%%%%:    4-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:    4-block  1
+call    4 never executed
+    $$$$$:    4-block  2
+call    5 never executed
+    #####:    5:    model = new CosModel(service);
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:    5-block  0
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:    5-block  1
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:    5-block  2
+call    8 never executed
+    #####:    6:    lista = new QListView;
+    %%%%%:    6-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:    6-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:    6-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:    6-block  3
+call    8 never executed
+    #####:    7:    lista->setModel(model);
+    %%%%%:    7-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    #####:    8:    QVBoxLayout *layout = new QVBoxLayout;
+    %%%%%:    8-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:    8-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    $$$$$:    8-block  2
+branch  6 never executed (fallthrough)
+branch  7 never executed
+    $$$$$:    8-block  3
+call    8 never executed
+    #####:    9:    layout->addWidget(lista);
+    %%%%%:    9-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:    9-block  1
+        -:   10:
+    #####:   11:    QPushButton *btnGenereaza = new QPushButton("Genereaza Cos");
+    %%%%%:   11-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   11-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   11-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   11-block  3
+call    9 never executed
+    $$$$$:   11-block  4
+call   10 never executed
+    $$$$$:   11-block  5
+    $$$$$:   11-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   11-block  7
+call   13 never executed
+    #####:   12:    layout->addWidget(btnGenereaza);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   12-block  0
+    #####:   13:    QPushButton *btnGoleste = new QPushButton("Goleste Cos");
+    %%%%%:   13-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   13-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    %%%%%:   13-block  2
+call    6 never executed
+branch  7 never executed (fallthrough)
+branch  8 never executed (throw)
+    %%%%%:   13-block  3
+call    9 never executed
+    $$$$$:   13-block  4
+call   10 never executed
+    $$$$$:   13-block  5
+    $$$$$:   13-block  6
+branch 11 never executed (fallthrough)
+branch 12 never executed
+    $$$$$:   13-block  7
+call   13 never executed
+    #####:   14:    layout->addWidget(btnGoleste);
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    $$$$$:   14-block  0
+    #####:   15:    setLayout(layout);
+    %%%%%:   15-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   16:
+function _ZZN10CosCRUDGUIC4ER12CarteServiceENKUlvE_clEv called 0 returned 0% blocks executed 0%
+    #####:   17:    connect(btnGenereaza, &QPushButton::clicked, this, [&]() {
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   17-block  1
+call    3 never executed
+    $$$$$:   17-block  2
+    $$$$$:   17-block  3
+        -:   18:        bool ok;
+    #####:   19:        int numarCarti = QInputDialog::getInt(this, "Genereaza Cos", "Numar de carti:", 5, 1, 100, 1, &ok);
+    %%%%%:   19-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed (fallthrough)
+branch  3 never executed (throw)
+    %%%%%:   19-block  1
+call    4 never executed
+branch  5 never executed (fallthrough)
+branch  6 never executed (throw)
+    %%%%%:   19-block  2
+call    7 never executed
+branch  8 never executed (fallthrough)
+branch  9 never executed (throw)
+    %%%%%:   19-block  3
+call   10 never executed
+call   11 never executed
+    $$$$$:   19-block  4
+call   12 never executed
+    $$$$$:   19-block  5
+    $$$$$:   19-block  6
+call   13 never executed
+    $$$$$:   19-block  7
+    $$$$$:   19-block  8
+    #####:   20:        if (ok) {
+branch  0 never executed (fallthrough)
+branch  1 never executed
+    #####:   21:            service.genereazaCos(numarCarti, service.getCarti());
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   21-block  1
+call    3 never executed
+branch  4 never executed (fallthrough)
+branch  5 never executed (throw)
+    #####:   22:            model->update();
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+        -:   23:        }
+    #####:   24:    });
+    %%%%%:   24-block  0
+        -:   25:
+function _ZZN10CosCRUDGUIC4ER12CarteServiceENKUlvE0_clEv called 0 returned 0% blocks executed 0%
+    #####:   26:    connect(btnGoleste, &QPushButton::clicked, this, [&]() {
+call    0 never executed
+branch  1 never executed (fallthrough)
+branch  2 never executed (throw)
+    %%%%%:   26-block  0
+call    3 never executed
+    $$$$$:   26-block  1
+    $$$$$:   26-block  2
+    #####:   27:        service.golesteCos();
+    %%%%%:   27-block  0
+call    0 never executed
+    #####:   28:        model->update();
+call    0 never executed
+    #####:   29:    });
+    #####:   30:}
+    $$$$$:   30-block  0
+call    0 never executed
+    $$$$$:   30-block  1
+call    1 never executed
+        -:   31:
+    #####:   32:CosCRUDGUI::~CosCRUDGUI() {
+    #####:   33:    service.removeObserver(this);
+        -:   34:    // delete model;
+    #####:   35:}
+------------------
+_ZN10CosCRUDGUID0Ev:
+function _ZN10CosCRUDGUID0Ev called 0 returned 0% blocks executed 0%
+    #####:   32:CosCRUDGUI::~CosCRUDGUI() {
+        -:   33:    service.removeObserver(this);
+        -:   34:    // delete model;
+    #####:   35:}
+    %%%%%:   35-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN10CosCRUDGUID2Ev:
+function _ZN10CosCRUDGUID2Ev called 0 returned 0% blocks executed 0%
+    #####:   32:CosCRUDGUI::~CosCRUDGUI() {
+    #####:   33:    service.removeObserver(this);
+    %%%%%:   33-block  0
+call    0 never executed
+        -:   34:    // delete model;
+    #####:   35:}
+call    0 never executed
+call    1 never executed
+------------------
+        -:   36:
+function _ZN10CosCRUDGUI6updateEv called 0 returned 0% blocks executed 0%
+    #####:   37:void CosCRUDGUI::update() {
+    #####:   38:    model->update();
+    %%%%%:   38-block  0
+call    0 never executed
+    #####:   39:}

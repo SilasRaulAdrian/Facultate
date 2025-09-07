@@ -1,0 +1,3 @@
+/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug/CMakeFiles/Lab_5__fmm_paul_.dir
+/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug/CMakeFiles/rebuild_cache.dir

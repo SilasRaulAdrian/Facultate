@@ -1,0 +1,156 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/undo/undo.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\service\carte_service.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\service\carte_service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#ifndef LAB_6_7_UNDO_H
+        -:    2:#define LAB_6_7_UNDO_H
+        -:    3:
+        -:    4:#include "../repository/carte_repo.h"
+        -:    5:#include <memory>
+        -:    6:
+        -:    7:/**
+        -:    8: * Clasa abstracta pentru operatii undo
+        -:    9: */
+        -:   10:class ActiuneUndo {
+        -:   11:public:
+        -:   12:    /**
+        -:   13:     * Functie virtuala pura pentru a efectua undo
+        -:   14:     */
+        -:   15:    virtual void doUndo() = 0;
+        -:   16:
+        -:   17:    /**
+        -:   18:     * Destructor virtual
+        -:   19:     */
+function _ZN11ActiuneUndoD2Ev called 23 returned 100% blocks executed 100%
+       23:   20:    virtual ~ActiuneUndo() = default;
+        -:   21:};
+        -:   22:
+        -:   23:/**
+        -:   24: * Clasa pentru undo adaugare carte
+        -:   25: */
+        -:   26:class UndoAdaugaCarte : public ActiuneUndo {
+        -:   27:private:
+        -:   28:    CarteRepo &repo;
+        -:   29:    Carte carte;
+        -:   30:public:
+        -:   31:    /**
+        -:   32:     * Constructorul clasei UndoAdaugaCarte
+        -:   33:     * @param repo Repository-ul de carti
+        -:   34:     * @param carte Carte adaugata
+        -:   35:     */
+function _ZN15UndoAdaugaCarteC1ER9CarteRepoRK5Carte called 18 returned 100% blocks executed 80%
+       18:   36:    UndoAdaugaCarte(CarteRepo &repo, const Carte &carte) : repo(repo), carte(carte) {}
+       18:   36-block  0
+call    0 returned 18
+call    1 returned 18
+branch  2 taken 18 (fallthrough)
+branch  3 taken 0 (throw)
+       18:   36-block  1
+    $$$$$:   36-block  2
+call    4 never executed
+        -:   37:
+        -:   38:    /**
+        -:   39:     * Functie pentru a efectua undo
+        -:   40:     */
+function _ZN15UndoAdaugaCarte6doUndoEv called 4 returned 100% blocks executed 100%
+        4:   41:    void doUndo() override {
+        4:   42:        repo.stergeCarte(carte.getId());
+        4:   42-block  0
+call    0 returned 4
+call    1 returned 4
+        4:   43:    }
+        -:   44:};
+        -:   45:
+        -:   46:/**
+        -:   47: * Clasa pentru undo stergere carte
+        -:   48: */
+        -:   49:class UndoStergeCarte : public ActiuneUndo {
+        -:   50:private:
+        -:   51:    CarteRepo &repo;
+        -:   52:    Carte carte;
+        -:   53:public:
+        -:   54:    /**
+        -:   55:     * Constructorul clasei UndoStergeCarte
+        -:   56:     * @param repo Repository-ul de carti
+        -:   57:     * @param carte Carte stearsa
+        -:   58:     */
+function _ZN15UndoStergeCarteC1ER9CarteRepoRK5Carte called 1 returned 100% blocks executed 80%
+        1:   59:    UndoStergeCarte(CarteRepo &repo, const Carte &carte) : repo(repo), carte(carte) {}
+        1:   59-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   59-block  1
+    $$$$$:   59-block  2
+call    4 never executed
+        -:   60:
+        -:   61:    /**
+        -:   62:     * Functie pentru a efectua undo
+        -:   63:     */
+function _ZN15UndoStergeCarte6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   64:    void doUndo() override {
+        1:   65:        repo.adaugaCarte(carte);
+        1:   65-block  0
+call    0 returned 1
+        1:   66:    }
+        -:   67:};
+        -:   68:
+        -:   69:/**
+        -:   70: * Clasa pentru undo modificare carte
+        -:   71: */
+        -:   72:class UndoModificaCarte : public ActiuneUndo {
+        -:   73:private:
+        -:   74:    CarteRepo &repo;
+        -:   75:    Carte carteVeche;
+        -:   76:    Carte carteNoua;
+        -:   77:public:
+        -:   78:    /**
+        -:   79:     * Constructorul clasei UndoModificaCarte
+        -:   80:     * @param repo Repository-ul de carti
+        -:   81:     * @param carteVeche Carte veche
+        -:   82:     * @param carteNoua Carte noua
+        -:   83:     */
+function _ZN17UndoModificaCarteC1ER9CarteRepoRK5CarteS4_ called 4 returned 100% blocks executed 62%
+        4:   84:    UndoModificaCarte(CarteRepo &repo, const Carte &carteVeche, const Carte &carteNoua) : repo(repo), carteVeche(carteVeche), carteNoua(carteNoua) {}
+        4:   84-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   84-block  1
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:   84-block  2
+    $$$$$:   84-block  3
+call    7 never executed
+    $$$$$:   84-block  4
+call    8 never executed
+        -:   85:
+        -:   86:    /**
+        -:   87:     * Functie pentru a efectua undo
+        -:   88:     */
+function _ZN17UndoModificaCarte6doUndoEv called 4 returned 100% blocks executed 100%
+        4:   89:    void doUndo() override {
+        4:   90:        repo.modificaTitlu(carteNoua.getId(), carteVeche.getTitlu());
+        4:   90-block  0
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+        4:   91:        repo.modificaAutor(carteNoua.getId(), carteVeche.getAutor());
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+        4:   92:        repo.modificaGen(carteNoua.getId(), carteVeche.getGen());
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+        4:   93:        repo.modificaAnAparitie(carteNoua.getId(), carteVeche.getAnAparitie());
+call    0 returned 4
+call    1 returned 4
+call    2 returned 4
+        4:   94:    }
+        -:   95:};
+        -:   96:
+        -:   97:#endif //LAB_6_7_UNDO_H

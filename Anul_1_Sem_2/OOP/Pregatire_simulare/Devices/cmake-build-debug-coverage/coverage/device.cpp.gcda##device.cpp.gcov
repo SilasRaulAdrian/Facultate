@@ -1,0 +1,38 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Devices/domain/device.cpp
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\domain\device.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Pregatire_simulare\Devices\cmake-build-debug-coverage\CMakeFiles\Devices.dir\domain\device.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "device.h"
+        -:    2:
+function _ZNK6Device6getTipEv called 1 returned 100% blocks executed 100%
+        1:    3:QString Device::getTip() const {
+        1:    4:    return tip;
+        1:    4-block  0
+call    0 returned 1
+        -:    5:}
+        -:    6:
+function _ZNK6Device8getModelEv called 22 returned 100% blocks executed 100%
+       22:    7:QString Device::getModel() const {
+       22:    8:    return model;
+       22:    8-block  0
+call    0 returned 22
+        -:    9:}
+        -:   10:
+function _ZNK6Device5getAnEv called 1 returned 100% blocks executed 100%
+        1:   11:int Device::getAn() const {
+        1:   12:    return an;
+        1:   12-block  0
+        -:   13:}
+        -:   14:
+function _ZNK6Device10getCuloareEv called 11 returned 100% blocks executed 100%
+       11:   15:QString Device::getCuloare() const {
+       11:   16:    return culoare;
+       11:   16-block  0
+call    0 returned 11
+        -:   17:}
+        -:   18:
+function _ZNK6Device7getPretEv called 24 returned 100% blocks executed 100%
+       24:   19:double Device::getPret() const {
+       24:   20:    return pret;
+       24:   20-block  0
+        -:   21:}

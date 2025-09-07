@@ -1,0 +1,19 @@
+# ninja log v6
+23	278	7693679186020303	Jucator_v1_autogen/timestamp	613e4dc397d14711
+23	278	7693679186020303	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Jucator_v1/cmake-build-debug/Jucator_v1_autogen/timestamp	613e4dc397d14711
+12053	12470	7693679304967985	Jucator_v1.exe	c15f701e240ab660
+23	278	7693679186020303	Jucator_v1_autogen/mocs_compilation.cpp	613e4dc397d14711
+23	278	7693679186020303	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Jucator_v1/cmake-build-debug/Jucator_v1_autogen/mocs_compilation.cpp	613e4dc397d14711
+282	565	7693679187260402	CMakeFiles/Jucator_v1.dir/Jucator_v1_autogen/mocs_compilation.cpp.obj	4898f1ac9cca6ff0
+288	12051	7693679187320498	CMakeFiles/Jucator_v1.dir/main.cpp.obj	d671d6c8ab77f7af
+34	2005	7693711921038168	Jucator_v1_autogen/timestamp	613e4dc397d14711
+34	2005	7693711921038168	Jucator_v1_autogen/mocs_compilation.cpp	613e4dc397d14711
+34	2005	7693711921038168	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Jucator_v1/cmake-build-debug/Jucator_v1_autogen/timestamp	613e4dc397d14711
+34	2005	7693711921038168	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Jucator_v1/cmake-build-debug/Jucator_v1_autogen/mocs_compilation.cpp	613e4dc397d14711
+2014	4227	7693711922003541	CMakeFiles/Jucator_v1.dir/domain/jucator.cpp.obj	50846cd6f55de06c
+2021	4448	7693711922088683	CMakeFiles/Jucator_v1.dir/service/jucator_service.cpp.obj	a7abdbca76082314
+2017	5586	7693711922049008	CMakeFiles/Jucator_v1.dir/repository/jucator_repo.cpp.obj	9d43a5f87715e862
+2010	6490	7693711921973553	CMakeFiles/Jucator_v1.dir/main.cpp.obj	d671d6c8ab77f7af
+2026	6507	7693711922138668	CMakeFiles/Jucator_v1.dir/ui/main_window.cpp.obj	5a46515a59052d33
+2006	6516	7693711921932802	CMakeFiles/Jucator_v1.dir/Jucator_v1_autogen/mocs_compilation.cpp.obj	4898f1ac9cca6ff0
+6516	6996	7693711967032645	Jucator_v1.exe	cf4083cfef9e1d11

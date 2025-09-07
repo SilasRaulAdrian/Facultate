@@ -1,0 +1,10 @@
+1,Paine,Aliment,3.5
+2,Lapte,Aliment,4.2
+3,Telefon,Electronice,99.9
+4,Televizor,Electronice,99.5
+5,Tricou,Haine,45.5
+6,Jeansi,Haine,80
+7,Mere,Aliment,2.8
+8,Blender,Electronice,70
+9,Cana,Bucatarie,12
+10,Minge,Sport,30

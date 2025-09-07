@@ -1,0 +1,13 @@
+Shape of You,Ed Sheeran,Altele,200
+Blinding Lights,The Weeknd,Pop,200
+Saint Tropez,Florin Salam,Altele,240
+Rolling in the Deep,Adele,Pop,228
+Billie Jean,Michael Jackson,Pop,294
+Bohemian Rhapsody,Queen,Rock,354
+Bad Guy,Billie Eilish,Pop,194
+Hotel California,Eagles,Rock,391
+Lose Yourself,Eminem,Altele,326
+Uptown Funk,Bruno Mars,Altele,270
+Song2,Artist1,Pop,197
+Song2,Artist1,Altele,265
+Song3,Artist2,Rock,182

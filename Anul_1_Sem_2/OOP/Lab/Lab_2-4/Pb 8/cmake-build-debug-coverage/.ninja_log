@@ -1,0 +1,9 @@
+# ninja log v6
+6	427	7640226425198934	CMakeFiles/Pb_8.dir/main.c.obj	7379bbaf03e65404
+45	504	7640226425600491	CMakeFiles/Pb_8.dir/ui.c.obj	e964977594f44216
+36	529	7640226425500442	CMakeFiles/Pb_8.dir/list.c.obj	3c065696eeb8d572
+21	532	7640226425359597	CMakeFiles/Pb_8.dir/validare.c.obj	d6f9006560c76ed
+31	533	7640226425449605	CMakeFiles/Pb_8.dir/produs.c.obj	a0517f649ddf9381
+52	535	7640226425670516	CMakeFiles/Pb_8.dir/test.c.obj	5f1085ed38d8aea
+40	578	7640226425540420	CMakeFiles/Pb_8.dir/service.c.obj	ab14e23adcac3656
+578	916	7640226430902681	Pb_8.exe	adcfe32b8699a982

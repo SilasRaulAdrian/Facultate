@@ -1,0 +1,123 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Colectie/Proiect_C++/Colectie/IteratorColectie.cpp
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Colectie/cmake-build-debug-coverage/CMakeFiles/TAD_Colectie.dir/Proiect_C++/Colectie/IteratorColectie.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Colectie/cmake-build-debug-coverage/CMakeFiles/TAD_Colectie.dir/Proiect_C++/Colectie/IteratorColectie.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "IteratorColectie.h"
+        -:    2:#include "Colectie.h"
+        -:    3:#include <iostream>
+        -:    4:
+        -:    5:/*
+        -:    6: * Complexitati:
+        -:    7: * Best case (Teta(1)): Initializarea iteratorului se face in timp constant, doar seteaza cateva variabile.
+        -:    8: * Worst case (O(1)): Nu depinde de dimensiunea colectiei, ramane O(1).
+        -:    9: * Average case (O(1)): O operatie constanta.
+        -:   10: */
+function _ZN16IteratorColectieC2ERK8Colectie called 6 returned 100% blocks executed 100%
+        6:   11:IteratorColectie::IteratorColectie(const Colectie& c): col(c) {
+        6:   12:    pozitieCurenta = 0;
+        6:   13:    if (pozitieCurenta < col.dimensiune)
+        6:   13-block  0
+branch  0 taken 5 (fallthrough)
+branch  1 taken 1
+        5:   14:        frecventaCurenta = 1;
+        5:   14-block  0
+        -:   15:    else
+        1:   16:        frecventaCurenta = 0;
+        1:   16-block  0
+        6:   17:}
+        -:   18:
+        -:   19:/*
+        -:   20: * Complexitati:
+        -:   21: * Best case (Teta(1)): Verifica daca iteratorul este valid si returneaza elementul curent.
+        -:   22: * Worst case (O(1)): Daca iteratorul nu este valid, arunca exceptie, dar aceasta tot O(1) este.
+        -:   23: * Average case (O(1)): O operatie constanta.
+        -:   24: */
+function _ZNK16IteratorColectie7elementEv called 1657 returned 100% blocks executed 57%
+     1657:   25:TElem IteratorColectie::element() const{
+     1657:   26:    if (!valid())
+     1657:   26-block  0
+call    0 returned 1657
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1657
+    #####:   27:        throw std::exception();
+    %%%%%:   27-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+     1657:   28:    return col.elemente[pozitieCurenta].elem;
+     1657:   28-block  0
+        -:   29:}
+        -:   30:
+        -:   31:/*
+        -:   32: * Complexitati:
+        -:   33: * Best case (Teta(1)): Se verifica doua conditii logice, ceea ce dureaza constant.
+        -:   34: * Worst case (O(1)): Indiferent de situatie, ramane O(1).
+        -:   35: * Average case (O(1)): O operatie constanta.
+        -:   36: */
+function _ZNK16IteratorColectie5validEv called 4980 returned 100% blocks executed 100%
+     4980:   37:bool IteratorColectie::valid() const {
+     4980:   38:    return pozitieCurenta < col.dimensiune && frecventaCurenta <= col.elemente[pozitieCurenta].frecventa;
+     4980:   38-block  0
+branch  0 taken 4973 (fallthrough)
+branch  1 taken 7
+     4973:   38-block  1
+branch  2 taken 4973 (fallthrough)
+branch  3 taken 0
+     4973:   38-block  2
+        7:   38-block  3
+     4980:   38-block  4
+        -:   39:}
+        -:   40:
+        -:   41:/*
+        -:   42: * Complexitati:
+        -:   43: * Best case (Teta(1)): Daca elementul curent are frecventa mai mare decat 1,
+        -:   44: *                      doar incrementeaza frecventaCurenta, ceea ce este O(1).
+        -:   45: * Worst case (O(n)): Daca s-a epuizat frecventa unui element, trece la
+        -:   46: *                    urmatoarea pozitie. Dar acest lucru implica doar modificarea a doua variabile,
+        -:   47: *                    deci tot O(1).
+        -:   48: * Average case (O(1)): O operatie constanta.
+        -:   49: */
+function _ZN16IteratorColectie7urmatorEv called 1657 returned 100% blocks executed 67%
+     1657:   50:void IteratorColectie::urmator() {
+     1657:   51:    if (!valid())
+     1657:   51-block  0
+call    0 returned 1657
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1657
+    #####:   52:        throw std::exception();
+    %%%%%:   52-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+     1657:   53:    if (frecventaCurenta < col.elemente[pozitieCurenta].frecventa)
+     1657:   53-block  0
+branch  0 taken 376 (fallthrough)
+branch  1 taken 1281
+      376:   54:        frecventaCurenta++;
+      376:   54-block  0
+        -:   55:    else {
+     1281:   56:        pozitieCurenta++;
+     1281:   57:        frecventaCurenta = 1;
+     1281:   57-block  0
+        -:   58:    }
+     1657:   59:}
+        -:   60:
+        -:   61:/*
+        -:   62: * Complexitati:
+        -:   63: * Best case (Teta(1)): Reseteaza iteratorul la inceputul colectiei, ceea ce implica doar atribuiri.
+        -:   64: * Worst case (O(1)): Nu depinde de dimensiunea colectiei, ramane O(1).
+        -:   65: * Average case (O(1)): O operatie constanta.
+        -:   66: */
+function _ZN16IteratorColectie4primEv called 1 returned 100% blocks executed 75%
+        1:   67:void IteratorColectie::prim() {
+        1:   68:    pozitieCurenta = 0;
+        1:   69:    if (pozitieCurenta < col.dimensiune)
+        1:   69-block  0
+branch  0 taken 1 (fallthrough)
+branch  1 taken 0
+        1:   70:        frecventaCurenta = 1;
+        1:   70-block  0
+        -:   71:    else
+    #####:   72:        frecventaCurenta = 0;
+    %%%%%:   72-block  0
+        1:   73:}

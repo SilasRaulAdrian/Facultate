@@ -1,0 +1,61 @@
+        -:    0:Source:D:/Facultate/Anul_1_Sem_2/OOP/Lab/Lab_10-11/domain/carte.cpp
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\domain\carte.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\domain\carte.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "carte.h"
+        -:    2:
+function _ZNK5Carte5getIdEv called 139 returned 100% blocks executed 100%
+      139:    3:const int Carte::getId() const {
+      139:    4:    return id;
+      139:    4-block  0
+        -:    5:}
+        -:    6:
+function _ZNK5Carte6getGenB5cxx11Ev called 45 returned 100% blocks executed 100%
+       45:    7:const std::string &Carte::getGen() const {
+       45:    8:    return gen;
+       45:    8-block  0
+        -:    9:}
+        -:   10:
+function _ZNK5Carte8getTitluB5cxx11Ev called 91 returned 100% blocks executed 100%
+       91:   11:const std::string &Carte::getTitlu() const {
+       91:   12:    return titlu;
+       91:   12-block  0
+        -:   13:}
+        -:   14:
+function _ZNK5Carte8getAutorB5cxx11Ev called 35 returned 100% blocks executed 100%
+       35:   15:const std::string &Carte::getAutor() const {
+       35:   16:    return autor;
+       35:   16-block  0
+        -:   17:}
+        -:   18:
+function _ZNK5Carte13getAnAparitieEv called 147 returned 100% blocks executed 100%
+      147:   19:const int Carte::getAnAparitie() const {
+      147:   20:    return an_aparitie;
+      147:   20-block  0
+        -:   21:}
+        -:   22:
+function _ZNK5Carte8setTitluERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 100%
+        7:   23:void Carte::setTitlu(const std::string &newTitlu) const {
+        7:   24:    Carte::titlu = newTitlu;
+        7:   24-block  0
+call    0 returned 7
+        7:   25:}
+        -:   26:
+function _ZNK5Carte8setAutorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 100%
+        7:   27:void Carte::setAutor(const std::string &newAutor) const {
+        7:   28:    Carte::autor = newAutor;
+        7:   28-block  0
+call    0 returned 7
+        7:   29:}
+        -:   30:
+function _ZNK5Carte6setGenERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 7 returned 100% blocks executed 100%
+        7:   31:void Carte::setGen(const std::string &newGen) const {
+        7:   32:    Carte::gen = newGen;
+        7:   32-block  0
+call    0 returned 7
+        7:   33:}
+        -:   34:
+function _ZNK5Carte13setAnAparitieEi called 7 returned 100% blocks executed 100%
+        7:   35:void Carte::setAnAparitie(int newAnAparitie) const {
+        7:   36:    Carte::an_aparitie = newAnAparitie;
+        7:   37:}

@@ -1,0 +1,928 @@
+        -:    0:Source:C:/Qt/6.9.0/mingw_64/include/QtCore/qrect.h
+        -:    0:Graph:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cosReadOnlyGUI.cpp.gcno
+        -:    0:Data:D:\Facultate\Anul_1_Sem_2\OOP\Lab\Lab_10-11\cmake-build-debug-coverage\CMakeFiles\Lab_6_7.dir\windows\cosReadOnlyGUI.cpp.gcda
+        -:    0:Runs:1
+        -:    1:// Copyright (C) 2022 The Qt Company Ltd.
+        -:    2:// SPDX-License-Identifier: LicenseRef-Qt-Commercial OR LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+        -:    3:
+        -:    4:#ifndef QRECT_H
+        -:    5:#define QRECT_H
+        -:    6:
+        -:    7:#include <QtCore/qhashfunctions.h>
+        -:    8:#include <QtCore/qmargins.h>
+        -:    9:#include <QtCore/qsize.h>
+        -:   10:#include <QtCore/qpoint.h>
+        -:   11:
+        -:   12:#ifdef topLeft
+        -:   13:#error qrect.h must be included before any header file that defines topLeft
+        -:   14:#endif
+        -:   15:
+        -:   16:#if defined(Q_OS_DARWIN) || defined(Q_QDOC)
+        -:   17:struct CGRect;
+        -:   18:#endif
+        -:   19:#if defined(Q_OS_WASM) || defined(Q_QDOC)
+        -:   20:namespace emscripten {
+        -:   21:class val;
+        -:   22:}
+        -:   23:#endif
+        -:   24:
+        -:   25:QT_BEGIN_NAMESPACE
+        -:   26:
+        -:   27:class QRectF;
+        -:   28:
+        -:   29:class Q_CORE_EXPORT QRect
+        -:   30:{
+        -:   31:public:
+        -:   32:    constexpr QRect() noexcept : x1(0), y1(0), x2(-1), y2(-1) {}
+        -:   33:    constexpr QRect(const QPoint &topleft, const QPoint &bottomright) noexcept;
+        -:   34:    constexpr QRect(const QPoint &topleft, const QSize &size) noexcept;
+        -:   35:    constexpr QRect(int left, int top, int width, int height) noexcept;
+        -:   36:
+        -:   37:    constexpr inline bool isNull() const noexcept;
+        -:   38:    constexpr inline bool isEmpty() const noexcept;
+        -:   39:    constexpr inline bool isValid() const noexcept;
+        -:   40:
+        -:   41:    constexpr inline int left() const noexcept;
+        -:   42:    constexpr inline int top() const noexcept;
+        -:   43:    constexpr inline int right() const noexcept;
+        -:   44:    constexpr inline int bottom() const noexcept;
+        -:   45:    [[nodiscard]] QRect normalized() const noexcept;
+        -:   46:
+        -:   47:    constexpr inline int x() const noexcept;
+        -:   48:    constexpr inline int y() const noexcept;
+        -:   49:    constexpr inline void setLeft(int pos) noexcept;
+        -:   50:    constexpr inline void setTop(int pos) noexcept;
+        -:   51:    constexpr inline void setRight(int pos) noexcept;
+        -:   52:    constexpr inline void setBottom(int pos) noexcept;
+        -:   53:    constexpr inline void setX(int x) noexcept;
+        -:   54:    constexpr inline void setY(int y) noexcept;
+        -:   55:
+        -:   56:    constexpr inline void setTopLeft(const QPoint &p) noexcept;
+        -:   57:    constexpr inline void setBottomRight(const QPoint &p) noexcept;
+        -:   58:    constexpr inline void setTopRight(const QPoint &p) noexcept;
+        -:   59:    constexpr inline void setBottomLeft(const QPoint &p) noexcept;
+        -:   60:
+        -:   61:    constexpr inline QPoint topLeft() const noexcept;
+        -:   62:    constexpr inline QPoint bottomRight() const noexcept;
+        -:   63:    constexpr inline QPoint topRight() const noexcept;
+        -:   64:    constexpr inline QPoint bottomLeft() const noexcept;
+        -:   65:    constexpr inline QPoint center() const noexcept;
+        -:   66:
+        -:   67:    constexpr inline void moveLeft(int pos) noexcept;
+        -:   68:    constexpr inline void moveTop(int pos) noexcept;
+        -:   69:    constexpr inline void moveRight(int pos) noexcept;
+        -:   70:    constexpr inline void moveBottom(int pos) noexcept;
+        -:   71:    constexpr inline void moveTopLeft(const QPoint &p) noexcept;
+        -:   72:    constexpr inline void moveBottomRight(const QPoint &p) noexcept;
+        -:   73:    constexpr inline void moveTopRight(const QPoint &p) noexcept;
+        -:   74:    constexpr inline void moveBottomLeft(const QPoint &p) noexcept;
+        -:   75:    constexpr inline void moveCenter(const QPoint &p) noexcept;
+        -:   76:
+        -:   77:    constexpr inline void translate(int dx, int dy) noexcept;
+        -:   78:    constexpr inline void translate(const QPoint &p) noexcept;
+        -:   79:    [[nodiscard]] constexpr inline QRect translated(int dx, int dy) const noexcept;
+        -:   80:    [[nodiscard]] constexpr inline QRect translated(const QPoint &p) const noexcept;
+        -:   81:    [[nodiscard]] constexpr inline QRect transposed() const noexcept;
+        -:   82:
+        -:   83:    constexpr inline void moveTo(int x, int t) noexcept;
+        -:   84:    constexpr inline void moveTo(const QPoint &p) noexcept;
+        -:   85:
+        -:   86:    constexpr inline void setRect(int x, int y, int w, int h) noexcept;
+        -:   87:    constexpr inline void getRect(int *x, int *y, int *w, int *h) const;
+        -:   88:
+        -:   89:    constexpr inline void setCoords(int x1, int y1, int x2, int y2) noexcept;
+        -:   90:    constexpr inline void getCoords(int *x1, int *y1, int *x2, int *y2) const;
+        -:   91:
+        -:   92:    constexpr inline void adjust(int x1, int y1, int x2, int y2) noexcept;
+        -:   93:    [[nodiscard]] constexpr inline QRect adjusted(int x1, int y1, int x2, int y2) const noexcept;
+        -:   94:
+        -:   95:    constexpr inline QSize size() const noexcept;
+        -:   96:    constexpr inline int width() const noexcept;
+        -:   97:    constexpr inline int height() const noexcept;
+        -:   98:    constexpr inline void setWidth(int w) noexcept;
+        -:   99:    constexpr inline void setHeight(int h) noexcept;
+        -:  100:    constexpr inline void setSize(const QSize &s) noexcept;
+        -:  101:
+        -:  102:    QRect operator|(const QRect &r) const noexcept;
+        -:  103:    QRect operator&(const QRect &r) const noexcept;
+        -:  104:    inline QRect &operator|=(const QRect &r) noexcept;
+        -:  105:    inline QRect &operator&=(const QRect &r) noexcept;
+        -:  106:
+        -:  107:    bool contains(const QRect &r, bool proper = false) const noexcept;
+        -:  108:    bool contains(const QPoint &p, bool proper = false) const noexcept;
+        -:  109:    inline bool contains(int x, int y) const noexcept;
+        -:  110:    inline bool contains(int x, int y, bool proper) const noexcept;
+        -:  111:    [[nodiscard]] inline QRect united(const QRect &other) const noexcept;
+        -:  112:    [[nodiscard]] inline QRect intersected(const QRect &other) const noexcept;
+        -:  113:    bool intersects(const QRect &r) const noexcept;
+        -:  114:
+        -:  115:    constexpr inline QRect marginsAdded(const QMargins &margins) const noexcept;
+        -:  116:    constexpr inline QRect marginsRemoved(const QMargins &margins) const noexcept;
+        -:  117:    constexpr inline QRect &operator+=(const QMargins &margins) noexcept;
+        -:  118:    constexpr inline QRect &operator-=(const QMargins &margins) noexcept;
+        -:  119:
+        -:  120:    [[nodiscard]] static constexpr inline QRect span(const QPoint &p1, const QPoint &p2) noexcept;
+        -:  121:
+        -:  122:private:
+        -:  123:    friend constexpr bool comparesEqual(const QRect &r1, const QRect &r2) noexcept
+        -:  124:    { return r1.x1==r2.x1 && r1.x2==r2.x2 && r1.y1==r2.y1 && r1.y2==r2.y2; }
+        -:  125:    Q_DECLARE_EQUALITY_COMPARABLE_LITERAL_TYPE(QRect)
+        -:  126:    friend constexpr inline size_t qHash(const QRect &, size_t) noexcept;
+        -:  127:
+        -:  128:public:
+        -:  129:#if defined(Q_OS_DARWIN) || defined(Q_QDOC)
+        -:  130:    [[nodiscard]] CGRect toCGRect() const noexcept;
+        -:  131:#endif
+        -:  132:    [[nodiscard]] constexpr inline QRectF toRectF() const noexcept;
+        -:  133:
+        -:  134:private:
+        -:  135:    int x1;
+        -:  136:    int y1;
+        -:  137:    int x2;
+        -:  138:    int y2;
+        -:  139:};
+        -:  140:Q_DECLARE_TYPEINFO(QRect, Q_RELOCATABLE_TYPE);
+        -:  141:
+        -:  142:
+        -:  143:/*****************************************************************************
+        -:  144:  QRect stream functions
+        -:  145: *****************************************************************************/
+        -:  146:#ifndef QT_NO_DATASTREAM
+        -:  147:Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QRect &);
+        -:  148:Q_CORE_EXPORT QDataStream &operator>>(QDataStream &, QRect &);
+        -:  149:#endif
+        -:  150:
+        -:  151:/*****************************************************************************
+        -:  152:  QRect inline member functions
+        -:  153: *****************************************************************************/
+        -:  154:
+function _ZN5QRectC1Eiiii called 0 returned 0% blocks executed 0%
+    #####:  155:constexpr inline QRect::QRect(int aleft, int atop, int awidth, int aheight) noexcept
+    #####:  156:    : x1(aleft), y1(atop), x2(aleft + awidth - 1), y2(atop + aheight - 1) {}
+        -:  157:
+        -:  158:constexpr inline QRect::QRect(const QPoint &atopLeft, const QPoint &abottomRight) noexcept
+        -:  159:    : x1(atopLeft.x()), y1(atopLeft.y()), x2(abottomRight.x()), y2(abottomRight.y()) {}
+        -:  160:
+        -:  161:constexpr inline QRect::QRect(const QPoint &atopLeft, const QSize &asize) noexcept
+        -:  162:    : x1(atopLeft.x()), y1(atopLeft.y()), x2(atopLeft.x()+asize.width() - 1), y2(atopLeft.y()+asize.height() - 1) {}
+        -:  163:
+        -:  164:constexpr inline bool QRect::isNull() const noexcept
+        -:  165:{ return x2 == x1 - 1 && y2 == y1 - 1; }
+        -:  166:
+        -:  167:constexpr inline bool QRect::isEmpty() const noexcept
+        -:  168:{ return x1 > x2 || y1 > y2; }
+        -:  169:
+        -:  170:constexpr inline bool QRect::isValid() const noexcept
+        -:  171:{ return x1 <= x2 && y1 <= y2; }
+        -:  172:
+        -:  173:constexpr inline int QRect::left() const noexcept
+        -:  174:{ return x1; }
+        -:  175:
+        -:  176:constexpr inline int QRect::top() const noexcept
+        -:  177:{ return y1; }
+        -:  178:
+        -:  179:constexpr inline int QRect::right() const noexcept
+        -:  180:{ return x2; }
+        -:  181:
+        -:  182:constexpr inline int QRect::bottom() const noexcept
+        -:  183:{ return y2; }
+        -:  184:
+        -:  185:constexpr inline int QRect::x() const noexcept
+        -:  186:{ return x1; }
+        -:  187:
+        -:  188:constexpr inline int QRect::y() const noexcept
+        -:  189:{ return y1; }
+        -:  190:
+        -:  191:constexpr inline void QRect::setLeft(int pos) noexcept
+        -:  192:{ x1 = pos; }
+        -:  193:
+        -:  194:constexpr inline void QRect::setTop(int pos) noexcept
+        -:  195:{ y1 = pos; }
+        -:  196:
+        -:  197:constexpr inline void QRect::setRight(int pos) noexcept
+        -:  198:{ x2 = pos; }
+        -:  199:
+        -:  200:constexpr inline void QRect::setBottom(int pos) noexcept
+        -:  201:{ y2 = pos; }
+        -:  202:
+        -:  203:constexpr inline void QRect::setTopLeft(const QPoint &p) noexcept
+        -:  204:{ x1 = p.x(); y1 = p.y(); }
+        -:  205:
+        -:  206:constexpr inline void QRect::setBottomRight(const QPoint &p) noexcept
+        -:  207:{ x2 = p.x(); y2 = p.y(); }
+        -:  208:
+        -:  209:constexpr inline void QRect::setTopRight(const QPoint &p) noexcept
+        -:  210:{ x2 = p.x(); y1 = p.y(); }
+        -:  211:
+        -:  212:constexpr inline void QRect::setBottomLeft(const QPoint &p) noexcept
+        -:  213:{ x1 = p.x(); y2 = p.y(); }
+        -:  214:
+        -:  215:constexpr inline void QRect::setX(int ax) noexcept
+        -:  216:{ x1 = ax; }
+        -:  217:
+        -:  218:constexpr inline void QRect::setY(int ay) noexcept
+        -:  219:{ y1 = ay; }
+        -:  220:
+        -:  221:constexpr inline QPoint QRect::topLeft() const noexcept
+        -:  222:{ return QPoint(x1, y1); }
+        -:  223:
+        -:  224:constexpr inline QPoint QRect::bottomRight() const noexcept
+        -:  225:{ return QPoint(x2, y2); }
+        -:  226:
+        -:  227:constexpr inline QPoint QRect::topRight() const noexcept
+        -:  228:{ return QPoint(x2, y1); }
+        -:  229:
+        -:  230:constexpr inline QPoint QRect::bottomLeft() const noexcept
+        -:  231:{ return QPoint(x1, y2); }
+        -:  232:
+        -:  233:constexpr inline QPoint QRect::center() const noexcept
+        -:  234:{ return QPoint(int((qint64(x1)+x2)/2), int((qint64(y1)+y2)/2)); } // cast avoids overflow on addition
+        -:  235:
+function _ZNK5QRect5widthEv called 0 returned 0% blocks executed 0%
+    #####:  236:constexpr inline int QRect::width() const noexcept
+    #####:  237:{ return  x2 - x1 + 1; }
+    %%%%%:  237-block  0
+        -:  238:
+function _ZNK5QRect6heightEv called 0 returned 0% blocks executed 0%
+    #####:  239:constexpr inline int QRect::height() const noexcept
+    #####:  240:{ return  y2 - y1 + 1; }
+    %%%%%:  240-block  0
+        -:  241:
+        -:  242:constexpr inline QSize QRect::size() const noexcept
+        -:  243:{ return QSize(width(), height()); }
+        -:  244:
+        -:  245:constexpr inline void QRect::translate(int dx, int dy) noexcept
+        -:  246:{
+        -:  247:    x1 += dx;
+        -:  248:    y1 += dy;
+        -:  249:    x2 += dx;
+        -:  250:    y2 += dy;
+        -:  251:}
+        -:  252:
+        -:  253:constexpr inline void QRect::translate(const QPoint &p) noexcept
+        -:  254:{
+        -:  255:    x1 += p.x();
+        -:  256:    y1 += p.y();
+        -:  257:    x2 += p.x();
+        -:  258:    y2 += p.y();
+        -:  259:}
+        -:  260:
+        -:  261:constexpr inline QRect QRect::translated(int dx, int dy) const noexcept
+        -:  262:{ return QRect(QPoint(x1 + dx, y1 + dy), QPoint(x2 + dx, y2 + dy)); }
+        -:  263:
+        -:  264:constexpr inline QRect QRect::translated(const QPoint &p) const noexcept
+        -:  265:{ return QRect(QPoint(x1 + p.x(), y1 + p.y()), QPoint(x2 + p.x(), y2 + p.y())); }
+        -:  266:
+        -:  267:constexpr inline QRect QRect::transposed() const noexcept
+        -:  268:{ return QRect(topLeft(), size().transposed()); }
+        -:  269:
+        -:  270:constexpr inline void QRect::moveTo(int ax, int ay) noexcept
+        -:  271:{
+        -:  272:    x2 += ax - x1;
+        -:  273:    y2 += ay - y1;
+        -:  274:    x1 = ax;
+        -:  275:    y1 = ay;
+        -:  276:}
+        -:  277:
+        -:  278:constexpr inline void QRect::moveTo(const QPoint &p) noexcept
+        -:  279:{
+        -:  280:    x2 += p.x() - x1;
+        -:  281:    y2 += p.y() - y1;
+        -:  282:    x1 = p.x();
+        -:  283:    y1 = p.y();
+        -:  284:}
+        -:  285:
+        -:  286:constexpr inline void QRect::moveLeft(int pos) noexcept
+        -:  287:{ x2 += (pos - x1); x1 = pos; }
+        -:  288:
+        -:  289:constexpr inline void QRect::moveTop(int pos) noexcept
+        -:  290:{ y2 += (pos - y1); y1 = pos; }
+        -:  291:
+        -:  292:constexpr inline void QRect::moveRight(int pos) noexcept
+        -:  293:{
+        -:  294:    x1 += (pos - x2);
+        -:  295:    x2 = pos;
+        -:  296:}
+        -:  297:
+        -:  298:constexpr inline void QRect::moveBottom(int pos) noexcept
+        -:  299:{
+        -:  300:    y1 += (pos - y2);
+        -:  301:    y2 = pos;
+        -:  302:}
+        -:  303:
+        -:  304:constexpr inline void QRect::moveTopLeft(const QPoint &p) noexcept
+        -:  305:{
+        -:  306:    moveLeft(p.x());
+        -:  307:    moveTop(p.y());
+        -:  308:}
+        -:  309:
+        -:  310:constexpr inline void QRect::moveBottomRight(const QPoint &p) noexcept
+        -:  311:{
+        -:  312:    moveRight(p.x());
+        -:  313:    moveBottom(p.y());
+        -:  314:}
+        -:  315:
+        -:  316:constexpr inline void QRect::moveTopRight(const QPoint &p) noexcept
+        -:  317:{
+        -:  318:    moveRight(p.x());
+        -:  319:    moveTop(p.y());
+        -:  320:}
+        -:  321:
+        -:  322:constexpr inline void QRect::moveBottomLeft(const QPoint &p) noexcept
+        -:  323:{
+        -:  324:    moveLeft(p.x());
+        -:  325:    moveBottom(p.y());
+        -:  326:}
+        -:  327:
+        -:  328:constexpr inline void QRect::moveCenter(const QPoint &p) noexcept
+        -:  329:{
+        -:  330:    int w = x2 - x1;
+        -:  331:    int h = y2 - y1;
+        -:  332:    x1 = p.x() - w/2;
+        -:  333:    y1 = p.y() - h/2;
+        -:  334:    x2 = x1 + w;
+        -:  335:    y2 = y1 + h;
+        -:  336:}
+        -:  337:
+        -:  338:constexpr inline void QRect::getRect(int *ax, int *ay, int *aw, int *ah) const
+        -:  339:{
+        -:  340:    *ax = x1;
+        -:  341:    *ay = y1;
+        -:  342:    *aw = x2 - x1 + 1;
+        -:  343:    *ah = y2 - y1 + 1;
+        -:  344:}
+        -:  345:
+        -:  346:constexpr inline void QRect::setRect(int ax, int ay, int aw, int ah) noexcept
+        -:  347:{
+        -:  348:    x1 = ax;
+        -:  349:    y1 = ay;
+        -:  350:    x2 = (ax + aw - 1);
+        -:  351:    y2 = (ay + ah - 1);
+        -:  352:}
+        -:  353:
+        -:  354:constexpr inline void QRect::getCoords(int *xp1, int *yp1, int *xp2, int *yp2) const
+        -:  355:{
+        -:  356:    *xp1 = x1;
+        -:  357:    *yp1 = y1;
+        -:  358:    *xp2 = x2;
+        -:  359:    *yp2 = y2;
+        -:  360:}
+        -:  361:
+        -:  362:constexpr inline void QRect::setCoords(int xp1, int yp1, int xp2, int yp2) noexcept
+        -:  363:{
+        -:  364:    x1 = xp1;
+        -:  365:    y1 = yp1;
+        -:  366:    x2 = xp2;
+        -:  367:    y2 = yp2;
+        -:  368:}
+        -:  369:
+        -:  370:constexpr inline QRect QRect::adjusted(int xp1, int yp1, int xp2, int yp2) const noexcept
+        -:  371:{ return QRect(QPoint(x1 + xp1, y1 + yp1), QPoint(x2 + xp2, y2 + yp2)); }
+        -:  372:
+        -:  373:constexpr inline void QRect::adjust(int dx1, int dy1, int dx2, int dy2) noexcept
+        -:  374:{
+        -:  375:    x1 += dx1;
+        -:  376:    y1 += dy1;
+        -:  377:    x2 += dx2;
+        -:  378:    y2 += dy2;
+        -:  379:}
+        -:  380:
+        -:  381:constexpr inline void QRect::setWidth(int w) noexcept
+        -:  382:{ x2 = (x1 + w - 1); }
+        -:  383:
+        -:  384:constexpr inline void QRect::setHeight(int h) noexcept
+        -:  385:{ y2 = (y1 + h - 1); }
+        -:  386:
+        -:  387:constexpr inline void QRect::setSize(const QSize &s) noexcept
+        -:  388:{
+        -:  389:    x2 = (s.width()  + x1 - 1);
+        -:  390:    y2 = (s.height() + y1 - 1);
+        -:  391:}
+        -:  392:
+        -:  393:inline bool QRect::contains(int ax, int ay, bool aproper) const noexcept
+        -:  394:{
+        -:  395:    return contains(QPoint(ax, ay), aproper);
+        -:  396:}
+        -:  397:
+        -:  398:inline bool QRect::contains(int ax, int ay) const noexcept
+        -:  399:{
+        -:  400:    return contains(QPoint(ax, ay), false);
+        -:  401:}
+        -:  402:
+        -:  403:inline QRect &QRect::operator|=(const QRect &r) noexcept
+        -:  404:{
+        -:  405:    *this = *this | r;
+        -:  406:    return *this;
+        -:  407:}
+        -:  408:
+        -:  409:inline QRect &QRect::operator&=(const QRect &r) noexcept
+        -:  410:{
+        -:  411:    *this = *this & r;
+        -:  412:    return *this;
+        -:  413:}
+        -:  414:
+        -:  415:inline QRect QRect::intersected(const QRect &other) const noexcept
+        -:  416:{
+        -:  417:    return *this & other;
+        -:  418:}
+        -:  419:
+        -:  420:inline QRect QRect::united(const QRect &r) const noexcept
+        -:  421:{
+        -:  422:    return *this | r;
+        -:  423:}
+        -:  424:
+        -:  425:constexpr inline size_t qHash(const QRect &r, size_t seed = 0) noexcept
+        -:  426:{
+        -:  427:    return qHashMulti(seed, r.x1, r.x2, r.y1, r.y2);
+        -:  428:}
+        -:  429:
+        -:  430:constexpr inline QRect operator+(const QRect &rectangle, const QMargins &margins) noexcept
+        -:  431:{
+        -:  432:    return QRect(QPoint(rectangle.left() - margins.left(), rectangle.top() - margins.top()),
+        -:  433:                 QPoint(rectangle.right() + margins.right(), rectangle.bottom() + margins.bottom()));
+        -:  434:}
+        -:  435:
+        -:  436:constexpr inline QRect operator+(const QMargins &margins, const QRect &rectangle) noexcept
+        -:  437:{
+        -:  438:    return QRect(QPoint(rectangle.left() - margins.left(), rectangle.top() - margins.top()),
+        -:  439:                 QPoint(rectangle.right() + margins.right(), rectangle.bottom() + margins.bottom()));
+        -:  440:}
+        -:  441:
+        -:  442:constexpr inline QRect operator-(const QRect &lhs, const QMargins &rhs) noexcept
+        -:  443:{
+        -:  444:    return QRect(QPoint(lhs.left() + rhs.left(), lhs.top() + rhs.top()),
+        -:  445:                 QPoint(lhs.right() - rhs.right(), lhs.bottom() - rhs.bottom()));
+        -:  446:}
+        -:  447:
+        -:  448:constexpr inline QRect QRect::marginsAdded(const QMargins &margins) const noexcept
+        -:  449:{
+        -:  450:    return QRect(QPoint(x1 - margins.left(), y1 - margins.top()),
+        -:  451:                 QPoint(x2 + margins.right(), y2 + margins.bottom()));
+        -:  452:}
+        -:  453:
+        -:  454:constexpr inline QRect QRect::marginsRemoved(const QMargins &margins) const noexcept
+        -:  455:{
+        -:  456:    return QRect(QPoint(x1 + margins.left(), y1 + margins.top()),
+        -:  457:                 QPoint(x2 - margins.right(), y2 - margins.bottom()));
+        -:  458:}
+        -:  459:
+        -:  460:constexpr inline QRect &QRect::operator+=(const QMargins &margins) noexcept
+        -:  461:{
+        -:  462:    *this = marginsAdded(margins);
+        -:  463:    return *this;
+        -:  464:}
+        -:  465:
+        -:  466:constexpr inline QRect &QRect::operator-=(const QMargins &margins) noexcept
+        -:  467:{
+        -:  468:    *this = marginsRemoved(margins);
+        -:  469:    return *this;
+        -:  470:}
+        -:  471:
+        -:  472:constexpr QRect QRect::span(const QPoint &p1, const QPoint &p2) noexcept
+        -:  473:{
+        -:  474:    return QRect(QPoint(qMin(p1.x(), p2.x()), qMin(p1.y(), p2.y())),
+        -:  475:                 QPoint(qMax(p1.x(), p2.x()), qMax(p1.y(), p2.y())));
+        -:  476:}
+        -:  477:
+        -:  478:#ifndef QT_NO_DEBUG_STREAM
+        -:  479:Q_CORE_EXPORT QDebug operator<<(QDebug, const QRect &);
+        -:  480:#endif
+        -:  481:
+        -:  482:
+        -:  483:class Q_CORE_EXPORT QRectF
+        -:  484:{
+        -:  485:public:
+        -:  486:    constexpr QRectF() noexcept : xp(0.), yp(0.), w(0.), h(0.) {}
+        -:  487:    constexpr QRectF(const QPointF &topleft, const QSizeF &size) noexcept;
+        -:  488:    constexpr QRectF(const QPointF &topleft, const QPointF &bottomRight) noexcept;
+        -:  489:    constexpr QRectF(qreal left, qreal top, qreal width, qreal height) noexcept;
+        -:  490:    constexpr QRectF(const QRect &rect) noexcept;
+        -:  491:
+        -:  492:    constexpr inline bool isNull() const noexcept;
+        -:  493:    constexpr inline bool isEmpty() const noexcept;
+        -:  494:    constexpr inline bool isValid() const noexcept;
+        -:  495:    [[nodiscard]] QRectF normalized() const noexcept;
+        -:  496:
+        -:  497:    constexpr inline qreal left() const noexcept { return xp; }
+        -:  498:    constexpr inline qreal top() const noexcept { return yp; }
+        -:  499:    constexpr inline qreal right() const noexcept { return xp + w; }
+        -:  500:    constexpr inline qreal bottom() const noexcept { return yp + h; }
+        -:  501:
+        -:  502:    constexpr inline qreal x() const noexcept;
+        -:  503:    constexpr inline qreal y() const noexcept;
+        -:  504:    constexpr inline void setLeft(qreal pos) noexcept;
+        -:  505:    constexpr inline void setTop(qreal pos) noexcept;
+        -:  506:    constexpr inline void setRight(qreal pos) noexcept;
+        -:  507:    constexpr inline void setBottom(qreal pos) noexcept;
+        -:  508:    constexpr inline void setX(qreal pos) noexcept { setLeft(pos); }
+        -:  509:    constexpr inline void setY(qreal pos) noexcept { setTop(pos); }
+        -:  510:
+        -:  511:    constexpr inline QPointF topLeft() const noexcept { return QPointF(xp, yp); }
+        -:  512:    constexpr inline QPointF bottomRight() const noexcept { return QPointF(xp+w, yp+h); }
+        -:  513:    constexpr inline QPointF topRight() const noexcept { return QPointF(xp+w, yp); }
+        -:  514:    constexpr inline QPointF bottomLeft() const noexcept { return QPointF(xp, yp+h); }
+        -:  515:    constexpr inline QPointF center() const noexcept;
+        -:  516:
+        -:  517:    constexpr inline void setTopLeft(const QPointF &p) noexcept;
+        -:  518:    constexpr inline void setBottomRight(const QPointF &p) noexcept;
+        -:  519:    constexpr inline void setTopRight(const QPointF &p) noexcept;
+        -:  520:    constexpr inline void setBottomLeft(const QPointF &p) noexcept;
+        -:  521:
+        -:  522:    constexpr inline void moveLeft(qreal pos) noexcept;
+        -:  523:    constexpr inline void moveTop(qreal pos) noexcept;
+        -:  524:    constexpr inline void moveRight(qreal pos) noexcept;
+        -:  525:    constexpr inline void moveBottom(qreal pos) noexcept;
+        -:  526:    constexpr inline void moveTopLeft(const QPointF &p) noexcept;
+        -:  527:    constexpr inline void moveBottomRight(const QPointF &p) noexcept;
+        -:  528:    constexpr inline void moveTopRight(const QPointF &p) noexcept;
+        -:  529:    constexpr inline void moveBottomLeft(const QPointF &p) noexcept;
+        -:  530:    constexpr inline void moveCenter(const QPointF &p) noexcept;
+        -:  531:
+        -:  532:    constexpr inline void translate(qreal dx, qreal dy) noexcept;
+        -:  533:    constexpr inline void translate(const QPointF &p) noexcept;
+        -:  534:
+        -:  535:    [[nodiscard]] constexpr inline QRectF translated(qreal dx, qreal dy) const noexcept;
+        -:  536:    [[nodiscard]] constexpr inline QRectF translated(const QPointF &p) const noexcept;
+        -:  537:
+        -:  538:    [[nodiscard]] constexpr inline QRectF transposed() const noexcept;
+        -:  539:
+        -:  540:    constexpr inline void moveTo(qreal x, qreal y) noexcept;
+        -:  541:    constexpr inline void moveTo(const QPointF &p) noexcept;
+        -:  542:
+        -:  543:    constexpr inline void setRect(qreal x, qreal y, qreal w, qreal h) noexcept;
+        -:  544:    constexpr inline void getRect(qreal *x, qreal *y, qreal *w, qreal *h) const;
+        -:  545:
+        -:  546:    constexpr inline void setCoords(qreal x1, qreal y1, qreal x2, qreal y2) noexcept;
+        -:  547:    constexpr inline void getCoords(qreal *x1, qreal *y1, qreal *x2, qreal *y2) const;
+        -:  548:
+        -:  549:    constexpr inline void adjust(qreal x1, qreal y1, qreal x2, qreal y2) noexcept;
+        -:  550:    [[nodiscard]] constexpr inline QRectF adjusted(qreal x1, qreal y1, qreal x2, qreal y2) const noexcept;
+        -:  551:
+        -:  552:    constexpr inline QSizeF size() const noexcept;
+        -:  553:    constexpr inline qreal width() const noexcept;
+        -:  554:    constexpr inline qreal height() const noexcept;
+        -:  555:    constexpr inline void setWidth(qreal w) noexcept;
+        -:  556:    constexpr inline void setHeight(qreal h) noexcept;
+        -:  557:    constexpr inline void setSize(const QSizeF &s) noexcept;
+        -:  558:
+        -:  559:    QRectF operator|(const QRectF &r) const noexcept;
+        -:  560:    QRectF operator&(const QRectF &r) const noexcept;
+        -:  561:    inline QRectF &operator|=(const QRectF &r) noexcept;
+        -:  562:    inline QRectF &operator&=(const QRectF &r) noexcept;
+        -:  563:
+        -:  564:    bool contains(const QRectF &r) const noexcept;
+        -:  565:    bool contains(const QPointF &p) const noexcept;
+        -:  566:    inline bool contains(qreal x, qreal y) const noexcept;
+        -:  567:    [[nodiscard]] inline QRectF united(const QRectF &other) const noexcept;
+        -:  568:    [[nodiscard]] inline QRectF intersected(const QRectF &other) const noexcept;
+        -:  569:    bool intersects(const QRectF &r) const noexcept;
+        -:  570:
+        -:  571:    constexpr inline QRectF marginsAdded(const QMarginsF &margins) const noexcept;
+        -:  572:    constexpr inline QRectF marginsRemoved(const QMarginsF &margins) const noexcept;
+        -:  573:    constexpr inline QRectF &operator+=(const QMarginsF &margins) noexcept;
+        -:  574:    constexpr inline QRectF &operator-=(const QMarginsF &margins) noexcept;
+        -:  575:
+        -:  576:private:
+        -:  577:    friend constexpr bool comparesEqual(const QRectF &r1, const QRectF &r2) noexcept
+        -:  578:    {
+        -:  579:        return r1.topLeft() == r2.topLeft()
+        -:  580:            && r1.size() == r2.size();
+        -:  581:    }
+        -:  582:    Q_DECLARE_EQUALITY_COMPARABLE_LITERAL_TYPE(QRectF)
+        -:  583:
+        -:  584:    friend constexpr bool comparesEqual(const QRectF &r1, const QRect &r2) noexcept
+        -:  585:    { return r1.topLeft() == r2.topLeft() && r1.size() == r2.size(); }
+        -:  586:    Q_DECLARE_EQUALITY_COMPARABLE_LITERAL_TYPE(QRectF, QRect)
+        -:  587:
+        -:  588:    friend constexpr bool qFuzzyCompare(const QRectF &lhs, const QRectF &rhs) noexcept
+        -:  589:    {
+        -:  590:        return qFuzzyCompare(lhs.topLeft(), rhs.topLeft())
+        -:  591:                && qFuzzyCompare(lhs.bottomRight(), rhs.bottomRight());
+        -:  592:    }
+        -:  593:
+        -:  594:    friend constexpr bool qFuzzyIsNull(const QRectF &rect) noexcept
+        -:  595:    {
+        -:  596:        return qFuzzyIsNull(rect.w) && qFuzzyIsNull(rect.h);
+        -:  597:    }
+        -:  598:
+        -:  599:public:
+        -:  600:    [[nodiscard]] constexpr inline QRect toRect() const noexcept;
+        -:  601:    [[nodiscard]] QRect toAlignedRect() const noexcept;
+        -:  602:
+        -:  603:#if defined(Q_OS_DARWIN) || defined(Q_QDOC)
+        -:  604:    [[nodiscard]] static QRectF fromCGRect(CGRect rect) noexcept;
+        -:  605:    [[nodiscard]] CGRect toCGRect() const noexcept;
+        -:  606:#endif
+        -:  607:
+        -:  608:#if defined(Q_OS_WASM) || defined(Q_QDOC)
+        -:  609:    [[nodiscard]] static QRectF fromDOMRect(emscripten::val domRect);
+        -:  610:    [[nodiscard]] emscripten::val toDOMRect() const;
+        -:  611:#endif
+        -:  612:
+        -:  613:private:
+        -:  614:    qreal xp;
+        -:  615:    qreal yp;
+        -:  616:    qreal w;
+        -:  617:    qreal h;
+        -:  618:};
+        -:  619:Q_DECLARE_TYPEINFO(QRectF, Q_RELOCATABLE_TYPE);
+        -:  620:
+        -:  621:
+        -:  622:/*****************************************************************************
+        -:  623:  QRectF stream functions
+        -:  624: *****************************************************************************/
+        -:  625:#ifndef QT_NO_DATASTREAM
+        -:  626:Q_CORE_EXPORT QDataStream &operator<<(QDataStream &, const QRectF &);
+        -:  627:Q_CORE_EXPORT QDataStream &operator>>(QDataStream &, QRectF &);
+        -:  628:#endif
+        -:  629:
+        -:  630:/*****************************************************************************
+        -:  631:  QRectF inline member functions
+        -:  632: *****************************************************************************/
+        -:  633:
+        -:  634:constexpr inline QRectF::QRectF(qreal aleft, qreal atop, qreal awidth, qreal aheight) noexcept
+        -:  635:    : xp(aleft), yp(atop), w(awidth), h(aheight)
+        -:  636:{
+        -:  637:}
+        -:  638:
+        -:  639:constexpr inline QRectF::QRectF(const QPointF &atopLeft, const QSizeF &asize) noexcept
+        -:  640:    : xp(atopLeft.x()), yp(atopLeft.y()), w(asize.width()), h(asize.height())
+        -:  641:{
+        -:  642:}
+        -:  643:
+        -:  644:
+        -:  645:constexpr inline QRectF::QRectF(const QPointF &atopLeft, const QPointF &abottomRight) noexcept
+        -:  646:    : xp(atopLeft.x()), yp(atopLeft.y()), w(abottomRight.x() - atopLeft.x()), h(abottomRight.y() - atopLeft.y())
+        -:  647:{
+        -:  648:}
+        -:  649:
+        -:  650:constexpr inline QRectF::QRectF(const QRect &r) noexcept
+        -:  651:    : xp(r.x()), yp(r.y()), w(r.width()), h(r.height())
+        -:  652:{
+        -:  653:}
+        -:  654:
+        -:  655:QT_WARNING_PUSH
+        -:  656:QT_WARNING_DISABLE_FLOAT_COMPARE
+        -:  657:
+        -:  658:constexpr inline bool QRectF::isNull() const noexcept
+        -:  659:{ return w == 0. && h == 0.; }
+        -:  660:
+        -:  661:constexpr inline bool QRectF::isEmpty() const noexcept
+        -:  662:{ return w <= 0. || h <= 0.; }
+        -:  663:
+        -:  664:QT_WARNING_POP
+        -:  665:
+        -:  666:constexpr inline bool QRectF::isValid() const noexcept
+        -:  667:{ return w > 0. && h > 0.; }
+        -:  668:
+        -:  669:constexpr inline qreal QRectF::x() const noexcept
+        -:  670:{ return xp; }
+        -:  671:
+        -:  672:constexpr inline qreal QRectF::y() const noexcept
+        -:  673:{ return yp; }
+        -:  674:
+        -:  675:constexpr inline void QRectF::setLeft(qreal pos) noexcept
+        -:  676:{ qreal diff = pos - xp; xp += diff; w -= diff; }
+        -:  677:
+        -:  678:constexpr inline void QRectF::setRight(qreal pos) noexcept
+        -:  679:{ w = pos - xp; }
+        -:  680:
+        -:  681:constexpr inline void QRectF::setTop(qreal pos) noexcept
+        -:  682:{ qreal diff = pos - yp; yp += diff; h -= diff; }
+        -:  683:
+        -:  684:constexpr inline void QRectF::setBottom(qreal pos) noexcept
+        -:  685:{ h = pos - yp; }
+        -:  686:
+        -:  687:constexpr inline void QRectF::setTopLeft(const QPointF &p) noexcept
+        -:  688:{ setLeft(p.x()); setTop(p.y()); }
+        -:  689:
+        -:  690:constexpr inline void QRectF::setTopRight(const QPointF &p) noexcept
+        -:  691:{ setRight(p.x()); setTop(p.y()); }
+        -:  692:
+        -:  693:constexpr inline void QRectF::setBottomLeft(const QPointF &p) noexcept
+        -:  694:{ setLeft(p.x()); setBottom(p.y()); }
+        -:  695:
+        -:  696:constexpr inline void QRectF::setBottomRight(const QPointF &p) noexcept
+        -:  697:{ setRight(p.x()); setBottom(p.y()); }
+        -:  698:
+        -:  699:constexpr inline QPointF QRectF::center() const noexcept
+        -:  700:{ return QPointF(xp + w/2, yp + h/2); }
+        -:  701:
+        -:  702:constexpr inline void QRectF::moveLeft(qreal pos) noexcept
+        -:  703:{ xp = pos; }
+        -:  704:
+        -:  705:constexpr inline void QRectF::moveTop(qreal pos) noexcept
+        -:  706:{ yp = pos; }
+        -:  707:
+        -:  708:constexpr inline void QRectF::moveRight(qreal pos) noexcept
+        -:  709:{ xp = pos - w; }
+        -:  710:
+        -:  711:constexpr inline void QRectF::moveBottom(qreal pos) noexcept
+        -:  712:{ yp = pos - h; }
+        -:  713:
+        -:  714:constexpr inline void QRectF::moveTopLeft(const QPointF &p) noexcept
+        -:  715:{ moveLeft(p.x()); moveTop(p.y()); }
+        -:  716:
+        -:  717:constexpr inline void QRectF::moveTopRight(const QPointF &p) noexcept
+        -:  718:{ moveRight(p.x()); moveTop(p.y()); }
+        -:  719:
+        -:  720:constexpr inline void QRectF::moveBottomLeft(const QPointF &p) noexcept
+        -:  721:{ moveLeft(p.x()); moveBottom(p.y()); }
+        -:  722:
+        -:  723:constexpr inline void QRectF::moveBottomRight(const QPointF &p) noexcept
+        -:  724:{ moveRight(p.x()); moveBottom(p.y()); }
+        -:  725:
+        -:  726:constexpr inline void QRectF::moveCenter(const QPointF &p) noexcept
+        -:  727:{ xp = p.x() - w/2; yp = p.y() - h/2; }
+        -:  728:
+        -:  729:constexpr inline qreal QRectF::width() const noexcept
+        -:  730:{ return w; }
+        -:  731:
+        -:  732:constexpr inline qreal QRectF::height() const noexcept
+        -:  733:{ return h; }
+        -:  734:
+        -:  735:constexpr inline QSizeF QRectF::size() const noexcept
+        -:  736:{ return QSizeF(w, h); }
+        -:  737:
+        -:  738:constexpr inline void QRectF::translate(qreal dx, qreal dy) noexcept
+        -:  739:{
+        -:  740:    xp += dx;
+        -:  741:    yp += dy;
+        -:  742:}
+        -:  743:
+        -:  744:constexpr inline void QRectF::translate(const QPointF &p) noexcept
+        -:  745:{
+        -:  746:    xp += p.x();
+        -:  747:    yp += p.y();
+        -:  748:}
+        -:  749:
+        -:  750:constexpr inline void QRectF::moveTo(qreal ax, qreal ay) noexcept
+        -:  751:{
+        -:  752:    xp = ax;
+        -:  753:    yp = ay;
+        -:  754:}
+        -:  755:
+        -:  756:constexpr inline void QRectF::moveTo(const QPointF &p) noexcept
+        -:  757:{
+        -:  758:    xp = p.x();
+        -:  759:    yp = p.y();
+        -:  760:}
+        -:  761:
+        -:  762:constexpr inline QRectF QRectF::translated(qreal dx, qreal dy) const noexcept
+        -:  763:{
+        -:  764:    return QRectF(xp + dx, yp + dy, w, h);
+        -:  765:}
+        -:  766:
+        -:  767:constexpr inline QRectF QRectF::translated(const QPointF &p) const noexcept
+        -:  768:{ return QRectF(xp + p.x(), yp + p.y(), w, h); }
+        -:  769:
+        -:  770:constexpr inline QRectF QRectF::transposed() const noexcept
+        -:  771:{ return QRectF(topLeft(), size().transposed()); }
+        -:  772:
+        -:  773:constexpr inline void QRectF::getRect(qreal *ax, qreal *ay, qreal *aaw, qreal *aah) const
+        -:  774:{
+        -:  775:    *ax = this->xp;
+        -:  776:    *ay = this->yp;
+        -:  777:    *aaw = this->w;
+        -:  778:    *aah = this->h;
+        -:  779:}
+        -:  780:
+        -:  781:constexpr inline void QRectF::setRect(qreal ax, qreal ay, qreal aaw, qreal aah) noexcept
+        -:  782:{
+        -:  783:    this->xp = ax;
+        -:  784:    this->yp = ay;
+        -:  785:    this->w = aaw;
+        -:  786:    this->h = aah;
+        -:  787:}
+        -:  788:
+        -:  789:constexpr inline void QRectF::getCoords(qreal *xp1, qreal *yp1, qreal *xp2, qreal *yp2) const
+        -:  790:{
+        -:  791:    *xp1 = xp;
+        -:  792:    *yp1 = yp;
+        -:  793:    *xp2 = xp + w;
+        -:  794:    *yp2 = yp + h;
+        -:  795:}
+        -:  796:
+        -:  797:constexpr inline void QRectF::setCoords(qreal xp1, qreal yp1, qreal xp2, qreal yp2) noexcept
+        -:  798:{
+        -:  799:    xp = xp1;
+        -:  800:    yp = yp1;
+        -:  801:    w = xp2 - xp1;
+        -:  802:    h = yp2 - yp1;
+        -:  803:}
+        -:  804:
+        -:  805:constexpr inline void QRectF::adjust(qreal xp1, qreal yp1, qreal xp2, qreal yp2) noexcept
+        -:  806:{
+        -:  807:    xp += xp1;
+        -:  808:    yp += yp1;
+        -:  809:    w += xp2 - xp1;
+        -:  810:    h += yp2 - yp1;
+        -:  811:}
+        -:  812:
+        -:  813:constexpr inline QRectF QRectF::adjusted(qreal xp1, qreal yp1, qreal xp2, qreal yp2) const noexcept
+        -:  814:{
+        -:  815:    return QRectF(xp + xp1, yp + yp1, w + xp2 - xp1, h + yp2 - yp1);
+        -:  816:}
+        -:  817:
+        -:  818:constexpr inline void QRectF::setWidth(qreal aw) noexcept
+        -:  819:{ this->w = aw; }
+        -:  820:
+        -:  821:constexpr inline void QRectF::setHeight(qreal ah) noexcept
+        -:  822:{ this->h = ah; }
+        -:  823:
+        -:  824:constexpr inline void QRectF::setSize(const QSizeF &s) noexcept
+        -:  825:{
+        -:  826:    w = s.width();
+        -:  827:    h = s.height();
+        -:  828:}
+        -:  829:
+        -:  830:inline bool QRectF::contains(qreal ax, qreal ay) const noexcept
+        -:  831:{
+        -:  832:    return contains(QPointF(ax, ay));
+        -:  833:}
+        -:  834:
+        -:  835:inline QRectF &QRectF::operator|=(const QRectF &r) noexcept
+        -:  836:{
+        -:  837:    *this = *this | r;
+        -:  838:    return *this;
+        -:  839:}
+        -:  840:
+        -:  841:inline QRectF &QRectF::operator&=(const QRectF &r) noexcept
+        -:  842:{
+        -:  843:    *this = *this & r;
+        -:  844:    return *this;
+        -:  845:}
+        -:  846:
+        -:  847:inline QRectF QRectF::intersected(const QRectF &r) const noexcept
+        -:  848:{
+        -:  849:    return *this & r;
+        -:  850:}
+        -:  851:
+        -:  852:inline QRectF QRectF::united(const QRectF &r) const noexcept
+        -:  853:{
+        -:  854:    return *this | r;
+        -:  855:}
+        -:  856:
+        -:  857:constexpr QRectF QRect::toRectF() const noexcept { return *this; }
+        -:  858:
+        -:  859:constexpr inline QRect QRectF::toRect() const noexcept
+        -:  860:{
+        -:  861:    // This rounding is designed to minimize the maximum possible difference
+        -:  862:    // in topLeft(), bottomRight(), and size() after rounding.
+        -:  863:    // All dimensions are at most off by 0.75, and topLeft by at most 0.5.
+        -:  864:    const int nxp = qRound(xp);
+        -:  865:    const int nyp = qRound(yp);
+        -:  866:    const int nw = qRound(w + (xp - nxp) / 2);
+        -:  867:    const int nh = qRound(h + (yp - nyp) / 2);
+        -:  868:    return QRect(nxp, nyp, nw, nh);
+        -:  869:}
+        -:  870:
+        -:  871:constexpr inline QRectF operator+(const QRectF &lhs, const QMarginsF &rhs) noexcept
+        -:  872:{
+        -:  873:    return QRectF(QPointF(lhs.left() - rhs.left(), lhs.top() - rhs.top()),
+        -:  874:                  QSizeF(lhs.width() + rhs.left() + rhs.right(), lhs.height() + rhs.top() + rhs.bottom()));
+        -:  875:}
+        -:  876:
+        -:  877:constexpr inline QRectF operator+(const QMarginsF &lhs, const QRectF &rhs) noexcept
+        -:  878:{
+        -:  879:    return QRectF(QPointF(rhs.left() - lhs.left(), rhs.top() - lhs.top()),
+        -:  880:                  QSizeF(rhs.width() + lhs.left() + lhs.right(), rhs.height() + lhs.top() + lhs.bottom()));
+        -:  881:}
+        -:  882:
+        -:  883:constexpr inline QRectF operator-(const QRectF &lhs, const QMarginsF &rhs) noexcept
+        -:  884:{
+        -:  885:    return QRectF(QPointF(lhs.left() + rhs.left(), lhs.top() + rhs.top()),
+        -:  886:                  QSizeF(lhs.width() - rhs.left() - rhs.right(), lhs.height() - rhs.top() - rhs.bottom()));
+        -:  887:}
+        -:  888:
+        -:  889:constexpr inline QRectF QRectF::marginsAdded(const QMarginsF &margins) const noexcept
+        -:  890:{
+        -:  891:    return QRectF(QPointF(xp - margins.left(), yp - margins.top()),
+        -:  892:                  QSizeF(w + margins.left() + margins.right(), h + margins.top() + margins.bottom()));
+        -:  893:}
+        -:  894:
+        -:  895:constexpr inline QRectF QRectF::marginsRemoved(const QMarginsF &margins) const noexcept
+        -:  896:{
+        -:  897:    return QRectF(QPointF(xp + margins.left(), yp + margins.top()),
+        -:  898:                  QSizeF(w - margins.left() - margins.right(), h - margins.top() - margins.bottom()));
+        -:  899:}
+        -:  900:
+        -:  901:constexpr inline QRectF &QRectF::operator+=(const QMarginsF &margins) noexcept
+        -:  902:{
+        -:  903:    *this = marginsAdded(margins);
+        -:  904:    return *this;
+        -:  905:}
+        -:  906:
+        -:  907:constexpr inline QRectF &QRectF::operator-=(const QMarginsF &margins) noexcept
+        -:  908:{
+        -:  909:    *this = marginsRemoved(margins);
+        -:  910:    return *this;
+        -:  911:}
+        -:  912:
+        -:  913:#ifndef QT_NO_DEBUG_STREAM
+        -:  914:Q_CORE_EXPORT QDebug operator<<(QDebug, const QRectF &);
+        -:  915:#endif
+        -:  916:
+        -:  917:QT_END_NAMESPACE
+        -:  918:
+        -:  919:#endif // QRECT_H

@@ -1,0 +1,18 @@
+{
+	"bmi-installation" : null,
+	"compiler-frontend-variant" : "MSVC",
+	"compiler-id" : "MSVC",
+	"compiler-simulate-id" : "",
+	"config" : "Debug",
+	"cxx-modules" : {},
+	"dir-cur-bld" : "D:/Facultate/Anul 1 Sem 2/OOP/Lab/Lab_10-11/out/build/x64-Debug",
+	"dir-cur-src" : "D:/Facultate/Anul 1 Sem 2/OOP/Lab/Lab_10-11",
+	"dir-top-bld" : "D:/Facultate/Anul 1 Sem 2/OOP/Lab/Lab_10-11/out/build/x64-Debug",
+	"dir-top-src" : "D:/Facultate/Anul 1 Sem 2/OOP/Lab/Lab_10-11",
+	"exports" : [],
+	"forward-modules-from-target-dirs" : [],
+	"include-dirs" : [],
+	"language" : "CXX",
+	"linked-target-dirs" : [],
+	"module-dir" : "D:/Facultate/Anul 1 Sem 2/OOP/Lab/Lab_10-11/out/build/x64-Debug/CMakeFiles/Lab_6_7.dir"
+}

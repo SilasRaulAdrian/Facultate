@@ -1,0 +1,10 @@
+1980101223456,Pop,Ion,pediatrie,0
+2750605332111,Ionescu,Maria,cardiologie,1
+1800701223344,Vasilescu,Ana,ortopedie,0
+2910101445566,Georgescu,Vlad,neurologie,0
+2891011332123,Enache,Mircea,cardiologie,1
+2750201223344,Dima,Andreea,pediatrie,0
+1680509332111,Petrescu,Ioana,chirurgie,0
+1820701445566,Radu,Alina,psihiatrie,1
+1800809332111,Marinescu,Dan,ortopedie,0
+1750101445566,Iliescu,Stefan,chirurgie,1

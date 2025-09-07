@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -g CMakeFiles/lab2_4.dir/main.c.o CMakeFiles/lab2_4.dir/repo/repo_oferte.c.o CMakeFiles/lab2_4.dir/teste/teste.c.o CMakeFiles/lab2_4.dir/service/service.c.o CMakeFiles/lab2_4.dir/validator/validator.c.o CMakeFiles/lab2_4.dir/ui/consola.c.o CMakeFiles/lab2_4.dir/domain/oferta.c.o -o lab2_4 

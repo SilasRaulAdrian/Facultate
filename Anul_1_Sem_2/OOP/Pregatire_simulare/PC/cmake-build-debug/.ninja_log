@@ -1,0 +1,21 @@
+# ninja log v6
+28	1166	7692767122523428	PC_autogen/timestamp	55f2af439d312a63
+28	1166	7692767122523428	PC_autogen/mocs_compilation.cpp	55f2af439d312a63
+28	1166	7692767122523428	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/PC/cmake-build-debug/PC_autogen/timestamp	55f2af439d312a63
+28	1166	7692767122523428	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/PC/cmake-build-debug/PC_autogen/mocs_compilation.cpp	55f2af439d312a63
+1177	1559	7692767125663929	CMakeFiles/PC.dir/PC_autogen/mocs_compilation.cpp.obj	2814ac0a8fd4cb0e
+1182	12509	7692767125719136	CMakeFiles/PC.dir/main.cpp.obj	f599f3f86b13bb0e
+12512	13003	7692767239019849	PC.exe	d0a6e8608efe725c
+23	1872	7692809329032640	PC_autogen/timestamp	55f2af439d312a63
+23	1872	7692809329032640	PC_autogen/mocs_compilation.cpp	55f2af439d312a63
+23	1872	7692809329032640	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/PC/cmake-build-debug/PC_autogen/timestamp	55f2af439d312a63
+23	1872	7692809329032640	D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/PC/cmake-build-debug/PC_autogen/mocs_compilation.cpp	55f2af439d312a63
+1906	4609	7692809330148914	CMakeFiles/PC.dir/domain/placa_de_baza.cpp.obj	50e4c09c789fe208
+1900	4624	7692809330083617	CMakeFiles/PC.dir/domain/procesor.cpp.obj	cbfb45ef72ba62af
+1919	4853	7692809330279403	CMakeFiles/PC.dir/service/pc_service.cpp.obj	8174974be4e5f24b
+1910	6195	7692809330189301	CMakeFiles/PC.dir/repository/procesor_repo.cpp.obj	46b81f99b7552785
+1915	6223	7692809330239366	CMakeFiles/PC.dir/repository/placa_de_baza_repo.cpp.obj	a34c1aa7eb1ca4ed
+1879	7159	7692809329880321	CMakeFiles/PC.dir/PC_autogen/mocs_compilation.cpp.obj	2814ac0a8fd4cb0e
+1891	7181	7692809329990434	CMakeFiles/PC.dir/main.cpp.obj	f599f3f86b13bb0e
+1923	7241	7692809330320171	CMakeFiles/PC.dir/ui/main_window.cpp.obj	887006df891fcb75
+7241	7736	7692809383497263	PC.exe	a92b10442dedfde3

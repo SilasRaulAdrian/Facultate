@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/TAD_Colectie.dir/Proiect_C++/Colectie/App.cpp.o CMakeFiles/TAD_Colectie.dir/Proiect_C++/Colectie/Colectie.cpp.o CMakeFiles/TAD_Colectie.dir/Proiect_C++/Colectie/IteratorColectie.cpp.o CMakeFiles/TAD_Colectie.dir/Teste/TestExtins.cpp.o CMakeFiles/TAD_Colectie.dir/Teste/TestScurt.cpp.o -o TAD_Colectie 

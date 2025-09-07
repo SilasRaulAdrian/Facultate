@@ -1,0 +1,4 @@
+1,15.12.2024,18:00,Ceremonia de decernare a premiilor
+2,20.12.2024,09:00,Workshop despre tehnologie
+3,25.12.2024,12:00,Pranz festiv de Craciun
+4,31.12.2024,23:30,Petrecerea de Revelion

@@ -1,0 +1,104 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit, printf, scanf         ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  import printf msvcrt.dll
+    11                                  import scanf msvcrt.dll
+    12                                  
+    13                                  ; our data is declared here (the variables needed by our program)
+    14                                  segment data use32 class=data
+    15                                      ; ...
+    16 00000000 496E74726F64756365-         prompt db 'Introduceti un numar hexazecimal (2 cifre): ', 0
+    16 00000009 746920756E206E756D-
+    16 00000012 617220686578617A65-
+    16 0000001B 63696D616C20283220-
+    16 00000024 6369667265293A2000 
+    17 0000002D 25327300                    format_in db '%2s', 0
+    18 00000031 4E756D617220666172-         format_unsigned db 'Numar fara semn: %u', 10, 0
+    18 0000003A 612073656D6E3A2025-
+    18 00000043 750A00             
+    19 00000046 4E756D617220637520-         format_signed db 'Numar cu semn: %d', 10, 0
+    19 0000004F 73656D6E3A2025640A-
+    19 00000058 00                 
+    20 00000059 000000                      input db 0, 0, 0 ; buffer pt 2 caractere + terminator
+    21                                  
+    22                                  ; our code starts here
+    23                                  segment code use32 class=code
+    24                                      start:
+    25                                          ; Afisez prompt-ul
+    26 00000000 68[00000000]                    push dword prompt
+    27 00000005 FF15[00000000]                  call [printf]
+    28 0000000B 83C404                          add esp, 4
+    29                                          
+    30                                          ; Citesc input de la tastatura
+    31 0000000E 68[59000000]                    push dword input
+    32 00000013 68[2D000000]                    push dword format_in
+    33 00000018 FF15[00000000]                  call [scanf]
+    34 0000001E 83C408                          add esp, 4 * 2
+    35                                          
+    36                                          ; Convertesc input-ul din ASCII in valoare numerica
+    37 00000021 BE[59000000]                    mov esi, input ; pointer catre buffer
+    38 00000026 31DB                            xor ebx, ebx ; ebx va stoca rezultatul numeric
+    39                                          
+    40                                          ; Prima cifra
+    41 00000028 8A06                            mov al, byte [esi] ; citesc primul caracter
+    42 0000002A E838000000                      call convert_hex_char ; convertesc la valoarea numerica
+    43 0000002F C0E304                          shl bl, 4 ; deplasam valoarea cu 4 biti la stanga
+    44 00000032 00C3                            add bl, al ; adaugam valoarea la ebx
+    45                                          
+    46                                          ; A doua cifra
+    47 00000034 46                              inc esi
+    48 00000035 8A06                            mov al, byte [esi] ; citesc al doilea caracter
+    49 00000037 E82B000000                      call convert_hex_char
+    50 0000003C 00C3                            add bl, al
+    51                                          
+    52                                          ; Afisez valoarea fara semn
+    53 0000003E 53                              push ebx
+    54 0000003F 68[31000000]                    push dword format_unsigned
+    55 00000044 FF15[00000000]                  call [printf]
+    56 0000004A 83C408                          add esp, 4 * 2
+    57                                          
+    58                                          ; Afisez valoarea cu semn
+    59 0000004D 0FBEC3                          movsx eax, bl ; extind bl la 32 de biti, pastrand semnul
+    60 00000050 50                              push eax
+    61 00000051 68[46000000]                    push dword format_signed
+    62 00000056 FF15[00000000]                  call [printf]
+    63 0000005C 83C408                          add esp, 4 * 2
+    64                                          
+    65                                          ; exit(0)
+    66 0000005F 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    67 00000061 FF15[00000000]                  call    [exit]       ; call exit to terminate the program
+    68                                          
+    69                                      convert_hex_char:
+    70                                          ; Convertesc un caracter hexazecimal ASCII in valoarea sa numerica
+    71 00000067 3C30                            cmp al, '0'
+    72 00000069 7C1E                            jl invalid_input
+    73 0000006B 3C39                            cmp al, '9'
+    74 0000006D 7E17                            jle digit
+    75 0000006F 3C41                            cmp al, 'A'
+    76 00000071 7C16                            jl invalid_input
+    77 00000073 3C46                            cmp al, 'F'
+    78 00000075 7E08                            jle letter
+    79 00000077 3C61                            cmp al, 'a'
+    80 00000079 7C0E                            jl invalid_input
+    81 0000007B 3C66                            cmp al, 'f'
+    82 0000007D 7F0A                            jg invalid_input
+    83                                          
+    84                                      letter:
+    85 0000007F 24DF                            and al, 0xDF ; transform literele mici in mari
+    86 00000081 2C41                            sub al, 'A' ; calculez offset-ul fata de 'A'
+    87 00000083 040A                            add al, 10 ; adaug baza 10
+    88 00000085 C3                              ret
+    89                                          
+    90                                      digit:
+    91 00000086 2C30                            sub al, '0' ; calculez offset-ul fata de '0'
+    92 00000088 C3                              ret
+    93                                          
+    94                                      invalid_input:
+    95 00000089 31C0                            xor eax, eax
+    96 0000008B C3                              ret

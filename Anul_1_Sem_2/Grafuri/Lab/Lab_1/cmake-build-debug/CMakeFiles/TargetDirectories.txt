@@ -1,0 +1,3 @@
+D:/Facultate/Anul 1 Sem 2/Grafuri/Lab/Lab 1/cmake-build-debug/CMakeFiles/Lab_1.dir
+D:/Facultate/Anul 1 Sem 2/Grafuri/Lab/Lab 1/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Facultate/Anul 1 Sem 2/Grafuri/Lab/Lab 1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

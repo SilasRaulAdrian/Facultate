@@ -1,0 +1,59 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ...
+    14 00000000 0204020502020404            sir db 2, 4, 2, 5, 2, 2, 4, 4
+    15                                      len_sir equ $ - sir
+    16 00000008 0000                        rez dw 0
+    17                                      len_rez equ 256
+    18                                      count_table times 0 db 256 ; tabel de frecvente pt octeti (0-255)
+    19                                  
+    20                                  ; our code starts here
+    21                                  segment code use32 class=code
+    22                                      start:
+    23                                          ; ...
+    24 00000000 31C9                            xor ecx, ecx ; index pt tabelul de frecvente
+    25                                          
+    26                                      init_count_table:
+    27 00000002 C681[0A000000]00                mov byte [count_table + ecx], 0 ; setez fiecare pozitie din tabel la 0
+    28 00000009 41                              inc ecx ; trec la urm pozitie
+    29 0000000A 81F900010000                    cmp ecx, 256 ; verific daca am parcurs cele 256 pozitii
+    30 00000010 75F0                            jne init_count_table ; daca nu s-a ajuns la final, continui
+    31                                          
+    32 00000012 31C9                            xor ecx, ecx ; index pt sir
+    33                                      count_loop:
+    34 00000014 0FB681[00000000]                movzx eax, byte [sir + ecx] ; incarc octetul curent din sir in eax
+    35 0000001B FE80[0A000000]                  inc byte [count_table + eax] ; cresc frecv caracterului din tabel
+    36 00000021 41                              inc ecx ; trec la urm octet din sir
+    37 00000022 83F908                          cmp ecx, len_sir ; verific daca am parcurs toate elementele din sir
+    38 00000025 75ED                            jne count_loop ; daca nu, continui
+    39                                          
+    40 00000027 31C9                            xor ecx, ecx ; index pt tabelul de frecvente
+    41 00000029 31DB                            xor ebx, ebx ; index pt rezultatul rez
+    42                                      create_result:
+    43 0000002B 0FB681[0A000000]                movzx eax, byte [count_table + ecx] ; incarc frecv caracterului curent in eax
+    44 00000032 83F800                          cmp eax, 0 ; verific daca caracterul este inexistent
+    45 00000035 740F                            je skip_character ; daca da, trec la urm caracter
+    46                                          
+    47 00000037 C1E008                          shl eax, 8 ; mut frecventa in octetul superior
+    48 0000003A 6609C8                          or ax, cx ; pun caracterul in octetul inferior
+    49 0000003D 6689841B[08000000]              mov word [rez + ebx * 2], ax ; salvez cuvantul in rez
+    50 00000045 43                              inc ebx ; incrementez indexul pt rez
+    51                                          
+    52                                      skip_character:
+    53 00000046 41                              inc ecx ; trec la urm caracter din tabel
+    54 00000047 81F900010000                    cmp ecx, 256 ; verific daca am parcurs cele 256 caractere
+    55 0000004D 75DC                            jne create_result ; daca mai sunt caractere, continui
+    56                                      
+    57                                          ; exit(0)
+    58 0000004F 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+    59 00000051 FF15[00000000]                  call    [exit]       ; call exit to terminate the program

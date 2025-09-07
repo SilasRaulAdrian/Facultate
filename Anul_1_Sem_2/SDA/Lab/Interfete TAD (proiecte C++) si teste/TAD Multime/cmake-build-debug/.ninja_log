@@ -1,0 +1,12 @@
+# ninja log v6
+10	158	7684063497370019	CMakeFiles/TAD_Multime.dir/Proiect_C++/Multime_(cu_rel)/IteratorMultime.cpp.obj	3a62ddab70517660
+24	161	7684063497653517	CMakeFiles/TAD_Multime.dir/Teste(cu_relatie)/TestScurt.cpp.obj	cd34dd12280aaf2c
+19	180	7684063497526338	CMakeFiles/TAD_Multime.dir/Teste(cu_relatie)/TestExtins.cpp.obj	398833576d59e569
+5	422	7684063497370019	CMakeFiles/TAD_Multime.dir/Proiect_C++/Multime_(cu_rel)/App.cpp.obj	f9ad6e4cf78b9ad
+15	437	7684063497526338	CMakeFiles/TAD_Multime.dir/Proiect_C++/Multime_(cu_rel)/Multime.cpp.obj	c4fcbdc56e5d5d7a
+7	122	7684063926653283	CMakeFiles/TAD_Multime.dir/Teste(cu_relatie)/TestExtins.cpp.obj	398833576d59e569
+19	110	7684064208512002	CMakeFiles/TAD_Multime.dir/Teste(cu_relatie)/TestScurt.cpp.obj	cd34dd12280aaf2c
+15	360	7684064208449443	CMakeFiles/TAD_Multime.dir/Proiect_C++/Multime_(cu_rel)/App.cpp.obj	f9ad6e4cf78b9ad
+360	456	7684064211924501	TAD_Multime.exe	87b222e35c2cfdd0
+24	511	7684088607010899	CMakeFiles/TAD_Multime.dir/Proiect_C++/Multime_(cu_rel)/Multime.cpp.obj	c4fcbdc56e5d5d7a
+511	672	7684088611886802	TAD_Multime.exe	87b222e35c2cfdd0

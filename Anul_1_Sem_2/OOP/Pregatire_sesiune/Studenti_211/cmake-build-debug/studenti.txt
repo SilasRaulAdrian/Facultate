@@ -1,0 +1,10 @@
+102,Ionescu Maria,20,mate
+103,Georgescu Vlad,21,ai
+105,Dragomir Paul,23,info
+106,Stan Cristina,24,mate
+110,Mitroi Alina,28,mate-info
+101,Popescu Andrei,19,info
+104,Marinela Luca,22,mate-info
+107,Petrescu Radu,25,ai
+108,Avram Elena,26,info
+109,Dobre Ioan,27,mate

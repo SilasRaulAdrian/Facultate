@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.29"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TAD_Dictionar_Ordonat",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TAD_Dictionar_Ordonat::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TAD_Dictionar_Ordonat-Debug-8c6fe089098617d9ae1b.json",
+					"name" : "TAD_Dictionar_Ordonat",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Facultate/Anul_1_Sem_2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Dictionar Ordonat/cmake-build-debug",
+		"source" : "D:/Facultate/Anul_1_Sem_2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Dictionar Ordonat"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

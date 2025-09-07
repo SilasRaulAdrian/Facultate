@@ -1,0 +1,5 @@
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Gamine_Store/cmake-build-debug/CMakeFiles/Gamine_Store.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Gamine_Store/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Gamine_Store/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Gamine_Store/cmake-build-debug/CMakeFiles/Gamine_Store_autogen_timestamp_deps.dir
+D:/Facultate/Anul_1_Sem_2/OOP/Pregatire_simulare/Gamine_Store/cmake-build-debug/CMakeFiles/Gamine_Store_autogen.dir

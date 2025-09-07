@@ -1,0 +1,17 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Colectie/Proiect_C++/Colectie/App.cpp
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Colectie/cmake-build-debug-coverage/CMakeFiles/TAD_Colectie.dir/Proiect_C++/Colectie/App.cpp.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/SDA/Lab/Interfete TAD (proiecte C++) si teste/TAD Colectie/cmake-build-debug-coverage/CMakeFiles/TAD_Colectie.dir/Proiect_C++/Colectie/App.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "../../Teste/TestExtins.h"
+        -:    2:#include "../../Teste/TestScurt.h"
+        -:    3:
+function main called 1 returned 100% blocks executed 100%
+        1:    4:int main() {
+        1:    5:    testAllExtins();
+        1:    5-block  0
+call    0 returned 1
+        1:    6:    testAll();
+call    0 returned 1
+        1:    7:    testAdaugaToateElementeScurt();
+call    0 returned 1
+        1:    8:}

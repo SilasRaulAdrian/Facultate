@@ -1,0 +1,21 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/lab2-4/main.c
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/lab2-4/cmake-build-debug-coverage/CMakeFiles/lab2_4.dir/main.c.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/lab2-4/cmake-build-debug-coverage/CMakeFiles/lab2_4.dir/main.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdio.h>
+        -:    2:#include "teste/teste.h"
+        -:    3:#include "ui/consola.h"
+        -:    4:
+function main called 1 returned 100% blocks executed 100%
+        1:    5:int main() {
+        1:    6:    printf("Se ruleaza testele...\n");
+        1:    6-block  0
+call    0 returned 1
+        1:    7:    run_all_tests();
+call    0 returned 1
+        1:    8:    printf("Testele au fost trecute cu succes!\n");
+call    0 returned 1
+        1:    9:    run();
+call    0 returned 1
+        1:   10:    return 0;
+        -:   11:}

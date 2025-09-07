@@ -1,0 +1,181 @@
+     1                                  bits 32 ; assembling for the 32 bits architecture
+     2                                  
+     3                                  ; declare the EntryPoint (a label defining the very first instruction of the program)
+     4                                  global start        
+     5                                  
+     6                                  ; declare external functions needed by our program
+     7                                  extern exit               ; tell nasm that exit exists even if we won't be defining it
+     8                                  import exit msvcrt.dll    ; exit is a function that ends the calling process. It is defined in msvcrt.dll
+     9                                                            ; msvcrt.dll contains exit, printf and all the other important C-runtime specific functions
+    10                                  
+    11                                  ; our data is declared here (the variables needed by our program)
+    12                                  segment data use32 class=data
+    13                                      ; ex 21
+    14                                      ; a db 3
+    15                                      ; b dw 2
+    16                                      ; e dd 100
+    17                                      ; x dq 20
+    18                                      
+    19                                      ; ex 22
+    20                                      ; a db 5
+    21                                      ; b db 4
+    22                                      ; c db 3
+    23                                      ; e dd 10
+    24                                      ; x dq 20
+    25                                      
+    26                                      ; ex 23
+    27                                      ; a db 5
+    28                                      ; b db 4
+    29                                      ; c db 3
+    30                                      ; d db 2
+    31                                      ; e dw 1
+    32                                      ; x dq 10
+    33                                      
+    34                                      ; ex 24
+    35                                      ; a dd 10
+    36                                      ; b db 4
+    37                                      ; c db 8
+    38                                      ; d db 2
+    39                                      ; x dq 20
+    40                                      
+    41                                      ; ex 30
+    42 00000000 0A00                        a dw 10
+    43 00000002 04                          b db 4
+    44 00000003 08                          c db 8
+    45 00000004 14000000                    e dd 20
+    46 00000008 1E00000000000000            x dq 30
+    47                                  
+    48                                  ; our code starts here
+    49                                  segment code use32 class=code
+    50                                      start:
+    51                                          ; ex 21: (a*a/b+b*b)/(2+b)+e-x
+    52                                          ; mov eax, 0
+    53                                          ; mov al, [a]
+    54                                          
+    55                                          ; mov ecx, eax
+    56                                          ; mul ecx
+    57                                          
+    58                                          ; mov ebx, 0
+    59                                          ; mov bx, [b]
+    60                                          ; div ebx
+    61                                          
+    62                                          ; mov ecx, ebx
+    63                                          ; mul ecx
+    64                                          
+    65                                          ; add eax, ecx
+    66                                          
+    67                                          ; add ebx, 2
+    68                                          ; div ebx
+    69                                          
+    70                                          ; add eax, [e]
+    71                                          ; sub eax, [x]
+    72                                          
+    73                                          ; ex 22: a/2+b*b-a*b*c+e+x
+    74                                          ; mov eax, 0
+    75                                          ; mov al, [a]
+    76                                          
+    77                                          ; mov edx, 0
+    78                                          ; mov ecx, 2
+    79                                          ; div ecx
+    80                                          
+    81                                          ; mov ebx, 0
+    82                                          ; mov bl, [b]
+    83                                          ; mov edx, ebx
+    84                                          ; mul ebx
+    85                                          
+    86                                          ; add eax, edx
+    87                                          
+    88                                          ; mov ebx, 0
+    89                                          ; mov bl, [b]
+    90                                          ; mov edx, 0
+    91                                          ; mov dl, [c]
+    92                                          ; mul dl
+    93                                          ; mov ecx, eax
+    94                                          ; mov eax, 0
+    95                                          ; mov al, [a]
+    96                                          ; mul ecx
+    97                                          
+    98                                          ; sub edx, eax
+    99                                          ; add edx, [e]
+   100                                          ; add edx, [x]
+   101                                          
+   102                                          ; ex 23: (a*b-2*c*d)/(c-e)+x/a
+   103                                          ; mov eax, 0
+   104                                          ; mov al, [a]
+   105                                          ; mov bl, [b]
+   106                                          ; mul bl
+   107                                          
+   108                                          ; mov al, [c]
+   109                                          ; mov bl, [d]
+   110                                          ; mul bl
+   111                                          
+   112                                          ; mov ebx, eax
+   113                                          ; add eax, ebx
+   114                                          
+   115                                          ; sub ebx, eax
+   116                                          
+   117                                          ; mov al, [c]
+   118                                          ; mov edx, 0
+   119                                          ; mov dx, [e]
+   120                                          ; sub eax, edx
+   121                                          
+   122                                          ; mov edx, 0
+   123                                          ; div eax
+   124                                          
+   125                                          ; mov edx, 0
+   126                                          ; mov eax, [x]
+   127                                          ; mov bl, [a]
+   128                                          ; div bl
+   129                                          
+   130                                          ; add ebx, eax
+   131                                          
+   132                                          ; ex 24: a-(7+x)/(b*b-c/d+2)
+   133                                          ; mov eax, [a]
+   134                                          
+   135                                          ; mov edx, 0
+   136                                          ; mov ecx, [x]
+   137                                          ; add ecx, 7
+   138                                          
+   139                                          ; mov bl, [b]
+   140                                          ; mov ebx, ebx
+   141                                          ; mul bl
+   142                                          
+   143                                          ; mov edx, 0
+   144                                          ; mov al, [c]
+   145                                          ; mov bl, [d]
+   146                                          ; div bl
+   147                                          
+   148                                          ; sub ebx, eax
+   149                                          ; add ebx, 2
+   150                                          
+   151                                          ; mov edx, 0
+   152                                          ; div ebx
+   153                                          
+   154                                          ; sub eax, [a]
+   155                                          
+   156                                          ; ex 30: a*b-(100-c)/(b*b)+e+x
+   157 00000000 66A1[00000000]                  mov ax, [a]
+   158 00000006 89C3                            mov ebx, eax
+   159                                          
+   160 00000008 8A1D[02000000]                  mov bl, [b]
+   161 0000000E F6E3                            mul bl
+   162                                          
+   163 00000010 A0[03000000]                    mov al, [c]
+   164 00000015 83E864                          sub eax, 100
+   165                                          
+   166 00000018 8A1D[02000000]                  mov bl, [b]
+   167 0000001E 89D9                            mov ecx, ebx
+   168 00000020 F6E3                            mul bl
+   169                                          
+   170 00000022 BA00000000                      mov edx, 0
+   171 00000027 F7F1                            div ecx
+   172                                          
+   173 00000029 29C3                            sub ebx, eax
+   174 0000002B 031D[04000000]                  add ebx, [e]
+   175                                          
+   176 00000031 A1[08000000]                    mov eax, [x]
+   177 00000036 01C3                            add ebx, eax
+   178                                      
+   179                                          ; exit(0)
+   180 00000038 6A00                            push    dword 0      ; push the parameter for exit onto the stack
+   181 0000003A FF15[00000000]                  call    [exit]       ; call exit to terminate the program

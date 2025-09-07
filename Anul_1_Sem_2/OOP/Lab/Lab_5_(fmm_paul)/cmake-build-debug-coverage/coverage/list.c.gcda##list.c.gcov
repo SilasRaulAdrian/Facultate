@@ -1,0 +1,89 @@
+        -:    0:Source:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/list.c
+        -:    0:Graph:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage/CMakeFiles/Lab_5__fmm_paul_.dir/list.c.gcno
+        -:    0:Data:/mnt/d/Facultate/Anul 1 Sem 2/OOP/Lab/Lab 5 (fmm paul)/cmake-build-debug-coverage/CMakeFiles/Lab_5__fmm_paul_.dir/list.c.gcda
+        -:    0:Runs:1
+        -:    1:#include <stdlib.h>
+        -:    2:#include "list.h"
+        -:    3:
+        -:    4:#define INIT_CAP 10
+        -:    5:
+function creeazaLista called 35 returned 100% blocks executed 75%
+       35:    6:List *creeazaLista(Distruge distruge, Copiaza copiaza) {
+       35:    7:    List *list = (List *)malloc(sizeof(List));
+       35:    8:    if (list == NULL) {
+       35:    8-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 35
+    #####:    9:        return NULL;
+    %%%%%:    9-block  0
+        -:   10:    }
+       35:   11:    list->lg = 0;
+       35:   12:    list->cap = INIT_CAP;
+       35:   13:    list->elems = (TElem *)malloc(sizeof(TElem) * INIT_CAP);
+       35:   14:    list->distruge = distruge;
+       35:   15:    list->copiaza = copiaza;
+       35:   16:    return list;
+       35:   16-block  0
+        -:   17:}
+        -:   18:
+function distrugeLista called 35 returned 100% blocks executed 100%
+       35:   19:void distrugeLista(List *list) {
+       97:   20:    for (int i = 0; i < list->lg; i++) {
+       35:   20-block  0
+       97:   20-block  1
+branch  0 taken 62
+branch  1 taken 35 (fallthrough)
+       62:   21:        list->distruge(list->elems[i]);
+       62:   21-block  0
+call    0 returned 62
+        -:   22:    }
+       35:   23:    free(list->elems);
+       35:   24:    free(list);
+       35:   25:}
+        -:   26:
+function add called 36 returned 100% blocks executed 100%
+       36:   27:void add(List *list, TElem elem) {
+        -:   28:    // resize
+       36:   29:    if (list->lg == list->cap) {
+       36:   29-block  0
+branch  0 taken 2 (fallthrough)
+branch  1 taken 34
+        2:   30:        list->cap *= 2;
+        2:   31:        list->elems = (TElem *)realloc(list->elems, sizeof(TElem) * list->cap);
+        2:   31-block  0
+        -:   32:    }
+       36:   33:    list->elems[list->lg++] = elem;
+       36:   34:}
+        -:   35:
+function copiazaLista called 23 returned 100% blocks executed 100%
+       23:   36:List *copiazaLista(List *list) {
+       23:   37:    List *copie = creeazaLista(list->distruge, list->copiaza);
+       23:   37-block  0
+call    0 returned 23
+       53:   38:    for (int i = 0; i < list->lg; i++) {
+       53:   38-block  0
+branch  0 taken 30
+branch  1 taken 23 (fallthrough)
+       30:   39:        copie->elems[i] = list->copiaza(list->elems[i]);
+       30:   39-block  0
+call    0 returned 30
+        -:   40:    }
+       23:   41:    copie->lg = list->lg;
+       23:   42:    copie->cap = list->cap;
+       23:   43:    return copie;
+       23:   43-block  0
+        -:   44:}
+        -:   45:
+function lungime called 4 returned 100% blocks executed 100%
+        4:   46:int lungime(List *list) {
+        4:   47:    return list->lg;
+        4:   47-block  0
+        -:   48:}
+        -:   49:
+function pop called 3 returned 100% blocks executed 100%
+        3:   50:TElem pop(List *list) {
+        3:   51:    TElem elem = list->elems[list->lg - 1];
+        3:   52:    list->lg--;
+        3:   53:    return elem;
+        3:   53-block  0
+        -:   54:}
