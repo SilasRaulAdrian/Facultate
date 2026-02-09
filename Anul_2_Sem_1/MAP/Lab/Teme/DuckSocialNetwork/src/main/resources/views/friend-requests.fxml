@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.controllers.FriendRequestsController"
+      spacing="15"
+      alignment="TOP_CENTER"
+      style="-fx-background-color: #f7fafc;">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Friend Requests"
+           style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #2d3748;"/>
+
+    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;">
+        <VBox fx:id="requestsContainer" spacing="10" alignment="TOP_CENTER" style="-fx-background-color: transparent;">
+            <padding>
+                <Insets top="5" right="0" bottom="5" left="0"/>
+            </padding>
+            <children>
+            </children>
+        </VBox>
+    </ScrollPane>
+
+    <Label fx:id="noRequestsLabel" text="No new friend requests." visible="false" managed="false"
+           style="-fx-text-fill: #a0aec0; -fx-font-style: italic;"/>
+    <Button text="Back" onAction="#goBack" prefWidth="100"/>
+
+</VBox>

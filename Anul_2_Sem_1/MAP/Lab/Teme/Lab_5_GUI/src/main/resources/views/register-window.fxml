@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.controllers.RegisterController"
+      style="-fx-padding: 20;">
+
+    <Label text="Create Account" style="-fx-font-size: 22; -fx-font-weight: bold"/>
+
+    <GridPane hgap="10" vgap="10">
+        <columnConstraints>
+            <ColumnConstraints halignment="RIGHT"/>
+            <ColumnConstraints hgrow="ALWAYS"/>
+        </columnConstraints>
+
+        <Label text="Username:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="usernameField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Email:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="emailField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Password:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="passwordField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Confirm Password:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="confirmPasswordField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="User Type:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="typeCombo" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    </GridPane>
+
+    <VBox fx:id="personBox" spacing="10" visible="false" managed="false"
+          style="-fx-border-color: lightgray; -fx-padding: 10; -fx-border-radius: 5;">
+
+        <Label text="Person Details:" style="-fx-font-weight: bold;"/>
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <Label text="Nume:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="numeField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Prenume:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="prenumeField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Data Nasterii:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="dataNField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Ocupatie:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="ocupatieField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Nivel Empatie:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="empatieField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        </GridPane>
+    </VBox>
+
+    <VBox fx:id="duckBox" spacing="10" visible="false" managed="false"
+          style="-fx-border-color: lightgray; -fx-padding: 10; -fx-border-radius: 5;">
+
+        <Label text="Duck Details:" style="-fx-font-weight: bold;"/>
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <Label text="Tip Rata:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="duckTypeCombo" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Viteza:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="vitezaField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Rezistenta:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="rezistentaField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+        </GridPane>
+    </VBox>
+
+    <Label fx:id="errorLabel" textFill="red"/>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="Back" onAction="#goBack" prefWidth="120"/>
+        <Button text="Register" onAction="#handleRegister" defaultButton="true" prefWidth="120"/>
+    </HBox>
+
+</VBox>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.controllers.AddPersonController"
+      alignment="CENTER" spacing="15" style="-fx-label-padding: 25 25 25 25;">
+
+    <Label text="Add Person" style="-fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+    <GridPane alignment="CENTER" hgap="10" vgap="10">
+
+        <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="usernameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Nume:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="numeField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Prenume:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="prenumeField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+        <Label text="Ocupatie:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+        <TextField fx:id="ocupatieField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+        <Label text="Nivel Empatie:" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+        <TextField fx:id="empatieField" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+        <Label text="Data Nasterii:" GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+        <DatePicker fx:id="dataPicker" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+    </GridPane>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button text="Back" onAction="#goBack"/>
+        <Button text="Add" defaultButton="true" onAction="#handleAdd"/>
+    </HBox>
+</VBox>

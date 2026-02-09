@@ -1,0 +1,13 @@
+module:org.example
+org.example
+org.example.config
+org.example.controllers
+org.example.event
+org.example.exceptions
+org.example.hash
+org.example.model
+org.example.model.paging
+org.example.observer
+org.example.repository
+org.example.service
+org.example.validation

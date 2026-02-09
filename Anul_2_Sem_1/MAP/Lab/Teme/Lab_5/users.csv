@@ -1,0 +1,11 @@
+ID,TYPE,USERNAME,EMAIL,PASSWORD,NUME,PRENUME,DATA_NASTERII,OCUPATIE,NIVEL_EMPATIE,TIP_RATA,VITEZA,REZISTENTA
+1,PERSON,ionpop,ion@mail.com,1234,Popescu,Ion,2000-01-01,Student,0.80,,,,
+2,DUCK,quacky,quack@pond.com,1234,,,,,,SWIMMING,4.50,6.00
+3,PERSON,ana,ana@mail.com,1234,Pop,Ana,1999-05-05,Doctor,0.90,,,,
+4,PERSON,maria,maria@mail.com,1234,Ionescu,Maria,2001-03-10,Designer,0.85,,,,
+5,PERSON,andrei,andrei@mail.com,1234,Georgescu,Andrei,1998-11-22,Programator,0.70,,,,
+6,DUCK,donald,donald@duck.com,1234,,,,,,FLYING,6.00,4.00
+7,PERSON,raluca,raluca@mail.com,1234,Dumitrescu,Raluca,2002-07-14,Profesor,0.95,,,,
+8,PERSON,paul,paul@mail.com,1234,Stan,Paul,1997-09-09,Arhitect,0.88,,,,
+9,DUCK,flappy,flappy@pond.com,1234,,,,,,SWIMMING,3.80,5.50
+10,PERSON,vlad,vlad@mail.com,1234,Pop,Vlad,1999-02-15,Medic,0.76,,,,

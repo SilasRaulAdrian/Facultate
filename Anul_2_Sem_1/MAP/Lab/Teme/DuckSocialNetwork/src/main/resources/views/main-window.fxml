@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="30" style="-fx-label-padding: 20 20 20 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.controllers.MainController">
+
+    <Label fx:id="welcomeLabel" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-font-family: 'Comic Sans MS'" text="Welcome, Guest!" />
+
+    <GridPane alignment="CENTER" hgap="40" vgap="20">
+
+        <Label style="-fx-font-size: 22px;" text="Manage Ducks" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button fx:id="manageDucksButton" onAction="#openDucksWindow" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label style="-fx-font-size: 22px;" text="Manage Persons" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <Button fx:id="managePersonsButton" onAction="#openPersonsWindow" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+        <Label style="-fx-font-size: 22px;" text="Manage Friendships" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Button fx:id="manageFriendshipButton" onAction="#openFriendshipsWindow" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label style="-fx-font-size: 22px;" text="Manage Messages" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <Button fx:id="manageMessagesButton" onAction="#openMessagesWindow" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+        <Label style="-fx-font-size: 22px;" text="Manage Friends" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <Button fx:id="manageFriendsButton" onAction="#openFriendsWindow" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+        <Label style="-fx-font-size: 22px;" text="Manage Events" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <Button fx:id="manageEventsButton" onAction="#openEventsWindow" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+        <Label style="-fx-font-size: 22px;" text="My Profile" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <Button fx:id="myProfileButton" onAction="#openProfileWindow" text="Open" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+        <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+
+    </GridPane>
+
+    <Button alignment="CENTER" onAction="#handleLogOut" prefHeight="37.0" prefWidth="160.0" text="Log Out" style="-fx-font-size: 22px"/>
+</VBox>

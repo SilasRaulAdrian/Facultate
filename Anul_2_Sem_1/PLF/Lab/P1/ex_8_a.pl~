@@ -1,0 +1,18 @@
+% membru(X, l1...ln) - fals daca l e vida
+%		     - adevarat daca l1 = X
+% membru(X, l2...ln) altfel
+%
+% este_multime(l1...ln) - true daca l e vida
+%                       - false daca l1 apartine (l2...ln)
+% este_multime(l2...ln) altfel
+
+% (i, o), (i, i)
+membru(X, [X|_]).
+membru(X, [_|T]):- membru(X, T).
+
+% (o)
+este_multime([]).
+este_multime([H|T]) :-
+	not(membru(H, T)),
+	este_multime(T).
+

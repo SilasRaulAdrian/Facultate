@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.controllers.UserProfileController">
+
+    <top>
+        <VBox spacing="10"
+              alignment="CENTER"
+              style="-fx-background-color: linear-gradient(to bottom, #4A90E2, #357ABD);">
+
+            <padding>
+                <Insets top="30" right="30" bottom="30" left="30"/>
+            </padding>
+
+            <StackPane maxWidth="-Infinity" maxHeight="-Infinity">
+                <style>
+                    -fx-background-color: white;
+                    -fx-background-radius: 70;
+                    -fx-padding: 10;
+                </style>
+
+                <ImageView fx:id="profileImageView"
+                           fitWidth="120"
+                           fitHeight="120"
+                           preserveRatio="true">
+                </ImageView>
+
+                <Button fx:id="editImageBtn"
+                        onAction="#handleChangeProfileImage"
+                        style="-fx-background-color: #3498db;
+                                -fx-text-fill: white;
+                                -fx-background-radius: 100;
+                                -fx-min-width: 35px;
+                                -fx-min-height: 35px;
+                                -fx-max-width: 35px;
+                                -fx-max-height: 35px;
+                                -fx-cursor: hand;"
+                        StackPane.alignment="BOTTOM_RIGHT">
+                    <StackPane.margin>
+                        <Insets bottom="-5" right="-5"/>
+                    </StackPane.margin>
+                    <graphic>
+                        <Label text="✏" style="-fx-text-fill: white; -fx-font-size: 16;"/>
+                    </graphic>
+                </Button>
+            </StackPane>
+
+            <Label fx:id="usernameLabel"
+                   style="-fx-text-fill: white; -fx-font-size: 26px; -fx-font-weight: bold;"/>
+
+            <Label fx:id="emailLabel"
+                   style="-fx-text-fill: #E3F2FD; -fx-font-size: 14px;"/>
+
+            <Label fx:id="typeLabel"
+                     style="-fx-text-fill: #E3F2FD; -fx-font-size: 14px;"/>
+
+            <Label fx:id="idLabel"
+                   style="-fx-text-fill: #BBDEFB; -fx-font-size: 12px;"/>
+
+            <Label fx:id="friendCountLabel"
+                   style="-fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold;"/>
+
+        </VBox>
+    </top>
+
+    <center>
+        <HBox spacing="15" alignment="CENTER">
+            <padding>
+                <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+
+            <Button text="Back"
+                    onAction="#handleBack"
+                    prefWidth="120"
+                    style="-fx-background-color: #f4f4f4; -fx-text-fill: #333; -fx-border-color: #ccc; -fx-font-weight: bold; -fx-padding: 10 10;"/>
+
+            <Button text="Edit Profile"
+                    onAction="#handleEditProfile"
+                    prefWidth="120"
+                    style="-fx-background-color: #357ABD; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 10;"/>
+        </HBox>
+    </center>
+
+</BorderPane>

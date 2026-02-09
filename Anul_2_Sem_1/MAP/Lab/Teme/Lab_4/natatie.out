@@ -1,0 +1,10 @@
+Best time: 4.000 s
+Lane 1 (d=3) <- Duck 1 (v=4.00, st=2)
+Lane 2 (d=6) <- Duck 2 (v=5.00, st=2)
+Lane 3 (d=10) <- Duck 3 (v=5.00, st=5)
+
+
+Duck 3 on lane 3: t=4.000 s
+Task executed at: 13:04
+Duck 2 on lane 2: t=2.400 s
+Task executed at: 13:04

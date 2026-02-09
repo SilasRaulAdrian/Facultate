@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.controllers.DucksController"
+      alignment="CENTER" spacing="20" style="-fx-label-padding: 20 20 20 20;
+             -fx-background-image: url('/images/ducks.jpg');
+             -fx-background-size: cover;
+             -fx-background-position: center;">
+
+    <Label text="Ducks" style="-fx-font-size: 30px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="table" prefHeight="146" prefWidth="812">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+            <TableColumn fx:id="colUsername" text="Username" prefWidth="150"/>
+            <TableColumn fx:id="colEmail" text="Email" prefWidth="150"/>
+            <TableColumn fx:id="colType" text="Duck Type" prefWidth="200"/>
+            <TableColumn fx:id="colSpeed" text="Speed" prefWidth="100"/>
+            <TableColumn fx:id="colStamina" text="Stamina" prefWidth="100"/>
+            <TableColumn fx:id="colCard" text="Card" prefWidth="150"/>
+        </columns>
+    </TableView>
+
+    <HBox alignment="CENTER" spacing="20">
+        <Button fx:id="prevButton" text="Previous" onAction="#handlePrevious"/>
+        <Label fx:id="pageInfoLabel" text="Page X of Y"/>
+        <Button fx:id="nextButton" text="Next" onAction="#handleNext"/>
+    </HBox>
+
+    <HBox alignment="CENTER" spacing="15">
+        <ComboBox fx:id="typeFilterCombo" promptText="Filter by Type" />
+        <Button text="Add Duck" onAction="#openAddWindow"/>
+        <Button text="Delete Selected" onAction="#deleteSelected"/>
+    </HBox>
+
+    <Button alignment="CENTER" text="Back" onAction="#goBack"/>
+</VBox>

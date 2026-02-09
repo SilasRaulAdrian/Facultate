@@ -1,0 +1,66 @@
+% sublista(l1...ln) =
+%     [[]],                                     daca lista este vida
+%     [l1 + s] U sublista(l2...ln),             daca s apartine sublista(l2...ln)
+%
+%
+% creste([a1...an], Acc, Rest, Ultim) =
+%     creste([a2...an], [a1|Acc], Rest, Ultim), daca a2 > a1
+%     (Acc != [], Rest = [Ultim|_]),            daca secventa nu mai creste
+%
+%
+% scade([a1...an], Ultim) =
+%     scade([a2...an], _), daca a2 < a1
+%     adevarat, daca am ajuns la finalul listei
+%
+%
+% split_in_munte(L) =
+%     exista un punct de varf in care creste(L, [], Rest, UltimCres)
+%     si scade(Rest, UltimCres)
+%
+%
+% verifica_munte(L) =
+%     adevarat, daca lungimea(L) >= 3 si split_in_munte(L) este adevarat
+%
+%
+% afisare_submultimi_munte(L) =
+%     { sublista(L) | sublista respecta regula de munte:
+%         exista k (1 < k < n) astfel incat
+%         l1 < l2 < ... < lk si lk > lk+1 > ... > ln }
+
+% (i, o), (i, i), (o, i)
+sublista([],[]).
+sublista([H|T], [H|Rez]):-
+	sublista(T, Rez).
+sublista([_|T], Rez):-
+	sublista(T, Rez).
+
+% (i)
+verifica_munte(L):-
+	L = [_,_|_],
+	split_in_munte(L).
+
+% (i)
+split_in_munte(L):-
+	creste(L, [], Rest, UltimCres),
+	scade(Rest, UltimCres).
+
+% (i, i, o, o), (i, o, o, o), (i, i, i, o), (i, i, o, i)
+creste([A,B|T], Acc, Rest, Ultim):-
+	B > A, !,
+	creste([B|T], [A|Acc], Rest, Ultim).
+creste(Rest, Acc, Rest, Ultim):-
+	Acc \= [],
+	Rest = [Ultim|_].
+
+% (i, i), (o, i), (i, o)
+scade([A,B|T], _):-
+	B < A, !,
+	scade([B|T], _).
+scade([_], _).
+
+% (i, o), (i, i), (o, o)
+afisare_submultimi_munte(Lista, Rez) :-
+    findall(Sub,
+            (sublista(Lista, Sub),
+             verifica_munte(Sub)),
+            Rez).

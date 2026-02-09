@@ -1,0 +1,9 @@
+org.example
+org.example.config
+org.example.event
+org.example.exceptions
+org.example.model
+org.example.repository
+org.example.service
+org.example.ui
+org.example.validation
